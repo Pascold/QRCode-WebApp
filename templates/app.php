@@ -5,14 +5,19 @@ declare(strict_types=1);
 /**
  * Main page template.
  *
+ * Rendered by \QrApp\View::render(), which provides:
+ *
  * @var \QrApp\I18n $i18n
  * @var array<string, mixed> $config
  * @var array<string, mixed> $jsConfig
  * @var string|null $theme
  * @var bool $consented
- * @var \Closure $e
- * @var \Closure $t
- * @var \Closure $asset
+ * @var bool $static     true for the static (GitHub Pages) build
+ * @var \Closure $e      HTML escape
+ * @var \Closure $t      translate + escape
+ * @var \Closure $url    URL of a static file
+ * @var \Closure $asset  URL of a static file with cache-busting version
+ * @var callable $langUrl URL of a language version
  */
 
 $contentTypes = ['url', 'text', 'email', 'phone', 'sms', 'wifi', 'vcard', 'geo'];
@@ -34,12 +39,12 @@ $shapeSelect = static function (string $name, array $shapes, string $selected) u
 $optional = ' <span class="optional">(' . $t('field.optional') . ')</span>';
 
 /** Renders a flag image (decorative - the language name is always shown next to it). */
-$flag = static function (string $country, bool $lazy = false) use ($e): string {
+$flag = static function (string $country, bool $lazy = false) use ($e, $url): string {
     if ($country === '' || !is_file(dirname(__DIR__) . '/assets/vendor/flag-icons/flags/' . $country . '.svg')) {
         return '<span class="flag" aria-hidden="true"></span>';
     }
 
-    return '<img class="flag" src="assets/vendor/flag-icons/flags/' . $e($country) . '.svg" alt="" width="22" height="16"'
+    return '<img class="flag" src="' . $url('assets/vendor/flag-icons/flags/' . $country . '.svg') . '" alt="" width="22" height="16"'
         . ($lazy ? ' loading="lazy"' : '') . '>';
 };
 ?>
@@ -48,21 +53,28 @@ $flag = static function (string $country, bool $lazy = false) use ($e): string {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php if ($static): ?>
+    <!-- Static hosting cannot send HTTP headers, so the policy is set here. -->
+    <meta http-equiv="Content-Security-Policy" content="<?= $e(\QrApp\View::CONTENT_SECURITY_POLICY) ?>">
+    <meta name="referrer" content="same-origin">
+    <!-- Applies the saved light/dark theme before the page is painted. -->
+    <script src="<?= $asset('assets/js/theme-init.js') ?>" data-consent-key="<?= $e((string) $config['consent_cookie']) ?>" data-theme-key="<?= $e((string) $config['theme_cookie']) ?>"></script>
+<?php endif; ?>
     <meta name="color-scheme" content="light dark">
     <meta name="description" content="<?= $t('app.tagline') ?>">
     <title><?= $t('app.title') ?></title>
     <meta name="theme-color" content="#4f46e5">
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="assets/img/icon-32.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="<?= $url('assets/img/favicon.svg') ?>" type="image/svg+xml">
+    <link rel="icon" href="<?= $url('assets/img/icon-32.png') ?>" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="<?= $url('assets/img/apple-touch-icon.png') ?>">
+    <link rel="manifest" href="<?= $url('manifest.webmanifest') ?>">
     <link rel="stylesheet" href="<?= $asset('assets/css/style.css') ?>">
 </head>
 <body>
 <header class="site-header">
     <div class="container header-inner">
         <div class="brand">
-            <img src="assets/img/favicon.svg" alt="" width="32" height="32">
+            <img src="<?= $url('assets/img/favicon.svg') ?>" alt="" width="32" height="32">
             <div>
                 <h1><?= $t('app.title') ?></h1>
                 <p class="tagline"><?= $t('app.tagline') ?></p>
@@ -93,7 +105,7 @@ $flag = static function (string $country, bool $lazy = false) use ($e): string {
                     <ul class="lang-list" role="list">
                         <?php foreach ($i18n->languages() as $code => $language): ?>
                             <li data-search="<?= $e($language['native'] . ' ' . $language['name'] . ' ' . $code) ?>">
-                                <a href="?lang=<?= $e($code) ?>" hreflang="<?= $e($code) ?>"
+                                <a href="<?= $e($langUrl($code)) ?>" hreflang="<?= $e($code) ?>"
                                    <?= $code === $i18n->current() ? 'aria-current="true"' : '' ?>>
                                     <?= $flag($language['flag'], true) ?>
                                     <span class="lang-name">
@@ -389,7 +401,7 @@ $flag = static function (string $country, bool $lazy = false) use ($e): string {
         <label for="consent-language" class="visually-hidden"><?= $t('app.language') ?></label>
         <select id="consent-language">
             <?php foreach ($i18n->languages() as $code => $language): ?>
-                <option value="<?= $e($code) ?>" <?= $code === $i18n->current() ? 'selected' : '' ?>><?= $e($language['native']) ?></option>
+                <option value="<?= $e($code) ?>" data-url="<?= $e($langUrl($code)) ?>" <?= $code === $i18n->current() ? 'selected' : '' ?>><?= $e($language['native']) ?></option>
             <?php endforeach; ?>
         </select>
     </div>

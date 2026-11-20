@@ -2,6 +2,8 @@
 
 A simple, dependency-free PHP web application for creating styled QR codes.
 
+**Live demo:** <https://pascold.github.io/QRCode-WebApp/> (static version on GitHub Pages)
+
 - Generate QR codes for **links, plain text, e-mail, phone numbers, SMS, Wi-Fi networks, contact cards (vCard) and map locations**.
 - Customize the look: **dot style** (square, dots, rounded, extra rounded, classy, classy rounded), **corner styles**, colors, optional **gradient**, transparent background, size, margin and error correction level.
 - Place your own **image / logo in the center** of the code.
@@ -55,6 +57,43 @@ Then open <http://localhost:8000>.
    ```
 
 4. Serve the site over **HTTPS** - the "Copy image" button relies on the Clipboard API, which browsers only enable in secure contexts (`https://` or `localhost`).
+
+### GitHub Pages (static version)
+
+GitHub Pages cannot run PHP, so the repository includes a build script that renders a static copy of the app - one page per language:
+
+| URL | Content |
+|-----|---------|
+| `/` | Start page - opens the saved language, or the best match for the browser languages |
+| `/pl/`, `/en-GB/`, `/sr-Latn/`, … | The app in that language (92 pages) |
+| `/404.html` | Fixes the letter case of language URLs (`/en-gb/` → `/en-GB/`), anything else goes to the start page |
+
+The live version is published automatically by [`.github/workflows/pages.yml`](.github/workflows/pages.yml) on every push to `main`:
+
+1. One-time setup: repository **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. Push to `main` (or run the workflow manually from the **Actions** tab).
+3. The site appears at `https://<user>.github.io/<repository>/` - for this repository <https://pascold.github.io/QRCode-WebApp/>.
+
+The workflow also checks all translations and lints the PHP files before deploying.
+
+To build it locally:
+
+```bash
+php tools/build-static.php --out=dist --base=/
+```
+
+`--base` is the URL path the site is served from (`/<repository>/` for a GitHub Pages project site, `/` for a custom domain). The `dist/` folder is ignored by Git.
+
+Differences from the PHP version:
+
+| | PHP server | Static (GitHub Pages) |
+|---|---|---|
+| Language URLs | `?lang=pl` | `/pl/` |
+| Preferences (consent, language, theme) | cookies | `localStorage` |
+| Browser language detection | `Accept-Language` header | `navigator.languages` on the start page |
+| Security headers | HTTP headers | `<meta>` Content-Security-Policy and referrer policy |
+
+The `.htaccess` files stay in the repository for anyone who downloads the project and runs the PHP version on Apache.
 
 ## Configuration
 
@@ -239,7 +278,7 @@ It reports missing or unknown keys, lost placeholders (`{size}`, `{author}`), br
 
 - Nothing the visitor types or uploads is ever sent to the server - QR codes are generated in the browser.
 - On the first visit a dialog asks for consent to store preferences. Until the visitor accepts, **no cookies are written** and the page cannot be used. Declining shows a short explanation with options to go back or close the page.
-- After consent the app stores: `qr_consent`, `qr_lang` and `qr_theme` cookies (preferences only), and the current form settings in `sessionStorage` (cleared when the tab is closed). No analytics or third-party requests.
+- After consent the app stores `qr_consent`, `qr_lang` and `qr_theme` (preferences only) - as cookies in the PHP version, in `localStorage` in the static version, and the current form settings in `sessionStorage` (cleared when the tab is closed). No analytics or third-party requests.
 
 ## Project structure
 
@@ -250,7 +289,8 @@ QRCode-WebApp/
 ├── manifest.webmanifest      # Web app manifest (installable app)
 ├── LICENSE                   # MIT license
 ├── src/
-│   └── I18n.php              # Translation service (auto-discovers languages)
+│   ├── I18n.php              # Translation service (auto-discovers languages)
+│   └── View.php              # Renders the page (PHP server and static build)
 ├── lang/
 │   ├── en.php                # English - default / fallback
 │   ├── en-GB.php             # Regional variant (only differences, inherits from en)
@@ -261,13 +301,17 @@ QRCode-WebApp/
 ├── assets/
 │   ├── css/style.css         # Styles (light & dark mode, responsive)
 │   ├── js/ui.js              # Consent dialog, theme toggle, language dropdown
+│   ├── js/theme-init.js      # Static build: applies the saved theme early
+│   ├── js/redirect.js        # Static build: start page and 404 redirects
 │   ├── js/app.js             # QR payload builders, preview, downloads
 │   ├── img/                  # Favicon and app icons (SVG + PNG)
 │   └── vendor/
 │       ├── qr-code-styling/  # QR rendering library (bundled, MIT)
 │       └── flag-icons/       # Flag SVGs (bundled, MIT)
 ├── tools/
-│   └── check-translations.php  # Validates all language files (CLI only)
+│   ├── check-translations.php  # Validates all language files (CLI only)
+│   └── build-static.php        # Builds the static GitHub Pages version (CLI only)
+├── .github/workflows/pages.yml # Deploys the static version to GitHub Pages
 └── .htaccess                 # Apache rules
 ```
 

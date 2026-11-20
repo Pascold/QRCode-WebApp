@@ -83,6 +83,22 @@ final class I18n
         return $this->lookup[strtolower(str_replace('_', '-', trim($code)))] ?? null;
     }
 
+    /**
+     * Every recognised code and alias (lowercase) mapped to its locale code,
+     * e.g. ["en-gb" => "en-GB", "no" => "nb"]. Used by the static build.
+     *
+     * @return array<string, string>
+     */
+    public function lookupTable(): array
+    {
+        return $this->lookup;
+    }
+
+    public function defaultLanguage(): string
+    {
+        return $this->defaultLanguage;
+    }
+
     public function setLanguage(string $code): void
     {
         $code = $this->normalize($code) ?? $this->defaultLanguage;

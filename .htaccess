@@ -1,7 +1,7 @@
 # QR Code Generator - Apache configuration
 
 Options -Indexes
-DirectoryIndex index.php
+DirectoryIndex index.php index.html
 
 # Block direct access to internal files and folders.
 <IfModule mod_rewrite.c>

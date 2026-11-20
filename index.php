@@ -3,8 +3,10 @@
 declare(strict_types=1);
 
 use QrApp\I18n;
+use QrApp\View;
 
 require __DIR__ . '/src/I18n.php';
+require __DIR__ . '/src/View.php';
 
 /** @var array<string, mixed> $config */
 $config = require __DIR__ . '/config.php';
@@ -51,36 +53,10 @@ header('Content-Type: text/html; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
 header('Referrer-Policy: same-origin');
 header('X-Frame-Options: SAMEORIGIN');
-header(
-    "Content-Security-Policy: default-src 'self'; script-src 'self'; "
-    . "style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; "
-    // qr-code-styling fetch()es the center image data URL to embed it.
-    . "connect-src 'self' data: blob:; "
-    . "object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
-);
+// frame-ancestors only works as a header (not in the <meta> tag of the static build).
+header('Content-Security-Policy: ' . View::CONTENT_SECURITY_POLICY . "; frame-ancestors 'self'");
 
-// ---------------------------------------------------------------------------
-// View helpers
-// ---------------------------------------------------------------------------
-$e = static fn (string $value): string => htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-$t = static fn (string $key, array $params = []): string => $e($i18n->t($key, $params));
-
-/** Cache busting for static assets. */
-$asset = static function (string $path) use ($e): string {
-    $file = __DIR__ . '/' . $path;
-    $version = is_file($file) ? (string) filemtime($file) : '1';
-
-    return $e($path . '?v=' . $version);
-};
-
-$jsConfig = [
-    'maxLogoSizeMb' => (int) $config['max_logo_size_mb'],
-    'themeCookie' => (string) $config['theme_cookie'],
-    'consentCookie' => (string) $config['consent_cookie'],
-    'languageCookie' => (string) $config['language_cookie'],
-    'cookieLifetime' => (int) $config['language_cookie_lifetime'],
-    'language' => $i18n->current(),
-    'i18n' => $i18n->group('js.'),
-];
-
-require __DIR__ . '/templates/app.php';
+echo View::render($i18n, $config, [
+    'theme' => $theme,
+    'consented' => $consented,
+]);

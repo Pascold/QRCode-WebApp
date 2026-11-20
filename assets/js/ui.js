@@ -10,15 +10,36 @@
     var config = JSON.parse(document.getElementById('app-config').textContent);
     var darkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
-    function readCookie(name) {
-        var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
-        return match ? decodeURIComponent(match[1]) : null;
-    }
+    // ------------------------------------------------------------------
+    // Preference storage: cookies on a PHP server (so PHP can read them),
+    // localStorage on static hosting such as GitHub Pages.
+    // ------------------------------------------------------------------
 
-    function writeCookie(name, value) {
-        var secure = window.location.protocol === 'https:' ? ';Secure' : '';
-        document.cookie = name + '=' + encodeURIComponent(value) + ';path=/;max-age=' + config.cookieLifetime + ';SameSite=Lax' + secure;
-    }
+    var prefs = config.storage === 'local' ? {
+        get: function (name) {
+            try {
+                return window.localStorage.getItem(name);
+            } catch (error) {
+                return null;
+            }
+        },
+        set: function (name, value) {
+            try {
+                window.localStorage.setItem(name, value);
+            } catch (error) {
+                // Storage blocked - the preference is simply not remembered.
+            }
+        }
+    } : {
+        get: function (name) {
+            var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+            return match ? decodeURIComponent(match[1]) : null;
+        },
+        set: function (name, value) {
+            var secure = window.location.protocol === 'https:' ? ';Secure' : '';
+            document.cookie = name + '=' + encodeURIComponent(value) + ';path=/;max-age=' + config.cookieLifetime + ';SameSite=Lax' + secure;
+        }
+    };
 
     // ------------------------------------------------------------------
     // Consent
@@ -26,7 +47,7 @@
 
     var consent = {
         given: function () {
-            return readCookie(config.consentCookie) === '1';
+            return prefs.get(config.consentCookie) === '1';
         }
     };
     // Shared with app.js (which stores the form state only after consent).
@@ -59,8 +80,8 @@
             }
             switch (action.dataset.consent) {
                 case 'accept':
-                    writeCookie(config.consentCookie, '1');
-                    writeCookie(config.languageCookie, config.language);
+                    prefs.set(config.consentCookie, '1');
+                    prefs.set(config.languageCookie, config.language);
                     dialog.close();
                     dialog.remove();
                     document.dispatchEvent(new CustomEvent('qr:consent'));
@@ -84,7 +105,8 @@
 
         // Lets the visitor read the dialog in another language first.
         document.getElementById('consent-language').addEventListener('change', function (event) {
-            window.location.href = '?lang=' + encodeURIComponent(event.target.value);
+            var option = event.target.options[event.target.selectedIndex];
+            window.location.href = option.dataset.url;
         });
 
         if (typeof dialog.showModal === 'function') {
@@ -95,6 +117,12 @@
         showStep('ask');
     } else if (dialog) {
         dialog.remove();
+    }
+
+    // Remember the language being viewed, so the start page of the static
+    // build (and the PHP version) opens it next time.
+    if (consent.given() && prefs.get(config.languageCookie) !== config.language) {
+        prefs.set(config.languageCookie, config.language);
     }
 
     // ------------------------------------------------------------------
@@ -123,7 +151,7 @@
         root.setAttribute('data-theme', next);
         // Stored in a cookie so PHP can render the right theme without a flash.
         if (consent.given()) {
-            writeCookie(config.themeCookie, next);
+            prefs.set(config.themeCookie, next);
         }
         updateToggleLabel();
     });
