@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Đã lưu kiểu "{name}".',
     'js.preset_saved_no_logo' => 'Đã lưu kiểu "{name}" mà không có hình ảnh - không đủ dung lượng lưu trữ.',
     'js.preset_deleted' => 'Đã xóa kiểu "{name}".',
+
+    'type.app' => 'Ứng dụng',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Cửa hàng',
+    'field.app_id' => 'ID ứng dụng hoặc liên kết cửa hàng',
+    'field.app_id_hint' => 'App Store: số trong liên kết của ứng dụng (id123456789). Google Play: tên gói (com.example.app).',
+    'field.whatsapp_hint' => 'Nhập số đầy đủ kèm mã quốc gia.',
+    'field.vcard_format' => 'Định dạng',
+    'field.vcard_vcard' => 'vCard (dùng được mọi nơi)',
+    'field.vcard_mecard' => 'MeCard (mã ngắn hơn)',
+
+    'logo.drop_hint' => 'Bạn cũng có thể kéo ảnh vào đây hoặc dán bằng Ctrl+V.',
+    'preset.copy_link' => 'Sao chép liên kết đến kiểu này',
+
+    'download.print_size' => 'Kích thước in',
+    'download.print_dpi' => 'Độ phân giải in',
+    'download.print_hint' => 'Dùng cho PDF, EPS và in. Để trống kích thước để dùng kích thước pixel.',
+
+    'history.undo' => 'Hoàn tác',
+    'history.redo' => 'Làm lại',
+
+    'js.link_copied' => 'Đã sao chép liên kết. Liên kết chỉ chứa kiểu - không có nội dung và hình ảnh.',
+    'js.style_from_link' => 'Đã tải kiểu từ liên kết.',
 ];

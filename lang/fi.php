@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Tyyli "{name}" tallennettu.',
     'js.preset_saved_no_logo' => 'Tyyli "{name}" tallennettiin ilman kuvaa - tallennustilaa ei ole tarpeeksi.',
     'js.preset_deleted' => 'Tyyli "{name}" poistettu.',
+
+    'type.app' => 'Sovellus',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Kauppa',
+    'field.app_id' => 'Sovelluksen tunnus tai kaupan linkki',
+    'field.app_id_hint' => 'App Store: sovelluksen linkissä oleva numero (id123456789). Google Play: paketin nimi (com.example.app).',
+    'field.whatsapp_hint' => 'Anna koko numero maatunnuksen kanssa.',
+    'field.vcard_format' => 'Muoto',
+    'field.vcard_vcard' => 'vCard (toimii kaikkialla)',
+    'field.vcard_mecard' => 'MeCard (lyhyempi koodi)',
+
+    'logo.drop_hint' => 'Voit myös vetää kuvan tähän tai liittää sen näppäimillä Ctrl+V.',
+    'preset.copy_link' => 'Kopioi linkki tähän tyyliin',
+
+    'download.print_size' => 'Tulostuskoko',
+    'download.print_dpi' => 'Tulostustarkkuus',
+    'download.print_hint' => 'Käytetään PDF:ssä, EPS:ssä ja tulostuksessa. Jätä koko tyhjäksi, niin käytetään kokoa pikseleinä.',
+
+    'history.undo' => 'Kumoa',
+    'history.redo' => 'Tee uudelleen',
+
+    'js.link_copied' => 'Linkki kopioitu. Se sisältää vain tyylin - ei sisältöä eikä kuvaa.',
+    'js.style_from_link' => 'Tyyli ladattu linkistä.',
 ];

@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Stilul „{name}” a fost salvat.',
     'js.preset_saved_no_logo' => 'Stilul „{name}” a fost salvat fără imagine - nu există suficient spațiu de stocare.',
     'js.preset_deleted' => 'Stilul „{name}” a fost șters.',
+
+    'type.app' => 'Aplicație',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Magazin',
+    'field.app_id' => 'ID-ul aplicației sau linkul din magazin',
+    'field.app_id_hint' => 'App Store: numărul din linkul aplicației (id123456789). Google Play: numele pachetului (com.example.app).',
+    'field.whatsapp_hint' => 'Introdu numărul complet cu prefixul țării.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (funcționează peste tot)',
+    'field.vcard_mecard' => 'MeCard (cod mai scurt)',
+
+    'logo.drop_hint' => 'Poți și să tragi o imagine aici sau să o lipești cu Ctrl+V.',
+    'preset.copy_link' => 'Copiază linkul către acest stil',
+
+    'download.print_size' => 'Dimensiune de tipărire',
+    'download.print_dpi' => 'Rezoluție de tipărire',
+    'download.print_hint' => 'Folosit pentru PDF, EPS și tipărire. Lasă dimensiunea goală pentru a folosi dimensiunea în pixeli.',
+
+    'history.undo' => 'Anulează',
+    'history.redo' => 'Refă',
+
+    'js.link_copied' => 'Link copiat. Conține doar stilul - fără conținut și fără imagine.',
+    'js.style_from_link' => 'Stil încărcat din link.',
 ];

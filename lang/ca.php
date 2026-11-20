@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'S\'ha desat l\'estil «{name}».',
     'js.preset_saved_no_logo' => 'S\'ha desat l\'estil «{name}» sense la imatge: no hi ha prou espai d\'emmagatzematge.',
     'js.preset_deleted' => 'S\'ha suprimit l\'estil «{name}».',
+
+    'type.app' => 'Aplicació',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Botiga',
+    'field.app_id' => 'ID de l\'aplicació o enllaç de la botiga',
+    'field.app_id_hint' => 'App Store: el número de l\'enllaç de l\'aplicació (id123456789). Google Play: el nom del paquet (com.example.app).',
+    'field.whatsapp_hint' => 'Introdueix el número complet amb el prefix del país.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (funciona a tot arreu)',
+    'field.vcard_mecard' => 'MeCard (codi més curt)',
+
+    'logo.drop_hint' => 'També pots arrossegar una imatge aquí o enganxar-la amb Ctrl+V.',
+    'preset.copy_link' => 'Copia l\'enllaç a aquest estil',
+
+    'download.print_size' => 'Mida d\'impressió',
+    'download.print_dpi' => 'Resolució d\'impressió',
+    'download.print_hint' => 'S\'utilitza per a PDF, EPS i impressió. Deixa la mida buida per fer servir la mida en píxels.',
+
+    'history.undo' => 'Desfés',
+    'history.redo' => 'Refés',
+
+    'js.link_copied' => 'Enllaç copiat. Només conté l\'estil, sense contingut ni imatge.',
+    'js.style_from_link' => 'Estil carregat des de l\'enllaç.',
 ];

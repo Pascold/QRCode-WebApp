@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'انداز "{name}" محفوظ ہو گیا۔',
     'js.preset_saved_no_logo' => 'انداز "{name}" تصویر کے بغیر محفوظ ہوا - اسٹوریج میں کافی جگہ نہیں ہے۔',
     'js.preset_deleted' => 'انداز "{name}" حذف ہو گیا۔',
+
+    'type.app' => 'ایپ',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'اسٹور',
+    'field.app_id' => 'ایپ آئی ڈی یا اسٹور لنک',
+    'field.app_id_hint' => 'App Store: ایپ کے لنک میں موجود نمبر (id123456789)۔ Google Play: پیکیج کا نام (com.example.app)۔',
+    'field.whatsapp_hint' => 'ملک کے کوڈ کے ساتھ پورا نمبر درج کریں۔',
+    'field.vcard_format' => 'فارمیٹ',
+    'field.vcard_vcard' => 'vCard (ہر جگہ چلتا ہے)',
+    'field.vcard_mecard' => 'MeCard (چھوٹا کوڈ)',
+
+    'logo.drop_hint' => 'آپ تصویر یہاں گھسیٹ کر بھی لا سکتے ہیں یا Ctrl+V سے پیسٹ کر سکتے ہیں۔',
+    'preset.copy_link' => 'اس اسٹائل کا لنک کاپی کریں',
+
+    'download.print_size' => 'پرنٹ سائز',
+    'download.print_dpi' => 'پرنٹ ریزولوشن',
+    'download.print_hint' => 'PDF، EPS اور پرنٹنگ کے لیے۔ پکسل سائز استعمال کرنے کے لیے سائز خالی چھوڑ دیں۔',
+
+    'history.undo' => 'واپس کریں',
+    'history.redo' => 'دوبارہ کریں',
+
+    'js.link_copied' => 'لنک کاپی ہو گیا۔ اس میں صرف اسٹائل ہے - کوئی مواد یا تصویر نہیں۔',
+    'js.style_from_link' => 'اسٹائل لنک سے لوڈ ہو گیا۔',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" ပုံစံကို သိမ်းပြီးပါပြီ။',
     'js.preset_saved_no_logo' => '"{name}" ပုံစံကို ပုံမပါဘဲ သိမ်းထားသည် - သိုလှောင်နေရာ မလုံလောက်ပါ။',
     'js.preset_deleted' => '"{name}" ပုံစံကို ဖျက်ပြီးပါပြီ။',
+
+    'type.app' => 'အက်ပ်',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'စတိုး',
+    'field.app_id' => 'အက်ပ် ID သို့မဟုတ် စတိုးလင့်ခ်',
+    'field.app_id_hint' => 'App Store: အက်ပ်လင့်ခ်ရှိ နံပါတ် (id123456789)။ Google Play: ပက်ကေ့ဂျ်အမည် (com.example.app)။',
+    'field.whatsapp_hint' => 'နိုင်ငံကုဒ်ပါသော နံပါတ်အပြည့်အစုံကို ထည့်ပါ။',
+    'field.vcard_format' => 'ဖော်မတ်',
+    'field.vcard_vcard' => 'vCard (နေရာတိုင်းတွင် အလုပ်လုပ်သည်)',
+    'field.vcard_mecard' => 'MeCard (ကုဒ်ပိုတို)',
+
+    'logo.drop_hint' => 'ပုံကို ဤနေရာသို့ ဆွဲထည့်နိုင်သည် သို့မဟုတ် Ctrl+V ဖြင့် ကူးထည့်နိုင်သည်။',
+    'preset.copy_link' => 'ဤပုံစံ၏ လင့်ခ်ကို ကူးယူရန်',
+
+    'download.print_size' => 'ပုံနှိပ်အရွယ်အစား',
+    'download.print_dpi' => 'ပုံနှိပ် ရုပ်ထွက်',
+    'download.print_hint' => 'PDF၊ EPS နှင့် ပုံနှိပ်ခြင်းအတွက်။ pixel အရွယ်အစားကို သုံးရန် အရွယ်အစားကို ကွက်လပ်ထားပါ။',
+
+    'history.undo' => 'ပြန်ဖျက်ရန်',
+    'history.redo' => 'ပြန်လုပ်ရန်',
+
+    'js.link_copied' => 'လင့်ခ်ကို ကူးယူပြီးပါပြီ။ ပုံစံသာ ပါဝင်သည် - အကြောင်းအရာနှင့် ပုံ မပါဝင်ပါ။',
+    'js.style_from_link' => 'လင့်ခ်မှ ပုံစံကို ဖွင့်ပြီးပါပြီ။',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Štýl „{name}“ bol uložený.',
     'js.preset_saved_no_logo' => 'Štýl „{name}“ bol uložený bez obrázka - nie je naň dosť miesta.',
     'js.preset_deleted' => 'Štýl „{name}“ bol odstránený.',
+
+    'type.app' => 'Aplikácia',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Obchod',
+    'field.app_id' => 'ID aplikácie alebo odkaz do obchodu',
+    'field.app_id_hint' => 'App Store: číslo z odkazu na aplikáciu (id123456789). Google Play: názov balíka (com.example.app).',
+    'field.whatsapp_hint' => 'Zadajte celé číslo s predvoľbou krajiny.',
+    'field.vcard_format' => 'Formát',
+    'field.vcard_vcard' => 'vCard (funguje všade)',
+    'field.vcard_mecard' => 'MeCard (kratší kód)',
+
+    'logo.drop_hint' => 'Obrázok sem môžete aj presunúť alebo vložiť pomocou Ctrl+V.',
+    'preset.copy_link' => 'Kopírovať odkaz na tento štýl',
+
+    'download.print_size' => 'Veľkosť tlače',
+    'download.print_dpi' => 'Rozlíšenie tlače',
+    'download.print_hint' => 'Používa sa pre PDF, EPS a tlač. Nechajte veľkosť prázdnu, ak chcete použiť veľkosť v pixeloch.',
+
+    'history.undo' => 'Späť',
+    'history.redo' => 'Znova',
+
+    'js.link_copied' => 'Odkaz skopírovaný. Obsahuje iba štýl - bez obsahu a bez obrázka.',
+    'js.style_from_link' => 'Štýl načítaný z odkazu.',
 ];

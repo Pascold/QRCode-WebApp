@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Stili „{name}“ u ruajt.',
     'js.preset_saved_no_logo' => 'Stili „{name}“ u ruajt pa imazhin - nuk ka hapësirë të mjaftueshme.',
     'js.preset_deleted' => 'Stili „{name}“ u fshi.',
+
+    'type.app' => 'Aplikacion',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Dyqan',
+    'field.app_id' => 'ID-ja e aplikacionit ose lidhja e dyqanit',
+    'field.app_id_hint' => 'App Store: numri nga lidhja e aplikacionit (id123456789). Google Play: emri i paketës (com.example.app).',
+    'field.whatsapp_hint' => 'Shkruani numrin e plotë me kodin e shtetit.',
+    'field.vcard_format' => 'Formati',
+    'field.vcard_vcard' => 'vCard (funksionon kudo)',
+    'field.vcard_mecard' => 'MeCard (kod më i shkurtër)',
+
+    'logo.drop_hint' => 'Mund të tërhiqni gjithashtu një imazh këtu ose ta ngjitni me Ctrl+V.',
+    'preset.copy_link' => 'Kopjo lidhjen për këtë stil',
+
+    'download.print_size' => 'Madhësia e printimit',
+    'download.print_dpi' => 'Rezolucioni i printimit',
+    'download.print_hint' => 'Përdoret për PDF, EPS dhe printim. Lëreni madhësinë bosh për të përdorur madhësinë në pikselë.',
+
+    'history.undo' => 'Zhbëj',
+    'history.redo' => 'Ribëj',
+
+    'js.link_copied' => 'Lidhja u kopjua. Përmban vetëm stilin - pa përmbajtje dhe pa imazh.',
+    'js.style_from_link' => 'Stili u ngarkua nga lidhja.',
 ];

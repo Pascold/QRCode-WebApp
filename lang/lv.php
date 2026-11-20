@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Stils “{name}” saglabāts.',
     'js.preset_saved_no_logo' => 'Stils “{name}” saglabāts bez attēla - nepietiek krātuves vietas.',
     'js.preset_deleted' => 'Stils “{name}” izdzēsts.',
+
+    'type.app' => 'Lietotne',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Veikals',
+    'field.app_id' => 'Lietotnes ID vai veikala saite',
+    'field.app_id_hint' => 'App Store: numurs no lietotnes saites (id123456789). Google Play: pakotnes nosaukums (com.example.app).',
+    'field.whatsapp_hint' => 'Ievadiet pilnu numuru ar valsts kodu.',
+    'field.vcard_format' => 'Formāts',
+    'field.vcard_vcard' => 'vCard (darbojas visur)',
+    'field.vcard_mecard' => 'MeCard (īsāks kods)',
+
+    'logo.drop_hint' => 'Attēlu var arī ievilkt šeit vai ielīmēt ar Ctrl+V.',
+    'preset.copy_link' => 'Kopēt saiti uz šo stilu',
+
+    'download.print_size' => 'Drukas izmērs',
+    'download.print_dpi' => 'Drukas izšķirtspēja',
+    'download.print_hint' => 'Izmanto PDF, EPS un drukāšanai. Atstājiet izmēru tukšu, lai izmantotu izmēru pikseļos.',
+
+    'history.undo' => 'Atsaukt',
+    'history.redo' => 'Atcelt atsaukšanu',
+
+    'js.link_copied' => 'Saite nokopēta. Tā satur tikai stilu - bez satura un bez attēla.',
+    'js.style_from_link' => 'Stils ielādēts no saites.',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'A ti fi àṣà "{name}" pamọ́.',
     'js.preset_saved_no_logo' => 'A ti fi àṣà "{name}" pamọ́ láìsí àwòrán - kò sí àyè tó tó.',
     'js.preset_deleted' => 'A ti pa àṣà "{name}" rẹ́.',
+
+    'type.app' => 'Àpù',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Ilé ìtajà',
+    'field.app_id' => 'ID àpù tàbí ìjápọ̀ ilé ìtajà',
+    'field.app_id_hint' => 'App Store: nọ́mbà láti inú ìjápọ̀ àpù náà (id123456789). Google Play: orúkọ àpò (com.example.app).',
+    'field.whatsapp_hint' => 'Tẹ nọ́mbà kíkún pẹ̀lú kóòdù orílẹ̀-èdè.',
+    'field.vcard_format' => 'Ìgúnrégé',
+    'field.vcard_vcard' => 'vCard (ó ń ṣiṣẹ́ níbi gbogbo)',
+    'field.vcard_mecard' => 'MeCard (kóòdù tó kúrú jù)',
+
+    'logo.drop_hint' => 'O tún lè fa àwòrán wá síbí tàbí lẹ̀ ẹ́ pẹ̀lú Ctrl+V.',
+    'preset.copy_link' => 'Ṣe àdàkọ ìjápọ̀ sí àṣà yìí',
+
+    'download.print_size' => 'Ìwọ̀n ìtẹ̀jáde',
+    'download.print_dpi' => 'Ìpinnu ìtẹ̀jáde',
+    'download.print_hint' => 'Fún PDF, EPS àti ìtẹ̀jáde. Fi ìwọ̀n sílẹ̀ ní òfo láti lo ìwọ̀n pixel.',
+
+    'history.undo' => 'Ṣe padà',
+    'history.redo' => 'Tún ṣe',
+
+    'js.link_copied' => 'A ti ṣe àdàkọ ìjápọ̀. Àṣà nìkan ló wà nínú rẹ̀ - kò sí àkóónú tàbí àwòrán.',
+    'js.style_from_link' => 'A ti gbé àṣà wọlé láti inú ìjápọ̀.',
 ];

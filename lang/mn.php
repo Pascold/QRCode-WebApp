@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '«{name}» загварыг хадгаллаа.',
     'js.preset_saved_no_logo' => '«{name}» загварыг зураггүйгээр хадгаллаа - хадгалах зай хүрэлцэхгүй байна.',
     'js.preset_deleted' => '«{name}» загварыг устгалаа.',
+
+    'type.app' => 'Апп',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Дэлгүүр',
+    'field.app_id' => 'Аппын ID эсвэл дэлгүүрийн холбоос',
+    'field.app_id_hint' => 'App Store: аппын холбоос дахь дугаар (id123456789). Google Play: багцын нэр (com.example.app).',
+    'field.whatsapp_hint' => 'Улсын кодтой нь бүтэн дугаарыг оруулна уу.',
+    'field.vcard_format' => 'Формат',
+    'field.vcard_vcard' => 'vCard (хаана ч ажиллана)',
+    'field.vcard_mecard' => 'MeCard (богино код)',
+
+    'logo.drop_hint' => 'Зургийг энд чирж оруулах эсвэл Ctrl+V-ээр буулгаж болно.',
+    'preset.copy_link' => 'Энэ загварын холбоосыг хуулах',
+
+    'download.print_size' => 'Хэвлэх хэмжээ',
+    'download.print_dpi' => 'Хэвлэх нягтрал',
+    'download.print_hint' => 'PDF, EPS болон хэвлэхэд ашиглана. Пикселийн хэмжээг ашиглах бол хэмжээг хоосон үлдээнэ үү.',
+
+    'history.undo' => 'Буцаах',
+    'history.redo' => 'Дахин хийх',
+
+    'js.link_copied' => 'Холбоос хуулагдлаа. Зөвхөн загвар агуулна - агуулга болон зураггүй.',
+    'js.style_from_link' => 'Загварыг холбоосоос ачааллаа.',
 ];

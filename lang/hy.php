@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '«{name}» ոճը պահվեց։',
     'js.preset_saved_no_logo' => '«{name}» ոճը պահվեց առանց պատկերի - բավարար տեղ չկա։',
     'js.preset_deleted' => '«{name}» ոճը ջնջվեց։',
+
+    'type.app' => 'Հավելված',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Խանութ',
+    'field.app_id' => 'Հավելվածի ID կամ խանութի հղում',
+    'field.app_id_hint' => 'App Store: հավելվածի հղման համարը (id123456789): Google Play: փաթեթի անունը (com.example.app):',
+    'field.whatsapp_hint' => 'Մուտքագրեք ամբողջական համարը երկրի կոդով:',
+    'field.vcard_format' => 'Ձևաչափ',
+    'field.vcard_vcard' => 'vCard (աշխատում է ամենուր)',
+    'field.vcard_mecard' => 'MeCard (ավելի կարճ կոդ)',
+
+    'logo.drop_hint' => 'Կարող եք նաև պատկերը քաշել այստեղ կամ տեղադրել Ctrl+V-ով:',
+    'preset.copy_link' => 'Պատճենել այս ոճի հղումը',
+
+    'download.print_size' => 'Տպման չափ',
+    'download.print_dpi' => 'Տպման լուծաչափ',
+    'download.print_hint' => 'Օգտագործվում է PDF-ի, EPS-ի և տպման համար: Թողեք չափը դատարկ՝ պիքսելային չափն օգտագործելու համար:',
+
+    'history.undo' => 'Հետարկել',
+    'history.redo' => 'Կրկնել',
+
+    'js.link_copied' => 'Հղումը պատճենվեց: Այն պարունակում է միայն ոճը՝ առանց բովանդակության և պատկերի:',
+    'js.style_from_link' => 'Ոճը բեռնվեց հղումից:',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Isitayela esithi "{name}" silondoloziwe.',
     'js.preset_saved_no_logo' => 'Isitayela esithi "{name}" silondolozwe ngaphandle kwesithombe - asikho isikhala esanele.',
     'js.preset_deleted' => 'Isitayela esithi "{name}" sisusiwe.',
+
+    'type.app' => 'Uhlelo lokusebenza',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Isitolo',
+    'field.app_id' => 'I-ID yohlelo noma isixhumanisi sesitolo',
+    'field.app_id_hint' => 'App Store: inombolo esesixhumanisini sohlelo (id123456789). Google Play: igama lephakheji (com.example.app).',
+    'field.whatsapp_hint' => 'Faka inombolo ephelele kanye nekhodi yezwe.',
+    'field.vcard_format' => 'Ifomethi',
+    'field.vcard_vcard' => 'vCard (isebenza yonke indawo)',
+    'field.vcard_mecard' => 'MeCard (ikhodi emfushane)',
+
+    'logo.drop_hint' => 'Ungadonsela isithombe lapha noma usinamathisele nge-Ctrl+V.',
+    'preset.copy_link' => 'Kopisha isixhumanisi saleli sitayela',
+
+    'download.print_size' => 'Usayizi wokuphrinta',
+    'download.print_dpi' => 'Ukucaca kokuphrinta',
+    'download.print_hint' => 'Kusetshenziselwa i-PDF, i-EPS nokuphrinta. Shiya usayizi ungenalutho ukuze usebenzise usayizi wamaphikseli.',
+
+    'history.undo' => 'Hlehlisa',
+    'history.redo' => 'Phinda wenze',
+
+    'js.link_copied' => 'Isixhumanisi sikopishiwe. Siqukethe isitayela kuphela - akukho okuqukethwe nesithombe.',
+    'js.style_from_link' => 'Isitayela silayishwe kusukela esixhumanisini.',
 ];

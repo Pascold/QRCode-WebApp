@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Stijl "{name}" opgeslagen.',
     'js.preset_saved_no_logo' => 'Stijl "{name}" opgeslagen zonder afbeelding - er is onvoldoende opslagruimte.',
     'js.preset_deleted' => 'Stijl "{name}" verwijderd.',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Store',
+    'field.app_id' => 'App-ID of storelink',
+    'field.app_id_hint' => 'App Store: het nummer uit de link van de app (id123456789). Google Play: de pakketnaam (com.example.app).',
+    'field.whatsapp_hint' => 'Voer het volledige nummer in met de landcode.',
+    'field.vcard_format' => 'Formaat',
+    'field.vcard_vcard' => 'vCard (werkt overal)',
+    'field.vcard_mecard' => 'MeCard (kortere code)',
+
+    'logo.drop_hint' => 'Je kunt ook een afbeelding hierheen slepen of plakken met Ctrl+V.',
+    'preset.copy_link' => 'Link naar deze stijl kopiëren',
+
+    'download.print_size' => 'Afdrukformaat',
+    'download.print_dpi' => 'Afdrukresolutie',
+    'download.print_hint' => 'Gebruikt voor PDF, EPS en afdrukken. Laat het formaat leeg om de grootte in pixels te gebruiken.',
+
+    'history.undo' => 'Ongedaan maken',
+    'history.redo' => 'Opnieuw',
+
+    'js.link_copied' => 'Link gekopieerd. Hij bevat alleen de stijl - geen inhoud en geen afbeelding.',
+    'js.style_from_link' => 'Stijl geladen uit de link.',
 ];

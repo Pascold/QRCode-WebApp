@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'บันทึกสไตล์ "{name}" แล้ว',
     'js.preset_saved_no_logo' => 'บันทึกสไตล์ "{name}" โดยไม่มีรูปภาพ - พื้นที่จัดเก็บไม่เพียงพอ',
     'js.preset_deleted' => 'ลบสไตล์ "{name}" แล้ว',
+
+    'type.app' => 'แอป',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'สโตร์',
+    'field.app_id' => 'ID แอปหรือลิงก์สโตร์',
+    'field.app_id_hint' => 'App Store: ตัวเลขจากลิงก์ของแอป (id123456789) Google Play: ชื่อแพ็กเกจ (com.example.app)',
+    'field.whatsapp_hint' => 'ป้อนหมายเลขเต็มพร้อมรหัสประเทศ',
+    'field.vcard_format' => 'รูปแบบ',
+    'field.vcard_vcard' => 'vCard (ใช้ได้ทุกที่)',
+    'field.vcard_mecard' => 'MeCard (โค้ดสั้นกว่า)',
+
+    'logo.drop_hint' => 'คุณยังลากรูปภาพมาที่นี่หรือวางด้วย Ctrl+V ได้',
+    'preset.copy_link' => 'คัดลอกลิงก์ของสไตล์นี้',
+
+    'download.print_size' => 'ขนาดพิมพ์',
+    'download.print_dpi' => 'ความละเอียดการพิมพ์',
+    'download.print_hint' => 'ใช้กับ PDF, EPS และการพิมพ์ เว้นขนาดว่างไว้เพื่อใช้ขนาดเป็นพิกเซล',
+
+    'history.undo' => 'เลิกทำ',
+    'history.redo' => 'ทำซ้ำ',
+
+    'js.link_copied' => 'คัดลอกลิงก์แล้ว ลิงก์มีเฉพาะสไตล์ ไม่มีเนื้อหาและรูปภาพ',
+    'js.style_from_link' => 'โหลดสไตล์จากลิงก์แล้ว',
 ];

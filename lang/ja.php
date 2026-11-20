@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'スタイル「{name}」を保存しました。',
     'js.preset_saved_no_logo' => 'スタイル「{name}」を画像なしで保存しました（保存容量が足りません）。',
     'js.preset_deleted' => 'スタイル「{name}」を削除しました。',
+
+    'type.app' => 'アプリ',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ストア',
+    'field.app_id' => 'アプリ ID またはストアのリンク',
+    'field.app_id_hint' => 'App Store：アプリのリンクにある番号（id123456789）。Google Play：パッケージ名（com.example.app）。',
+    'field.whatsapp_hint' => '国番号を含む完全な番号を入力してください。',
+    'field.vcard_format' => '形式',
+    'field.vcard_vcard' => 'vCard（どこでも使える）',
+    'field.vcard_mecard' => 'MeCard（コードが短い）',
+
+    'logo.drop_hint' => '画像をここにドラッグするか、Ctrl+V で貼り付けることもできます。',
+    'preset.copy_link' => 'このスタイルのリンクをコピー',
+
+    'download.print_size' => '印刷サイズ',
+    'download.print_dpi' => '印刷解像度',
+    'download.print_hint' => 'PDF、EPS、印刷に使用します。空欄の場合はピクセルサイズを使います。',
+
+    'history.undo' => '元に戻す',
+    'history.redo' => 'やり直す',
+
+    'js.link_copied' => 'リンクをコピーしました。スタイルのみを含み、内容や画像は含みません。',
+    'js.style_from_link' => 'リンクからスタイルを読み込みました。',
 ];

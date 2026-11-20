@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'ਸ਼ੈਲੀ "{name}" ਸੰਭਾਲੀ ਗਈ।',
     'js.preset_saved_no_logo' => 'ਸ਼ੈਲੀ "{name}" ਤਸਵੀਰ ਤੋਂ ਬਿਨਾਂ ਸੰਭਾਲੀ ਗਈ - ਕਾਫ਼ੀ ਸਟੋਰੇਜ ਨਹੀਂ ਹੈ।',
     'js.preset_deleted' => 'ਸ਼ੈਲੀ "{name}" ਮਿਟਾਈ ਗਈ।',
+
+    'type.app' => 'ਐਪ',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ਸਟੋਰ',
+    'field.app_id' => 'ਐਪ ID ਜਾਂ ਸਟੋਰ ਲਿੰਕ',
+    'field.app_id_hint' => 'App Store: ਐਪ ਦੇ ਲਿੰਕ ਵਿੱਚਲਾ ਨੰਬਰ (id123456789)। Google Play: ਪੈਕੇਜ ਦਾ ਨਾਮ (com.example.app)।',
+    'field.whatsapp_hint' => 'ਦੇਸ਼ ਦੇ ਕੋਡ ਸਮੇਤ ਪੂਰਾ ਨੰਬਰ ਦਰਜ ਕਰੋ।',
+    'field.vcard_format' => 'ਫਾਰਮੈਟ',
+    'field.vcard_vcard' => 'vCard (ਹਰ ਥਾਂ ਚੱਲਦਾ ਹੈ)',
+    'field.vcard_mecard' => 'MeCard (ਛੋਟਾ ਕੋਡ)',
+
+    'logo.drop_hint' => 'ਤੁਸੀਂ ਤਸਵੀਰ ਇੱਥੇ ਖਿੱਚ ਕੇ ਲਿਆ ਸਕਦੇ ਹੋ ਜਾਂ Ctrl+V ਨਾਲ ਪੇਸਟ ਕਰ ਸਕਦੇ ਹੋ।',
+    'preset.copy_link' => 'ਇਸ ਸ਼ੈਲੀ ਦਾ ਲਿੰਕ ਕਾਪੀ ਕਰੋ',
+
+    'download.print_size' => 'ਪ੍ਰਿੰਟ ਆਕਾਰ',
+    'download.print_dpi' => 'ਪ੍ਰਿੰਟ ਰੈਜ਼ੋਲਿਊਸ਼ਨ',
+    'download.print_hint' => 'PDF, EPS ਅਤੇ ਪ੍ਰਿੰਟਿੰਗ ਲਈ। ਪਿਕਸਲ ਆਕਾਰ ਵਰਤਣ ਲਈ ਆਕਾਰ ਖਾਲੀ ਛੱਡੋ।',
+
+    'history.undo' => 'ਵਾਪਸ ਕਰੋ',
+    'history.redo' => 'ਮੁੜ ਕਰੋ',
+
+    'js.link_copied' => 'ਲਿੰਕ ਕਾਪੀ ਹੋ ਗਿਆ। ਇਸ ਵਿੱਚ ਸਿਰਫ਼ ਸ਼ੈਲੀ ਹੈ - ਕੋਈ ਸਮੱਗਰੀ ਜਾਂ ਤਸਵੀਰ ਨਹੀਂ।',
+    'js.style_from_link' => 'ਲਿੰਕ ਤੋਂ ਸ਼ੈਲੀ ਲੋਡ ਹੋ ਗਈ।',
 ];

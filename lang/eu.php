@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '«{name}» estiloa gorde da.',
     'js.preset_saved_no_logo' => '«{name}» estiloa irudirik gabe gorde da - ez dago behar adina leku.',
     'js.preset_deleted' => '«{name}» estiloa ezabatu da.',
+
+    'type.app' => 'Aplikazioa',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Denda',
+    'field.app_id' => 'Aplikazioaren IDa edo dendako esteka',
+    'field.app_id_hint' => 'App Store: aplikazioaren estekako zenbakia (id123456789). Google Play: paketearen izena (com.example.app).',
+    'field.whatsapp_hint' => 'Idatzi zenbaki osoa herrialde-kodearekin.',
+    'field.vcard_format' => 'Formatua',
+    'field.vcard_vcard' => 'vCard (edonon dabil)',
+    'field.vcard_mecard' => 'MeCard (kode laburragoa)',
+
+    'logo.drop_hint' => 'Irudi bat hona arrastatu edo Ctrl+V bidez itsats dezakezu ere.',
+    'preset.copy_link' => 'Kopiatu estilo honetarako esteka',
+
+    'download.print_size' => 'Inprimatze-tamaina',
+    'download.print_dpi' => 'Inprimatze-bereizmena',
+    'download.print_hint' => 'PDF, EPS eta inprimatzeko erabiltzen da. Utzi tamaina hutsik pixeletako tamaina erabiltzeko.',
+
+    'history.undo' => 'Desegin',
+    'history.redo' => 'Berregin',
+
+    'js.link_copied' => 'Esteka kopiatu da. Estiloa baino ez dauka - ez edukirik ez irudirik.',
+    'js.style_from_link' => 'Estiloa estekatik kargatu da.',
 ];

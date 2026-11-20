@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'An adana salon "{name}".',
     'js.preset_saved_no_logo' => 'An adana salon "{name}" ba tare da hoton ba - babu isasshen wurin ajiya.',
     'js.preset_deleted' => 'An share salon "{name}".',
+
+    'type.app' => 'Manhaja',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Shago',
+    'field.app_id' => 'ID na manhaja ko mahaɗin shago',
+    'field.app_id_hint' => 'App Store: lambar daga mahaɗin manhajar (id123456789). Google Play: sunan fakitin (com.example.app).',
+    'field.whatsapp_hint' => 'Shigar da cikakkiyar lamba tare da lambar ƙasa.',
+    'field.vcard_format' => 'Tsari',
+    'field.vcard_vcard' => 'vCard (yana aiki ko\'ina)',
+    'field.vcard_mecard' => 'MeCard (lamba gajera)',
+
+    'logo.drop_hint' => 'Kuna iya jawo hoto nan ko liƙa shi da Ctrl+V.',
+    'preset.copy_link' => 'Kwafi mahaɗin wannan salo',
+
+    'download.print_size' => 'Girman bugu',
+    'download.print_dpi' => 'Ƙudurin bugu',
+    'download.print_hint' => 'Ana amfani da shi don PDF, EPS da bugu. Bar girman babu komai don amfani da girman pixel.',
+
+    'history.undo' => 'Soke',
+    'history.redo' => 'Sake yi',
+
+    'js.link_copied' => 'An kwafi mahaɗin. Salo kawai ke ciki - babu abun ciki ko hoto.',
+    'js.style_from_link' => 'An loda salo daga mahaɗin.',
 ];

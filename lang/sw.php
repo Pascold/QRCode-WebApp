@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Mtindo "{name}" umehifadhiwa.',
     'js.preset_saved_no_logo' => 'Mtindo "{name}" umehifadhiwa bila picha - hakuna nafasi ya kutosha ya hifadhi.',
     'js.preset_deleted' => 'Mtindo "{name}" umefutwa.',
+
+    'type.app' => 'Programu',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Duka',
+    'field.app_id' => 'Kitambulisho cha programu au kiungo cha duka',
+    'field.app_id_hint' => 'App Store: nambari kutoka kiungo cha programu (id123456789). Google Play: jina la kifurushi (com.example.app).',
+    'field.whatsapp_hint' => 'Weka nambari kamili pamoja na msimbo wa nchi.',
+    'field.vcard_format' => 'Muundo',
+    'field.vcard_vcard' => 'vCard (inafanya kazi kila mahali)',
+    'field.vcard_mecard' => 'MeCard (msimbo mfupi zaidi)',
+
+    'logo.drop_hint' => 'Unaweza pia kuburuta picha hapa au kuibandika kwa Ctrl+V.',
+    'preset.copy_link' => 'Nakili kiungo cha mtindo huu',
+
+    'download.print_size' => 'Ukubwa wa kuchapisha',
+    'download.print_dpi' => 'Ubora wa kuchapisha',
+    'download.print_hint' => 'Hutumika kwa PDF, EPS na kuchapisha. Acha ukubwa wazi ili kutumia ukubwa wa pikseli.',
+
+    'history.undo' => 'Tendua',
+    'history.redo' => 'Rudia',
+
+    'js.link_copied' => 'Kiungo kimenakiliwa. Kina mtindo pekee - bila maudhui na bila picha.',
+    'js.style_from_link' => 'Mtindo umepakiwa kutoka kwenye kiungo.',
 ];

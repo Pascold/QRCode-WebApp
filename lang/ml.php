@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" ശൈലി സംരക്ഷിച്ചു.',
     'js.preset_saved_no_logo' => '"{name}" ശൈലി ചിത്രമില്ലാതെ സംരക്ഷിച്ചു - മതിയായ സംഭരണ ഇടമില്ല.',
     'js.preset_deleted' => '"{name}" ശൈലി ഇല്ലാതാക്കി.',
+
+    'type.app' => 'ആപ്പ്',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'സ്റ്റോർ',
+    'field.app_id' => 'ആപ്പ് ID അല്ലെങ്കിൽ സ്റ്റോർ ലിങ്ക്',
+    'field.app_id_hint' => 'App Store: ആപ്പിന്റെ ലിങ്കിലെ നമ്പർ (id123456789). Google Play: പാക്കേജിന്റെ പേര് (com.example.app).',
+    'field.whatsapp_hint' => 'രാജ്യ കോഡ് ഉൾപ്പെടെ പൂർണ്ണ നമ്പർ നൽകുക.',
+    'field.vcard_format' => 'ഫോർമാറ്റ്',
+    'field.vcard_vcard' => 'vCard (എല്ലായിടത്തും പ്രവർത്തിക്കും)',
+    'field.vcard_mecard' => 'MeCard (ചെറിയ കോഡ്)',
+
+    'logo.drop_hint' => 'ചിത്രം ഇവിടേക്ക് വലിച്ചിടാം, അല്ലെങ്കിൽ Ctrl+V ഉപയോഗിച്ച് ഒട്ടിക്കാം.',
+    'preset.copy_link' => 'ഈ ശൈലിയുടെ ലിങ്ക് പകർത്തുക',
+
+    'download.print_size' => 'പ്രിന്റ് വലുപ്പം',
+    'download.print_dpi' => 'പ്രിന്റ് റെസല്യൂഷൻ',
+    'download.print_hint' => 'PDF, EPS, പ്രിന്റിംഗ് എന്നിവയ്ക്ക്. പിക്സൽ വലുപ്പം ഉപയോഗിക്കാൻ വലുപ്പം ശൂന്യമാക്കി വിടുക.',
+
+    'history.undo' => 'പഴയപടിയാക്കുക',
+    'history.redo' => 'വീണ്ടും ചെയ്യുക',
+
+    'js.link_copied' => 'ലിങ്ക് പകർത്തി. ഇതിൽ ശൈലി മാത്രമേയുള്ളൂ - ഉള്ളടക്കമോ ചിത്രമോ ഇല്ല.',
+    'js.style_from_link' => 'ലിങ്കിൽ നിന്ന് ശൈലി ലോഡ് ചെയ്തു.',
 ];

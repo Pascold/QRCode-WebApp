@@ -29,4 +29,6 @@ return [
     'js.preset_saved' => 'Estilo "{name}" guardado.',
     'js.preset_saved_no_logo' => 'Estilo "{name}" guardado sin la imagen: no hay suficiente espacio de almacenamiento.',
     'js.preset_deleted' => 'Estilo "{name}" eliminado.',
+
+    'field.whatsapp_hint' => 'Ingresa el número completo con el código de país.',
 ];

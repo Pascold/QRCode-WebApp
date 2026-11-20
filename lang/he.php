@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'הסגנון "{name}" נשמר.',
     'js.preset_saved_no_logo' => 'הסגנון "{name}" נשמר ללא התמונה - אין מספיק מקום אחסון.',
     'js.preset_deleted' => 'הסגנון "{name}" נמחק.',
+
+    'type.app' => 'אפליקציה',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'חנות',
+    'field.app_id' => 'מזהה אפליקציה או קישור לחנות',
+    'field.app_id_hint' => 'App Store: המספר מהקישור של האפליקציה (id123456789). Google Play: שם החבילה (com.example.app).',
+    'field.whatsapp_hint' => 'הזינו את המספר המלא עם קידומת המדינה.',
+    'field.vcard_format' => 'פורמט',
+    'field.vcard_vcard' => 'vCard (עובד בכל מקום)',
+    'field.vcard_mecard' => 'MeCard (קוד קצר יותר)',
+
+    'logo.drop_hint' => 'אפשר גם לגרור תמונה לכאן או להדביק אותה עם Ctrl+V.',
+    'preset.copy_link' => 'העתקת קישור לסגנון הזה',
+
+    'download.print_size' => 'גודל הדפסה',
+    'download.print_dpi' => 'רזולוציית הדפסה',
+    'download.print_hint' => 'משמש ל-PDF, ל-EPS ולהדפסה. השאירו את הגודל ריק כדי להשתמש בגודל בפיקסלים.',
+
+    'history.undo' => 'ביטול',
+    'history.redo' => 'ביצוע מחדש',
+
+    'js.link_copied' => 'הקישור הועתק. הוא כולל רק את הסגנון - בלי תוכן ובלי תמונה.',
+    'js.style_from_link' => 'הסגנון נטען מהקישור.',
 ];

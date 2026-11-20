@@ -35,4 +35,8 @@ return [
     'preset.hint' => 'Guardá el aspecto actual (colores, formas, tamaño e imagen) y volvé a cargarlo con un clic. Los estilos se guardan solo en este navegador.',
     'preset.none' => '— Elegí un estilo —',
     'js.scan_fail' => 'No se pudo leer este código. Aumentá el contraste, reducí la imagen o elegí un nivel de corrección más alto.',
+
+    'field.whatsapp_hint' => 'Ingresá el número completo con el código de país.',
+    'logo.drop_hint' => 'También podés arrastrar una imagen acá o pegarla con Ctrl+V.',
+    'download.print_hint' => 'Se usa para PDF, EPS e impresión. Dejá el tamaño vacío para usar el tamaño en píxeles.',
 ];

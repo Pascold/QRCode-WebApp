@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" பாணி சேமிக்கப்பட்டது.',
     'js.preset_saved_no_logo' => '"{name}" பாணி படமின்றிச் சேமிக்கப்பட்டது - போதிய சேமிப்பிடம் இல்லை.',
     'js.preset_deleted' => '"{name}" பாணி நீக்கப்பட்டது.',
+
+    'type.app' => 'ஆப்ஸ்',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ஸ்டோர்',
+    'field.app_id' => 'ஆப்ஸ் ID அல்லது ஸ்டோர் இணைப்பு',
+    'field.app_id_hint' => 'App Store: ஆப்ஸ் இணைப்பில் உள்ள எண் (id123456789). Google Play: பேக்கேஜ் பெயர் (com.example.app).',
+    'field.whatsapp_hint' => 'நாட்டுக் குறியீட்டுடன் முழு எண்ணை உள்ளிடவும்.',
+    'field.vcard_format' => 'வடிவம்',
+    'field.vcard_vcard' => 'vCard (எங்கும் வேலை செய்யும்)',
+    'field.vcard_mecard' => 'MeCard (சிறிய குறியீடு)',
+
+    'logo.drop_hint' => 'படத்தை இங்கே இழுத்து விடலாம் அல்லது Ctrl+V மூலம் ஒட்டலாம்.',
+    'preset.copy_link' => 'இந்த ஸ்டைலுக்கான இணைப்பை நகலெடு',
+
+    'download.print_size' => 'அச்சு அளவு',
+    'download.print_dpi' => 'அச்சுத் தெளிவுத்திறன்',
+    'download.print_hint' => 'PDF, EPS மற்றும் அச்சிடலுக்குப் பயன்படும். பிக்சல் அளவைப் பயன்படுத்த அளவைக் காலியாக விடவும்.',
+
+    'history.undo' => 'செயல்தவிர்',
+    'history.redo' => 'மீண்டும் செய்',
+
+    'js.link_copied' => 'இணைப்பு நகலெடுக்கப்பட்டது. இதில் ஸ்டைல் மட்டுமே உள்ளது - உள்ளடக்கமோ படமோ இல்லை.',
+    'js.style_from_link' => 'இணைப்பிலிருந்து ஸ்டைல் ஏற்றப்பட்டது.',
 ];

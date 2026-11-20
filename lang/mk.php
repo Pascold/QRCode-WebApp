@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Стилот „{name}“ е зачуван.',
     'js.preset_saved_no_logo' => 'Стилот „{name}“ е зачуван без слика - нема доволно простор.',
     'js.preset_deleted' => 'Стилот „{name}“ е избришан.',
+
+    'type.app' => 'Апликација',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Продавница',
+    'field.app_id' => 'ИД на апликацијата или линк до продавницата',
+    'field.app_id_hint' => 'App Store: бројот од линкот на апликацијата (id123456789). Google Play: името на пакетот (com.example.app).',
+    'field.whatsapp_hint' => 'Внесете го целиот број со повикувачкиот број на земјата.',
+    'field.vcard_format' => 'Формат',
+    'field.vcard_vcard' => 'vCard (работи насекаде)',
+    'field.vcard_mecard' => 'MeCard (пократок код)',
+
+    'logo.drop_hint' => 'Можете и да повлечете слика овде или да ја залепите со Ctrl+V.',
+    'preset.copy_link' => 'Копирај линк до овој стил',
+
+    'download.print_size' => 'Големина за печатење',
+    'download.print_dpi' => 'Резолуција за печатење',
+    'download.print_hint' => 'Се користи за PDF, EPS и печатење. Оставете ја големината празна за да се користи големината во пиксели.',
+
+    'history.undo' => 'Врати',
+    'history.redo' => 'Повтори',
+
+    'js.link_copied' => 'Линкот е копиран. Содржи само стил - без содржина и без слика.',
+    'js.style_from_link' => 'Стилот е вчитан од линкот.',
 ];

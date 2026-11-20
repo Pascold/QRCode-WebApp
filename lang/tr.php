@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" stili kaydedildi.',
     'js.preset_saved_no_logo' => '"{name}" stili görsel olmadan kaydedildi - yeterli depolama alanı yok.',
     'js.preset_deleted' => '"{name}" stili silindi.',
+
+    'type.app' => 'Uygulama',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Mağaza',
+    'field.app_id' => 'Uygulama kimliği veya mağaza bağlantısı',
+    'field.app_id_hint' => 'App Store: uygulama bağlantısındaki numara (id123456789). Google Play: paket adı (com.example.app).',
+    'field.whatsapp_hint' => 'Numaranın tamamını ülke koduyla girin.',
+    'field.vcard_format' => 'Biçim',
+    'field.vcard_vcard' => 'vCard (her yerde çalışır)',
+    'field.vcard_mecard' => 'MeCard (daha kısa kod)',
+
+    'logo.drop_hint' => 'Bir görseli buraya sürükleyebilir veya Ctrl+V ile yapıştırabilirsiniz.',
+    'preset.copy_link' => 'Bu stilin bağlantısını kopyala',
+
+    'download.print_size' => 'Baskı boyutu',
+    'download.print_dpi' => 'Baskı çözünürlüğü',
+    'download.print_hint' => 'PDF, EPS ve yazdırma için kullanılır. Piksel boyutunu kullanmak için boyutu boş bırakın.',
+
+    'history.undo' => 'Geri al',
+    'history.redo' => 'Yinele',
+
+    'js.link_copied' => 'Bağlantı kopyalandı. Yalnızca stili içerir - içerik ve görsel yok.',
+    'js.style_from_link' => 'Stil bağlantıdan yüklendi.',
 ];

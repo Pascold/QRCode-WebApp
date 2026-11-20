@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" ቅጥ ተቀምጧል።',
     'js.preset_saved_no_logo' => '"{name}" ቅጥ ያለ ምስል ተቀምጧል - በቂ የማከማቻ ቦታ የለም።',
     'js.preset_deleted' => '"{name}" ቅጥ ተሰርዟል።',
+
+    'type.app' => 'መተግበሪያ',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'መደብር',
+    'field.app_id' => 'የመተግበሪያ መታወቂያ ወይም የመደብር አገናኝ',
+    'field.app_id_hint' => 'App Store: ከመተግበሪያው አገናኝ ያለው ቁጥር (id123456789)። Google Play: የጥቅሉ ስም (com.example.app)።',
+    'field.whatsapp_hint' => 'ሙሉ ቁጥሩን ከአገር ኮድ ጋር ያስገቡ።',
+    'field.vcard_format' => 'ቅርጸት',
+    'field.vcard_vcard' => 'vCard (በሁሉም ቦታ ይሰራል)',
+    'field.vcard_mecard' => 'MeCard (አጭር ኮድ)',
+
+    'logo.drop_hint' => 'ምስልን ወደዚህ መጎተት ወይም በCtrl+V መለጠፍ ይችላሉ።',
+    'preset.copy_link' => 'የዚህን ቅጥ አገናኝ ቅዳ',
+
+    'download.print_size' => 'የህትመት መጠን',
+    'download.print_dpi' => 'የህትመት ጥራት',
+    'download.print_hint' => 'ለPDF፣ EPS እና ለህትመት ያገለግላል። የፒክሰል መጠኑን ለመጠቀም መጠኑን ባዶ ይተዉት።',
+
+    'history.undo' => 'ቀልብስ',
+    'history.redo' => 'ድገም',
+
+    'js.link_copied' => 'አገናኙ ተቀድቷል። ቅጡን ብቻ ይዟል - ይዘት እና ምስል የለውም።',
+    'js.style_from_link' => 'ቅጡ ከአገናኙ ተጭኗል።',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Mae\'r arddull "{name}" wedi\'i chadw.',
     'js.preset_saved_no_logo' => 'Mae\'r arddull "{name}" wedi\'i chadw heb y ddelwedd - does dim digon o le storio.',
     'js.preset_deleted' => 'Mae\'r arddull "{name}" wedi\'i dileu.',
+
+    'type.app' => 'Ap',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Siop',
+    'field.app_id' => 'ID yr ap neu ddolen y siop',
+    'field.app_id_hint' => 'App Store: y rhif o ddolen yr ap (id123456789). Google Play: enw\'r pecyn (com.example.app).',
+    'field.whatsapp_hint' => 'Rhowch y rhif llawn gyda chod y wlad.',
+    'field.vcard_format' => 'Fformat',
+    'field.vcard_vcard' => 'vCard (yn gweithio ym mhobman)',
+    'field.vcard_mecard' => 'MeCard (cod byrrach)',
+
+    'logo.drop_hint' => 'Gallwch hefyd lusgo delwedd yma neu ei gludo gyda Ctrl+V.',
+    'preset.copy_link' => 'Copïo dolen i\'r arddull hon',
+
+    'download.print_size' => 'Maint argraffu',
+    'download.print_dpi' => 'Cydraniad argraffu',
+    'download.print_hint' => 'Defnyddir ar gyfer PDF, EPS ac argraffu. Gadewch y maint yn wag i ddefnyddio\'r maint mewn picseli.',
+
+    'history.undo' => 'Dadwneud',
+    'history.redo' => 'Ailwneud',
+
+    'js.link_copied' => 'Dolen wedi\'i chopïo. Dim ond yr arddull sydd ynddi - dim cynnwys a dim delwedd.',
+    'js.style_from_link' => 'Arddull wedi\'i llwytho o\'r ddolen.',
 ];

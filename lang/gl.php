@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Gardouse o estilo «{name}».',
     'js.preset_saved_no_logo' => 'Gardouse o estilo «{name}» sen a imaxe: non hai espazo de almacenamento suficiente.',
     'js.preset_deleted' => 'Eliminouse o estilo «{name}».',
+
+    'type.app' => 'Aplicación',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Tenda',
+    'field.app_id' => 'ID da aplicación ou ligazón da tenda',
+    'field.app_id_hint' => 'App Store: o número da ligazón da aplicación (id123456789). Google Play: o nome do paquete (com.example.app).',
+    'field.whatsapp_hint' => 'Introduce o número completo co prefixo do país.',
+    'field.vcard_format' => 'Formato',
+    'field.vcard_vcard' => 'vCard (funciona en calquera lugar)',
+    'field.vcard_mecard' => 'MeCard (código máis curto)',
+
+    'logo.drop_hint' => 'Tamén podes arrastrar unha imaxe aquí ou pegala con Ctrl+V.',
+    'preset.copy_link' => 'Copiar ligazón a este estilo',
+
+    'download.print_size' => 'Tamaño de impresión',
+    'download.print_dpi' => 'Resolución de impresión',
+    'download.print_hint' => 'Úsase para PDF, EPS e impresión. Deixa o tamaño baleiro para usar o tamaño en píxeles.',
+
+    'history.undo' => 'Desfacer',
+    'history.redo' => 'Refacer',
+
+    'js.link_copied' => 'Ligazón copiada. Só contén o estilo, sen contido nin imaxe.',
+    'js.style_from_link' => 'Estilo cargado desde a ligazón.',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'शैली "{name}" जतन झाली.',
     'js.preset_saved_no_logo' => 'शैली "{name}" प्रतिमेशिवाय जतन झाली - पुरेशी साठवण जागा नाही.',
     'js.preset_deleted' => 'शैली "{name}" हटवली.',
+
+    'type.app' => 'ॲप',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'स्टोअर',
+    'field.app_id' => 'ॲप ID किंवा स्टोअर लिंक',
+    'field.app_id_hint' => 'App Store: ॲपच्या लिंकमधील क्रमांक (id123456789). Google Play: पॅकेजचे नाव (com.example.app).',
+    'field.whatsapp_hint' => 'देशाच्या कोडसह पूर्ण नंबर लिहा.',
+    'field.vcard_format' => 'फॉरमॅट',
+    'field.vcard_vcard' => 'vCard (सगळीकडे चालते)',
+    'field.vcard_mecard' => 'MeCard (लहान कोड)',
+
+    'logo.drop_hint' => 'तुम्ही प्रतिमा इथे ओढून आणू शकता किंवा Ctrl+V ने पेस्ट करू शकता.',
+    'preset.copy_link' => 'या शैलीची लिंक कॉपी करा',
+
+    'download.print_size' => 'प्रिंट आकार',
+    'download.print_dpi' => 'प्रिंट रिझोल्यूशन',
+    'download.print_hint' => 'PDF, EPS आणि प्रिंटिंगसाठी. पिक्सेल आकार वापरण्यासाठी आकार रिकामा ठेवा.',
+
+    'history.undo' => 'पूर्ववत करा',
+    'history.redo' => 'पुन्हा करा',
+
+    'js.link_copied' => 'लिंक कॉपी झाली. यात फक्त शैली आहे - मजकूर किंवा प्रतिमा नाही.',
+    'js.style_from_link' => 'लिंकमधून शैली लोड झाली.',
 ];

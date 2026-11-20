@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Sábháladh an stíl "{name}".',
     'js.preset_saved_no_logo' => 'Sábháladh an stíl "{name}" gan an íomhá - níl go leor spáis stórála ann.',
     'js.preset_deleted' => 'Scriosadh an stíl "{name}".',
+
+    'type.app' => 'Aip',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Siopa',
+    'field.app_id' => 'Aitheantas na haipe nó nasc an tsiopa',
+    'field.app_id_hint' => 'App Store: an uimhir as nasc na haipe (id123456789). Google Play: ainm an phacáiste (com.example.app).',
+    'field.whatsapp_hint' => 'Cuir isteach an uimhir iomlán leis an gcód tíre.',
+    'field.vcard_format' => 'Formáid',
+    'field.vcard_vcard' => 'vCard (oibríonn sé i ngach áit)',
+    'field.vcard_mecard' => 'MeCard (cód níos giorra)',
+
+    'logo.drop_hint' => 'Is féidir leat íomhá a tharraingt anseo freisin nó í a ghreamú le Ctrl+V.',
+    'preset.copy_link' => 'Cóipeáil nasc chuig an stíl seo',
+
+    'download.print_size' => 'Méid priontála',
+    'download.print_dpi' => 'Taifeach priontála',
+    'download.print_hint' => 'Úsáidtear é do PDF, EPS agus priontáil. Fág an méid folamh chun an méid i bpicteilíní a úsáid.',
+
+    'history.undo' => 'Cealaigh',
+    'history.redo' => 'Athdhéan',
+
+    'js.link_copied' => 'Cóipeáladh an nasc. Níl ann ach an stíl - gan ábhar agus gan íomhá.',
+    'js.style_from_link' => 'Lódáladh an stíl ón nasc.',
 ];

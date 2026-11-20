@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Styl "{name}" is gestoor.',
     'js.preset_saved_no_logo' => 'Styl "{name}" is sonder die beeld gestoor - daar is nie genoeg bergingspasie nie.',
     'js.preset_deleted' => 'Styl "{name}" is uitgevee.',
+
+    'type.app' => 'Toep',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Winkel',
+    'field.app_id' => 'Toep-ID of winkelskakel',
+    'field.app_id_hint' => 'App Store: die nommer uit die toep se skakel (id123456789). Google Play: die pakketnaam (com.example.app).',
+    'field.whatsapp_hint' => 'Voer die volle nommer met die landkode in.',
+    'field.vcard_format' => 'Formaat',
+    'field.vcard_vcard' => 'vCard (werk oral)',
+    'field.vcard_mecard' => 'MeCard (korter kode)',
+
+    'logo.drop_hint' => 'Jy kan ook ’n prent hierheen sleep of dit met Ctrl+V plak.',
+    'preset.copy_link' => 'Kopieer skakel na hierdie styl',
+
+    'download.print_size' => 'Drukgrootte',
+    'download.print_dpi' => 'Drukresolusie',
+    'download.print_hint' => 'Gebruik vir PDF, EPS en druk. Laat die grootte leeg om die grootte in pieksels te gebruik.',
+
+    'history.undo' => 'Ontdoen',
+    'history.redo' => 'Herdoen',
+
+    'js.link_copied' => 'Skakel gekopieer. Dit bevat net die styl - geen inhoud en geen prent nie.',
+    'js.style_from_link' => 'Styl uit die skakel gelaai.',
 ];

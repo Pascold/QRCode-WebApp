@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '\'{name}\' 스타일을 저장했습니다.',
     'js.preset_saved_no_logo' => '\'{name}\' 스타일을 이미지 없이 저장했습니다. 저장 공간이 부족합니다.',
     'js.preset_deleted' => '\'{name}\' 스타일을 삭제했습니다.',
+
+    'type.app' => '앱',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => '스토어',
+    'field.app_id' => '앱 ID 또는 스토어 링크',
+    'field.app_id_hint' => 'App Store: 앱 링크에 있는 번호(id123456789). Google Play: 패키지 이름(com.example.app).',
+    'field.whatsapp_hint' => '국가 번호를 포함한 전체 번호를 입력하세요.',
+    'field.vcard_format' => '형식',
+    'field.vcard_vcard' => 'vCard(어디서나 작동)',
+    'field.vcard_mecard' => 'MeCard(더 짧은 코드)',
+
+    'logo.drop_hint' => '이미지를 여기로 끌어오거나 Ctrl+V로 붙여 넣을 수도 있습니다.',
+    'preset.copy_link' => '이 스타일의 링크 복사',
+
+    'download.print_size' => '인쇄 크기',
+    'download.print_dpi' => '인쇄 해상도',
+    'download.print_hint' => 'PDF, EPS 및 인쇄에 사용됩니다. 픽셀 크기를 사용하려면 크기를 비워 두세요.',
+
+    'history.undo' => '실행 취소',
+    'history.redo' => '다시 실행',
+
+    'js.link_copied' => '링크를 복사했습니다. 스타일만 포함되며 내용과 이미지는 없습니다.',
+    'js.style_from_link' => '링크에서 스타일을 불러왔습니다.',
 ];

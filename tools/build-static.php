@@ -19,7 +19,7 @@ declare(strict_types=1);
  *   index.html          start page - opens the saved or browser language
  *   <code>/index.html   one page per language, e.g. pl/, en-GB/, sr-Latn/
  *   404.html            fixes the letter case of language URLs (/en-gb/ -> /en-GB/)
- *   assets/, manifest.webmanifest, LICENSE, .nojekyll
+ *   assets/, manifest.webmanifest, sw.js (offline support), LICENSE, .nojekyll
  */
 
 use QrApp\I18n;
@@ -91,6 +91,7 @@ $copyTree = static function (string $from, string $to) use (&$copyTree): void {
 // ---------------------------------------------------------------------------
 $copyTree($root . '/assets', $out . '/assets');
 copy($root . '/manifest.webmanifest', $out . '/manifest.webmanifest');
+copy($root . '/sw.js', $out . '/sw.js');
 copy($root . '/LICENSE', $out . '/LICENSE');
 // Tells GitHub Pages not to run Jekyll on the output.
 file_put_contents($out . '/.nojekyll', '');

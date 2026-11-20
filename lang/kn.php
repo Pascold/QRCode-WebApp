@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" ಶೈಲಿಯನ್ನು ಉಳಿಸಲಾಗಿದೆ.',
     'js.preset_saved_no_logo' => '"{name}" ಶೈಲಿಯನ್ನು ಚಿತ್ರವಿಲ್ಲದೆ ಉಳಿಸಲಾಗಿದೆ - ಸಾಕಷ್ಟು ಸಂಗ್ರಹಣಾ ಸ್ಥಳವಿಲ್ಲ.',
     'js.preset_deleted' => '"{name}" ಶೈಲಿಯನ್ನು ಅಳಿಸಲಾಗಿದೆ.',
+
+    'type.app' => 'ಆ್ಯಪ್',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ಸ್ಟೋರ್',
+    'field.app_id' => 'ಆ್ಯಪ್ ID ಅಥವಾ ಸ್ಟೋರ್ ಲಿಂಕ್',
+    'field.app_id_hint' => 'App Store: ಆ್ಯಪ್ ಲಿಂಕ್‌ನಲ್ಲಿರುವ ಸಂಖ್ಯೆ (id123456789). Google Play: ಪ್ಯಾಕೇಜ್ ಹೆಸರು (com.example.app).',
+    'field.whatsapp_hint' => 'ದೇಶದ ಕೋಡ್ ಸಹಿತ ಪೂರ್ಣ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ.',
+    'field.vcard_format' => 'ಸ್ವರೂಪ',
+    'field.vcard_vcard' => 'vCard (ಎಲ್ಲೆಡೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ)',
+    'field.vcard_mecard' => 'MeCard (ಚಿಕ್ಕ ಕೋಡ್)',
+
+    'logo.drop_hint' => 'ನೀವು ಚಿತ್ರವನ್ನು ಇಲ್ಲಿಗೆ ಎಳೆದು ತರಬಹುದು ಅಥವಾ Ctrl+V ಮೂಲಕ ಅಂಟಿಸಬಹುದು.',
+    'preset.copy_link' => 'ಈ ಶೈಲಿಯ ಲಿಂಕ್ ನಕಲಿಸಿ',
+
+    'download.print_size' => 'ಮುದ್ರಣ ಗಾತ್ರ',
+    'download.print_dpi' => 'ಮುದ್ರಣ ರೆಸಲ್ಯೂಶನ್',
+    'download.print_hint' => 'PDF, EPS ಮತ್ತು ಮುದ್ರಣಕ್ಕಾಗಿ. ಪಿಕ್ಸೆಲ್ ಗಾತ್ರ ಬಳಸಲು ಗಾತ್ರವನ್ನು ಖಾಲಿ ಬಿಡಿ.',
+
+    'history.undo' => 'ರದ್ದುಮಾಡಿ',
+    'history.redo' => 'ಮತ್ತೆ ಮಾಡಿ',
+
+    'js.link_copied' => 'ಲಿಂಕ್ ನಕಲಿಸಲಾಗಿದೆ. ಇದರಲ್ಲಿ ಶೈಲಿ ಮಾತ್ರ ಇದೆ - ವಿಷಯ ಅಥವಾ ಚಿತ್ರ ಇಲ್ಲ.',
+    'js.style_from_link' => 'ಲಿಂಕ್‌ನಿಂದ ಶೈಲಿ ಲೋಡ್ ಆಗಿದೆ.',
 ];

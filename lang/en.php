@@ -166,4 +166,27 @@ return [
     'js.preset_saved' => 'Style "{name}" saved.',
     'js.preset_saved_no_logo' => 'Style "{name}" saved without the image - there is not enough storage space for it.',
     'js.preset_deleted' => 'Style "{name}" deleted.',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Store',
+    'field.app_id' => 'App ID or store link',
+    'field.app_id_hint' => 'App Store: the number from the app\'s link (id123456789). Google Play: the package name (com.example.app).',
+    'field.whatsapp_hint' => 'Enter the full number with the country code.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (works everywhere)',
+    'field.vcard_mecard' => 'MeCard (shorter code)',
+
+    'logo.drop_hint' => 'You can also drag an image here or paste it with Ctrl+V.',
+    'preset.copy_link' => 'Copy link to this style',
+
+    'download.print_size' => 'Print size',
+    'download.print_dpi' => 'Print resolution',
+    'download.print_hint' => 'Used for PDF, EPS and printing. Leave the size empty to use the pixel size.',
+
+    'history.undo' => 'Undo',
+    'history.redo' => 'Redo',
+
+    'js.link_copied' => 'Link copied. It contains only the style - no content and no image.',
+    'js.style_from_link' => 'Style loaded from the link.',
 ];

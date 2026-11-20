@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'શૈલી "{name}" સાચવી.',
     'js.preset_saved_no_logo' => 'શૈલી "{name}" છબી વિના સાચવી - પૂરતી સ્ટોરેજ જગ્યા નથી.',
     'js.preset_deleted' => 'શૈલી "{name}" કાઢી નાખી.',
+
+    'type.app' => 'ઍપ',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'સ્ટોર',
+    'field.app_id' => 'ઍપ ID અથવા સ્ટોર લિંક',
+    'field.app_id_hint' => 'App Store: ઍપની લિંકમાંનો નંબર (id123456789). Google Play: પૅકેજનું નામ (com.example.app).',
+    'field.whatsapp_hint' => 'દેશના કોડ સાથે પૂરો નંબર દાખલ કરો.',
+    'field.vcard_format' => 'ફોર્મેટ',
+    'field.vcard_vcard' => 'vCard (બધે ચાલે છે)',
+    'field.vcard_mecard' => 'MeCard (નાનો કોડ)',
+
+    'logo.drop_hint' => 'તમે છબી અહીં ખેંચી લાવી શકો છો અથવા Ctrl+V થી પેસ્ટ કરી શકો છો.',
+    'preset.copy_link' => 'આ શૈલીની લિંક કૉપિ કરો',
+
+    'download.print_size' => 'પ્રિન્ટ કદ',
+    'download.print_dpi' => 'પ્રિન્ટ રિઝોલ્યુશન',
+    'download.print_hint' => 'PDF, EPS અને પ્રિન્ટિંગ માટે. પિક્સેલ કદ વાપરવા માટે કદ ખાલી રાખો.',
+
+    'history.undo' => 'પૂર્વવત્ કરો',
+    'history.redo' => 'ફરી કરો',
+
+    'js.link_copied' => 'લિંક કૉપિ થઈ. તેમાં ફક્ત શૈલી છે - કોઈ સામગ્રી કે છબી નથી.',
+    'js.style_from_link' => 'લિંકમાંથી શૈલી લોડ થઈ.',
 ];

@@ -74,6 +74,44 @@
         return text.replace(/[^\d+*#]/g, '');
     }
 
+    /** Escapes special characters in MeCard values (\ ; ,). */
+    function escapeMecard(text) {
+        return text.replace(/([\\;,])/g, '\\$1');
+    }
+
+    /** vCard 3.0: understood by every phone. */
+    function buildVcard(first, last, org) {
+        var lines = [
+            'BEGIN:VCARD',
+            'VERSION:3.0',
+            'N:' + escapeVcard(last) + ';' + escapeVcard(first) + ';;;',
+            'FN:' + escapeVcard((first + ' ' + last).trim() || org)
+        ];
+        if (org) { lines.push('ORG:' + escapeVcard(org)); }
+        if (value('vc_title')) { lines.push('TITLE:' + escapeVcard(value('vc_title'))); }
+        if (value('vc_phone')) { lines.push('TEL;TYPE=CELL:' + cleanPhone(value('vc_phone'))); }
+        if (value('vc_email')) { lines.push('EMAIL:' + escapeVcard(value('vc_email'))); }
+        if (value('vc_url')) { lines.push('URL:' + escapeVcard(value('vc_url'))); }
+        if (value('vc_address')) { lines.push('ADR:;;' + escapeVcard(value('vc_address')) + ';;;;'); }
+        lines.push('END:VCARD');
+        return lines.join('\n');
+    }
+
+    /** MeCard: a shorter contact format, so the code has fewer dots. */
+    function buildMecard(first, last, org) {
+        // "N:Last,First" - the comma separates the two names.
+        var name = last && first ? escapeMecard(last) + ',' + escapeMecard(first) : escapeMecard(last || first || org);
+        var parts = ['N:' + name];
+        if (org) { parts.push('ORG:' + escapeMecard(org)); }
+        if (value('vc_phone')) { parts.push('TEL:' + cleanPhone(value('vc_phone'))); }
+        if (value('vc_email')) { parts.push('EMAIL:' + escapeMecard(value('vc_email'))); }
+        if (value('vc_url')) { parts.push('URL:' + escapeMecard(value('vc_url'))); }
+        if (value('vc_address')) { parts.push('ADR:' + escapeMecard(value('vc_address'))); }
+        // MeCard has no job title field - it goes into the note.
+        if (value('vc_title')) { parts.push('NOTE:' + escapeMecard(value('vc_title'))); }
+        return 'MECARD:' + parts.join(';') + ';;';
+    }
+
     /**
      * "2026-11-20T15:30" (datetime-local input) -> "20261120T153000".
      * Local ("floating") time, so the event shows at the same clock time
@@ -139,20 +177,33 @@
             if (!first && !last && !org) {
                 return '';
             }
-            var lines = [
-                'BEGIN:VCARD',
-                'VERSION:3.0',
-                'N:' + escapeVcard(last) + ';' + escapeVcard(first) + ';;;',
-                'FN:' + escapeVcard((first + ' ' + last).trim() || org)
-            ];
-            if (org) { lines.push('ORG:' + escapeVcard(org)); }
-            if (value('vc_title')) { lines.push('TITLE:' + escapeVcard(value('vc_title'))); }
-            if (value('vc_phone')) { lines.push('TEL;TYPE=CELL:' + cleanPhone(value('vc_phone'))); }
-            if (value('vc_email')) { lines.push('EMAIL:' + escapeVcard(value('vc_email'))); }
-            if (value('vc_url')) { lines.push('URL:' + escapeVcard(value('vc_url'))); }
-            if (value('vc_address')) { lines.push('ADR:;;' + escapeVcard(value('vc_address')) + ';;;;'); }
-            lines.push('END:VCARD');
-            return lines.join('\n');
+            return value('vc_format') === 'mecard' ? buildMecard(first, last, org) : buildVcard(first, last, org);
+        },
+        whatsapp: function () {
+            // wa.me needs the full international number, digits only.
+            var digits = value('wa_phone').replace(/\D/g, '');
+            if (!digits) {
+                return '';
+            }
+            var message = value('wa_message');
+            return 'https://wa.me/' + digits + (message ? '?text=' + encodeURIComponent(message) : '');
+        },
+        app: function () {
+            var id = value('app_id').replace(/\s+/g, '');
+            if (!id) {
+                return '';
+            }
+            // A full store link is used as it is.
+            if (/^https?:\/\//i.test(id)) {
+                return id;
+            }
+            if (value('app_store') === 'google') {
+                return /^[A-Za-z][\w]*(\.[A-Za-z_][\w]*)+$/.test(id)
+                    ? 'https://play.google.com/store/apps/details?id=' + id
+                    : '';
+            }
+            var match = /^(?:id)?(\d{5,})$/i.exec(id);
+            return match ? 'https://apps.apple.com/app/id' + match[1] : '';
         },
         event: function () {
             var title = value('ev_title');
@@ -351,7 +402,7 @@
 
     var STATE_KEY = 'qr_state';
     var saveTimer = null;
-    var extraFields = ['filename', 'format'];
+    var extraFields = ['filename', 'format', 'print_size', 'print_unit', 'print_dpi'];
 
     function storage() {
         try {
@@ -513,6 +564,7 @@
         updateOutputs();
         scheduleRender();
         scheduleSave();
+        scheduleHistory();
     }
 
     // ------------------------------------------------------------------
@@ -537,8 +589,8 @@
         refresh();
     }
 
-    logoInput.addEventListener('change', function () {
-        var file = logoInput.files && logoInput.files[0];
+    /** Reads an image file (chosen, dropped or pasted) into a data URL - locally. */
+    function loadLogoFile(file) {
         if (!file) {
             clearLogo();
             return;
@@ -575,9 +627,86 @@
             showMessage(t('logo_invalid'), 'error');
         };
         reader.readAsDataURL(file);
+    }
+
+    logoInput.addEventListener('change', function () {
+        loadLogoFile(logoInput.files && logoInput.files[0]);
     });
 
     logoRemove.addEventListener('click', clearLogo);
+
+    // Drag and drop an image onto the "Center image" card.
+    var logoCard = document.getElementById('logo-card');
+    var dragDepth = 0;
+
+    function hasFiles(event) {
+        return !!event.dataTransfer && Array.prototype.indexOf.call(event.dataTransfer.types || [], 'Files') !== -1;
+    }
+
+    function firstImage(files) {
+        return Array.prototype.filter.call(files || [], function (file) {
+            return /^image\//.test(file.type);
+        })[0] || (files && files[0]) || null;
+    }
+
+    logoCard.addEventListener('dragenter', function (event) {
+        if (hasFiles(event)) {
+            dragDepth++;
+            logoCard.classList.add('is-dragover');
+        }
+    });
+    logoCard.addEventListener('dragleave', function (event) {
+        if (hasFiles(event) && --dragDepth <= 0) {
+            dragDepth = 0;
+            logoCard.classList.remove('is-dragover');
+        }
+    });
+    logoCard.addEventListener('drop', function (event) {
+        dragDepth = 0;
+        logoCard.classList.remove('is-dragover');
+        if (hasFiles(event)) {
+            event.preventDefault();
+            event.stopPropagation();
+            logoInput.value = '';
+            loadLogoFile(firstImage(event.dataTransfer.files));
+        }
+    });
+    // Elsewhere on the page a dropped file must not replace the page.
+    window.addEventListener('dragover', function (event) {
+        if (hasFiles(event)) {
+            event.preventDefault();
+            event.dataTransfer.dropEffect = logoCard.contains(event.target) ? 'copy' : 'none';
+        }
+    });
+    window.addEventListener('drop', function (event) {
+        if (hasFiles(event)) {
+            event.preventDefault();
+        }
+    });
+
+    // Paste an image (e.g. a screenshot) with Ctrl+V / Cmd+V.
+    document.addEventListener('paste', function (event) {
+        var data = event.clipboardData;
+        if (!data || document.querySelector('dialog[open]')) {
+            return;
+        }
+        var image = Array.prototype.filter.call(data.files || [], function (file) {
+            return /^image\//.test(file.type);
+        })[0];
+        if (!image) {
+            return;
+        }
+        // In a text field, pasted text wins (some apps copy text and an image).
+        var target = event.target;
+        var typing = target && (target.tagName === 'TEXTAREA'
+            || (target.tagName === 'INPUT' && /^(text|url|email|tel|search|number|password)$/.test(target.type)));
+        if (typing && data.getData('text/plain')) {
+            return;
+        }
+        event.preventDefault();
+        logoInput.value = '';
+        loadLogoFile(image);
+    });
 
     // ------------------------------------------------------------------
     // Download / copy / reset
@@ -595,6 +724,32 @@
     // Print formats are rendered at up to 3x resolution (about 300 DPI).
     var PRINT_FORMATS = { pdf: true, eps: true };
     var EXTENSIONS = { jpeg: 'jpg' };
+    // Largest image rendered for print (browsers limit canvas sizes).
+    var MAX_PRINT_PX = 6000;
+    var UNIT_PER_INCH = { mm: 25.4, cm: 2.54, in: 1 };
+
+    /** The chosen print size in inches, or 0 when the field is empty. */
+    function printInches() {
+        var amount = parseFloat(String(value('print_size')).replace(',', '.'));
+        var perInch = UNIT_PER_INCH[value('print_unit')] || 2.54;
+        return isFinite(amount) && amount > 0 ? Math.min(100, amount / perInch) : 0;
+    }
+
+    /**
+     * Resolution and physical size for PDF, EPS and printing.
+     * With a print size: that size at the chosen DPI. Without one: the pixel
+     * size at 96 DPI (1 px = 0.75 pt), rendered at `fallbackScale`.
+     */
+    function printLayout(fallbackScale) {
+        var size = parseInt(value('size'), 10) || 600;
+        var inches = printInches();
+        if (!inches) {
+            return { scale: Math.min(fallbackScale, 4096 / size), widthPt: size * 0.75, cssWidth: size + 'px' };
+        }
+        var dpi = parseInt(value('print_dpi'), 10) || 300;
+        var pixels = Math.max(64, Math.min(MAX_PRINT_PX, Math.round(inches * dpi)));
+        return { scale: pixels / size, widthPt: inches * 72, cssWidth: inches + 'in' };
+    }
 
     /** Renders the current code into a canvas (for the custom exporters). */
     async function renderCanvas(data, overrides) {
@@ -664,14 +819,14 @@
         }
 
         var size = parseInt(value('size'), 10) || 600;
-        var scale = PRINT_FORMATS[format] ? Math.min(3, 4096 / size) : 1;
+        // Print formats: the print size at its DPI, or about 300 DPI by default.
+        var layout = PRINT_FORMATS[format] ? printLayout(3) : { scale: 1, widthPt: size * 0.75 };
 
         busy(downloadButton, async function () {
-            var canvas = await renderCanvas(data, { forceBackground: !!OPAQUE_FORMATS[format], scale: scale });
+            var canvas = await renderCanvas(data, { forceBackground: !!OPAQUE_FORMATS[format], scale: layout.scale });
             var blob = await window.QrExport.encode(format, canvas, {
-                // Physical size: the chosen pixel size at 96 DPI (1 px = 0.75 pt).
-                widthPt: size * 0.75,
-                heightPt: size * 0.75,
+                widthPt: layout.widthPt,
+                heightPt: layout.widthPt,
                 title: safeFilename()
             });
             saveBlob(blob, safeFilename() + '.' + (EXTENSIONS[format] || format));
@@ -710,9 +865,9 @@
         if (!data) {
             return;
         }
-        var size = parseInt(value('size'), 10) || 600;
-        // Twice the resolution keeps the edges sharp on paper.
-        new QRCodeStyling(buildOptions(data, { scale: Math.min(2, 4096 / size) })).getRawData('png')
+        // Without a print size, twice the resolution keeps the edges sharp on paper.
+        var layout = printLayout(2);
+        new QRCodeStyling(buildOptions(data, { scale: layout.scale })).getRawData('png')
             .then(function (blob) {
                 if (printUrl) {
                     URL.revokeObjectURL(printUrl);
@@ -720,7 +875,7 @@
                 printUrl = URL.createObjectURL(blob);
                 var image = new Image();
                 image.alt = '';
-                image.style.width = size + 'px';
+                image.style.width = layout.cssWidth;
                 image.onload = function () {
                     window.print();
                 };
@@ -891,8 +1046,21 @@
         'dots_type', 'dots_color', 'gradient', 'gradient_color',
         'corner_square_type', 'corner_square_color', 'corner_dot_type', 'corner_dot_color',
         'background_color', 'transparent', 'size', 'margin', 'error_correction',
-        'logo_size', 'logo_margin', 'logo_hide_dots'
+        'logo_size', 'logo_margin', 'logo_hide_dots',
+        'print_size', 'print_unit', 'print_dpi'
     ];
+
+    /** The current values of the style fields only (no content). */
+    function styleFields() {
+        var fields = {};
+        var all = collectState().fields;
+        STYLE_FIELDS.forEach(function (key) {
+            if (key in all) {
+                fields[key] = all[key];
+            }
+        });
+        return fields;
+    }
     var presetSelect = document.getElementById('preset-select');
     var presetName = document.getElementById('preset-name');
     var presetSave = document.getElementById('preset-save');
@@ -942,15 +1110,8 @@
         if (!name || !consentGiven()) {
             return;
         }
-        var fields = {};
-        var all = collectState().fields;
-        STYLE_FIELDS.forEach(function (key) {
-            if (key in all) {
-                fields[key] = all[key];
-            }
-        });
         var presets = readPresets();
-        presets[name] = { fields: fields, logo: logoDataUrl, logoName: logoName.title || '' };
+        presets[name] = { fields: styleFields(), logo: logoDataUrl, logoName: logoName.title || '' };
         try {
             writePresets(presets);
             showMessage(t('preset_saved', { name: name }), 'success');
@@ -1011,6 +1172,192 @@
     renderPresets('');
 
     // ------------------------------------------------------------------
+    // Style link: the style (no content, no image) is put after "#" in the
+    // address. Browsers never send that part to a server.
+    // ------------------------------------------------------------------
+
+    var STYLE_HASH = /^#style=([A-Za-z0-9_-]{1,4000})$/;
+
+    function encodeStyle(fields) {
+        return btoa(utf8ByteString(JSON.stringify(fields)))
+            .replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+    }
+
+    function decodeStyle(text) {
+        var binary = atob(text.replace(/-/g, '+').replace(/_/g, '/'));
+        var bytes = Uint8Array.from(binary, function (c) { return c.charCodeAt(0); });
+        return JSON.parse(new TextDecoder().decode(bytes));
+    }
+
+    /** Keeps only known style fields with sensible values. */
+    function cleanStyle(data) {
+        var fields = {};
+        if (!data || typeof data !== 'object') {
+            return fields;
+        }
+        STYLE_FIELDS.forEach(function (key) {
+            var saved = data[key];
+            var field = form.elements.namedItem(key);
+            if (!field || saved === undefined) {
+                return;
+            }
+            if (field.type === 'checkbox') {
+                fields[key] = saved === true;
+            } else if (typeof saved === 'string' && saved.length <= 20) {
+                if (field.type === 'color' && !/^#[0-9a-f]{6}$/i.test(saved)) {
+                    return;
+                }
+                if ((field.type === 'range' || field.type === 'number') && !/^(\d+(\.\d+)?)?$/.test(saved)) {
+                    return;
+                }
+                fields[key] = saved;
+            }
+        });
+        return fields;
+    }
+
+    function applyStyleLink() {
+        var match = STYLE_HASH.exec(window.location.hash);
+        if (!match) {
+            return;
+        }
+        // The style is applied once; the address goes back to normal.
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        var fields;
+        try {
+            fields = cleanStyle(decodeStyle(match[1]));
+        } catch (error) {
+            return;
+        }
+        if (!Object.keys(fields).length) {
+            return;
+        }
+        applyFields(fields);
+        refresh();
+        showMessage(t('style_from_link'), 'success');
+    }
+
+    document.getElementById('preset-link').addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            showMessage(t('clipboard_failed'), 'error');
+            return;
+        }
+        var link = window.location.href.split('#')[0] + '#style=' + encodeStyle(styleFields());
+        navigator.clipboard.writeText(link)
+            .then(function () { showMessage(t('link_copied'), 'success'); })
+            .catch(function () { showMessage(t('clipboard_failed'), 'error'); });
+    });
+
+    window.addEventListener('hashchange', applyStyleLink);
+
+    // ------------------------------------------------------------------
+    // Undo / redo (buttons and Ctrl+Z / Ctrl+Y). Only in memory.
+    // ------------------------------------------------------------------
+
+    var HISTORY_LIMIT = 100;
+    var undoButton = document.getElementById('undo');
+    var redoButton = document.getElementById('redo');
+    var historyStack = [];
+    var historyIndex = -1;
+    var historyTimer = null;
+    var applyingHistory = false;
+
+    function updateHistoryButtons() {
+        undoButton.disabled = historyIndex <= 0;
+        redoButton.disabled = historyIndex >= historyStack.length - 1;
+    }
+
+    function recordHistory() {
+        window.clearTimeout(historyTimer);
+        historyTimer = null;
+        var state = collectState();
+        var key = JSON.stringify(state.fields);
+        var current = historyStack[historyIndex];
+        if (current && current.key === key && current.state.logo === state.logo) {
+            return;
+        }
+        // A new change removes the steps that were undone.
+        historyStack = historyStack.slice(0, historyIndex + 1);
+        historyStack.push({ key: key, state: state });
+        if (historyStack.length > HISTORY_LIMIT) {
+            historyStack.shift();
+        }
+        historyIndex = historyStack.length - 1;
+        updateHistoryButtons();
+    }
+
+    function scheduleHistory() {
+        if (applyingHistory) {
+            return;
+        }
+        window.clearTimeout(historyTimer);
+        // Typing is grouped into one step.
+        historyTimer = window.setTimeout(recordHistory, 500);
+    }
+
+    function goHistory(step) {
+        if (historyTimer) {
+            recordHistory();
+        }
+        var target = historyIndex + step;
+        if (target < 0 || target >= historyStack.length) {
+            return;
+        }
+        historyIndex = target;
+        var state = historyStack[target].state;
+        applyingHistory = true;
+        try {
+            applyFields(state.fields);
+            logoDataUrl = state.logo || null;
+            logoInput.value = '';
+            setLogoName(state.logo ? state.logoName : '');
+            refresh();
+        } finally {
+            applyingHistory = false;
+        }
+        updateHistoryButtons();
+    }
+
+    undoButton.addEventListener('click', function () { goHistory(-1); });
+    redoButton.addEventListener('click', function () { goHistory(1); });
+
+    document.addEventListener('keydown', function (event) {
+        if (!(event.ctrlKey || event.metaKey) || event.altKey || document.querySelector('dialog[open]')) {
+            return;
+        }
+        var key = event.key.toLowerCase();
+        var redo = key === 'y' || (key === 'z' && event.shiftKey);
+        if (key !== 'z' && key !== 'y') {
+            return;
+        }
+        // Text fields keep their own undo for typing.
+        var target = event.target;
+        if (target && (target.isContentEditable || target.tagName === 'TEXTAREA'
+            || (target.tagName === 'INPUT' && /^(text|url|email|tel|search|number|password)$/.test(target.type)))) {
+            return;
+        }
+        event.preventDefault();
+        goHistory(redo ? 1 : -1);
+    });
+
+    // ------------------------------------------------------------------
+    // Offline support: a service worker keeps a copy of the site's own files.
+    // ------------------------------------------------------------------
+
+    function registerServiceWorker() {
+        if (!config.serviceWorker || !('serviceWorker' in navigator) || !window.isSecureContext) {
+            return;
+        }
+        navigator.serviceWorker.register(config.serviceWorker).catch(function (error) {
+            if (window.console) {
+                console.warn('Offline mode is not available:', error);
+            }
+        });
+    }
+
+    // ------------------------------------------------------------------
     // Wiring
     // ------------------------------------------------------------------
 
@@ -1035,8 +1382,12 @@
 
     // File name and format live outside the <form> element in the DOM.
     extraFields.forEach(function (id) {
-        document.getElementById(id).addEventListener('input', scheduleSave);
-        document.getElementById(id).addEventListener('change', scheduleSave);
+        ['input', 'change'].forEach(function (type) {
+            document.getElementById(id).addEventListener(type, function () {
+                scheduleSave();
+                scheduleHistory();
+            });
+        });
     });
 
     // Save right away when the page is left (e.g. switching the language).
@@ -1045,4 +1396,13 @@
 
     restoreState();
     refresh();
+    applyStyleLink();
+    recordHistory();
+
+    // Offline mode is set up only after consent (it stores files in the browser).
+    if (consentGiven()) {
+        registerServiceWorker();
+    } else {
+        document.addEventListener('qr:consent', registerServiceWorker);
+    }
 })();

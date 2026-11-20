@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Стыль «{name}» захаваны.',
     'js.preset_saved_no_logo' => 'Стыль «{name}» захаваны без выявы - не хапае месца для захоўвання.',
     'js.preset_deleted' => 'Стыль «{name}» выдалены.',
+
+    'type.app' => 'Праграма',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Крама',
+    'field.app_id' => 'ID праграмы або спасылка на краму',
+    'field.app_id_hint' => 'App Store: нумар са спасылкі на праграму (id123456789). Google Play: назва пакета (com.example.app).',
+    'field.whatsapp_hint' => 'Увядзіце поўны нумар з кодам краіны.',
+    'field.vcard_format' => 'Фармат',
+    'field.vcard_vcard' => 'vCard (працуе ўсюды)',
+    'field.vcard_mecard' => 'MeCard (карацейшы код)',
+
+    'logo.drop_hint' => 'Таксама можна перацягнуць сюды выяву або ўставіць яе праз Ctrl+V.',
+    'preset.copy_link' => 'Скапіраваць спасылку на гэты стыль',
+
+    'download.print_size' => 'Памер друку',
+    'download.print_dpi' => 'Раздзяляльнасць друку',
+    'download.print_hint' => 'Для PDF, EPS і друку. Пакіньце памер пустым, каб выкарыстаць памер у пікселях.',
+
+    'history.undo' => 'Адрабіць',
+    'history.redo' => 'Паўтарыць',
+
+    'js.link_copied' => 'Спасылка скапіравана. Яна змяшчае толькі стыль - без змесціва і без выявы.',
+    'js.style_from_link' => 'Стыль загружаны са спасылкі.',
 ];

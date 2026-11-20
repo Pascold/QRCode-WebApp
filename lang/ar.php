@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'تم حفظ النمط «{name}».',
     'js.preset_saved_no_logo' => 'تم حفظ النمط «{name}» بدون الصورة - لا توجد مساحة تخزين كافية.',
     'js.preset_deleted' => 'تم حذف النمط «{name}».',
+
+    'type.app' => 'تطبيق',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'المتجر',
+    'field.app_id' => 'معرّف التطبيق أو رابط المتجر',
+    'field.app_id_hint' => 'App Store: الرقم الموجود في رابط التطبيق (id123456789). Google Play: اسم الحزمة (com.example.app).',
+    'field.whatsapp_hint' => 'أدخل الرقم كاملاً مع رمز الدولة.',
+    'field.vcard_format' => 'التنسيق',
+    'field.vcard_vcard' => 'vCard (يعمل في كل مكان)',
+    'field.vcard_mecard' => 'MeCard (رمز أقصر)',
+
+    'logo.drop_hint' => 'يمكنك أيضًا سحب صورة إلى هنا أو لصقها باستخدام Ctrl+V.',
+    'preset.copy_link' => 'نسخ رابط هذا النمط',
+
+    'download.print_size' => 'حجم الطباعة',
+    'download.print_dpi' => 'دقة الطباعة',
+    'download.print_hint' => 'يُستخدم لملفات PDF وEPS والطباعة. اترك الحجم فارغًا لاستخدام الحجم بالبكسل.',
+
+    'history.undo' => 'تراجع',
+    'history.redo' => 'إعادة',
+
+    'js.link_copied' => 'تم نسخ الرابط. يحتوي على النمط فقط - بدون محتوى وبدون صورة.',
+    'js.style_from_link' => 'تم تحميل النمط من الرابط.',
 ];

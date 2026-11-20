@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Qaabka "{name}" waa la kaydiyay.',
     'js.preset_saved_no_logo' => 'Qaabka "{name}" waxaa la kaydiyay sawir la\'aan - meel kayd oo ku filan ma jirto.',
     'js.preset_deleted' => 'Qaabka "{name}" waa la tirtiray.',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Dukaan',
+    'field.app_id' => 'Aqoonsiga app-ka ama xiriirka dukaanka',
+    'field.app_id_hint' => 'App Store: lambarka ku jira xiriirka app-ka (id123456789). Google Play: magaca xirmada (com.example.app).',
+    'field.whatsapp_hint' => 'Geli lambarka oo dhan oo leh koodka dalka.',
+    'field.vcard_format' => 'Qaab',
+    'field.vcard_vcard' => 'vCard (meel kasta wuu ka shaqeeyaa)',
+    'field.vcard_mecard' => 'MeCard (kood gaaban)',
+
+    'logo.drop_hint' => 'Sidoo kale sawir halkan u soo jiid ama ku dheji Ctrl+V.',
+    'preset.copy_link' => 'Koobi xiriirka qaabkan',
+
+    'download.print_size' => 'Cabbirka daabacaadda',
+    'download.print_dpi' => 'Tayada daabacaadda',
+    'download.print_hint' => 'Waxaa loo isticmaalaa PDF, EPS iyo daabacaadda. Cabbirka bannaan u daa si loo isticmaalo cabbirka pixel-ka.',
+
+    'history.undo' => 'Ka noqo',
+    'history.redo' => 'Samee mar kale',
+
+    'js.link_copied' => 'Xiriirka waa la koobiyeeyay. Wuxuu ka kooban yahay qaabka oo kaliya - ma jiro nuxur iyo sawir.',
+    'js.style_from_link' => 'Qaabka waxaa laga soo raray xiriirka.',
 ];

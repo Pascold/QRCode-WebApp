@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'បានរក្សាទុករចនាប័ទ្ម "{name}"។',
     'js.preset_saved_no_logo' => 'បានរក្សាទុករចនាប័ទ្ម "{name}" ដោយគ្មានរូបភាព - ទំហំផ្ទុកមិនគ្រប់គ្រាន់។',
     'js.preset_deleted' => 'បានលុបរចនាប័ទ្ម "{name}"។',
+
+    'type.app' => 'កម្មវិធី',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ហាង',
+    'field.app_id' => 'ID កម្មវិធី ឬតំណហាង',
+    'field.app_id_hint' => 'App Store: លេខពីតំណរបស់កម្មវិធី (id123456789)។ Google Play: ឈ្មោះកញ្ចប់ (com.example.app)។',
+    'field.whatsapp_hint' => 'បញ្ចូលលេខពេញ រួមទាំងលេខកូដប្រទេស។',
+    'field.vcard_format' => 'ទម្រង់',
+    'field.vcard_vcard' => 'vCard (ដំណើរការគ្រប់ទីកន្លែង)',
+    'field.vcard_mecard' => 'MeCard (កូដខ្លីជាង)',
+
+    'logo.drop_hint' => 'អ្នកក៏អាចអូសរូបភាពមកទីនេះ ឬបិទភ្ជាប់ដោយ Ctrl+V ផងដែរ។',
+    'preset.copy_link' => 'ចម្លងតំណទៅរចនាប័ទ្មនេះ',
+
+    'download.print_size' => 'ទំហំបោះពុម្ព',
+    'download.print_dpi' => 'គុណភាពបង្ហាញនៃការបោះពុម្ព',
+    'download.print_hint' => 'ប្រើសម្រាប់ PDF, EPS និងការបោះពុម្ព។ ទុកទំហំឱ្យទទេ ដើម្បីប្រើទំហំជាភីកសែល។',
+
+    'history.undo' => 'មិនធ្វើវិញ',
+    'history.redo' => 'ធ្វើវិញ',
+
+    'js.link_copied' => 'បានចម្លងតំណ។ វាមានតែរចនាប័ទ្មប៉ុណ្ណោះ - គ្មានខ្លឹមសារ និងគ្មានរូបភាព។',
+    'js.style_from_link' => 'បានផ្ទុករចនាប័ទ្មពីតំណ។',
 ];

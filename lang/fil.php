@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Na-save ang istilong "{name}".',
     'js.preset_saved_no_logo' => 'Na-save ang istilong "{name}" nang walang larawan - kulang ang espasyo sa storage.',
     'js.preset_deleted' => 'Nabura ang istilong "{name}".',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Store',
+    'field.app_id' => 'ID ng app o link ng store',
+    'field.app_id_hint' => 'App Store: ang numero mula sa link ng app (id123456789). Google Play: ang pangalan ng package (com.example.app).',
+    'field.whatsapp_hint' => 'Ilagay ang buong numero kasama ang country code.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (gumagana kahit saan)',
+    'field.vcard_mecard' => 'MeCard (mas maikling code)',
+
+    'logo.drop_hint' => 'Puwede mo ring i-drag ang larawan dito o i-paste ito gamit ang Ctrl+V.',
+    'preset.copy_link' => 'Kopyahin ang link sa estilong ito',
+
+    'download.print_size' => 'Laki ng print',
+    'download.print_dpi' => 'Resolution ng print',
+    'download.print_hint' => 'Ginagamit para sa PDF, EPS at pag-print. Iwanang blangko ang laki para gamitin ang laki sa pixel.',
+
+    'history.undo' => 'I-undo',
+    'history.redo' => 'I-redo',
+
+    'js.link_copied' => 'Nakopya ang link. Estilo lang ang laman nito - walang nilalaman at walang larawan.',
+    'js.style_from_link' => 'Na-load ang estilo mula sa link.',
 ];

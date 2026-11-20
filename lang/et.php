@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Stiil „{name}” salvestati.',
     'js.preset_saved_no_logo' => 'Stiil „{name}” salvestati ilma pildita - salvestusruumi ei jätku.',
     'js.preset_deleted' => 'Stiil „{name}” kustutati.',
+
+    'type.app' => 'Rakendus',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Pood',
+    'field.app_id' => 'Rakenduse ID või poe link',
+    'field.app_id_hint' => 'App Store: number rakenduse lingist (id123456789). Google Play: paketi nimi (com.example.app).',
+    'field.whatsapp_hint' => 'Sisesta täielik number koos riigikoodiga.',
+    'field.vcard_format' => 'Vorming',
+    'field.vcard_vcard' => 'vCard (töötab kõikjal)',
+    'field.vcard_mecard' => 'MeCard (lühem kood)',
+
+    'logo.drop_hint' => 'Pildi võid ka siia lohistada või kleepida klahvidega Ctrl+V.',
+    'preset.copy_link' => 'Kopeeri link selle stiili juurde',
+
+    'download.print_size' => 'Prindisuurus',
+    'download.print_dpi' => 'Prindi eraldusvõime',
+    'download.print_hint' => 'Kasutatakse PDF-i, EPS-i ja printimise jaoks. Jäta suurus tühjaks, et kasutada suurust pikslites.',
+
+    'history.undo' => 'Võta tagasi',
+    'history.redo' => 'Tee uuesti',
+
+    'js.link_copied' => 'Link kopeeritud. See sisaldab ainult stiili - ilma sisu ja pildita.',
+    'js.style_from_link' => 'Stiil laaditi lingist.',
 ];

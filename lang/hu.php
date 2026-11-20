@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'A(z) „{name}” stílus elmentve.',
     'js.preset_saved_no_logo' => 'A(z) „{name}” stílus kép nélkül lett elmentve - nincs elég tárhely.',
     'js.preset_deleted' => 'A(z) „{name}” stílus törölve.',
+
+    'type.app' => 'Alkalmazás',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Áruház',
+    'field.app_id' => 'Alkalmazásazonosító vagy áruházlink',
+    'field.app_id_hint' => 'App Store: az alkalmazás linkjében lévő szám (id123456789). Google Play: a csomag neve (com.example.app).',
+    'field.whatsapp_hint' => 'Add meg a teljes számot az országhívószámmal.',
+    'field.vcard_format' => 'Formátum',
+    'field.vcard_vcard' => 'vCard (mindenhol működik)',
+    'field.vcard_mecard' => 'MeCard (rövidebb kód)',
+
+    'logo.drop_hint' => 'Képet ide is húzhatsz, vagy beillesztheted a Ctrl+V billentyűkkel.',
+    'preset.copy_link' => 'Link másolása ehhez a stílushoz',
+
+    'download.print_size' => 'Nyomtatási méret',
+    'download.print_dpi' => 'Nyomtatási felbontás',
+    'download.print_hint' => 'PDF-hez, EPS-hez és nyomtatáshoz. Hagyd üresen a méretet a képpontméret használatához.',
+
+    'history.undo' => 'Visszavonás',
+    'history.redo' => 'Újra',
+
+    'js.link_copied' => 'Link kimásolva. Csak a stílust tartalmazza - tartalmat és képet nem.',
+    'js.style_from_link' => 'A stílus betöltve a linkből.',
 ];

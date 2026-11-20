@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'სტილი „{name}“ შენახულია.',
     'js.preset_saved_no_logo' => 'სტილი „{name}“ შენახულია სურათის გარეშე - მეხსიერება არ არის საკმარისი.',
     'js.preset_deleted' => 'სტილი „{name}“ წაშლილია.',
+
+    'type.app' => 'აპი',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'მაღაზია',
+    'field.app_id' => 'აპის ID ან მაღაზიის ბმული',
+    'field.app_id_hint' => 'App Store: აპის ბმულში არსებული ნომერი (id123456789). Google Play: პაკეტის სახელი (com.example.app).',
+    'field.whatsapp_hint' => 'შეიყვანეთ სრული ნომერი ქვეყნის კოდით.',
+    'field.vcard_format' => 'ფორმატი',
+    'field.vcard_vcard' => 'vCard (ყველგან მუშაობს)',
+    'field.vcard_mecard' => 'MeCard (უფრო მოკლე კოდი)',
+
+    'logo.drop_hint' => 'სურათის აქ გადმოტანა ან Ctrl+V-ით ჩასმაც შეგიძლიათ.',
+    'preset.copy_link' => 'ამ სტილის ბმულის კოპირება',
+
+    'download.print_size' => 'ბეჭდვის ზომა',
+    'download.print_dpi' => 'ბეჭდვის გარჩევადობა',
+    'download.print_hint' => 'გამოიყენება PDF-ის, EPS-ისა და ბეჭდვისთვის. პიქსელური ზომის გამოსაყენებლად ზომა ცარიელი დატოვეთ.',
+
+    'history.undo' => 'გაუქმება',
+    'history.redo' => 'გამეორება',
+
+    'js.link_copied' => 'ბმული დაკოპირდა. მასში მხოლოდ სტილია - შინაარსისა და სურათის გარეშე.',
+    'js.style_from_link' => 'სტილი ჩაიტვირთა ბმულიდან.',
 ];

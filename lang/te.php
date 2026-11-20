@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" శైలి సేవ్ చేయబడింది.',
     'js.preset_saved_no_logo' => '"{name}" శైలి చిత్రం లేకుండా సేవ్ చేయబడింది - తగినంత నిల్వ స్థలం లేదు.',
     'js.preset_deleted' => '"{name}" శైలి తొలగించబడింది.',
+
+    'type.app' => 'యాప్',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'స్టోర్',
+    'field.app_id' => 'యాప్ ID లేదా స్టోర్ లింక్',
+    'field.app_id_hint' => 'App Store: యాప్ లింక్‌లోని సంఖ్య (id123456789). Google Play: ప్యాకేజీ పేరు (com.example.app).',
+    'field.whatsapp_hint' => 'దేశ కోడ్‌తో సహా పూర్తి నంబర్‌ను నమోదు చేయండి.',
+    'field.vcard_format' => 'ఫార్మాట్',
+    'field.vcard_vcard' => 'vCard (ఎక్కడైనా పనిచేస్తుంది)',
+    'field.vcard_mecard' => 'MeCard (చిన్న కోడ్)',
+
+    'logo.drop_hint' => 'మీరు చిత్రాన్ని ఇక్కడికి లాగవచ్చు లేదా Ctrl+V తో అతికించవచ్చు.',
+    'preset.copy_link' => 'ఈ శైలికి లింక్‌ను కాపీ చేయండి',
+
+    'download.print_size' => 'ప్రింట్ పరిమాణం',
+    'download.print_dpi' => 'ప్రింట్ రిజల్యూషన్',
+    'download.print_hint' => 'PDF, EPS మరియు ప్రింటింగ్ కోసం. పిక్సెల్ పరిమాణాన్ని ఉపయోగించడానికి పరిమాణాన్ని ఖాళీగా ఉంచండి.',
+
+    'history.undo' => 'రద్దు చేయి',
+    'history.redo' => 'మళ్లీ చేయి',
+
+    'js.link_copied' => 'లింక్ కాపీ అయింది. ఇందులో శైలి మాత్రమే ఉంది - కంటెంట్ లేదా చిత్రం లేదు.',
+    'js.style_from_link' => 'లింక్ నుండి శైలి లోడ్ అయింది.',
 ];

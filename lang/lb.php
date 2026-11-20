@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Stil „{name}“ gespäichert.',
     'js.preset_saved_no_logo' => 'Stil „{name}“ ouni Bild gespäichert - et ass net genuch Späicherplaz do.',
     'js.preset_deleted' => 'Stil „{name}“ geläscht.',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Store',
+    'field.app_id' => 'App-ID oder Store-Link',
+    'field.app_id_hint' => 'App Store: d\'Nummer aus dem Link vun der App (id123456789). Google Play: den Numm vum Package (com.example.app).',
+    'field.whatsapp_hint' => 'Gëff déi komplett Nummer mat der Landesvirwiel an.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (fonctionéiert iwwerall)',
+    'field.vcard_mecard' => 'MeCard (méi kuerze Code)',
+
+    'logo.drop_hint' => 'Du kanns e Bild och heihinner zéien oder mat Ctrl+V apechen.',
+    'preset.copy_link' => 'Link op dëse Stil kopéieren',
+
+    'download.print_size' => 'Drockgréisst',
+    'download.print_dpi' => 'Drockopléisung',
+    'download.print_hint' => 'Gëllt fir PDF, EPS an Drécken. Looss d\'Gréisst eidel fir d\'Gréisst a Pixelen ze benotzen.',
+
+    'history.undo' => 'Réckgängeg',
+    'history.redo' => 'Widderhuelen',
+
+    'js.link_copied' => 'Link kopéiert. En enthält just de Stil - keen Inhalt a kee Bild.',
+    'js.style_from_link' => 'Stil aus dem Link gelueden.',
 ];

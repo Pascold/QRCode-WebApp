@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Isitayile "{name}" sigciniwe.',
     'js.preset_saved_no_logo' => 'Isitayile "{name}" sigcinwe ngaphandle komfanekiso - akukho ndawo yaneleyo yogcino.',
     'js.preset_deleted' => 'Isitayile "{name}" sicinyiwe.',
+
+    'type.app' => 'Usetyenziso',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Ivenkile',
+    'field.app_id' => 'I-ID yosetyenziso okanye ikhonkco levenkile',
+    'field.app_id_hint' => 'App Store: inombolo ekwikhonkco losetyenziso (id123456789). Google Play: igama lepakethe (com.example.app).',
+    'field.whatsapp_hint' => 'Faka inombolo epheleleyo kunye nekhowudi yelizwe.',
+    'field.vcard_format' => 'Ifomathi',
+    'field.vcard_vcard' => 'vCard (isebenza naphi na)',
+    'field.vcard_mecard' => 'MeCard (ikhowudi emfutshane)',
+
+    'logo.drop_hint' => 'Ungatsala umfanekiso apha okanye uwuncamathisele nge-Ctrl+V.',
+    'preset.copy_link' => 'Kopa ikhonkco kwesi simbo',
+
+    'download.print_size' => 'Ubungakanani bokushicilela',
+    'download.print_dpi' => 'Ukucaca kokushicilela',
+    'download.print_hint' => 'Isetyenziselwa i-PDF, i-EPS nokushicilela. Shiya ubungakanani bungenanto ukuze usebenzise ubungakanani beepikseli.',
+
+    'history.undo' => 'Rhoxisa',
+    'history.redo' => 'Phinda wenze',
+
+    'js.link_copied' => 'Ikhonkco likopiwe. Liqulethe isimbo kuphela - akukho mxholo nomfanekiso.',
+    'js.style_from_link' => 'Isimbo silayishwe kwikhonkco.',
 ];

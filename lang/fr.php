@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Style « {name} » enregistré.',
     'js.preset_saved_no_logo' => 'Style « {name} » enregistré sans l\'image - l\'espace de stockage est insuffisant.',
     'js.preset_deleted' => 'Style « {name} » supprimé.',
+
+    'type.app' => 'Application',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Store',
+    'field.app_id' => 'ID de l\'application ou lien du store',
+    'field.app_id_hint' => 'App Store : le numéro dans le lien de l\'application (id123456789). Google Play : le nom du paquet (com.example.app).',
+    'field.whatsapp_hint' => 'Saisissez le numéro complet avec l\'indicatif du pays.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (fonctionne partout)',
+    'field.vcard_mecard' => 'MeCard (code plus court)',
+
+    'logo.drop_hint' => 'Vous pouvez aussi glisser une image ici ou la coller avec Ctrl+V.',
+    'preset.copy_link' => 'Copier le lien de ce style',
+
+    'download.print_size' => 'Taille d\'impression',
+    'download.print_dpi' => 'Résolution d\'impression',
+    'download.print_hint' => 'Utilisé pour le PDF, l\'EPS et l\'impression. Laissez la taille vide pour utiliser la taille en pixels.',
+
+    'history.undo' => 'Annuler',
+    'history.redo' => 'Rétablir',
+
+    'js.link_copied' => 'Lien copié. Il contient uniquement le style - ni contenu ni image.',
+    'js.style_from_link' => 'Style chargé depuis le lien.',
 ];

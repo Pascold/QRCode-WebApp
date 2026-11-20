@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'ບັນທຶກຮູບແບບ "{name}" ແລ້ວ.',
     'js.preset_saved_no_logo' => 'ບັນທຶກຮູບແບບ "{name}" ໂດຍບໍ່ມີຮູບພາບ - ບ່ອນເກັບຂໍ້ມູນບໍ່ພຽງພໍ.',
     'js.preset_deleted' => 'ລຶບຮູບແບບ "{name}" ແລ້ວ.',
+
+    'type.app' => 'ແອັບ',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ຮ້ານ',
+    'field.app_id' => 'ID ແອັບ ຫຼື ລິ້ງຮ້ານ',
+    'field.app_id_hint' => 'App Store: ຕົວເລກຈາກລິ້ງຂອງແອັບ (id123456789). Google Play: ຊື່ແພັກເກດ (com.example.app).',
+    'field.whatsapp_hint' => 'ປ້ອນເບີເຕັມພ້ອມລະຫັດປະເທດ.',
+    'field.vcard_format' => 'ຮູບແບບ',
+    'field.vcard_vcard' => 'vCard (ໃຊ້ໄດ້ທຸກບ່ອນ)',
+    'field.vcard_mecard' => 'MeCard (ລະຫັດສັ້ນກວ່າ)',
+
+    'logo.drop_hint' => 'ທ່ານຍັງສາມາດລາກຮູບມາໃສ່ບ່ອນນີ້ ຫຼື ວາງດ້ວຍ Ctrl+V ໄດ້.',
+    'preset.copy_link' => 'ສຳເນົາລິ້ງຂອງສະໄຕລ໌ນີ້',
+
+    'download.print_size' => 'ຂະໜາດພິມ',
+    'download.print_dpi' => 'ຄວາມລະອຽດການພິມ',
+    'download.print_hint' => 'ໃຊ້ສຳລັບ PDF, EPS ແລະ ການພິມ. ປ່ອຍຂະໜາດຫວ່າງໄວ້ເພື່ອໃຊ້ຂະໜາດເປັນພິກເຊລ.',
+
+    'history.undo' => 'ຍົກເລີກ',
+    'history.redo' => 'ເຮັດຄືນ',
+
+    'js.link_copied' => 'ສຳເນົາລິ້ງແລ້ວ. ມີແຕ່ສະໄຕລ໌ - ບໍ່ມີເນື້ອຫາ ແລະ ຮູບ.',
+    'js.style_from_link' => 'ໂຫຼດສະໄຕລ໌ຈາກລິ້ງແລ້ວ.',
 ];

@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Stilen «{name}» er lagret.',
     'js.preset_saved_no_logo' => 'Stilen «{name}» ble lagret uten bilde - det er ikke nok lagringsplass.',
     'js.preset_deleted' => 'Stilen «{name}» er slettet.',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Butikk',
+    'field.app_id' => 'App-ID eller butikklenke',
+    'field.app_id_hint' => 'App Store: nummeret i lenken til appen (id123456789). Google Play: pakkenavnet (com.example.app).',
+    'field.whatsapp_hint' => 'Skriv inn hele nummeret med landskode.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (fungerer overalt)',
+    'field.vcard_mecard' => 'MeCard (kortere kode)',
+
+    'logo.drop_hint' => 'Du kan også dra et bilde hit eller lime det inn med Ctrl+V.',
+    'preset.copy_link' => 'Kopier lenke til denne stilen',
+
+    'download.print_size' => 'Utskriftsstørrelse',
+    'download.print_dpi' => 'Utskriftsoppløsning',
+    'download.print_hint' => 'Brukes for PDF, EPS og utskrift. La størrelsen stå tom for å bruke størrelsen i piksler.',
+
+    'history.undo' => 'Angre',
+    'history.redo' => 'Gjør om',
+
+    'js.link_copied' => 'Lenken er kopiert. Den inneholder bare stilen - ikke innhold eller bilde.',
+    'js.style_from_link' => 'Stilen ble lastet inn fra lenken.',
 ];

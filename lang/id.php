@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Gaya "{name}" disimpan.',
     'js.preset_saved_no_logo' => 'Gaya "{name}" disimpan tanpa gambar - ruang penyimpanan tidak cukup.',
     'js.preset_deleted' => 'Gaya "{name}" dihapus.',
+
+    'type.app' => 'Aplikasi',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Toko',
+    'field.app_id' => 'ID aplikasi atau tautan toko',
+    'field.app_id_hint' => 'App Store: angka dari tautan aplikasi (id123456789). Google Play: nama paket (com.example.app).',
+    'field.whatsapp_hint' => 'Masukkan nomor lengkap dengan kode negara.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (berfungsi di mana saja)',
+    'field.vcard_mecard' => 'MeCard (kode lebih pendek)',
+
+    'logo.drop_hint' => 'Anda juga bisa menyeret gambar ke sini atau menempelkannya dengan Ctrl+V.',
+    'preset.copy_link' => 'Salin tautan ke gaya ini',
+
+    'download.print_size' => 'Ukuran cetak',
+    'download.print_dpi' => 'Resolusi cetak',
+    'download.print_hint' => 'Dipakai untuk PDF, EPS, dan pencetakan. Kosongkan ukuran untuk memakai ukuran piksel.',
+
+    'history.undo' => 'Urungkan',
+    'history.redo' => 'Ulangi',
+
+    'js.link_copied' => 'Tautan disalin. Isinya hanya gaya - tanpa konten dan tanpa gambar.',
+    'js.style_from_link' => 'Gaya dimuat dari tautan.',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" üslubu saxlanıldı.',
     'js.preset_saved_no_logo' => '"{name}" üslubu şəkilsiz saxlanıldı - kifayət qədər yaddaş yoxdur.',
     'js.preset_deleted' => '"{name}" üslubu silindi.',
+
+    'type.app' => 'Tətbiq',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Mağaza',
+    'field.app_id' => 'Tətbiq ID-si və ya mağaza linki',
+    'field.app_id_hint' => 'App Store: tətbiqin linkindəki nömrə (id123456789). Google Play: paketin adı (com.example.app).',
+    'field.whatsapp_hint' => 'Ölkə kodu ilə tam nömrəni daxil edin.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (hər yerdə işləyir)',
+    'field.vcard_mecard' => 'MeCard (daha qısa kod)',
+
+    'logo.drop_hint' => 'Şəkli bura sürükləyə və ya Ctrl+V ilə yapışdıra da bilərsiniz.',
+    'preset.copy_link' => 'Bu üslubun linkini kopyala',
+
+    'download.print_size' => 'Çap ölçüsü',
+    'download.print_dpi' => 'Çap keyfiyyəti',
+    'download.print_hint' => 'PDF, EPS və çap üçün istifadə olunur. Piksel ölçüsündən istifadə üçün ölçünü boş saxlayın.',
+
+    'history.undo' => 'Geri qaytar',
+    'history.redo' => 'Təkrarla',
+
+    'js.link_copied' => 'Link kopyalandı. Yalnız üslubu saxlayır - məzmun və şəkil yoxdur.',
+    'js.style_from_link' => 'Üslub linkdən yükləndi.',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'E chekwara ụdị "{name}".',
     'js.preset_saved_no_logo' => 'E chekwara ụdị "{name}" na-enweghị foto - enweghị ohere nchekwa zuru ezu.',
     'js.preset_deleted' => 'E hichapụrụ ụdị "{name}".',
+
+    'type.app' => 'Ngwa',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Ụlọ ahịa',
+    'field.app_id' => 'ID ngwa ma ọ bụ njikọ ụlọ ahịa',
+    'field.app_id_hint' => 'App Store: nọmba dị na njikọ ngwa ahụ (id123456789). Google Play: aha ngwugwu (com.example.app).',
+    'field.whatsapp_hint' => 'Tinye nọmba zuru ezu na koodu mba.',
+    'field.vcard_format' => 'Usoro',
+    'field.vcard_vcard' => 'vCard (na-arụ ọrụ ebe niile)',
+    'field.vcard_mecard' => 'MeCard (koodu dị mkpụmkpụ)',
+
+    'logo.drop_hint' => 'Ị nwekwara ike ịdọrọ onyonyo ebe a ma ọ bụ mado ya site na Ctrl+V.',
+    'preset.copy_link' => 'Detuo njikọ gaa na ụdị a',
+
+    'download.print_size' => 'Nha mbipụta',
+    'download.print_dpi' => 'Mkpebi mbipụta',
+    'download.print_hint' => 'Maka PDF, EPS na mbipụta. Hapụ nha ahụ efu iji jiri nha pixel.',
+
+    'history.undo' => 'Mebie',
+    'history.redo' => 'Mee ọzọ',
+
+    'js.link_copied' => 'E detuola njikọ. Ọ nwere naanị ụdị - enweghị ọdịnaya ma ọ bụ onyonyo.',
+    'js.style_from_link' => 'Ebuputere ụdị site na njikọ.',
 ];

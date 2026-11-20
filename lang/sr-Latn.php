@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Stil „{name}“ je sačuvan.',
     'js.preset_saved_no_logo' => 'Stil „{name}“ je sačuvan bez slike - nema dovoljno prostora za skladištenje.',
     'js.preset_deleted' => 'Stil „{name}“ je izbrisan.',
+
+    'type.app' => 'Aplikacija',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Prodavnica',
+    'field.app_id' => 'ID aplikacije ili link ka prodavnici',
+    'field.app_id_hint' => 'App Store: broj iz linka aplikacije (id123456789). Google Play: naziv paketa (com.example.app).',
+    'field.whatsapp_hint' => 'Unesite ceo broj sa pozivnim brojem zemlje.',
+    'field.vcard_format' => 'Format',
+    'field.vcard_vcard' => 'vCard (radi svuda)',
+    'field.vcard_mecard' => 'MeCard (kraći kod)',
+
+    'logo.drop_hint' => 'Sliku možete i da prevučete ovde ili da je nalepite pomoću Ctrl+V.',
+    'preset.copy_link' => 'Kopiraj link ka ovom stilu',
+
+    'download.print_size' => 'Veličina štampe',
+    'download.print_dpi' => 'Rezolucija štampe',
+    'download.print_hint' => 'Koristi se za PDF, EPS i štampu. Ostavite veličinu praznom da biste koristili veličinu u pikselima.',
+
+    'history.undo' => 'Opozovi',
+    'history.redo' => 'Ponovi',
+
+    'js.link_copied' => 'Link je kopiran. Sadrži samo stil - bez sadržaja i bez slike.',
+    'js.style_from_link' => 'Stil je učitan iz linka.',
 ];

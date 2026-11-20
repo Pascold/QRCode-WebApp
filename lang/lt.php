@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Stilius „{name}“ išsaugotas.',
     'js.preset_saved_no_logo' => 'Stilius „{name}“ išsaugotas be vaizdo - nepakanka vietos.',
     'js.preset_deleted' => 'Stilius „{name}“ ištrintas.',
+
+    'type.app' => 'Programėlė',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Parduotuvė',
+    'field.app_id' => 'Programėlės ID arba parduotuvės nuoroda',
+    'field.app_id_hint' => 'App Store: numeris iš programėlės nuorodos (id123456789). Google Play: paketo pavadinimas (com.example.app).',
+    'field.whatsapp_hint' => 'Įveskite visą numerį su šalies kodu.',
+    'field.vcard_format' => 'Formatas',
+    'field.vcard_vcard' => 'vCard (veikia visur)',
+    'field.vcard_mecard' => 'MeCard (trumpesnis kodas)',
+
+    'logo.drop_hint' => 'Paveikslėlį taip pat galite nuvilkti čia arba įklijuoti su Ctrl+V.',
+    'preset.copy_link' => 'Kopijuoti nuorodą į šį stilių',
+
+    'download.print_size' => 'Spaudinio dydis',
+    'download.print_dpi' => 'Spaudinio raiška',
+    'download.print_hint' => 'Naudojama PDF, EPS ir spausdinimui. Palikite dydį tuščią, kad būtų naudojamas dydis pikseliais.',
+
+    'history.undo' => 'Anuliuoti',
+    'history.redo' => 'Pakartoti',
+
+    'js.link_copied' => 'Nuoroda nukopijuota. Joje yra tik stilius - be turinio ir be paveikslėlio.',
+    'js.style_from_link' => 'Stilius įkeltas iš nuorodos.',
 ];

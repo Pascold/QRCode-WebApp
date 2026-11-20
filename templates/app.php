@@ -20,7 +20,7 @@ declare(strict_types=1);
  * @var callable $langUrl URL of a language version
  */
 
-$contentTypes = ['url', 'text', 'email', 'phone', 'sms', 'wifi', 'vcard', 'event', 'geo'];
+$contentTypes = ['url', 'app', 'text', 'email', 'phone', 'sms', 'whatsapp', 'wifi', 'vcard', 'event', 'geo'];
 $dotShapes = ['square', 'dots', 'rounded', 'extra-rounded', 'classy', 'classy-rounded'];
 $cornerSquareShapes = ['square', 'dot', 'rounded', 'extra-rounded', 'classy', 'classy-rounded'];
 $cornerDotShapes = ['square', 'dot', 'rounded', 'classy'];
@@ -145,6 +145,17 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                 <input type="url" id="url" name="url" placeholder="https://example.com" value="https://example.com">
             </fieldset>
 
+            <fieldset class="type-panel" data-type="app" hidden>
+                <label for="app_store"><?= $t('field.app_store') ?></label>
+                <select id="app_store" name="app_store">
+                    <option value="apple">App Store (iPhone, iPad)</option>
+                    <option value="google">Google Play (Android)</option>
+                </select>
+                <label for="app_id"><?= $t('field.app_id') ?></label>
+                <input type="text" id="app_id" name="app_id" spellcheck="false" placeholder="id123456789 / com.example.app">
+                <p class="hint"><?= $t('field.app_id_hint') ?></p>
+            </fieldset>
+
             <fieldset class="type-panel" data-type="text" hidden>
                 <label for="text"><?= $t('field.text') ?></label>
                 <textarea id="text" name="text" rows="4"></textarea>
@@ -171,6 +182,14 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                 <textarea id="sms_message" name="sms_message" rows="3"></textarea>
             </fieldset>
 
+            <fieldset class="type-panel" data-type="whatsapp" hidden>
+                <label for="wa_phone"><?= $t('field.phone') ?></label>
+                <input type="tel" id="wa_phone" name="wa_phone" placeholder="+48 123 456 789">
+                <p class="hint"><?= $t('field.whatsapp_hint') ?></p>
+                <label for="wa_message"><?= $t('field.sms_message') . $optional ?></label>
+                <textarea id="wa_message" name="wa_message" rows="3"></textarea>
+            </fieldset>
+
             <fieldset class="type-panel" data-type="wifi" hidden>
                 <label for="wifi_ssid"><?= $t('field.ssid') ?></label>
                 <input type="text" id="wifi_ssid" name="wifi_ssid">
@@ -186,6 +205,11 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
             </fieldset>
 
             <fieldset class="type-panel" data-type="vcard" hidden>
+                <label for="vc_format"><?= $t('field.vcard_format') ?></label>
+                <select id="vc_format" name="vc_format">
+                    <option value="vcard"><?= $t('field.vcard_vcard') ?></option>
+                    <option value="mecard"><?= $t('field.vcard_mecard') ?></option>
+                </select>
                 <div class="row">
                     <div>
                         <label for="vc_first"><?= $t('field.first_name') ?></label>
@@ -332,7 +356,8 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
         </section>
 
         <!-- Center image --------------------------------------------------->
-        <section class="card">
+        <!-- Images can also be dropped on this card or pasted with Ctrl+V. -->
+        <section class="card drop-zone" id="logo-card">
             <h2><?= $t('logo.heading') ?></h2>
 
             <span class="label"><?= $t('logo.file') ?></span>
@@ -344,7 +369,7 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                 <span id="logo-name" class="file-name" data-empty="<?= $t('logo.none') ?>"><?= $t('logo.none') ?></span>
                 <button type="button" id="logo-remove" class="btn btn-ghost" hidden><?= $t('logo.remove') ?></button>
             </div>
-            <p class="hint"><?= $t('logo.hint', ['size' => (int) $config['max_logo_size_mb']]) ?></p>
+            <p class="hint"><?= $t('logo.hint', ['size' => (int) $config['max_logo_size_mb']]) ?> <?= $t('logo.drop_hint') ?></p>
 
             <div data-show-if="logo" hidden>
                 <div class="row">
@@ -381,13 +406,26 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                 <input type="text" id="preset-name" maxlength="40" placeholder="<?= $t('preset.name_placeholder') ?>">
                 <button type="button" id="preset-save" class="btn" disabled><?= $t('preset.save') ?></button>
             </div>
+
+            <!-- The style goes after "#" in the link - browsers never send that part to a server. -->
+            <button type="button" id="preset-link" class="btn btn-block"><?= $t('preset.copy_link') ?></button>
         </section>
     </form>
 
     <!-- Preview & download ------------------------------------------------->
     <aside class="preview-column">
         <section class="card preview-card">
-            <h2><?= $t('preview.heading') ?></h2>
+            <div class="preview-head">
+                <h2><?= $t('preview.heading') ?></h2>
+                <div class="history-tools">
+                    <button type="button" id="undo" class="icon-btn" title="<?= $t('history.undo') ?> (Ctrl+Z)" aria-label="<?= $t('history.undo') ?>" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg>
+                    </button>
+                    <button type="button" id="redo" class="icon-btn" title="<?= $t('history.redo') ?> (Ctrl+Y)" aria-label="<?= $t('history.redo') ?>" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg>
+                    </button>
+                </div>
+            </div>
             <div id="qr-preview" class="qr-preview checkerboard" aria-live="polite"></div>
             <p id="qr-empty" class="hint center" hidden><?= $t('preview.empty') ?></p>
             <!-- Automatic readability check (the code is decoded in the browser). -->
@@ -416,6 +454,29 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                     </select>
                 </div>
             </div>
+            <!-- Physical size for PDF, EPS and printing (empty = the pixel size at 96 DPI). -->
+            <div class="row">
+                <div>
+                    <label for="print_size"><?= $t('download.print_size') ?></label>
+                    <div class="inline-row">
+                        <input type="number" id="print_size" name="print_size" min="0.5" max="2000" step="any" inputmode="decimal" form="qr-form">
+                        <select id="print_unit" name="print_unit" form="qr-form" aria-label="<?= $t('download.print_size') ?>">
+                            <option value="mm">mm</option>
+                            <option value="cm" selected>cm</option>
+                            <option value="in">in</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="print_dpi"><?= $t('download.print_dpi') ?></label>
+                    <select id="print_dpi" name="print_dpi" form="qr-form">
+                        <option value="150">150 DPI</option>
+                        <option value="300" selected>300 DPI</option>
+                        <option value="600">600 DPI</option>
+                    </select>
+                </div>
+            </div>
+            <p class="hint"><?= $t('download.print_hint') ?></p>
             <div class="actions">
                 <button type="button" id="download" class="btn btn-primary"><?= $t('download.button') ?></button>
                 <button type="button" id="copy" class="btn"><?= $t('download.copy') ?></button>

@@ -4,16 +4,20 @@ A simple, dependency-free PHP web application for creating styled QR codes.
 
 **Live demo:** <https://pascold.github.io/QRCode-WebApp/> (static version on GitHub Pages)
 
-- Generate QR codes for **links, plain text, e-mail, phone numbers, SMS, Wi-Fi networks, contact cards (vCard), calendar events and map locations**. Any language and emoji are encoded as UTF-8.
+- Generate QR codes for **links, App Store / Google Play apps, plain text, e-mail, phone numbers, SMS, WhatsApp, Wi-Fi networks, contact cards (vCard or the shorter MeCard), calendar events and map locations**. Any language and emoji are encoded as UTF-8.
 - Customize the look: **dot style** (square, dots, rounded, extra rounded, classy, classy rounded), **corner styles**, colors, optional **gradient**, transparent background, size, margin and error correction level.
-- Place your own **image / logo in the center** of the code.
+- Place your own **image / logo in the center** of the code - choose a file, **drag it onto the card** or **paste it with Ctrl+V** (e.g. a screenshot).
 - Live preview and export to **PNG, SVG, PDF, JPG, WebP, AVIF, GIF, BMP and EPS**, plus **Print**, **Share** (phones), **Copy image** and **Copy SVG code**.
+- **Print size** in mm, cm or inches at 150, 300 or 600 DPI for PDF, EPS and printing.
+- **Undo / redo** with buttons or Ctrl+Z / Ctrl+Y (Ctrl+Shift+Z).
+- **Works offline** after the first visit (service worker).
 - **92 languages and regional variants** (BCP 47 locale codes such as `pl`, `en-GB`, `sr-Latn`, `zh-HK`) in a searchable dropdown with flags, including right-to-left support for Arabic, Hebrew, Persian and Urdu. Adding more takes one file.
 - **Light and dark theme**, following the operating system by default, with a toggle in the header.
 - **Private by design:** content and images are processed entirely in the browser and never uploaded to the server. Your current settings (including the center image) survive a language switch or reload thanks to `sessionStorage` in your own browser tab.
 - **Readability check:** after every change the code is decoded in the browser (with jsQR, like a phone camera would) and the preview shows whether it scans correctly.
 - **Contrast check:** a warning appears when the dots are too light or lighter than the background (inverted codes), which many phones cannot scan.
 - **Saved styles:** save the current look (colors, shapes, size, image) under a name and load it again with one click - stored only in the browser (`localStorage`).
+- **Style link:** copy a link that carries the current style (not the content and not the image) after `#` in the address, so you can send your look to someone else.
 - **Consent dialog** on the first visit: preferences are stored only after the visitor accepts; declining explains that the page cannot be used and offers to close it.
 - **Installable** on phones and desktops (web app manifest and icons).
 - Searchable language dropdown with **keyboard navigation** (arrows, Home/End, Enter, Escape).
@@ -283,8 +287,21 @@ It reports missing or unknown keys, lost placeholders (`{size}`, `{author}`), br
 - After consent the app stores:
   - `qr_consent`, `qr_lang` and `qr_theme` (preferences only) - as cookies in the PHP version, in `localStorage` in the static version,
   - saved styles in `localStorage` (`qr_presets`),
-  - the current form settings in `sessionStorage` (cleared when the tab is closed).
+  - the current form settings in `sessionStorage` (cleared when the tab is closed),
+  - a copy of the site's own files (pages, scripts, styles, images) in the service worker cache `qr-offline-v1`, so the app works offline. Nothing the visitor enters is cached.
+- The **style link** puts the style after `#` in the address. Browsers never send that part to a server; the app reads it once and removes it from the address bar.
+- The undo / redo history is kept only in memory and is gone when the page is closed.
 - No analytics and no third-party requests.
+
+### Offline mode
+
+`sw.js` (registered after consent, on `https://` or `localhost` only) caches every file of the site the first time it is used:
+
+- **Pages** are loaded from the network first; when offline the saved copy is used. A language page that was never opened falls back to a saved page in another language.
+- **Scripts, styles and images** come from the cache first. Files with a `?v=` version are replaced when the version changes, the others are refreshed in the background.
+- The QR decoder and GIF encoder are saved up front; the 3.5 MB AVIF encoder is saved the first time AVIF is used.
+
+To publish a change in `sw.js` itself, browsers check the file on every visit (`.htaccess` sends `Cache-Control: no-cache`). To drop all old cached files, change `CACHE` in `sw.js` (e.g. `qr-offline-v2`).
 
 ## Project structure
 
@@ -293,6 +310,7 @@ QRCode-WebApp/
 ├── index.php                 # Entry point: language detection, headers, rendering
 ├── config.php                # Application settings
 ├── manifest.webmanifest      # Web app manifest (installable app)
+├── sw.js                     # Service worker (offline mode)
 ├── LICENSE                   # MIT license
 ├── src/
 │   ├── I18n.php              # Translation service (auto-discovers languages)
@@ -309,7 +327,7 @@ QRCode-WebApp/
 │   ├── js/ui.js              # Consent dialog, theme toggle, language dropdown
 │   ├── js/theme-init.js      # Static build: applies the saved theme early
 │   ├── js/redirect.js        # Static build: start page and 404 redirects
-│   ├── js/app.js             # QR payload builders, preview, downloads, print, share
+│   ├── js/app.js             # QR payload builders, preview, downloads, print, share, undo, style link
 │   ├── js/export.js          # PDF, EPS, BMP, GIF and AVIF exporters
 │   ├── img/                  # Favicon and app icons (SVG + PNG)
 │   └── vendor/
@@ -334,11 +352,13 @@ The content types are encoded using the common formats understood by phone camer
 | Type | Format |
 |------|--------|
 | Link | `https://…` (the scheme is added automatically if missing) |
+| App | `https://apps.apple.com/app/id…` or `https://play.google.com/store/apps/details?id=…` (a full store link is used as it is) |
 | E-mail | `mailto:address?subject=…&body=…` |
 | Phone | `tel:+48…` |
 | SMS | `SMSTO:number:message` |
+| WhatsApp | `https://wa.me/48…?text=…` (international number, digits only) |
 | Wi-Fi | `WIFI:T:WPA;S:name;P:password;H:true;;` |
-| Contact | vCard 3.0 |
+| Contact | vCard 3.0, or `MECARD:N:Last,First;TEL:…;;` (shorter, so the code has fewer dots; the job title goes into the note) |
 | Event | iCalendar `VEVENT` (local time, optional end, place and description) |
 | Location | `geo:lat,lng` |
 
@@ -348,11 +368,13 @@ The content types are encoded using the common formats understood by phone camer
 |--------|----------------|-------|
 | PNG, JPG, WebP | Browser (canvas) | JPG has no transparency - the background color is used |
 | SVG | qr-code-styling | Vector; also available as **Copy SVG code** |
-| PDF | Built in `assets/js/export.js` | Lossless image at up to 3x resolution (about 300 DPI); keeps transparency; page size = chosen size at 96 DPI (600 px = 15.9 cm) |
-| EPS | Built in `assets/js/export.js` | PostScript level 3, lossless image at up to 3x resolution, for print shops |
+| PDF | Built in `assets/js/export.js` | Lossless image; keeps transparency; page size = the **print size** (see below) |
+| EPS | Built in `assets/js/export.js` | PostScript level 3, lossless image at the print size, for print shops |
 | BMP | Built in `assets/js/export.js` | 24-bit, no transparency |
 | GIF | gifenc (loaded on demand) | 256 colors, 1-bit transparency |
 | AVIF | Browser if supported, otherwise the jSquash WebAssembly encoder (3.5 MB, loaded only when AVIF is chosen) | Small files with transparency |
+
+**Print size** (PDF, EPS and Print): enter a size in mm, cm or inches and pick 150, 300 or 600 DPI - for example 5 cm at 600 DPI gives a 5 × 5 cm page with a 1181 × 1181 px image (at most 6000 px). Leave it empty to use the pixel size at 96 DPI (600 px = 15.9 cm), rendered at up to 3x resolution (about 300 DPI).
 
 PDF and EPS contain a high-resolution image of the code (not vector paths). **Print** prints only the code at the chosen size, and **Share** (shown only where the browser can share files, mostly on phones) sends a PNG to other apps. All exports are created in the browser - nothing is uploaded.
 

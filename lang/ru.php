@@ -161,4 +161,27 @@ return [
     'js.preset_saved' => 'Стиль «{name}» сохранён.',
     'js.preset_saved_no_logo' => 'Стиль «{name}» сохранён без изображения - недостаточно места для хранения.',
     'js.preset_deleted' => 'Стиль «{name}» удалён.',
+
+    'type.app' => 'Приложение',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Магазин',
+    'field.app_id' => 'ID приложения или ссылка на магазин',
+    'field.app_id_hint' => 'App Store: номер из ссылки на приложение (id123456789). Google Play: имя пакета (com.example.app).',
+    'field.whatsapp_hint' => 'Введите полный номер с кодом страны.',
+    'field.vcard_format' => 'Формат',
+    'field.vcard_vcard' => 'vCard (работает везде)',
+    'field.vcard_mecard' => 'MeCard (более короткий код)',
+
+    'logo.drop_hint' => 'Также можно перетащить сюда изображение или вставить его через Ctrl+V.',
+    'preset.copy_link' => 'Копировать ссылку на этот стиль',
+
+    'download.print_size' => 'Размер печати',
+    'download.print_dpi' => 'Разрешение печати',
+    'download.print_hint' => 'Для PDF, EPS и печати. Оставьте размер пустым, чтобы использовать размер в пикселях.',
+
+    'history.undo' => 'Отменить',
+    'history.redo' => 'Повторить',
+
+    'js.link_copied' => 'Ссылка скопирована. Она содержит только стиль - без содержимого и без изображения.',
+    'js.style_from_link' => 'Стиль загружен из ссылки.',
 ];

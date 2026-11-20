@@ -162,4 +162,27 @@ return [
     'js.preset_saved' => '樣式「{name}」已儲存。',
     'js.preset_saved_no_logo' => '樣式「{name}」已儲存，但未包含圖片——儲存空間不足。',
     'js.preset_deleted' => '樣式「{name}」已刪除。',
+
+    'type.app' => 'App',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => '商店',
+    'field.app_id' => 'App ID 或商店連結',
+    'field.app_id_hint' => 'App Store：App 連結中的數字（id123456789）。Google Play：套件名稱（com.example.app）。',
+    'field.whatsapp_hint' => '請輸入含國碼的完整號碼。',
+    'field.vcard_format' => '格式',
+    'field.vcard_vcard' => 'vCard（各處通用）',
+    'field.vcard_mecard' => 'MeCard（碼較短）',
+
+    'logo.drop_hint' => '也可以將圖片拖曳到這裡，或用 Ctrl+V 貼上。',
+    'preset.copy_link' => '複製此樣式的連結',
+
+    'download.print_size' => '列印尺寸',
+    'download.print_dpi' => '列印解析度',
+    'download.print_hint' => '用於 PDF、EPS 與列印。留空則使用像素尺寸。',
+
+    'history.undo' => '復原',
+    'history.redo' => '重做',
+
+    'js.link_copied' => '已複製連結。只包含樣式，不含內容與圖片。',
+    'js.style_from_link' => '已從連結載入樣式。',
 ];

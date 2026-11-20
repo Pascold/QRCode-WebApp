@@ -69,6 +69,8 @@ final class View
             'languageCookie' => (string) $config['language_cookie'],
             'cookieLifetime' => (int) $config['language_cookie_lifetime'],
             'language' => $i18n->current(),
+            // Offline support; registered by app.js after consent.
+            'serviceWorker' => $basePath . 'sw.js',
             'i18n' => $i18n->group('js.'),
         ];
 

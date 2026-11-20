@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'سبک «{name}» ذخیره شد.',
     'js.preset_saved_no_logo' => 'سبک «{name}» بدون تصویر ذخیره شد - فضای ذخیره‌سازی کافی نیست.',
     'js.preset_deleted' => 'سبک «{name}» حذف شد.',
+
+    'type.app' => 'برنامه',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'فروشگاه',
+    'field.app_id' => 'شناسه برنامه یا پیوند فروشگاه',
+    'field.app_id_hint' => 'App Store: عدد موجود در پیوند برنامه (id123456789). Google Play: نام بسته (com.example.app).',
+    'field.whatsapp_hint' => 'شماره کامل را همراه با کد کشور وارد کنید.',
+    'field.vcard_format' => 'قالب',
+    'field.vcard_vcard' => 'vCard (همه‌جا کار می‌کند)',
+    'field.vcard_mecard' => 'MeCard (کد کوتاه‌تر)',
+
+    'logo.drop_hint' => 'می‌توانید تصویری را به اینجا بکشید یا با Ctrl+V بچسبانید.',
+    'preset.copy_link' => 'کپی پیوند این سبک',
+
+    'download.print_size' => 'اندازه چاپ',
+    'download.print_dpi' => 'وضوح چاپ',
+    'download.print_hint' => 'برای PDF، EPS و چاپ استفاده می‌شود. برای استفاده از اندازه پیکسلی، اندازه را خالی بگذارید.',
+
+    'history.undo' => 'واگرد',
+    'history.redo' => 'ازنو',
+
+    'js.link_copied' => 'پیوند کپی شد. فقط سبک را دارد - بدون محتوا و بدون تصویر.',
+    'js.style_from_link' => 'سبک از پیوند بارگیری شد.',
 ];

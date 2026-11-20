@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '"{name}" විලාසය සුරකින ලදී.',
     'js.preset_saved_no_logo' => '"{name}" විලාසය රූපය නොමැතිව සුරකින ලදී - ප්‍රමාණවත් ගබඩා ඉඩක් නැත.',
     'js.preset_deleted' => '"{name}" විලාසය මකා දමන ලදී.',
+
+    'type.app' => 'යෙදුම',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'ගබඩාව',
+    'field.app_id' => 'යෙදුම් ID හෝ ගබඩා සබැඳිය',
+    'field.app_id_hint' => 'App Store: යෙදුමේ සබැඳියේ ඇති අංකය (id123456789). Google Play: පැකේජයේ නම (com.example.app).',
+    'field.whatsapp_hint' => 'රටේ කේතය සමඟ සම්පූර්ණ අංකය ඇතුළත් කරන්න.',
+    'field.vcard_format' => 'ආකෘතිය',
+    'field.vcard_vcard' => 'vCard (සෑම තැනකම ක්‍රියා කරයි)',
+    'field.vcard_mecard' => 'MeCard (කෙටි කේතයක්)',
+
+    'logo.drop_hint' => 'ඔබට රූපයක් මෙතැනට ඇදගෙන ඒමට හෝ Ctrl+V මගින් ඇලවීමටද හැක.',
+    'preset.copy_link' => 'මෙම විලාසයට සබැඳිය පිටපත් කරන්න',
+
+    'download.print_size' => 'මුද්‍රණ ප්‍රමාණය',
+    'download.print_dpi' => 'මුද්‍රණ විභේදනය',
+    'download.print_hint' => 'PDF, EPS සහ මුද්‍රණය සඳහා. පික්සල ප්‍රමාණය භාවිත කිරීමට ප්‍රමාණය හිස්ව තබන්න.',
+
+    'history.undo' => 'අස් කරන්න',
+    'history.redo' => 'නැවත කරන්න',
+
+    'js.link_copied' => 'සබැඳිය පිටපත් විය. එහි ඇත්තේ විලාසය පමණි - අන්තර්ගතයක් හෝ රූපයක් නැත.',
+    'js.style_from_link' => 'සබැඳියෙන් විලාසය පූරණය විය.',
 ];

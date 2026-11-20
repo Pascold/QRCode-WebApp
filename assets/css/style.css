@@ -925,3 +925,58 @@ body > noscript .notice {
 .inline-row > .btn {
     flex-shrink: 0;
 }
+
+/* Preview header with undo / redo --------------------------------------- */
+
+.preview-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.preview-head h2 {
+    margin: 0;
+}
+
+.history-tools {
+    display: flex;
+    gap: 6px;
+}
+
+.history-tools .icon-btn {
+    width: 34px;
+    height: 34px;
+}
+
+.icon-btn:disabled {
+    opacity: .4;
+    cursor: default;
+    border-color: var(--border);
+}
+
+/* Mirror the arrows for right-to-left languages. */
+[dir="rtl"] .history-tools svg {
+    transform: scaleX(-1);
+}
+
+/* Drag and drop of the center image ------------------------------------- */
+
+.drop-zone {
+    transition: border-color .15s, background-color .15s;
+}
+
+.drop-zone.is-dragover {
+    border-color: var(--accent);
+    border-style: dashed;
+    background: var(--accent-soft);
+}
+
+/* Full-width button (style link) ---------------------------------------- */
+
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+}

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Slog »{name}« je shranjen.',
     'js.preset_saved_no_logo' => 'Slog »{name}« je shranjen brez slike - ni dovolj prostora za shranjevanje.',
     'js.preset_deleted' => 'Slog »{name}« je izbrisan.',
+
+    'type.app' => 'Aplikacija',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Trgovina',
+    'field.app_id' => 'ID aplikacije ali povezava do trgovine',
+    'field.app_id_hint' => 'App Store: številka iz povezave do aplikacije (id123456789). Google Play: ime paketa (com.example.app).',
+    'field.whatsapp_hint' => 'Vnesite celotno številko s kodo države.',
+    'field.vcard_format' => 'Oblika',
+    'field.vcard_vcard' => 'vCard (deluje povsod)',
+    'field.vcard_mecard' => 'MeCard (krajša koda)',
+
+    'logo.drop_hint' => 'Sliko lahko tudi povlečete sem ali jo prilepite s Ctrl+V.',
+    'preset.copy_link' => 'Kopiraj povezavo do tega sloga',
+
+    'download.print_size' => 'Velikost tiska',
+    'download.print_dpi' => 'Ločljivost tiska',
+    'download.print_hint' => 'Uporablja se za PDF, EPS in tiskanje. Pustite velikost prazno, da uporabite velikost v slikovnih pikah.',
+
+    'history.undo' => 'Razveljavi',
+    'history.redo' => 'Uveljavi',
+
+    'js.link_copied' => 'Povezava je kopirana. Vsebuje samo slog - brez vsebine in brez slike.',
+    'js.style_from_link' => 'Slog je naložen iz povezave.',
 ];

@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Útlitið „{name}“ var vistað.',
     'js.preset_saved_no_logo' => 'Útlitið „{name}“ var vistað án myndar - ekki er nægt geymslurými.',
     'js.preset_deleted' => 'Útlitinu „{name}“ var eytt.',
+
+    'type.app' => 'Forrit',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Verslun',
+    'field.app_id' => 'Auðkenni forrits eða tengill í verslun',
+    'field.app_id_hint' => 'App Store: númerið úr tengli forritsins (id123456789). Google Play: heiti pakkans (com.example.app).',
+    'field.whatsapp_hint' => 'Sláðu inn allt númerið með landsnúmeri.',
+    'field.vcard_format' => 'Snið',
+    'field.vcard_vcard' => 'vCard (virkar alls staðar)',
+    'field.vcard_mecard' => 'MeCard (styttri kóði)',
+
+    'logo.drop_hint' => 'Þú getur líka dregið mynd hingað eða límt hana inn með Ctrl+V.',
+    'preset.copy_link' => 'Afrita tengil á þennan stíl',
+
+    'download.print_size' => 'Prentstærð',
+    'download.print_dpi' => 'Prentupplausn',
+    'download.print_hint' => 'Notað fyrir PDF, EPS og prentun. Hafðu stærðina tóma til að nota stærðina í dílum.',
+
+    'history.undo' => 'Afturkalla',
+    'history.redo' => 'Endurgera',
+
+    'js.link_copied' => 'Tengill afritaður. Hann inniheldur aðeins stílinn - ekkert efni og enga mynd.',
+    'js.style_from_link' => 'Stíll hlaðinn úr tenglinum.',
 ];

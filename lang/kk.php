@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => '«{name}» стилі сақталды.',
     'js.preset_saved_no_logo' => '«{name}» стилі суретсіз сақталды - сақтау орны жеткіліксіз.',
     'js.preset_deleted' => '«{name}» стилі жойылды.',
+
+    'type.app' => 'Қолданба',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Дүкен',
+    'field.app_id' => 'Қолданба ID-і немесе дүкен сілтемесі',
+    'field.app_id_hint' => 'App Store: қолданба сілтемесіндегі нөмір (id123456789). Google Play: пакет атауы (com.example.app).',
+    'field.whatsapp_hint' => 'Ел кодымен толық нөмірді енгізіңіз.',
+    'field.vcard_format' => 'Пішім',
+    'field.vcard_vcard' => 'vCard (барлық жерде жұмыс істейді)',
+    'field.vcard_mecard' => 'MeCard (қысқарақ код)',
+
+    'logo.drop_hint' => 'Суретті осында сүйреп әкелуге немесе Ctrl+V арқылы қоюға да болады.',
+    'preset.copy_link' => 'Осы стильге сілтемені көшіру',
+
+    'download.print_size' => 'Басып шығару өлшемі',
+    'download.print_dpi' => 'Басып шығару ажыратымдылығы',
+    'download.print_hint' => 'PDF, EPS және басып шығару үшін. Пиксель өлшемін қолдану үшін өлшемді бос қалдырыңыз.',
+
+    'history.undo' => 'Болдырмау',
+    'history.redo' => 'Қайталау',
+
+    'js.link_copied' => 'Сілтеме көшірілді. Онда тек стиль бар - мазмұн да, сурет те жоқ.',
+    'js.style_from_link' => 'Стиль сілтемеден жүктелді.',
 ];

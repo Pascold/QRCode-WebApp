@@ -160,4 +160,27 @@ return [
     'js.preset_saved' => 'Το στυλ «{name}» αποθηκεύτηκε.',
     'js.preset_saved_no_logo' => 'Το στυλ «{name}» αποθηκεύτηκε χωρίς την εικόνα - δεν υπάρχει αρκετός χώρος αποθήκευσης.',
     'js.preset_deleted' => 'Το στυλ «{name}» διαγράφηκε.',
+
+    'type.app' => 'Εφαρμογή',
+    'type.whatsapp' => 'WhatsApp',
+    'field.app_store' => 'Κατάστημα',
+    'field.app_id' => 'ID εφαρμογής ή σύνδεσμος καταστήματος',
+    'field.app_id_hint' => 'App Store: ο αριθμός από τον σύνδεσμο της εφαρμογής (id123456789). Google Play: το όνομα του πακέτου (com.example.app).',
+    'field.whatsapp_hint' => 'Πληκτρολογήστε τον πλήρη αριθμό με τον κωδικό χώρας.',
+    'field.vcard_format' => 'Μορφή',
+    'field.vcard_vcard' => 'vCard (λειτουργεί παντού)',
+    'field.vcard_mecard' => 'MeCard (συντομότερος κωδικός)',
+
+    'logo.drop_hint' => 'Μπορείτε επίσης να σύρετε μια εικόνα εδώ ή να την επικολλήσετε με Ctrl+V.',
+    'preset.copy_link' => 'Αντιγραφή συνδέσμου για αυτό το στυλ',
+
+    'download.print_size' => 'Μέγεθος εκτύπωσης',
+    'download.print_dpi' => 'Ανάλυση εκτύπωσης',
+    'download.print_hint' => 'Για PDF, EPS και εκτύπωση. Αφήστε το μέγεθος κενό για να χρησιμοποιηθεί το μέγεθος σε pixel.',
+
+    'history.undo' => 'Αναίρεση',
+    'history.redo' => 'Επανάληψη',
+
+    'js.link_copied' => 'Ο σύνδεσμος αντιγράφηκε. Περιέχει μόνο το στυλ - χωρίς περιεχόμενο και χωρίς εικόνα.',
+    'js.style_from_link' => 'Το στυλ φορτώθηκε από τον σύνδεσμο.',
 ];
