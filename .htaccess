@@ -1,0 +1,41 @@
+# QR Code Generator - Apache configuration
+
+Options -Indexes
+DirectoryIndex index.php
+
+# Block direct access to internal files and folders.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(src|lang|templates|tools)(/|$) - [F,L]
+    RewriteRule ^(config\.php|composer\.(json|lock)|README\.md|\.git.*)$ - [F,L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    <FilesMatch "^(config\.php|README\.md)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Correct MIME types.
+<IfModule mod_mime.c>
+    AddType image/svg+xml .svg
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Cache static assets (URLs carry a ?v= version, so long caching is safe).
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>

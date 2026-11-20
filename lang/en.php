@@ -1,0 +1,136 @@
+<?php
+
+declare(strict_types=1);
+
+/*
+ * English - default / fallback language and base for the regional variants
+ * (en-US, en-GB, en-CA, en-AU).
+ *
+ * Any key missing from another language file falls back to the value below.
+ * Keys starting with "js." are passed to the browser script.
+ */
+return [
+    '_meta' => [
+        'name' => 'English',
+        'native' => 'English',
+        'dir' => 'ltr',
+        'flag' => 'gb',
+    ],
+
+    'app.title' => 'QR Code Generator',
+    'app.tagline' => 'Create styled QR codes with your own logo. Everything runs in your browser.',
+    'app.language' => 'Language',
+    'app.search_language' => 'Search languages…',
+    'app.no_language' => 'No matching languages',
+    'app.noscript' => 'This application needs JavaScript to generate QR codes. Please enable it in your browser.',
+    'theme.toggle' => 'Switch theme',
+    'theme.to_light' => 'Switch to light mode',
+    'theme.to_dark' => 'Switch to dark mode',
+
+    'app.footer' => 'Your data and images are processed locally in your browser and are never uploaded.',
+
+    'content.heading' => 'Content',
+    'content.type' => 'Content type',
+    'type.url' => 'Link',
+    'type.text' => 'Text',
+    'type.email' => 'E-mail',
+    'type.phone' => 'Phone',
+    'type.sms' => 'SMS',
+    'type.wifi' => 'Wi-Fi',
+    'type.vcard' => 'Contact',
+    'type.geo' => 'Location',
+
+    'field.url' => 'Website address',
+    'field.text' => 'Text',
+    'field.email' => 'E-mail address',
+    'field.subject' => 'Subject',
+    'field.body' => 'Message',
+    'field.phone' => 'Phone number',
+    'field.sms_message' => 'Message',
+    'field.ssid' => 'Network name (SSID)',
+    'field.password' => 'Password',
+    'field.encryption' => 'Security',
+    'field.encryption_none' => 'None (open network)',
+    'field.hidden' => 'Hidden network',
+    'field.first_name' => 'First name',
+    'field.last_name' => 'Last name',
+    'field.organization' => 'Company',
+    'field.job_title' => 'Job title',
+    'field.website' => 'Website',
+    'field.address' => 'Address',
+    'field.latitude' => 'Latitude',
+    'field.longitude' => 'Longitude',
+    'field.optional' => 'optional',
+
+    'style.heading' => 'Appearance',
+    'style.dots' => 'Dot style',
+    'style.corner_square' => 'Corner frame style',
+    'style.corner_dot' => 'Corner center style',
+    'style.color' => 'Color',
+    'style.dots_color' => 'Dot color',
+    'style.corner_square_color' => 'Corner frame color',
+    'style.corner_dot_color' => 'Corner center color',
+    'style.background' => 'Background color',
+    'style.transparent' => 'Transparent background',
+    'style.gradient' => 'Use gradient for dots',
+    'style.gradient_color' => 'Second gradient color',
+    'style.size' => 'Size',
+    'style.margin' => 'Margin',
+    'style.error_correction' => 'Error correction',
+    'style.error_correction_hint' => 'Higher levels make the code more robust and leave more room for a logo, but add more dots.',
+    'style.ec_l' => 'Low (7%)',
+    'style.ec_m' => 'Medium (15%)',
+    'style.ec_q' => 'Quartile (25%)',
+    'style.ec_h' => 'High (30%)',
+
+    'shape.square' => 'Square',
+    'shape.dots' => 'Dots',
+    'shape.dot' => 'Dot',
+    'shape.rounded' => 'Rounded',
+    'shape.extra-rounded' => 'Extra rounded',
+    'shape.classy' => 'Classy',
+    'shape.classy-rounded' => 'Classy rounded',
+
+    'logo.heading' => 'Center image',
+    'logo.file' => 'Image file',
+    'logo.choose' => 'Choose image',
+    'logo.none' => 'No file selected',
+    'logo.hint' => 'PNG, JPG, SVG, GIF or WebP, up to {size} MB.',
+    'logo.size' => 'Image size',
+    'logo.margin' => 'Space around image',
+    'logo.hide_dots' => 'Hide dots behind the image',
+    'logo.remove' => 'Remove image',
+
+    'preview.heading' => 'Preview',
+    'preview.empty' => 'Enter some content to generate a QR code.',
+    'download.heading' => 'Download',
+    'download.format' => 'Format',
+    'download.filename' => 'File name',
+    'download.button' => 'Download',
+    'download.copy' => 'Copy image',
+    'download.reset' => 'Reset settings',
+
+    'js.copied' => 'Image copied to clipboard.',
+    'js.copy_failed' => 'Your browser does not allow copying images. Please use Download instead.',
+    'js.too_long' => 'The content is too long for a QR code. Shorten it or lower the error correction level.',
+    'js.logo_too_big' => 'The image is too large. Maximum size is {size} MB.',
+    'js.logo_invalid' => 'Please choose an image file.',
+    'js.logo_ec_hint' => 'Tip: with a center image, use the "High" error correction level so the code stays readable.',
+    'js.generic_error' => 'Something went wrong while generating the QR code.',
+
+    'footer.created_by' => 'Created by {author}',
+    'footer.source' => 'Source code on GitHub',
+    'footer.license' => 'MIT License',
+
+    'consent.title' => 'Before you start',
+    'consent.text' => 'This page saves your language, theme and current settings only in your browser (cookies and browser storage). Nothing you enter is sent to a server or shared with anyone.',
+    'consent.accept' => 'Accept and continue',
+    'consent.decline' => 'Decline',
+    'consent.declined_title' => 'Consent required',
+    'consent.declined_text' => 'Without your consent this page cannot be used. You can close the page or go back and accept.',
+    'consent.back' => 'Go back',
+    'consent.leave' => 'Close page',
+
+    'js.low_contrast' => 'Low contrast between the dots and the background - some phones may not be able to scan this code.',
+    'js.inverted' => 'The dots are lighter than the background. Many scanners cannot read inverted codes - use dark dots on a light background.',
+];
