@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Burauzarka ba ta ba da damar kwafi zuwa allon kwafi ba.',
     'js.share_failed' => 'Ba a iya rabawa ba. Da fatan za a yi amfani da Zazzage.',
     'js.format_unsupported' => 'Burauzarka ba za ta iya ƙirƙirar wannan tsari ba. Da fatan za a zaɓi wani.',
+
+    'type.event' => 'Taron',
+    'field.event_title' => 'Sunan taron',
+    'field.event_start' => 'Farawa',
+    'field.event_end' => 'Ƙarshe',
+    'field.event_location' => 'Wuri',
+    'field.event_description' => 'Bayani',
+
+    'preset.heading' => 'Salo da aka adana',
+    'preset.hint' => 'Adana kamannin yanzu (launuka, siffofi, girma da hoto) kuma ka sake loda shi da danna sau ɗaya. Ana adana salo a wannan burauza kawai.',
+    'preset.choose' => 'Salon da aka adana',
+    'preset.none' => '— Zaɓi salo —',
+    'preset.delete' => 'Share',
+    'preset.name' => 'Adana salon yanzu da sunan',
+    'preset.name_placeholder' => 'misali Kamfani',
+    'preset.save' => 'Adana',
+
+    'js.scan_checking' => 'Ana duba ko za a iya duba lambar…',
+    'js.scan_ok' => 'Ana iya duba lambar daidai.',
+    'js.scan_fail' => 'Ba a iya karanta wannan lambar ba. Ƙara bambancin launi, rage hoton ko zaɓi matakin gyara mafi girma.',
+    'js.preset_saved' => 'An adana salon "{name}".',
+    'js.preset_saved_no_logo' => 'An adana salon "{name}" ba tare da hoton ba - babu isasshen wurin ajiya.',
+    'js.preset_deleted' => 'An share salon "{name}".',
 ];

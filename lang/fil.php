@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Hindi pinapayagan ng iyong browser ang pagkopya sa clipboard.',
     'js.share_failed' => 'Hindi naibahagi. Gamitin na lang ang I-download.',
     'js.format_unsupported' => 'Hindi kayang gawin ng iyong browser ang format na ito. Pumili ng iba.',
+
+    'type.event' => 'Event',
+    'field.event_title' => 'Pamagat ng event',
+    'field.event_start' => 'Simula',
+    'field.event_end' => 'Katapusan',
+    'field.event_location' => 'Lugar',
+    'field.event_description' => 'Paglalarawan',
+
+    'preset.heading' => 'Mga naka-save na istilo',
+    'preset.hint' => 'I-save ang kasalukuyang itsura (kulay, hugis, laki at larawan) at i-load muli sa isang click. Sa browser na ito lang naka-save ang mga istilo.',
+    'preset.choose' => 'Naka-save na istilo',
+    'preset.none' => '— Pumili ng istilo —',
+    'preset.delete' => 'Burahin',
+    'preset.name' => 'I-save ang kasalukuyang istilo bilang',
+    'preset.name_placeholder' => 'hal. Kumpanya',
+    'preset.save' => 'I-save',
+
+    'js.scan_checking' => 'Sinusuri kung ma-scan ang code…',
+    'js.scan_ok' => 'Tama ang pag-scan ng code.',
+    'js.scan_fail' => 'Hindi mabasa ang code na ito. Taasan ang contrast, paliitin ang larawan o pumili ng mas mataas na antas ng pagtatama.',
+    'js.preset_saved' => 'Na-save ang istilong "{name}".',
+    'js.preset_saved_no_logo' => 'Na-save ang istilong "{name}" nang walang larawan - kulang ang espasyo sa storage.',
+    'js.preset_deleted' => 'Nabura ang istilong "{name}".',
 ];

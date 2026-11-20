@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Teie brauser ei luba lõikelauale kopeerida.',
     'js.share_failed' => 'Jagamine ebaõnnestus. Kasutage selle asemel nuppu „Laadi alla”.',
     'js.format_unsupported' => 'Teie brauser ei saa seda vormingut luua. Valige mõni muu.',
+
+    'type.event' => 'Sündmus',
+    'field.event_title' => 'Sündmuse nimi',
+    'field.event_start' => 'Algus',
+    'field.event_end' => 'Lõpp',
+    'field.event_location' => 'Koht',
+    'field.event_description' => 'Kirjeldus',
+
+    'preset.heading' => 'Salvestatud stiilid',
+    'preset.hint' => 'Salvestage praegune välimus (värvid, kujundid, suurus ja pilt) ja laadige see ühe klõpsuga uuesti. Stiile hoitakse ainult selles brauseris.',
+    'preset.choose' => 'Salvestatud stiil',
+    'preset.none' => '— Valige stiil —',
+    'preset.delete' => 'Kustuta',
+    'preset.name' => 'Salvesta praegune stiil nimega',
+    'preset.name_placeholder' => 'nt Ettevõte',
+    'preset.save' => 'Salvesta',
+
+    'js.scan_checking' => 'Kontrollin, kas koodi saab skannida…',
+    'js.scan_ok' => 'Kood loetakse õigesti.',
+    'js.scan_fail' => 'Seda koodi ei õnnestunud lugeda. Suurendage kontrasti, vähendage pilti või valige kõrgem veaparanduse tase.',
+    'js.preset_saved' => 'Stiil „{name}” salvestati.',
+    'js.preset_saved_no_logo' => 'Stiil „{name}” salvestati ilma pildita - salvestusruumi ei jätku.',
+    'js.preset_deleted' => 'Stiil „{name}” kustutati.',
 ];

@@ -4,14 +4,16 @@ A simple, dependency-free PHP web application for creating styled QR codes.
 
 **Live demo:** <https://pascold.github.io/QRCode-WebApp/> (static version on GitHub Pages)
 
-- Generate QR codes for **links, plain text, e-mail, phone numbers, SMS, Wi-Fi networks, contact cards (vCard) and map locations**.
+- Generate QR codes for **links, plain text, e-mail, phone numbers, SMS, Wi-Fi networks, contact cards (vCard), calendar events and map locations**. Any language and emoji are encoded as UTF-8.
 - Customize the look: **dot style** (square, dots, rounded, extra rounded, classy, classy rounded), **corner styles**, colors, optional **gradient**, transparent background, size, margin and error correction level.
 - Place your own **image / logo in the center** of the code.
 - Live preview and export to **PNG, SVG, PDF, JPG, WebP, AVIF, GIF, BMP and EPS**, plus **Print**, **Share** (phones), **Copy image** and **Copy SVG code**.
 - **92 languages and regional variants** (BCP 47 locale codes such as `pl`, `en-GB`, `sr-Latn`, `zh-HK`) in a searchable dropdown with flags, including right-to-left support for Arabic, Hebrew, Persian and Urdu. Adding more takes one file.
 - **Light and dark theme**, following the operating system by default, with a toggle in the header.
 - **Private by design:** content and images are processed entirely in the browser and never uploaded to the server. Your current settings (including the center image) survive a language switch or reload thanks to `sessionStorage` in your own browser tab.
+- **Readability check:** after every change the code is decoded in the browser (with jsQR, like a phone camera would) and the preview shows whether it scans correctly.
 - **Contrast check:** a warning appears when the dots are too light or lighter than the background (inverted codes), which many phones cannot scan.
+- **Saved styles:** save the current look (colors, shapes, size, image) under a name and load it again with one click - stored only in the browser (`localStorage`).
 - **Consent dialog** on the first visit: preferences are stored only after the visitor accepts; declining explains that the page cannot be used and offers to close it.
 - **Installable** on phones and desktops (web app manifest and icons).
 - Searchable language dropdown with **keyboard navigation** (arrows, Home/End, Enter, Escape).
@@ -278,7 +280,11 @@ It reports missing or unknown keys, lost placeholders (`{size}`, `{author}`), br
 
 - Nothing the visitor types or uploads is ever sent to the server - QR codes are generated in the browser.
 - On the first visit a dialog asks for consent to store preferences. Until the visitor accepts, **no cookies are written** and the page cannot be used. Declining shows a short explanation with options to go back or close the page.
-- After consent the app stores `qr_consent`, `qr_lang` and `qr_theme` (preferences only) - as cookies in the PHP version, in `localStorage` in the static version, and the current form settings in `sessionStorage` (cleared when the tab is closed). No analytics or third-party requests.
+- After consent the app stores:
+  - `qr_consent`, `qr_lang` and `qr_theme` (preferences only) - as cookies in the PHP version, in `localStorage` in the static version,
+  - saved styles in `localStorage` (`qr_presets`),
+  - the current form settings in `sessionStorage` (cleared when the tab is closed).
+- No analytics and no third-party requests.
 
 ## Project structure
 
@@ -310,6 +316,7 @@ QRCode-WebApp/
 │       ├── qr-code-styling/  # QR rendering library (bundled, MIT)
 │       ├── flag-icons/       # Flag SVGs (bundled, MIT)
 │       ├── gifenc/           # GIF encoder (bundled, MIT, loaded on demand)
+│       ├── jsqr/             # QR decoder for the readability check (bundled, Apache-2.0, loaded on demand)
 │       └── jsquash-avif/     # AVIF encoder, WebAssembly (bundled, Apache-2.0, loaded on demand)
 ├── tools/
 │   ├── check-translations.php  # Validates all language files (CLI only)
@@ -320,7 +327,7 @@ QRCode-WebApp/
 
 ## How it works
 
-PHP renders the page and handles translations. QR codes are generated in the browser by [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) (v1.9.2, MIT license), which is bundled locally in `assets/vendor/` together with the flag images from [flag-icons](https://github.com/lipis/flag-icons) (v7.6.0, MIT license), the GIF encoder [gifenc](https://github.com/mattdesl/gifenc) (v1.0.3, MIT) and the AVIF encoder from [jSquash](https://github.com/jamsinclair/jSquash) (v2.1.1, Apache-2.0), so the application works offline and does not load anything from third-party CDNs.
+PHP renders the page and handles translations. QR codes are generated in the browser by [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) (v1.9.2, MIT license), which is bundled locally in `assets/vendor/` together with the flag images from [flag-icons](https://github.com/lipis/flag-icons) (v7.6.0, MIT license), the GIF encoder [gifenc](https://github.com/mattdesl/gifenc) (v1.0.3, MIT), the QR decoder [jsQR](https://github.com/cozmo/jsQR) (v1.4.0, Apache-2.0) and the AVIF encoder from [jSquash](https://github.com/jamsinclair/jSquash) (v2.1.1, Apache-2.0), so the application works offline and does not load anything from third-party CDNs.
 
 The content types are encoded using the common formats understood by phone camera apps:
 
@@ -332,6 +339,7 @@ The content types are encoded using the common formats understood by phone camer
 | SMS | `SMSTO:number:message` |
 | Wi-Fi | `WIFI:T:WPA;S:name;P:password;H:true;;` |
 | Contact | vCard 3.0 |
+| Event | iCalendar `VEVENT` (local time, optional end, place and description) |
 | Location | `geo:lat,lng` |
 
 ### Export formats
@@ -372,5 +380,6 @@ You may use, copy, modify and distribute this software, **commercially or not**,
 The bundled third-party libraries keep their own licenses:
 [qr-code-styling](assets/vendor/qr-code-styling/LICENSE) (MIT),
 [flag-icons](assets/vendor/flag-icons/LICENSE) (MIT),
-[gifenc](assets/vendor/gifenc/LICENSE.md) (MIT) and
+[gifenc](assets/vendor/gifenc/LICENSE.md) (MIT),
+[jsQR](assets/vendor/jsqr/LICENSE) (Apache-2.0) and
 [jSquash AVIF](assets/vendor/jsquash-avif/LICENSE) (Apache-2.0).

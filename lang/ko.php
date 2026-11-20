@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => '브라우저에서 클립보드 복사를 허용하지 않습니다.',
     'js.share_failed' => '공유하지 못했습니다. 대신 다운로드를 이용하세요.',
     'js.format_unsupported' => '브라우저에서 이 형식을 만들 수 없습니다. 다른 형식을 선택하세요.',
+
+    'type.event' => '일정',
+    'field.event_title' => '일정 제목',
+    'field.event_start' => '시작',
+    'field.event_end' => '종료',
+    'field.event_location' => '장소',
+    'field.event_description' => '설명',
+
+    'preset.heading' => '저장된 스타일',
+    'preset.hint' => '현재 모양(색상, 모양, 크기, 이미지)을 저장하고 클릭 한 번으로 다시 불러오세요. 스타일은 이 브라우저에만 저장됩니다.',
+    'preset.choose' => '저장된 스타일',
+    'preset.none' => '— 스타일 선택 —',
+    'preset.delete' => '삭제',
+    'preset.name' => '현재 스타일을 다음 이름으로 저장',
+    'preset.name_placeholder' => '예: 회사',
+    'preset.save' => '저장',
+
+    'js.scan_checking' => '코드를 스캔할 수 있는지 확인하는 중…',
+    'js.scan_ok' => '코드가 올바르게 스캔됩니다.',
+    'js.scan_fail' => '이 코드를 읽을 수 없습니다. 대비를 높이거나 이미지를 줄이거나 더 높은 오류 정정 수준을 선택하세요.',
+    'js.preset_saved' => '\'{name}\' 스타일을 저장했습니다.',
+    'js.preset_saved_no_logo' => '\'{name}\' 스타일을 이미지 없이 저장했습니다. 저장 공간이 부족합니다.',
+    'js.preset_deleted' => '\'{name}\' 스타일을 삭제했습니다.',
 ];

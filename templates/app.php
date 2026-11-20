@@ -20,7 +20,7 @@ declare(strict_types=1);
  * @var callable $langUrl URL of a language version
  */
 
-$contentTypes = ['url', 'text', 'email', 'phone', 'sms', 'wifi', 'vcard', 'geo'];
+$contentTypes = ['url', 'text', 'email', 'phone', 'sms', 'wifi', 'vcard', 'event', 'geo'];
 $dotShapes = ['square', 'dots', 'rounded', 'extra-rounded', 'classy', 'classy-rounded'];
 $cornerSquareShapes = ['square', 'dot', 'rounded', 'extra-rounded', 'classy', 'classy-rounded'];
 $cornerDotShapes = ['square', 'dot', 'rounded', 'classy'];
@@ -222,6 +222,25 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                 <input type="text" id="vc_address" name="vc_address">
             </fieldset>
 
+            <fieldset class="type-panel" data-type="event" hidden>
+                <label for="ev_title"><?= $t('field.event_title') ?></label>
+                <input type="text" id="ev_title" name="ev_title">
+                <div class="row">
+                    <div>
+                        <label for="ev_start"><?= $t('field.event_start') ?></label>
+                        <input type="datetime-local" id="ev_start" name="ev_start">
+                    </div>
+                    <div>
+                        <label for="ev_end"><?= $t('field.event_end') . $optional ?></label>
+                        <input type="datetime-local" id="ev_end" name="ev_end">
+                    </div>
+                </div>
+                <label for="ev_location"><?= $t('field.event_location') . $optional ?></label>
+                <input type="text" id="ev_location" name="ev_location">
+                <label for="ev_description"><?= $t('field.event_description') . $optional ?></label>
+                <textarea id="ev_description" name="ev_description" rows="3"></textarea>
+            </fieldset>
+
             <fieldset class="type-panel" data-type="geo" hidden>
                 <div class="row">
                     <div>
@@ -342,6 +361,27 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                 <label class="check"><input type="checkbox" name="logo_hide_dots" checked> <?= $t('logo.hide_dots') ?></label>
             </div>
         </section>
+
+        <!-- Saved styles (kept in this browser only) -------------------------->
+        <!-- data-ignore: these controls are not part of the QR settings. -->
+        <section class="card" data-ignore>
+            <h2><?= $t('preset.heading') ?></h2>
+            <p class="hint"><?= $t('preset.hint') ?></p>
+
+            <label for="preset-select"><?= $t('preset.choose') ?></label>
+            <div class="inline-row">
+                <select id="preset-select">
+                    <option value=""><?= $t('preset.none') ?></option>
+                </select>
+                <button type="button" id="preset-delete" class="btn btn-ghost" disabled><?= $t('preset.delete') ?></button>
+            </div>
+
+            <label for="preset-name"><?= $t('preset.name') ?></label>
+            <div class="inline-row">
+                <input type="text" id="preset-name" maxlength="40" placeholder="<?= $t('preset.name_placeholder') ?>">
+                <button type="button" id="preset-save" class="btn" disabled><?= $t('preset.save') ?></button>
+            </div>
+        </section>
     </form>
 
     <!-- Preview & download ------------------------------------------------->
@@ -350,6 +390,8 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
             <h2><?= $t('preview.heading') ?></h2>
             <div id="qr-preview" class="qr-preview checkerboard" aria-live="polite"></div>
             <p id="qr-empty" class="hint center" hidden><?= $t('preview.empty') ?></p>
+            <!-- Automatic readability check (the code is decoded in the browser). -->
+            <p id="qr-scan" class="scan-status" role="status" hidden></p>
             <p id="qr-warning" class="notice notice-warning" role="status" hidden></p>
             <p id="qr-message" class="notice" role="status" hidden></p>
 

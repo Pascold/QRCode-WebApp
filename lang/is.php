@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Vafrinn þinn leyfir ekki afritun á klippiborðið.',
     'js.share_failed' => 'Ekki tókst að deila. Notaðu „Sækja“ í staðinn.',
     'js.format_unsupported' => 'Vafrinn þinn getur ekki búið til þetta snið. Veldu annað.',
+
+    'type.event' => 'Viðburður',
+    'field.event_title' => 'Heiti viðburðar',
+    'field.event_start' => 'Hefst',
+    'field.event_end' => 'Lýkur',
+    'field.event_location' => 'Staður',
+    'field.event_description' => 'Lýsing',
+
+    'preset.heading' => 'Vistuð útlit',
+    'preset.hint' => 'Vistaðu núverandi útlit (liti, form, stærð og mynd) og hlaðaðu því aftur með einum smelli. Útlitin eru aðeins geymd í þessum vafra.',
+    'preset.choose' => 'Vistað útlit',
+    'preset.none' => '— Veldu útlit —',
+    'preset.delete' => 'Eyða',
+    'preset.name' => 'Vista núverandi útlit sem',
+    'preset.name_placeholder' => 't.d. Fyrirtæki',
+    'preset.save' => 'Vista',
+
+    'js.scan_checking' => 'Athuga hvort hægt sé að skanna kóðann…',
+    'js.scan_ok' => 'Kóðinn skannast rétt.',
+    'js.scan_fail' => 'Ekki tókst að lesa þennan kóða. Auktu birtuskilin, minnkaðu myndina eða veldu hærra villuleiðréttingarstig.',
+    'js.preset_saved' => 'Útlitið „{name}“ var vistað.',
+    'js.preset_saved_no_logo' => 'Útlitið „{name}“ var vistað án myndar - ekki er nægt geymslurými.',
+    'js.preset_deleted' => 'Útlitinu „{name}“ var eytt.',
 ];

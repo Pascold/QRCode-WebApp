@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Browser Anda tidak mengizinkan penyalinan ke papan klip.',
     'js.share_failed' => 'Gagal membagikan. Gunakan Unduh sebagai gantinya.',
     'js.format_unsupported' => 'Browser Anda tidak dapat membuat format ini. Pilih format lain.',
+
+    'type.event' => 'Acara',
+    'field.event_title' => 'Judul acara',
+    'field.event_start' => 'Mulai',
+    'field.event_end' => 'Selesai',
+    'field.event_location' => 'Tempat',
+    'field.event_description' => 'Deskripsi',
+
+    'preset.heading' => 'Gaya tersimpan',
+    'preset.hint' => 'Simpan tampilan saat ini (warna, bentuk, ukuran, dan gambar) lalu muat lagi dengan sekali klik. Gaya hanya disimpan di browser ini.',
+    'preset.choose' => 'Gaya tersimpan',
+    'preset.none' => '— Pilih gaya —',
+    'preset.delete' => 'Hapus',
+    'preset.name' => 'Simpan gaya saat ini sebagai',
+    'preset.name_placeholder' => 'mis. Perusahaan',
+    'preset.save' => 'Simpan',
+
+    'js.scan_checking' => 'Memeriksa apakah kode dapat dipindai…',
+    'js.scan_ok' => 'Kode dapat dipindai dengan benar.',
+    'js.scan_fail' => 'Kode ini tidak dapat dibaca. Tingkatkan kontras, perkecil gambar, atau pilih tingkat koreksi yang lebih tinggi.',
+    'js.preset_saved' => 'Gaya "{name}" disimpan.',
+    'js.preset_saved_no_logo' => 'Gaya "{name}" disimpan tanpa gambar - ruang penyimpanan tidak cukup.',
+    'js.preset_deleted' => 'Gaya "{name}" dihapus.',
 ];

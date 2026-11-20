@@ -27,4 +27,6 @@ return [
 
     'logo.heading' => 'Centre image',
     'js.logo_ec_hint' => 'Tip: with a centre image, use the "High" error correction level so the code stays readable.',
+
+    'preset.hint' => 'Save the current look (colours, shapes, size and image) and load it again with one click. Styles are stored only in this browser.',
 ];

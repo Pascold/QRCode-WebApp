@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Tu navegador no permite copiar al portapapeles.',
     'js.share_failed' => 'No se pudo compartir. Usa «Descargar» en su lugar.',
     'js.format_unsupported' => 'Tu navegador no puede crear este formato. Elige otro.',
+
+    'type.event' => 'Evento',
+    'field.event_title' => 'Título del evento',
+    'field.event_start' => 'Inicio',
+    'field.event_end' => 'Fin',
+    'field.event_location' => 'Lugar',
+    'field.event_description' => 'Descripción',
+
+    'preset.heading' => 'Estilos guardados',
+    'preset.hint' => 'Guarda el aspecto actual (colores, formas, tamaño e imagen) y vuelve a cargarlo con un clic. Los estilos se guardan solo en este navegador.',
+    'preset.choose' => 'Estilo guardado',
+    'preset.none' => '— Elige un estilo —',
+    'preset.delete' => 'Eliminar',
+    'preset.name' => 'Guardar el estilo actual como',
+    'preset.name_placeholder' => 'p. ej. Empresa',
+    'preset.save' => 'Guardar',
+
+    'js.scan_checking' => 'Comprobando si el código se puede escanear…',
+    'js.scan_ok' => 'El código se escanea correctamente.',
+    'js.scan_fail' => 'No se pudo leer este código. Aumenta el contraste, reduce la imagen o elige un nivel de corrección más alto.',
+    'js.preset_saved' => 'Estilo «{name}» guardado.',
+    'js.preset_saved_no_logo' => 'Estilo «{name}» guardado sin la imagen: no hay suficiente espacio de almacenamiento.',
+    'js.preset_deleted' => 'Estilo «{name}» eliminado.',
 ];

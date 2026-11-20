@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Äre Browser erlaabt net, an den Tëschespäicher ze kopéieren.',
     'js.share_failed' => 'Deelen huet net geklappt. Benotzt w.e.g. „Eroflueden“.',
     'js.format_unsupported' => 'Äre Browser kann dëse Format net erstellen. Wielt w.e.g. en aneren.',
+
+    'type.event' => 'Evenement',
+    'field.event_title' => 'Titel vum Evenement',
+    'field.event_start' => 'Ufank',
+    'field.event_end' => 'Enn',
+    'field.event_location' => 'Plaz',
+    'field.event_description' => 'Beschreiwung',
+
+    'preset.heading' => 'Gespäichert Stiler',
+    'preset.hint' => 'Späichert dat aktuellt Ausgesinn (Faarwen, Formen, Gréisst a Bild) a lued et mat engem Klick nees. D\'Stiler ginn nëmmen an dësem Browser gespäichert.',
+    'preset.choose' => 'Gespäicherte Stil',
+    'preset.none' => '— Stil auswielen —',
+    'preset.delete' => 'Läschen',
+    'preset.name' => 'Aktuelle Stil späicheren als',
+    'preset.name_placeholder' => 'z. B. Firma',
+    'preset.save' => 'Späicheren',
+
+    'js.scan_checking' => 'Kontrolléieren, ob de Code sech scanne léisst…',
+    'js.scan_ok' => 'De Code léisst sech korrekt scannen.',
+    'js.scan_fail' => 'Dëse Code konnt net gelies ginn. Erhéicht de Kontrast, maacht d\'Bild méi kleng oder wielt eng méi héich Feelerkorrektur.',
+    'js.preset_saved' => 'Stil „{name}“ gespäichert.',
+    'js.preset_saved_no_logo' => 'Stil „{name}“ ouni Bild gespäichert - et ass net genuch Späicherplaz do.',
+    'js.preset_deleted' => 'Stil „{name}“ geläscht.',
 ];

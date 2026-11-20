@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'הדפדפן שלכם אינו מאפשר העתקה ללוח.',
     'js.share_failed' => 'השיתוף לא הצליח. השתמשו ב"הורדה" במקום.',
     'js.format_unsupported' => 'הדפדפן שלכם אינו יכול ליצור פורמט זה. בחרו פורמט אחר.',
+
+    'type.event' => 'אירוע',
+    'field.event_title' => 'שם האירוע',
+    'field.event_start' => 'התחלה',
+    'field.event_end' => 'סיום',
+    'field.event_location' => 'מקום',
+    'field.event_description' => 'תיאור',
+
+    'preset.heading' => 'סגנונות שמורים',
+    'preset.hint' => 'שמרו את המראה הנוכחי (צבעים, צורות, גודל ותמונה) וטענו אותו שוב בלחיצה אחת. הסגנונות נשמרים רק בדפדפן הזה.',
+    'preset.choose' => 'סגנון שמור',
+    'preset.none' => '— בחרו סגנון —',
+    'preset.delete' => 'מחיקה',
+    'preset.name' => 'שמירת הסגנון הנוכחי בשם',
+    'preset.name_placeholder' => 'למשל: חברה',
+    'preset.save' => 'שמירה',
+
+    'js.scan_checking' => 'בודק אם ניתן לסרוק את הקוד…',
+    'js.scan_ok' => 'הקוד נסרק כראוי.',
+    'js.scan_fail' => 'לא ניתן היה לקרוא את הקוד. הגבירו את הניגודיות, הקטינו את התמונה או בחרו רמת תיקון גבוהה יותר.',
+    'js.preset_saved' => 'הסגנון "{name}" נשמר.',
+    'js.preset_saved_no_logo' => 'הסגנון "{name}" נשמר ללא התמונה - אין מספיק מקום אחסון.',
+    'js.preset_deleted' => 'הסגנון "{name}" נמחק.',
 ];

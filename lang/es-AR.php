@@ -31,4 +31,8 @@ return [
 
     'js.share_failed' => 'No se pudo compartir. Usá "Descargar" en su lugar.',
     'js.format_unsupported' => 'Tu navegador no puede crear este formato. Elegí otro.',
+
+    'preset.hint' => 'Guardá el aspecto actual (colores, formas, tamaño e imagen) y volvé a cargarlo con un clic. Los estilos se guardan solo en este navegador.',
+    'preset.none' => '— Elegí un estilo —',
+    'js.scan_fail' => 'No se pudo leer este código. Aumentá el contraste, reducí la imagen o elegí un nivel de corrección más alto.',
 ];

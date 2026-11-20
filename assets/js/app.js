@@ -8,6 +8,8 @@
     'use strict';
 
     var config = JSON.parse(document.getElementById('app-config').textContent);
+    // jsQR is loaded on demand, relative to this script (works in sub-folders).
+    var JSQR_URL = new URL('../vendor/jsqr/jsQR.js', document.currentScript.src).href;
     var i18n = config.i18n || {};
 
     var form = document.getElementById('qr-form');
@@ -70,6 +72,16 @@
 
     function cleanPhone(text) {
         return text.replace(/[^\d+*#]/g, '');
+    }
+
+    /**
+     * "2026-11-20T15:30" (datetime-local input) -> "20261120T153000".
+     * Local ("floating") time, so the event shows at the same clock time
+     * in the scanning phone's calendar.
+     */
+    function icalDate(text) {
+        var match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(text || '');
+        return match ? match[1] + match[2] + match[3] + 'T' + match[4] + match[5] + '00' : '';
     }
 
     var builders = {
@@ -142,6 +154,26 @@
             lines.push('END:VCARD');
             return lines.join('\n');
         },
+        event: function () {
+            var title = value('ev_title');
+            var start = icalDate(value('ev_start'));
+            if (!title || !start) {
+                return '';
+            }
+            var end = icalDate(value('ev_end'));
+            var lines = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'BEGIN:VEVENT',
+                'SUMMARY:' + escapeVcard(title),
+                'DTSTART:' + start
+            ];
+            if (end && end > start) { lines.push('DTEND:' + end); }
+            if (value('ev_location')) { lines.push('LOCATION:' + escapeVcard(value('ev_location'))); }
+            if (value('ev_description')) { lines.push('DESCRIPTION:' + escapeVcard(value('ev_description'))); }
+            lines.push('END:VEVENT', 'END:VCALENDAR');
+            return lines.join('\n');
+        },
         geo: function () {
             var lat = parseFloat(value('geo_lat'));
             var lng = parseFloat(value('geo_lng'));
@@ -155,6 +187,21 @@
     // ------------------------------------------------------------------
     // QR options
     // ------------------------------------------------------------------
+
+    /**
+     * The QR library writes each character as a single byte (char code & 0xFF),
+     * which breaks letters such as "ż", Cyrillic or Chinese. Passing the UTF-8
+     * bytes as a "binary string" (one character per byte) makes the code
+     * contain proper UTF-8, which phone scanners decode correctly.
+     */
+    function utf8ByteString(text) {
+        var bytes = new TextEncoder().encode(text);
+        var out = '';
+        for (var i = 0; i < bytes.length; i += 8192) {
+            out += String.fromCharCode.apply(null, bytes.subarray(i, i + 8192));
+        }
+        return out;
+    }
 
     function buildOptions(data, overrides) {
         overrides = overrides || {};
@@ -181,7 +228,7 @@
             width: size,
             height: size,
             margin: Math.round((parseInt(value('margin'), 10) || 0) * scale),
-            data: data,
+            data: utf8ByteString(data),
             image: logoDataUrl || undefined,
             qrOptions: {
                 typeNumber: 0,
@@ -223,6 +270,7 @@
             emptyHint.hidden = false;
             preview.classList.add('is-empty');
             setActionsEnabled(false);
+            hideScan();
             return;
         }
 
@@ -234,6 +282,7 @@
             qr.append(preview);
             setActionsEnabled(true);
             checkContrast();
+            scheduleScan(data);
             if (message.dataset.source === 'render') {
                 showMessage('');
                 delete message.dataset.source;
@@ -243,6 +292,7 @@
             preview.innerHTML = '';
             preview.classList.add('is-empty');
             setActionsEnabled(false);
+            hideScan();
             showMessage(isOverflowError(error) ? t('too_long') : t('generic_error'), 'error');
             message.dataset.source = 'render';
             if (window.console) {
@@ -377,9 +427,18 @@
         } catch (error) {
             return;
         }
-        Object.keys(state.fields || {}).forEach(function (name) {
+        applyFields(state.fields || {});
+        if (typeof state.logo === 'string' && state.logo.indexOf('data:image/') === 0) {
+            logoDataUrl = state.logo;
+            setLogoName(state.logoName || '');
+        }
+    }
+
+    /** Puts saved values back into the form. */
+    function applyFields(fields) {
+        Object.keys(fields).forEach(function (name) {
             var field = form.elements.namedItem(name);
-            var saved = state.fields[name];
+            var saved = fields[name];
             if (!field) {
                 return;
             }
@@ -396,10 +455,6 @@
                 field.value = saved;
             }
         });
-        if (typeof state.logo === 'string' && state.logo.indexOf('data:image/') === 0) {
-            logoDataUrl = state.logo;
-            setLogoName(state.logoName || '');
-        }
     }
 
     function clearState() {
@@ -733,16 +788,244 @@
     });
 
     // ------------------------------------------------------------------
+    // Readability check: the rendered code is decoded with jsQR in the
+    // browser, the same way a phone camera app would read it.
+    // ------------------------------------------------------------------
+
+    var scanStatus = document.getElementById('qr-scan');
+    var scanTimer = null;
+    var scanToken = 0;
+    var jsqrPromise = null;
+
+    function loadJsQR() {
+        if (!jsqrPromise) {
+            jsqrPromise = new Promise(function (resolve, reject) {
+                var script = document.createElement('script');
+                script.src = JSQR_URL;
+                script.onload = function () { resolve(window.jsQR); };
+                script.onerror = function () {
+                    jsqrPromise = null;
+                    reject(new Error('jsQR could not be loaded'));
+                };
+                document.head.appendChild(script);
+            });
+        }
+        return jsqrPromise;
+    }
+
+    function setScan(state, text) {
+        scanStatus.className = 'scan-status is-' + state;
+        scanStatus.textContent = text;
+        scanStatus.hidden = false;
+    }
+
+    function hideScan() {
+        window.clearTimeout(scanTimer);
+        scanToken++;
+        scanStatus.hidden = true;
+    }
+
+    function sameBytes(a, b) {
+        if (!a || a.length !== b.length) {
+            return false;
+        }
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] !== b[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function scheduleScan(data) {
+        window.clearTimeout(scanTimer);
+        var token = ++scanToken;
+        setScan('checking', t('scan_checking'));
+        scanTimer = window.setTimeout(function () {
+            runScan(data, token);
+        }, 400);
+    }
+
+    async function runScan(data, token) {
+        var current = qr;
+        try {
+            var jsQR = await loadJsQR();
+            if (!current || token !== scanToken) {
+                return;
+            }
+            // Waits until the preview (including the logo) is fully drawn.
+            var bitmap = await createImageBitmap(await current.getRawData('png'));
+            // Decoding a smaller copy is faster and closer to a phone camera.
+            var scale = Math.min(1, 800 / bitmap.width);
+            var canvas = document.createElement('canvas');
+            canvas.width = Math.round(bitmap.width * scale);
+            canvas.height = Math.round(bitmap.height * scale);
+            var context = canvas.getContext('2d');
+            // Transparent codes are checked on white paper.
+            context.fillStyle = '#ffffff';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+            var image = context.getImageData(0, 0, canvas.width, canvas.height);
+            // Many phone scanners cannot read inverted codes, so neither do we.
+            var result = jsQR(image.data, canvas.width, canvas.height, { inversionAttempts: 'dontInvert' });
+            if (token !== scanToken) {
+                return;
+            }
+            var readable = !!result && (result.data === data
+                || sameBytes(result.binaryData, new TextEncoder().encode(data)));
+            setScan(readable ? 'ok' : 'fail', readable ? t('scan_ok') : t('scan_fail'));
+        } catch (error) {
+            if (token === scanToken) {
+                scanStatus.hidden = true;
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------
+    // Saved styles: the look of the code (not its content) is stored under
+    // a name in localStorage - only in this browser, after consent.
+    // ------------------------------------------------------------------
+
+    var PRESETS_KEY = 'qr_presets';
+    var STYLE_FIELDS = [
+        'dots_type', 'dots_color', 'gradient', 'gradient_color',
+        'corner_square_type', 'corner_square_color', 'corner_dot_type', 'corner_dot_color',
+        'background_color', 'transparent', 'size', 'margin', 'error_correction',
+        'logo_size', 'logo_margin', 'logo_hide_dots'
+    ];
+    var presetSelect = document.getElementById('preset-select');
+    var presetName = document.getElementById('preset-name');
+    var presetSave = document.getElementById('preset-save');
+    var presetDelete = document.getElementById('preset-delete');
+
+    function readPresets() {
+        try {
+            var presets = JSON.parse(window.localStorage.getItem(PRESETS_KEY) || '{}');
+            return presets && typeof presets === 'object' ? presets : {};
+        } catch (error) {
+            return {};
+        }
+    }
+
+    function writePresets(presets) {
+        // Throws when storage is full or blocked - handled by the caller.
+        window.localStorage.setItem(PRESETS_KEY, JSON.stringify(presets));
+    }
+
+    function renderPresets(selected) {
+        var presets = readPresets();
+        var placeholder = presetSelect.options[0];
+        presetSelect.replaceChildren(placeholder);
+        Object.keys(presets).sort(function (a, b) { return a.localeCompare(b); }).forEach(function (name) {
+            var option = document.createElement('option');
+            option.value = name;
+            option.textContent = name;
+            presetSelect.appendChild(option);
+        });
+        presetSelect.value = selected && presets[selected] ? selected : '';
+        presetDelete.disabled = !presetSelect.value;
+    }
+
+    presetName.addEventListener('input', function () {
+        presetSave.disabled = presetName.value.trim() === '';
+    });
+
+    presetName.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            presetSave.click();
+        }
+    });
+
+    presetSave.addEventListener('click', function () {
+        var name = presetName.value.trim();
+        if (!name || !consentGiven()) {
+            return;
+        }
+        var fields = {};
+        var all = collectState().fields;
+        STYLE_FIELDS.forEach(function (key) {
+            if (key in all) {
+                fields[key] = all[key];
+            }
+        });
+        var presets = readPresets();
+        presets[name] = { fields: fields, logo: logoDataUrl, logoName: logoName.title || '' };
+        try {
+            writePresets(presets);
+            showMessage(t('preset_saved', { name: name }), 'success');
+        } catch (error) {
+            // Not enough space for the image - keep the rest of the style.
+            presets[name].logo = null;
+            presets[name].logoName = '';
+            try {
+                writePresets(presets);
+                showMessage(t('preset_saved_no_logo', { name: name }), 'info');
+            } catch (ignored) {
+                showMessage(t('generic_error'), 'error');
+                return;
+            }
+        }
+        renderPresets(name);
+    });
+
+    presetSelect.addEventListener('change', function () {
+        var name = presetSelect.value;
+        presetDelete.disabled = !name;
+        var preset = readPresets()[name];
+        if (!preset) {
+            return;
+        }
+        applyFields(preset.fields || {});
+        // A style includes its center image (or the lack of one).
+        var hasLogo = typeof preset.logo === 'string' && preset.logo.indexOf('data:image/') === 0;
+        logoDataUrl = hasLogo ? preset.logo : null;
+        logoInput.value = '';
+        setLogoName(hasLogo ? preset.logoName : '');
+        presetName.value = name;
+        presetSave.disabled = false;
+        refresh();
+    });
+
+    presetDelete.addEventListener('click', function () {
+        var name = presetSelect.value;
+        if (!name) {
+            return;
+        }
+        var presets = readPresets();
+        delete presets[name];
+        try {
+            writePresets(presets);
+        } catch (error) {
+            showMessage(t('generic_error'), 'error');
+            return;
+        }
+        if (presetName.value.trim() === name) {
+            presetName.value = '';
+            presetSave.disabled = true;
+        }
+        renderPresets('');
+        showMessage(t('preset_deleted', { name: name }), 'info');
+    });
+
+    renderPresets('');
+
+    // ------------------------------------------------------------------
     // Wiring
     // ------------------------------------------------------------------
 
+    /** Controls that are not QR settings (e.g. saved styles) do not re-render. */
+    function isSetting(target) {
+        return target !== logoInput && !(target.closest && target.closest('[data-ignore]'));
+    }
+
     form.addEventListener('input', function (event) {
-        if (event.target !== logoInput) {
+        if (isSetting(event.target)) {
             refresh();
         }
     });
     form.addEventListener('change', function (event) {
-        if (event.target !== logoInput) {
+        if (isSetting(event.target)) {
             refresh();
         }
     });

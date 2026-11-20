@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Browserul tău nu permite copierea în clipboard.',
     'js.share_failed' => 'Distribuirea nu a reușit. Folosește în schimb „Descarcă”.',
     'js.format_unsupported' => 'Browserul tău nu poate crea acest format. Alege altul.',
+
+    'type.event' => 'Eveniment',
+    'field.event_title' => 'Titlul evenimentului',
+    'field.event_start' => 'Început',
+    'field.event_end' => 'Sfârșit',
+    'field.event_location' => 'Loc',
+    'field.event_description' => 'Descriere',
+
+    'preset.heading' => 'Stiluri salvate',
+    'preset.hint' => 'Salvează aspectul actual (culori, forme, dimensiune și imagine) și încarcă-l din nou cu un clic. Stilurile sunt păstrate doar în acest browser.',
+    'preset.choose' => 'Stil salvat',
+    'preset.none' => '— Alege un stil —',
+    'preset.delete' => 'Șterge',
+    'preset.name' => 'Salvează stilul actual ca',
+    'preset.name_placeholder' => 'ex. Firmă',
+    'preset.save' => 'Salvează',
+
+    'js.scan_checking' => 'Se verifică dacă codul poate fi scanat…',
+    'js.scan_ok' => 'Codul se scanează corect.',
+    'js.scan_fail' => 'Acest cod nu a putut fi citit. Mărește contrastul, micșorează imaginea sau alege un nivel de corectare mai mare.',
+    'js.preset_saved' => 'Stilul „{name}” a fost salvat.',
+    'js.preset_saved_no_logo' => 'Stilul „{name}” a fost salvat fără imagine - nu există suficient spațiu de stocare.',
+    'js.preset_deleted' => 'Stilul „{name}” a fost șters.',
 ];

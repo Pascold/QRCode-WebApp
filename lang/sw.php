@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Kivinjari chako hakiruhusu kunakili kwenye ubao wa kunakili.',
     'js.share_failed' => 'Kushiriki hakukufaulu. Tafadhali tumia Pakua badala yake.',
     'js.format_unsupported' => 'Kivinjari chako hakiwezi kutengeneza muundo huu. Tafadhali chagua mwingine.',
+
+    'type.event' => 'Tukio',
+    'field.event_title' => 'Jina la tukio',
+    'field.event_start' => 'Mwanzo',
+    'field.event_end' => 'Mwisho',
+    'field.event_location' => 'Mahali',
+    'field.event_description' => 'Maelezo',
+
+    'preset.heading' => 'Mitindo iliyohifadhiwa',
+    'preset.hint' => 'Hifadhi mwonekano wa sasa (rangi, maumbo, ukubwa na picha) na uupakie tena kwa mbofyo mmoja. Mitindo huhifadhiwa kwenye kivinjari hiki pekee.',
+    'preset.choose' => 'Mtindo uliohifadhiwa',
+    'preset.none' => '— Chagua mtindo —',
+    'preset.delete' => 'Futa',
+    'preset.name' => 'Hifadhi mtindo wa sasa kama',
+    'preset.name_placeholder' => 'mf. Kampuni',
+    'preset.save' => 'Hifadhi',
+
+    'js.scan_checking' => 'Inakagua kama msimbo unaweza kuchanganuliwa…',
+    'js.scan_ok' => 'Msimbo unachanganuliwa ipasavyo.',
+    'js.scan_fail' => 'Msimbo huu haukuweza kusomwa. Ongeza utofautishaji, punguza picha au chagua kiwango cha juu zaidi cha urekebishaji.',
+    'js.preset_saved' => 'Mtindo "{name}" umehifadhiwa.',
+    'js.preset_saved_no_logo' => 'Mtindo "{name}" umehifadhiwa bila picha - hakuna nafasi ya kutosha ya hifadhi.',
+    'js.preset_deleted' => 'Mtindo "{name}" umefutwa.',
 ];

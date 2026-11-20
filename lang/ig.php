@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Nchọgharị gị anaghị ekwe ka e detuo na klipbọọdụ.',
     'js.share_failed' => 'Ịkesa agaghị nke ọma. Biko jiri Budata kama.',
     'js.format_unsupported' => 'Nchọgharị gị enweghị ike ịmepụta usoro a. Biko họrọ nke ọzọ.',
+
+    'type.event' => 'Mmemme',
+    'field.event_title' => 'Aha mmemme',
+    'field.event_start' => 'Mmalite',
+    'field.event_end' => 'Njedebe',
+    'field.event_location' => 'Ebe',
+    'field.event_description' => 'Nkọwa',
+
+    'preset.heading' => 'Ụdị ndị echekwara',
+    'preset.hint' => 'Chekwaa ọdịdị ugbu a (agba, ọdịdị, nha na foto) ma bulite ya ọzọ site n\'ịpị otu ugboro. A na-echekwa ụdị naanị na nchọgharị a.',
+    'preset.choose' => 'Ụdị echekwara',
+    'preset.none' => '— Họrọ ụdị —',
+    'preset.delete' => 'Hichapụ',
+    'preset.name' => 'Chekwaa ụdị ugbu a dị ka',
+    'preset.name_placeholder' => 'dịka Ụlọ ọrụ',
+    'preset.save' => 'Chekwaa',
+
+    'js.scan_checking' => 'Na-enyocha ma enwere ike ịgụ koodu ahụ…',
+    'js.scan_ok' => 'A na-agụ koodu ahụ nke ọma.',
+    'js.scan_fail' => 'Enweghị ike ịgụ koodu a. Mee ka ọdịiche agba dịkwuo elu, belata foto ahụ ma ọ bụ họrọ ọkwa ndozi dị elu.',
+    'js.preset_saved' => 'E chekwara ụdị "{name}".',
+    'js.preset_saved_no_logo' => 'E chekwara ụdị "{name}" na-enweghị foto - enweghị ohere nchekwa zuru ezu.',
+    'js.preset_deleted' => 'E hichapụrụ ụdị "{name}".',
 ];

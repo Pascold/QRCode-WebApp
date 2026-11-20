@@ -143,4 +143,27 @@ return [
     'js.clipboard_failed' => 'Your browser does not allow copying to the clipboard.',
     'js.share_failed' => 'Sharing did not work. Please use Download instead.',
     'js.format_unsupported' => 'Your browser cannot create this format. Please choose another one.',
+
+    'type.event' => 'Event',
+    'field.event_title' => 'Event title',
+    'field.event_start' => 'Start',
+    'field.event_end' => 'End',
+    'field.event_location' => 'Place',
+    'field.event_description' => 'Description',
+
+    'preset.heading' => 'Saved styles',
+    'preset.hint' => 'Save the current look (colors, shapes, size and image) and load it again with one click. Styles are stored only in this browser.',
+    'preset.choose' => 'Saved style',
+    'preset.none' => '— Choose a style —',
+    'preset.delete' => 'Delete',
+    'preset.name' => 'Save current style as',
+    'preset.name_placeholder' => 'e.g. Company',
+    'preset.save' => 'Save',
+
+    'js.scan_checking' => 'Checking whether the code can be scanned…',
+    'js.scan_ok' => 'The code scans correctly.',
+    'js.scan_fail' => 'This code could not be read. Increase the contrast, make the image smaller or choose a higher error correction level.',
+    'js.preset_saved' => 'Style "{name}" saved.',
+    'js.preset_saved_no_logo' => 'Style "{name}" saved without the image - there is not enough storage space for it.',
+    'js.preset_deleted' => 'Style "{name}" deleted.',
 ];

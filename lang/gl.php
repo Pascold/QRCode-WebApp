@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'O teu navegador non permite copiar no portapapeis.',
     'js.share_failed' => 'Non se puido compartir. Usa «Descargar».',
     'js.format_unsupported' => 'O teu navegador non pode crear este formato. Escolle outro.',
+
+    'type.event' => 'Evento',
+    'field.event_title' => 'Título do evento',
+    'field.event_start' => 'Inicio',
+    'field.event_end' => 'Fin',
+    'field.event_location' => 'Lugar',
+    'field.event_description' => 'Descrición',
+
+    'preset.heading' => 'Estilos gardados',
+    'preset.hint' => 'Garda o aspecto actual (cores, formas, tamaño e imaxe) e vólveo cargar cun clic. Os estilos só se gardan neste navegador.',
+    'preset.choose' => 'Estilo gardado',
+    'preset.none' => '— Escolle un estilo —',
+    'preset.delete' => 'Eliminar',
+    'preset.name' => 'Gardar o estilo actual como',
+    'preset.name_placeholder' => 'p. ex. Empresa',
+    'preset.save' => 'Gardar',
+
+    'js.scan_checking' => 'Comprobando se o código se pode escanear…',
+    'js.scan_ok' => 'O código escanéase correctamente.',
+    'js.scan_fail' => 'Non se puido ler este código. Aumenta o contraste, reduce a imaxe ou escolle un nivel de corrección máis alto.',
+    'js.preset_saved' => 'Gardouse o estilo «{name}».',
+    'js.preset_saved_no_logo' => 'Gardouse o estilo «{name}» sen a imaxe: non hai espazo de almacenamento suficiente.',
+    'js.preset_deleted' => 'Eliminouse o estilo «{name}».',
 ];

@@ -25,4 +25,5 @@ Third-party components bundled in assets/vendor/ keep their own licenses:
 - qr-code-styling (MIT)        - see assets/vendor/qr-code-styling/LICENSE
 - flag-icons (MIT)             - see assets/vendor/flag-icons/LICENSE
 - gifenc (MIT)                 - see assets/vendor/gifenc/LICENSE.md
+- jsQR (Apache-2.0)            - see assets/vendor/jsqr/LICENSE
 - jSquash AVIF (Apache-2.0)    - see assets/vendor/jsquash-avif/LICENSE

@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'لا يسمح متصفحك بالنسخ إلى الحافظة.',
     'js.share_failed' => 'تعذّرت المشاركة. استخدم زر «تنزيل» بدلًا من ذلك.',
     'js.format_unsupported' => 'لا يستطيع متصفحك إنشاء هذه الصيغة. يرجى اختيار صيغة أخرى.',
+
+    'type.event' => 'حدث',
+    'field.event_title' => 'عنوان الحدث',
+    'field.event_start' => 'البداية',
+    'field.event_end' => 'النهاية',
+    'field.event_location' => 'المكان',
+    'field.event_description' => 'الوصف',
+
+    'preset.heading' => 'الأنماط المحفوظة',
+    'preset.hint' => 'احفظ المظهر الحالي (الألوان والأشكال والحجم والصورة) وأعد تحميله بنقرة واحدة. تُحفظ الأنماط في هذا المتصفح فقط.',
+    'preset.choose' => 'نمط محفوظ',
+    'preset.none' => '— اختر نمطًا —',
+    'preset.delete' => 'حذف',
+    'preset.name' => 'حفظ النمط الحالي باسم',
+    'preset.name_placeholder' => 'مثلًا: الشركة',
+    'preset.save' => 'حفظ',
+
+    'js.scan_checking' => 'جارٍ التحقق من إمكانية مسح الرمز…',
+    'js.scan_ok' => 'يمكن مسح الرمز بشكل صحيح.',
+    'js.scan_fail' => 'تعذّرت قراءة هذا الرمز. زد التباين أو صغّر الصورة أو اختر مستوى تصحيح أعلى.',
+    'js.preset_saved' => 'تم حفظ النمط «{name}».',
+    'js.preset_saved_no_logo' => 'تم حفظ النمط «{name}» بدون الصورة - لا توجد مساحة تخزين كافية.',
+    'js.preset_deleted' => 'تم حذف النمط «{name}».',
 ];

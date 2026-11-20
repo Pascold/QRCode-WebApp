@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Je browser staat kopiëren naar het klembord niet toe.',
     'js.share_failed' => 'Delen is niet gelukt. Gebruik in plaats daarvan Downloaden.',
     'js.format_unsupported' => 'Je browser kan dit formaat niet maken. Kies een ander formaat.',
+
+    'type.event' => 'Afspraak',
+    'field.event_title' => 'Titel van de afspraak',
+    'field.event_start' => 'Begin',
+    'field.event_end' => 'Einde',
+    'field.event_location' => 'Locatie',
+    'field.event_description' => 'Beschrijving',
+
+    'preset.heading' => 'Opgeslagen stijlen',
+    'preset.hint' => 'Sla het huidige uiterlijk op (kleuren, vormen, grootte en afbeelding) en laad het met één klik opnieuw. Stijlen worden alleen in deze browser bewaard.',
+    'preset.choose' => 'Opgeslagen stijl',
+    'preset.none' => '— Kies een stijl —',
+    'preset.delete' => 'Verwijderen',
+    'preset.name' => 'Huidige stijl opslaan als',
+    'preset.name_placeholder' => 'bijv. Bedrijf',
+    'preset.save' => 'Opslaan',
+
+    'js.scan_checking' => 'Controleren of de code te scannen is…',
+    'js.scan_ok' => 'De code is goed te scannen.',
+    'js.scan_fail' => 'Deze code kon niet worden gelezen. Verhoog het contrast, verklein de afbeelding of kies een hoger foutcorrectieniveau.',
+    'js.preset_saved' => 'Stijl "{name}" opgeslagen.',
+    'js.preset_saved_no_logo' => 'Stijl "{name}" opgeslagen zonder afbeelding - er is onvoldoende opslagruimte.',
+    'js.preset_deleted' => 'Stijl "{name}" verwijderd.',
 ];

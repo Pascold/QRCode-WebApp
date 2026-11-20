@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Isikhangeli sakho asivumeli ukukopa kwibhodi yokuncamathisela.',
     'js.share_failed' => 'Ukwabelana akuphumelelanga. Nceda usebenzise u-Khuphela endaweni yoko.',
     'js.format_unsupported' => 'Isikhangeli sakho asinakuyenza le fomathi. Nceda ukhethe enye.',
+
+    'type.event' => 'Umsitho',
+    'field.event_title' => 'Isihloko somsitho',
+    'field.event_start' => 'Ukuqala',
+    'field.event_end' => 'Ukuphela',
+    'field.event_location' => 'Indawo',
+    'field.event_description' => 'Inkcazelo',
+
+    'preset.heading' => 'Izitayile ezigciniweyo',
+    'preset.hint' => 'Gcina inkangeleko yangoku (imibala, iimilo, ubungakanani nomfanekiso) uze uyilayishe kwakhona ngokucofa kube kanye. Izitayile zigcinwa kwesi sikhangeli kuphela.',
+    'preset.choose' => 'Isitayile esigciniweyo',
+    'preset.none' => '— Khetha isitayile —',
+    'preset.delete' => 'Cima',
+    'preset.name' => 'Gcina isitayile sangoku njenge',
+    'preset.name_placeholder' => 'umz. Inkampani',
+    'preset.save' => 'Gcina',
+
+    'js.scan_checking' => 'Ijonga ukuba ikhowudi inokuskenwa na…',
+    'js.scan_ok' => 'Ikhowudi iskenwa kakuhle.',
+    'js.scan_fail' => 'Le khowudi ayikwazanga ukufundwa. Yandisa umahluko, yenza umfanekiso ube mncinci okanye ukhethe inqanaba eliphezulu lokulungisa.',
+    'js.preset_saved' => 'Isitayile "{name}" sigciniwe.',
+    'js.preset_saved_no_logo' => 'Isitayile "{name}" sigcinwe ngaphandle komfanekiso - akukho ndawo yaneleyo yogcino.',
+    'js.preset_deleted' => 'Isitayile "{name}" sicinyiwe.',
 ];

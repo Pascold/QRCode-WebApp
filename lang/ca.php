@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'El teu navegador no permet copiar al porta-retalls.',
     'js.share_failed' => 'No s\'ha pogut compartir. Fes servir «Baixa».',
     'js.format_unsupported' => 'El teu navegador no pot crear aquest format. Tria\'n un altre.',
+
+    'type.event' => 'Esdeveniment',
+    'field.event_title' => 'Títol de l\'esdeveniment',
+    'field.event_start' => 'Inici',
+    'field.event_end' => 'Final',
+    'field.event_location' => 'Lloc',
+    'field.event_description' => 'Descripció',
+
+    'preset.heading' => 'Estils desats',
+    'preset.hint' => 'Desa l\'aspecte actual (colors, formes, mida i imatge) i torna\'l a carregar amb un clic. Els estils només es guarden en aquest navegador.',
+    'preset.choose' => 'Estil desat',
+    'preset.none' => '— Tria un estil —',
+    'preset.delete' => 'Suprimeix',
+    'preset.name' => 'Desa l\'estil actual com a',
+    'preset.name_placeholder' => 'p. ex. Empresa',
+    'preset.save' => 'Desa',
+
+    'js.scan_checking' => 'S\'està comprovant si el codi es pot escanejar…',
+    'js.scan_ok' => 'El codi s\'escaneja correctament.',
+    'js.scan_fail' => 'No s\'ha pogut llegir aquest codi. Augmenta el contrast, redueix la imatge o tria un nivell de correcció més alt.',
+    'js.preset_saved' => 'S\'ha desat l\'estil «{name}».',
+    'js.preset_saved_no_logo' => 'S\'ha desat l\'estil «{name}» sense la imatge: no hi ha prou espai d\'emmagatzematge.',
+    'js.preset_deleted' => 'S\'ha suprimit l\'estil «{name}».',
 ];

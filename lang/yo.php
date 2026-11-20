@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Aṣàwákiri rẹ kò gbà láti ṣe àdàkọ sí pátákó ìdàkọ.',
     'js.share_failed' => 'Pínpín kò ṣiṣẹ́. Jọ̀wọ́ lo Gbà sílẹ̀ dípò rẹ̀.',
     'js.format_unsupported' => 'Aṣàwákiri rẹ kò lè ṣẹ̀dá ọ̀nà yìí. Jọ̀wọ́ yan òmíràn.',
+
+    'type.event' => 'Ìṣẹ̀lẹ̀',
+    'field.event_title' => 'Àkọlé ìṣẹ̀lẹ̀',
+    'field.event_start' => 'Ìbẹ̀rẹ̀',
+    'field.event_end' => 'Ìparí',
+    'field.event_location' => 'Ibi',
+    'field.event_description' => 'Àpèjúwe',
+
+    'preset.heading' => 'Àwọn àṣà tí a fipamọ́',
+    'preset.hint' => 'Fi ìrísí lọ́wọ́lọ́wọ́ (àwọ̀, ìrísí, ìwọ̀n àti àwòrán) pamọ́ kí o sì tún gbé e wọlé pẹ̀lú títẹ̀ ẹ̀ẹ̀kan. A ń fi àwọn àṣà pamọ́ sínú aṣàwákiri yìí nìkan.',
+    'preset.choose' => 'Àṣà tí a fipamọ́',
+    'preset.none' => '— Yan àṣà kan —',
+    'preset.delete' => 'Pa rẹ́',
+    'preset.name' => 'Fi àṣà lọ́wọ́lọ́wọ́ pamọ́ bí',
+    'preset.name_placeholder' => 'fún àpẹẹrẹ Ilé-iṣẹ́',
+    'preset.save' => 'Fipamọ́',
+
+    'js.scan_checking' => 'À ń ṣàyẹ̀wò bóyá a lè ka kóòdù náà…',
+    'js.scan_ok' => 'A ń ka kóòdù náà dáadáa.',
+    'js.scan_fail' => 'A kò lè ka kóòdù yìí. Mú ìyàtọ̀ àwọ̀ pọ̀ sí i, dín àwòrán kù tàbí yan ìpele àtúnṣe tó ga jù.',
+    'js.preset_saved' => 'A ti fi àṣà "{name}" pamọ́.',
+    'js.preset_saved_no_logo' => 'A ti fi àṣà "{name}" pamọ́ láìsí àwòrán - kò sí àyè tó tó.',
+    'js.preset_deleted' => 'A ti pa àṣà "{name}" rẹ́.',
 ];

@@ -139,4 +139,27 @@ return [
     'js.clipboard_failed' => '您的浏览器不允许复制到剪贴板。',
     'js.share_failed' => '分享失败，请改用“下载”。',
     'js.format_unsupported' => '您的浏览器无法生成此格式，请选择其他格式。',
+
+    'type.event' => '日程',
+    'field.event_title' => '日程名称',
+    'field.event_start' => '开始',
+    'field.event_end' => '结束',
+    'field.event_location' => '地点',
+    'field.event_description' => '说明',
+
+    'preset.heading' => '已保存的样式',
+    'preset.hint' => '保存当前外观（颜色、形状、尺寸和图片），一键即可重新载入。样式只保存在此浏览器中。',
+    'preset.choose' => '已保存的样式',
+    'preset.none' => '— 选择样式 —',
+    'preset.delete' => '删除',
+    'preset.name' => '将当前样式保存为',
+    'preset.name_placeholder' => '例如：公司',
+    'preset.save' => '保存',
+
+    'js.scan_checking' => '正在检查二维码能否被扫描…',
+    'js.scan_ok' => '二维码可以正常扫描。',
+    'js.scan_fail' => '无法识别此二维码。请提高对比度、缩小图片或选择更高的纠错级别。',
+    'js.preset_saved' => '样式“{name}”已保存。',
+    'js.preset_saved_no_logo' => '样式“{name}”已保存，但未包含图片——存储空间不足。',
+    'js.preset_deleted' => '样式“{name}”已删除。',
 ];

@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Váš prohlížeč nepovoluje kopírování do schránky.',
     'js.share_failed' => 'Sdílení se nezdařilo. Použijte tlačítko Stáhnout.',
     'js.format_unsupported' => 'Váš prohlížeč neumí vytvořit tento formát. Vyberte jiný.',
+
+    'type.event' => 'Událost',
+    'field.event_title' => 'Název události',
+    'field.event_start' => 'Začátek',
+    'field.event_end' => 'Konec',
+    'field.event_location' => 'Místo',
+    'field.event_description' => 'Popis',
+
+    'preset.heading' => 'Uložené styly',
+    'preset.hint' => 'Uložte aktuální vzhled (barvy, tvary, velikost a obrázek) a načtěte ho znovu jedním kliknutím. Styly se ukládají jen v tomto prohlížeči.',
+    'preset.choose' => 'Uložený styl',
+    'preset.none' => '— Vyberte styl —',
+    'preset.delete' => 'Smazat',
+    'preset.name' => 'Uložit aktuální styl jako',
+    'preset.name_placeholder' => 'např. Firma',
+    'preset.save' => 'Uložit',
+
+    'js.scan_checking' => 'Kontroluji, zda lze kód naskenovat…',
+    'js.scan_ok' => 'Kód se načítá správně.',
+    'js.scan_fail' => 'Tento kód se nepodařilo přečíst. Zvyšte kontrast, zmenšete obrázek nebo zvolte vyšší úroveň opravy chyb.',
+    'js.preset_saved' => 'Styl „{name}“ byl uložen.',
+    'js.preset_saved_no_logo' => 'Styl „{name}“ byl uložen bez obrázku - není na něj dost místa.',
+    'js.preset_deleted' => 'Styl „{name}“ byl smazán.',
 ];

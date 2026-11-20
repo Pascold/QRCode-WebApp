@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Shfletuesi yt nuk lejon kopjimin në kujtesën e fragmenteve.',
     'js.share_failed' => 'Ndarja nuk funksionoi. Përdor butonin Shkarko.',
     'js.format_unsupported' => 'Shfletuesi yt nuk mund ta krijojë këtë format. Zgjidh një tjetër.',
+
+    'type.event' => 'Ngjarje',
+    'field.event_title' => 'Titulli i ngjarjes',
+    'field.event_start' => 'Fillimi',
+    'field.event_end' => 'Mbarimi',
+    'field.event_location' => 'Vendi',
+    'field.event_description' => 'Përshkrimi',
+
+    'preset.heading' => 'Stilet e ruajtura',
+    'preset.hint' => 'Ruaj pamjen aktuale (ngjyrat, format, madhësinë dhe imazhin) dhe ngarkoje përsëri me një klikim. Stilet ruhen vetëm në këtë shfletues.',
+    'preset.choose' => 'Stil i ruajtur',
+    'preset.none' => '— Zgjidh një stil —',
+    'preset.delete' => 'Fshi',
+    'preset.name' => 'Ruaj stilin aktual si',
+    'preset.name_placeholder' => 'p.sh. Kompania',
+    'preset.save' => 'Ruaj',
+
+    'js.scan_checking' => 'Po kontrollohet nëse kodi mund të skanohet…',
+    'js.scan_ok' => 'Kodi skanohet saktë.',
+    'js.scan_fail' => 'Ky kod nuk mund të lexohej. Rrit kontrastin, zvogëlo imazhin ose zgjidh një nivel më të lartë korrigjimi.',
+    'js.preset_saved' => 'Stili „{name}“ u ruajt.',
+    'js.preset_saved_no_logo' => 'Stili „{name}“ u ruajt pa imazhin - nuk ka hapësirë të mjaftueshme.',
+    'js.preset_deleted' => 'Stili „{name}“ u fshi.',
 ];

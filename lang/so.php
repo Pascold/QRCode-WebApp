@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Biraawsarkaagu ma ogola in lagu koobiyeeyo sabuuradda.',
     'js.share_failed' => 'La wadaagiddu ma shaqayn. Fadlan isticmaal Soo deji.',
     'js.format_unsupported' => 'Biraawsarkaagu ma samayn karo qaabkan. Fadlan dooro mid kale.',
+
+    'type.event' => 'Dhacdo',
+    'field.event_title' => 'Cinwaanka dhacdada',
+    'field.event_start' => 'Bilow',
+    'field.event_end' => 'Dhammaad',
+    'field.event_location' => 'Goob',
+    'field.event_description' => 'Sharaxaad',
+
+    'preset.heading' => 'Qaabab la kaydiyay',
+    'preset.hint' => 'Kaydi muuqaalka hadda (midabada, qaababka, cabbirka iyo sawirka) oo mar kale ku soo kici hal guji. Qaababka waxaa lagu kaydiyaa biraawsarkan oo keliya.',
+    'preset.choose' => 'Qaab la kaydiyay',
+    'preset.none' => '— Dooro qaab —',
+    'preset.delete' => 'Tirtir',
+    'preset.name' => 'Kaydi qaabka hadda magacan',
+    'preset.name_placeholder' => 'tusaale Shirkad',
+    'preset.save' => 'Kaydi',
+
+    'js.scan_checking' => 'Waxaa la hubinayaa in koodhka la akhrin karo…',
+    'js.scan_ok' => 'Koodhka si sax ah ayaa loo akhriyaa.',
+    'js.scan_fail' => 'Koodhkan lama akhrin karin. Kordhi kala-duwanaanshaha, yaree sawirka ama dooro heer saxid sare.',
+    'js.preset_saved' => 'Qaabka "{name}" waa la kaydiyay.',
+    'js.preset_saved_no_logo' => 'Qaabka "{name}" waxaa la kaydiyay sawir la\'aan - meel kayd oo ku filan ma jirto.',
+    'js.preset_deleted' => 'Qaabka "{name}" waa la tirtiray.',
 ];

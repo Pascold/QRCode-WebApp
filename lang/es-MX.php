@@ -25,4 +25,8 @@ return [
     'js.generic_error' => 'Ocurrió un error al generar el código QR.',
 
     'js.share_failed' => 'No se pudo compartir. Usa "Descargar" en su lugar.',
+
+    'js.preset_saved' => 'Estilo "{name}" guardado.',
+    'js.preset_saved_no_logo' => 'Estilo "{name}" guardado sin la imagen: no hay suficiente espacio de almacenamiento.',
+    'js.preset_deleted' => 'Estilo "{name}" eliminado.',
 ];

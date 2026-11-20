@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Selaimesi ei salli kopioimista leikepöydälle.',
     'js.share_failed' => 'Jakaminen ei onnistunut. Käytä sen sijaan Lataa-painiketta.',
     'js.format_unsupported' => 'Selaimesi ei pysty luomaan tätä muotoa. Valitse toinen.',
+
+    'type.event' => 'Tapahtuma',
+    'field.event_title' => 'Tapahtuman nimi',
+    'field.event_start' => 'Alkaa',
+    'field.event_end' => 'Päättyy',
+    'field.event_location' => 'Paikka',
+    'field.event_description' => 'Kuvaus',
+
+    'preset.heading' => 'Tallennetut tyylit',
+    'preset.hint' => 'Tallenna nykyinen ulkoasu (värit, muodot, koko ja kuva) ja lataa se uudelleen yhdellä napsautuksella. Tyylit tallennetaan vain tähän selaimeen.',
+    'preset.choose' => 'Tallennettu tyyli',
+    'preset.none' => '— Valitse tyyli —',
+    'preset.delete' => 'Poista',
+    'preset.name' => 'Tallenna nykyinen tyyli nimellä',
+    'preset.name_placeholder' => 'esim. Yritys',
+    'preset.save' => 'Tallenna',
+
+    'js.scan_checking' => 'Tarkistetaan, voiko koodin lukea…',
+    'js.scan_ok' => 'Koodi luetaan oikein.',
+    'js.scan_fail' => 'Koodia ei voitu lukea. Lisää kontrastia, pienennä kuvaa tai valitse korkeampi virheenkorjaustaso.',
+    'js.preset_saved' => 'Tyyli "{name}" tallennettu.',
+    'js.preset_saved_no_logo' => 'Tyyli "{name}" tallennettiin ilman kuvaa - tallennustilaa ei ole tarpeeksi.',
+    'js.preset_deleted' => 'Tyyli "{name}" poistettu.',
 ];

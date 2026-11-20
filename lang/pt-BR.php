@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Seu navegador não permite copiar para a área de transferência.',
     'js.share_failed' => 'Não foi possível compartilhar. Use o botão Baixar.',
     'js.format_unsupported' => 'Seu navegador não consegue criar este formato. Escolha outro.',
+
+    'type.event' => 'Evento',
+    'field.event_title' => 'Título do evento',
+    'field.event_start' => 'Início',
+    'field.event_end' => 'Fim',
+    'field.event_location' => 'Local',
+    'field.event_description' => 'Descrição',
+
+    'preset.heading' => 'Estilos salvos',
+    'preset.hint' => 'Salve a aparência atual (cores, formas, tamanho e imagem) e carregue-a de novo com um clique. Os estilos ficam salvos apenas neste navegador.',
+    'preset.choose' => 'Estilo salvo',
+    'preset.none' => '— Escolha um estilo —',
+    'preset.delete' => 'Excluir',
+    'preset.name' => 'Salvar o estilo atual como',
+    'preset.name_placeholder' => 'ex.: Empresa',
+    'preset.save' => 'Salvar',
+
+    'js.scan_checking' => 'Verificando se o código pode ser lido…',
+    'js.scan_ok' => 'O código é lido corretamente.',
+    'js.scan_fail' => 'Não foi possível ler este código. Aumente o contraste, diminua a imagem ou escolha um nível de correção maior.',
+    'js.preset_saved' => 'Estilo "{name}" salvo.',
+    'js.preset_saved_no_logo' => 'Estilo "{name}" salvo sem a imagem - não há espaço de armazenamento suficiente.',
+    'js.preset_deleted' => 'Estilo "{name}" excluído.',
 ];

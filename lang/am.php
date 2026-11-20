@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'አሳሽዎ ወደ ቅንጥብ ሰሌዳ መቅዳት አይፈቅድም።',
     'js.share_failed' => 'ማጋራት አልተሳካም። እባክዎ በምትኩ አውርድን ይጠቀሙ።',
     'js.format_unsupported' => 'አሳሽዎ ይህን ቅርጸት መፍጠር አይችልም። እባክዎ ሌላ ይምረጡ።',
+
+    'type.event' => 'ዝግጅት',
+    'field.event_title' => 'የዝግጅቱ ርዕስ',
+    'field.event_start' => 'መጀመሪያ',
+    'field.event_end' => 'መጨረሻ',
+    'field.event_location' => 'ቦታ',
+    'field.event_description' => 'መግለጫ',
+
+    'preset.heading' => 'የተቀመጡ ቅጦች',
+    'preset.hint' => 'የአሁኑን መልክ (ቀለሞች፣ ቅርጾች፣ መጠን እና ምስል) ያስቀምጡ እና በአንድ ጠቅታ እንደገና ይጫኑት። ቅጦቹ በዚህ አሳሽ ውስጥ ብቻ ይቀመጣሉ።',
+    'preset.choose' => 'የተቀመጠ ቅጥ',
+    'preset.none' => '— ቅጥ ይምረጡ —',
+    'preset.delete' => 'ሰርዝ',
+    'preset.name' => 'የአሁኑን ቅጥ በዚህ ስም አስቀምጥ',
+    'preset.name_placeholder' => 'ለምሳሌ ድርጅት',
+    'preset.save' => 'አስቀምጥ',
+
+    'js.scan_checking' => 'ኮዱ መቃኘት ይችል እንደሆነ በመፈተሽ ላይ…',
+    'js.scan_ok' => 'ኮዱ በትክክል ይቃኛል።',
+    'js.scan_fail' => 'ይህ ኮድ ሊነበብ አልቻለም። ንፅፅሩን ይጨምሩ፣ ምስሉን ያሳንሱ ወይም ከፍ ያለ የእርማት ደረጃ ይምረጡ።',
+    'js.preset_saved' => '"{name}" ቅጥ ተቀምጧል።',
+    'js.preset_saved_no_logo' => '"{name}" ቅጥ ያለ ምስል ተቀምጧል - በቂ የማከማቻ ቦታ የለም።',
+    'js.preset_deleted' => '"{name}" ቅጥ ተሰርዟል።',
 ];

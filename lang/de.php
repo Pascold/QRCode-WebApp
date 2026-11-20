@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Dein Browser erlaubt das Kopieren in die Zwischenablage nicht.',
     'js.share_failed' => 'Teilen hat nicht funktioniert. Bitte nutze stattdessen „Herunterladen“.',
     'js.format_unsupported' => 'Dein Browser kann dieses Format nicht erstellen. Bitte wähle ein anderes.',
+
+    'type.event' => 'Termin',
+    'field.event_title' => 'Titel des Termins',
+    'field.event_start' => 'Beginn',
+    'field.event_end' => 'Ende',
+    'field.event_location' => 'Ort',
+    'field.event_description' => 'Beschreibung',
+
+    'preset.heading' => 'Gespeicherte Stile',
+    'preset.hint' => 'Speichere das aktuelle Aussehen (Farben, Formen, Größe und Bild) und lade es mit einem Klick wieder. Stile werden nur in diesem Browser gespeichert.',
+    'preset.choose' => 'Gespeicherter Stil',
+    'preset.none' => '— Stil auswählen —',
+    'preset.delete' => 'Löschen',
+    'preset.name' => 'Aktuellen Stil speichern als',
+    'preset.name_placeholder' => 'z. B. Firma',
+    'preset.save' => 'Speichern',
+
+    'js.scan_checking' => 'Prüfe, ob sich der Code scannen lässt…',
+    'js.scan_ok' => 'Der Code lässt sich korrekt scannen.',
+    'js.scan_fail' => 'Dieser Code konnte nicht gelesen werden. Erhöhe den Kontrast, verkleinere das Bild oder wähle eine höhere Fehlerkorrektur.',
+    'js.preset_saved' => 'Stil „{name}“ gespeichert.',
+    'js.preset_saved_no_logo' => 'Stil „{name}“ ohne Bild gespeichert - dafür ist nicht genug Speicherplatz vorhanden.',
+    'js.preset_deleted' => 'Stil „{name}“ gelöscht.',
 ];

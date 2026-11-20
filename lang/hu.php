@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'A böngésződ nem engedi a vágólapra másolást.',
     'js.share_failed' => 'A megosztás nem sikerült. Használd inkább a Letöltés gombot.',
     'js.format_unsupported' => 'A böngésződ nem tudja létrehozni ezt a formátumot. Válassz másikat.',
+
+    'type.event' => 'Esemény',
+    'field.event_title' => 'Esemény neve',
+    'field.event_start' => 'Kezdés',
+    'field.event_end' => 'Befejezés',
+    'field.event_location' => 'Helyszín',
+    'field.event_description' => 'Leírás',
+
+    'preset.heading' => 'Mentett stílusok',
+    'preset.hint' => 'Mentsd el a jelenlegi megjelenést (színek, formák, méret és kép), és töltsd be újra egy kattintással. A stílusok csak ebben a böngészőben tárolódnak.',
+    'preset.choose' => 'Mentett stílus',
+    'preset.none' => '— Válassz stílust —',
+    'preset.delete' => 'Törlés',
+    'preset.name' => 'Jelenlegi stílus mentése ezzel a névvel',
+    'preset.name_placeholder' => 'pl. Cég',
+    'preset.save' => 'Mentés',
+
+    'js.scan_checking' => 'Ellenőrzés, hogy a kód beolvasható-e…',
+    'js.scan_ok' => 'A kód megfelelően beolvasható.',
+    'js.scan_fail' => 'Ezt a kódot nem sikerült beolvasni. Növeld a kontrasztot, kicsinyítsd a képet, vagy válassz magasabb hibajavítási szintet.',
+    'js.preset_saved' => 'A(z) „{name}” stílus elmentve.',
+    'js.preset_saved_no_logo' => 'A(z) „{name}” stílus kép nélkül lett elmentve - nincs elég tárhely.',
+    'js.preset_deleted' => 'A(z) „{name}” stílus törölve.',
 ];

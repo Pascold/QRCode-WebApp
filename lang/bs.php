@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Vaš preglednik ne dozvoljava kopiranje u međuspremnik.',
     'js.share_failed' => 'Dijeljenje nije uspjelo. Umjesto toga koristite Preuzmi.',
     'js.format_unsupported' => 'Vaš preglednik ne može napraviti ovaj format. Odaberite drugi.',
+
+    'type.event' => 'Događaj',
+    'field.event_title' => 'Naziv događaja',
+    'field.event_start' => 'Početak',
+    'field.event_end' => 'Kraj',
+    'field.event_location' => 'Mjesto',
+    'field.event_description' => 'Opis',
+
+    'preset.heading' => 'Sačuvani stilovi',
+    'preset.hint' => 'Sačuvajte trenutni izgled (boje, oblike, veličinu i sliku) i učitajte ga ponovo jednim klikom. Stilovi se čuvaju samo u ovom pregledniku.',
+    'preset.choose' => 'Sačuvani stil',
+    'preset.none' => '— Odaberite stil —',
+    'preset.delete' => 'Izbriši',
+    'preset.name' => 'Sačuvaj trenutni stil kao',
+    'preset.name_placeholder' => 'npr. Firma',
+    'preset.save' => 'Sačuvaj',
+
+    'js.scan_checking' => 'Provjeravam može li se kod skenirati…',
+    'js.scan_ok' => 'Kod se ispravno skenira.',
+    'js.scan_fail' => 'Ovaj kod nije moguće pročitati. Povećajte kontrast, smanjite sliku ili odaberite viši nivo ispravljanja grešaka.',
+    'js.preset_saved' => 'Stil „{name}“ je sačuvan.',
+    'js.preset_saved_no_logo' => 'Stil „{name}“ je sačuvan bez slike - nema dovoljno prostora za pohranu.',
+    'js.preset_deleted' => 'Stil „{name}“ je izbrisan.',
 ];

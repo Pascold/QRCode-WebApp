@@ -139,4 +139,27 @@ return [
     'js.clipboard_failed' => 'Twoja przeglądarka nie pozwala kopiować do schowka.',
     'js.share_failed' => 'Nie udało się udostępnić. Użyj przycisku Pobierz.',
     'js.format_unsupported' => 'Twoja przeglądarka nie potrafi utworzyć tego formatu. Wybierz inny.',
+
+    'type.event' => 'Wydarzenie',
+    'field.event_title' => 'Nazwa wydarzenia',
+    'field.event_start' => 'Początek',
+    'field.event_end' => 'Koniec',
+    'field.event_location' => 'Miejsce',
+    'field.event_description' => 'Opis',
+
+    'preset.heading' => 'Zapisane style',
+    'preset.hint' => 'Zapisz obecny wygląd (kolory, kształty, rozmiar i obraz) i wczytaj go jednym kliknięciem. Style są przechowywane tylko w tej przeglądarce.',
+    'preset.choose' => 'Zapisany styl',
+    'preset.none' => '— Wybierz styl —',
+    'preset.delete' => 'Usuń',
+    'preset.name' => 'Zapisz obecny styl jako',
+    'preset.name_placeholder' => 'np. Firma',
+    'preset.save' => 'Zapisz',
+
+    'js.scan_checking' => 'Sprawdzam, czy kod da się zeskanować…',
+    'js.scan_ok' => 'Kod skanuje się poprawnie.',
+    'js.scan_fail' => 'Nie udało się odczytać tego kodu. Zwiększ kontrast, zmniejsz obraz albo wybierz wyższy poziom korekcji błędów.',
+    'js.preset_saved' => 'Zapisano styl „{name}”.',
+    'js.preset_saved_no_logo' => 'Zapisano styl „{name}” bez obrazu - brakuje na niego miejsca w pamięci przeglądarki.',
+    'js.preset_deleted' => 'Usunięto styl „{name}”.',
 ];

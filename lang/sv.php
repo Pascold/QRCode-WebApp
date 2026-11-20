@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Din webbläsare tillåter inte kopiering till urklipp.',
     'js.share_failed' => 'Delningen fungerade inte. Använd Ladda ner i stället.',
     'js.format_unsupported' => 'Din webbläsare kan inte skapa det här formatet. Välj ett annat.',
+
+    'type.event' => 'Händelse',
+    'field.event_title' => 'Händelsens namn',
+    'field.event_start' => 'Start',
+    'field.event_end' => 'Slut',
+    'field.event_location' => 'Plats',
+    'field.event_description' => 'Beskrivning',
+
+    'preset.heading' => 'Sparade stilar',
+    'preset.hint' => 'Spara det nuvarande utseendet (färger, former, storlek och bild) och ladda det igen med ett klick. Stilarna sparas bara i den här webbläsaren.',
+    'preset.choose' => 'Sparad stil',
+    'preset.none' => '— Välj en stil —',
+    'preset.delete' => 'Ta bort',
+    'preset.name' => 'Spara nuvarande stil som',
+    'preset.name_placeholder' => 't.ex. Företag',
+    'preset.save' => 'Spara',
+
+    'js.scan_checking' => 'Kontrollerar om koden går att skanna…',
+    'js.scan_ok' => 'Koden går att skanna.',
+    'js.scan_fail' => 'Koden kunde inte läsas. Öka kontrasten, gör bilden mindre eller välj en högre felkorrigeringsnivå.',
+    'js.preset_saved' => 'Stilen "{name}" har sparats.',
+    'js.preset_saved_no_logo' => 'Stilen "{name}" sparades utan bild - det finns inte tillräckligt med lagringsutrymme.',
+    'js.preset_deleted' => 'Stilen "{name}" har tagits bort.',
 ];

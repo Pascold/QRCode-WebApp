@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Vaš brskalnik ne dovoli kopiranja v odložišče.',
     'js.share_failed' => 'Deljenje ni uspelo. Namesto tega uporabite Prenesi.',
     'js.format_unsupported' => 'Vaš brskalnik ne more ustvariti te oblike. Izberite drugo.',
+
+    'type.event' => 'Dogodek',
+    'field.event_title' => 'Naslov dogodka',
+    'field.event_start' => 'Začetek',
+    'field.event_end' => 'Konec',
+    'field.event_location' => 'Kraj',
+    'field.event_description' => 'Opis',
+
+    'preset.heading' => 'Shranjeni slogi',
+    'preset.hint' => 'Shranite trenutni videz (barve, oblike, velikost in sliko) in ga znova naložite z enim klikom. Slogi so shranjeni samo v tem brskalniku.',
+    'preset.choose' => 'Shranjeni slog',
+    'preset.none' => '— Izberite slog —',
+    'preset.delete' => 'Izbriši',
+    'preset.name' => 'Shrani trenutni slog kot',
+    'preset.name_placeholder' => 'npr. Podjetje',
+    'preset.save' => 'Shrani',
+
+    'js.scan_checking' => 'Preverjam, ali je kodo mogoče skenirati …',
+    'js.scan_ok' => 'Koda se pravilno prebere.',
+    'js.scan_fail' => 'Te kode ni bilo mogoče prebrati. Povečajte kontrast, zmanjšajte sliko ali izberite višjo raven popravljanja napak.',
+    'js.preset_saved' => 'Slog »{name}« je shranjen.',
+    'js.preset_saved_no_logo' => 'Slog »{name}« je shranjen brez slike - ni dovolj prostora za shranjevanje.',
+    'js.preset_deleted' => 'Slog »{name}« je izbrisan.',
 ];

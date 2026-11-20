@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'お使いのブラウザーではクリップボードへのコピーが許可されていません。',
     'js.share_failed' => '共有できませんでした。代わりに「ダウンロード」をご利用ください。',
     'js.format_unsupported' => 'お使いのブラウザーではこの形式を作成できません。別の形式を選択してください。',
+
+    'type.event' => '予定',
+    'field.event_title' => '予定のタイトル',
+    'field.event_start' => '開始',
+    'field.event_end' => '終了',
+    'field.event_location' => '場所',
+    'field.event_description' => '説明',
+
+    'preset.heading' => '保存したスタイル',
+    'preset.hint' => '現在の見た目（色・形・サイズ・画像）を保存し、ワンクリックで読み込めます。スタイルはこのブラウザーにのみ保存されます。',
+    'preset.choose' => '保存したスタイル',
+    'preset.none' => '— スタイルを選択 —',
+    'preset.delete' => '削除',
+    'preset.name' => '現在のスタイルを次の名前で保存',
+    'preset.name_placeholder' => '例：会社',
+    'preset.save' => '保存',
+
+    'js.scan_checking' => 'コードを読み取れるか確認しています…',
+    'js.scan_ok' => 'コードは正しく読み取れます。',
+    'js.scan_fail' => 'このコードを読み取れませんでした。コントラストを上げる、画像を小さくする、または誤り訂正レベルを上げてください。',
+    'js.preset_saved' => 'スタイル「{name}」を保存しました。',
+    'js.preset_saved_no_logo' => 'スタイル「{name}」を画像なしで保存しました（保存容量が足りません）。',
+    'js.preset_deleted' => 'スタイル「{name}」を削除しました。',
 ];

@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Brauzeriniz mübadilə buferinə kopyalamağa icazə vermir.',
     'js.share_failed' => 'Paylaşmaq alınmadı. Əvəzində «Endir» düyməsindən istifadə edin.',
     'js.format_unsupported' => 'Brauzeriniz bu formatı yarada bilmir. Başqasını seçin.',
+
+    'type.event' => 'Tədbir',
+    'field.event_title' => 'Tədbirin adı',
+    'field.event_start' => 'Başlanğıc',
+    'field.event_end' => 'Son',
+    'field.event_location' => 'Yer',
+    'field.event_description' => 'Təsvir',
+
+    'preset.heading' => 'Saxlanmış üslublar',
+    'preset.hint' => 'Cari görünüşü (rənglər, formalar, ölçü və şəkil) saxlayın və bir kliklə yenidən yükləyin. Üslublar yalnız bu brauzerdə saxlanılır.',
+    'preset.choose' => 'Saxlanmış üslub',
+    'preset.none' => '— Üslub seçin —',
+    'preset.delete' => 'Sil',
+    'preset.name' => 'Cari üslubu bu adla saxla',
+    'preset.name_placeholder' => 'məs. Şirkət',
+    'preset.save' => 'Saxla',
+
+    'js.scan_checking' => 'Kodun skan edilə bilib-bilmədiyi yoxlanılır…',
+    'js.scan_ok' => 'Kod düzgün skan olunur.',
+    'js.scan_fail' => 'Bu kodu oxumaq mümkün olmadı. Kontrastı artırın, şəkli kiçildin və ya daha yüksək düzəliş səviyyəsi seçin.',
+    'js.preset_saved' => '"{name}" üslubu saxlanıldı.',
+    'js.preset_saved_no_logo' => '"{name}" üslubu şəkilsiz saxlanıldı - kifayət qədər yaddaş yoxdur.',
+    'js.preset_deleted' => '"{name}" üslubu silindi.',
 ];

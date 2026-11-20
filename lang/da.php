@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Din browser tillader ikke kopiering til udklipsholderen.',
     'js.share_failed' => 'Deling mislykkedes. Brug Download i stedet.',
     'js.format_unsupported' => 'Din browser kan ikke lave dette format. Vælg et andet.',
+
+    'type.event' => 'Begivenhed',
+    'field.event_title' => 'Begivenhedens titel',
+    'field.event_start' => 'Start',
+    'field.event_end' => 'Slut',
+    'field.event_location' => 'Sted',
+    'field.event_description' => 'Beskrivelse',
+
+    'preset.heading' => 'Gemte stilarter',
+    'preset.hint' => 'Gem det nuværende udseende (farver, former, størrelse og billede), og indlæs det igen med ét klik. Stilarter gemmes kun i denne browser.',
+    'preset.choose' => 'Gemt stilart',
+    'preset.none' => '— Vælg en stilart —',
+    'preset.delete' => 'Slet',
+    'preset.name' => 'Gem nuværende stilart som',
+    'preset.name_placeholder' => 'f.eks. Firma',
+    'preset.save' => 'Gem',
+
+    'js.scan_checking' => 'Tjekker, om koden kan scannes…',
+    'js.scan_ok' => 'Koden kan scannes korrekt.',
+    'js.scan_fail' => 'Koden kunne ikke læses. Øg kontrasten, gør billedet mindre, eller vælg et højere fejlkorrektionsniveau.',
+    'js.preset_saved' => 'Stilarten "{name}" er gemt.',
+    'js.preset_saved_no_logo' => 'Stilarten "{name}" er gemt uden billede - der er ikke plads nok.',
+    'js.preset_deleted' => 'Stilarten "{name}" er slettet.',
 ];

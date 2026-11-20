@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Isiphequluli sakho asivumeli ukukopisha ebhodini lokunamathisela.',
     'js.share_failed' => 'Ukwabelana akuphumelelanga. Sicela usebenzise u-Landa esikhundleni salokho.',
     'js.format_unsupported' => 'Isiphequluli sakho asikwazi ukwakha le fomethi. Sicela ukhethe enye.',
+
+    'type.event' => 'Umcimbi',
+    'field.event_title' => 'Isihloko somcimbi',
+    'field.event_start' => 'Ukuqala',
+    'field.event_end' => 'Ukuphela',
+    'field.event_location' => 'Indawo',
+    'field.event_description' => 'Incazelo',
+
+    'preset.heading' => 'Izitayela ezilondoloziwe',
+    'preset.hint' => 'Londoloza ukubukeka kwamanje (imibala, ukwakheka, usayizi nesithombe) bese ukulayisha futhi ngokuchofoza kanye. Izitayela zigcinwa kulesi siphequluli kuphela.',
+    'preset.choose' => 'Isitayela esilondoloziwe',
+    'preset.none' => '— Khetha isitayela —',
+    'preset.delete' => 'Susa',
+    'preset.name' => 'Londoloza isitayela samanje njengo',
+    'preset.name_placeholder' => 'isib. Inkampani',
+    'preset.save' => 'Londoloza',
+
+    'js.scan_checking' => 'Ihlola ukuthi ikhodi ingaskenwa yini…',
+    'js.scan_ok' => 'Ikhodi iskenwa kahle.',
+    'js.scan_fail' => 'Le khodi ayikwazanga ukufundwa. Khulisa umehluko, nciphisa isithombe noma ukhethe izinga eliphezulu lokulungisa.',
+    'js.preset_saved' => 'Isitayela esithi "{name}" silondoloziwe.',
+    'js.preset_saved_no_logo' => 'Isitayela esithi "{name}" silondolozwe ngaphandle kwesithombe - asikho isikhala esanele.',
+    'js.preset_deleted' => 'Isitayela esithi "{name}" sisusiwe.',
 ];

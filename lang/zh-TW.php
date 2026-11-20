@@ -139,4 +139,27 @@ return [
     'js.clipboard_failed' => '您的瀏覽器不允許複製到剪貼簿。',
     'js.share_failed' => '分享失敗，請改用「下載」。',
     'js.format_unsupported' => '您的瀏覽器無法產生此格式，請選擇其他格式。',
+
+    'type.event' => '行程',
+    'field.event_title' => '行程名稱',
+    'field.event_start' => '開始',
+    'field.event_end' => '結束',
+    'field.event_location' => '地點',
+    'field.event_description' => '說明',
+
+    'preset.heading' => '已儲存的樣式',
+    'preset.hint' => '儲存目前的外觀（顏色、形狀、尺寸與圖片），一鍵即可重新載入。樣式只會儲存在此瀏覽器中。',
+    'preset.choose' => '已儲存的樣式',
+    'preset.none' => '— 選擇樣式 —',
+    'preset.delete' => '刪除',
+    'preset.name' => '將目前樣式儲存為',
+    'preset.name_placeholder' => '例如：公司',
+    'preset.save' => '儲存',
+
+    'js.scan_checking' => '正在檢查 QR Code 能否被掃描…',
+    'js.scan_ok' => 'QR Code 可以正常掃描。',
+    'js.scan_fail' => '無法讀取此 QR Code。請提高對比度、縮小圖片或選擇更高的容錯等級。',
+    'js.preset_saved' => '樣式「{name}」已儲存。',
+    'js.preset_saved_no_logo' => '樣式「{name}」已儲存，但未包含圖片——儲存空間不足。',
+    'js.preset_deleted' => '樣式「{name}」已刪除。',
 ];

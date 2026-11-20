@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Jūsų naršyklė neleidžia kopijuoti į iškarpinę.',
     'js.share_failed' => 'Bendrinti nepavyko. Naudokite mygtuką „Atsisiųsti“.',
     'js.format_unsupported' => 'Jūsų naršyklė negali sukurti šio formato. Pasirinkite kitą.',
+
+    'type.event' => 'Renginys',
+    'field.event_title' => 'Renginio pavadinimas',
+    'field.event_start' => 'Pradžia',
+    'field.event_end' => 'Pabaiga',
+    'field.event_location' => 'Vieta',
+    'field.event_description' => 'Aprašymas',
+
+    'preset.heading' => 'Išsaugoti stiliai',
+    'preset.hint' => 'Išsaugokite dabartinę išvaizdą (spalvas, formas, dydį ir vaizdą) ir įkelkite ją vienu paspaudimu. Stiliai saugomi tik šioje naršyklėje.',
+    'preset.choose' => 'Išsaugotas stilius',
+    'preset.none' => '— Pasirinkite stilių —',
+    'preset.delete' => 'Ištrinti',
+    'preset.name' => 'Išsaugoti dabartinį stilių kaip',
+    'preset.name_placeholder' => 'pvz., Įmonė',
+    'preset.save' => 'Išsaugoti',
+
+    'js.scan_checking' => 'Tikrinama, ar kodą galima nuskaityti…',
+    'js.scan_ok' => 'Kodas nuskaitomas teisingai.',
+    'js.scan_fail' => 'Šio kodo nepavyko nuskaityti. Padidinkite kontrastą, sumažinkite vaizdą arba pasirinkite aukštesnį klaidų taisymo lygį.',
+    'js.preset_saved' => 'Stilius „{name}“ išsaugotas.',
+    'js.preset_saved_no_logo' => 'Stilius „{name}“ išsaugotas be vaizdo - nepakanka vietos.',
+    'js.preset_deleted' => 'Stilius „{name}“ ištrintas.',
 ];

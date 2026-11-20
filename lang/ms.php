@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Pelayar anda tidak membenarkan penyalinan ke papan keratan.',
     'js.share_failed' => 'Perkongsian gagal. Sila gunakan Muat turun.',
     'js.format_unsupported' => 'Pelayar anda tidak dapat mencipta format ini. Sila pilih format lain.',
+
+    'type.event' => 'Acara',
+    'field.event_title' => 'Tajuk acara',
+    'field.event_start' => 'Mula',
+    'field.event_end' => 'Tamat',
+    'field.event_location' => 'Tempat',
+    'field.event_description' => 'Penerangan',
+
+    'preset.heading' => 'Gaya tersimpan',
+    'preset.hint' => 'Simpan rupa semasa (warna, bentuk, saiz dan imej) dan muatkannya semula dengan satu klik. Gaya hanya disimpan dalam pelayar ini.',
+    'preset.choose' => 'Gaya tersimpan',
+    'preset.none' => '— Pilih gaya —',
+    'preset.delete' => 'Padam',
+    'preset.name' => 'Simpan gaya semasa sebagai',
+    'preset.name_placeholder' => 'cth. Syarikat',
+    'preset.save' => 'Simpan',
+
+    'js.scan_checking' => 'Menyemak sama ada kod boleh diimbas…',
+    'js.scan_ok' => 'Kod boleh diimbas dengan betul.',
+    'js.scan_fail' => 'Kod ini tidak dapat dibaca. Tingkatkan kontras, kecilkan imej atau pilih tahap pembetulan yang lebih tinggi.',
+    'js.preset_saved' => 'Gaya "{name}" disimpan.',
+    'js.preset_saved_no_logo' => 'Gaya "{name}" disimpan tanpa imej - ruang storan tidak mencukupi.',
+    'js.preset_deleted' => 'Gaya "{name}" dipadam.',
 ];

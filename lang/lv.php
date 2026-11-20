@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Jūsu pārlūkprogramma neļauj kopēt starpliktuvē.',
     'js.share_failed' => 'Kopīgošana neizdevās. Lūdzu, izmantojiet pogu “Lejupielādēt”.',
     'js.format_unsupported' => 'Jūsu pārlūkprogramma nevar izveidot šo formātu. Izvēlieties citu.',
+
+    'type.event' => 'Notikums',
+    'field.event_title' => 'Notikuma nosaukums',
+    'field.event_start' => 'Sākums',
+    'field.event_end' => 'Beigas',
+    'field.event_location' => 'Vieta',
+    'field.event_description' => 'Apraksts',
+
+    'preset.heading' => 'Saglabātie stili',
+    'preset.hint' => 'Saglabājiet pašreizējo izskatu (krāsas, formas, izmēru un attēlu) un ielādējiet to atkārtoti ar vienu klikšķi. Stili tiek glabāti tikai šajā pārlūkprogrammā.',
+    'preset.choose' => 'Saglabātais stils',
+    'preset.none' => '— Izvēlieties stilu —',
+    'preset.delete' => 'Dzēst',
+    'preset.name' => 'Saglabāt pašreizējo stilu kā',
+    'preset.name_placeholder' => 'piem., Uzņēmums',
+    'preset.save' => 'Saglabāt',
+
+    'js.scan_checking' => 'Pārbauda, vai kodu var noskenēt…',
+    'js.scan_ok' => 'Kods tiek nolasīts pareizi.',
+    'js.scan_fail' => 'Šo kodu neizdevās nolasīt. Palieliniet kontrastu, samaziniet attēlu vai izvēlieties augstāku kļūdu labošanas līmeni.',
+    'js.preset_saved' => 'Stils “{name}” saglabāts.',
+    'js.preset_saved_no_logo' => 'Stils “{name}” saglabāts bez attēla - nepietiek krātuves vietas.',
+    'js.preset_deleted' => 'Stils “{name}” izdzēsts.',
 ];

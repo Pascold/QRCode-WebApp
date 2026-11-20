@@ -27,4 +27,9 @@ return [
     'consent.leave' => 'Seite schliessen',
 
     'js.share_failed' => 'Teilen hat nicht funktioniert. Bitte nutze stattdessen «Herunterladen».',
+
+    'preset.hint' => 'Speichere das aktuelle Aussehen (Farben, Formen, Grösse und Bild) und lade es mit einem Klick wieder. Stile werden nur in diesem Browser gespeichert.',
+    'js.preset_saved' => 'Stil «{name}» gespeichert.',
+    'js.preset_saved_no_logo' => 'Stil «{name}» ohne Bild gespeichert - dafür ist nicht genug Speicherplatz vorhanden.',
+    'js.preset_deleted' => 'Stil «{name}» gelöscht.',
 ];

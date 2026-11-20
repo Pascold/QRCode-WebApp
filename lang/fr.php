@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Votre navigateur ne permet pas de copier dans le presse-papiers.',
     'js.share_failed' => 'Le partage n\'a pas fonctionné. Utilisez plutôt « Télécharger ».',
     'js.format_unsupported' => 'Votre navigateur ne peut pas créer ce format. Veuillez en choisir un autre.',
+
+    'type.event' => 'Événement',
+    'field.event_title' => 'Titre de l\'événement',
+    'field.event_start' => 'Début',
+    'field.event_end' => 'Fin',
+    'field.event_location' => 'Lieu',
+    'field.event_description' => 'Description',
+
+    'preset.heading' => 'Styles enregistrés',
+    'preset.hint' => 'Enregistrez l\'apparence actuelle (couleurs, formes, taille et image) et rechargez-la en un clic. Les styles sont stockés uniquement dans ce navigateur.',
+    'preset.choose' => 'Style enregistré',
+    'preset.none' => '— Choisir un style —',
+    'preset.delete' => 'Supprimer',
+    'preset.name' => 'Enregistrer le style actuel sous',
+    'preset.name_placeholder' => 'p. ex. Entreprise',
+    'preset.save' => 'Enregistrer',
+
+    'js.scan_checking' => 'Vérification de la lisibilité du code…',
+    'js.scan_ok' => 'Le code se scanne correctement.',
+    'js.scan_fail' => 'Ce code n\'a pas pu être lu. Augmentez le contraste, réduisez l\'image ou choisissez un niveau de correction plus élevé.',
+    'js.preset_saved' => 'Style « {name} » enregistré.',
+    'js.preset_saved_no_logo' => 'Style « {name} » enregistré sans l\'image - l\'espace de stockage est insuffisant.',
+    'js.preset_deleted' => 'Style « {name} » supprimé.',
 ];

@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Tarayıcınız panoya kopyalamaya izin vermiyor.',
     'js.share_failed' => 'Paylaşım başarısız oldu. Lütfen bunun yerine İndir\'i kullanın.',
     'js.format_unsupported' => 'Tarayıcınız bu biçimi oluşturamıyor. Lütfen başka bir biçim seçin.',
+
+    'type.event' => 'Etkinlik',
+    'field.event_title' => 'Etkinlik adı',
+    'field.event_start' => 'Başlangıç',
+    'field.event_end' => 'Bitiş',
+    'field.event_location' => 'Yer',
+    'field.event_description' => 'Açıklama',
+
+    'preset.heading' => 'Kayıtlı stiller',
+    'preset.hint' => 'Mevcut görünümü (renkler, şekiller, boyut ve görsel) kaydedin ve tek tıkla yeniden yükleyin. Stiller yalnızca bu tarayıcıda saklanır.',
+    'preset.choose' => 'Kayıtlı stil',
+    'preset.none' => '— Bir stil seçin —',
+    'preset.delete' => 'Sil',
+    'preset.name' => 'Mevcut stili şu adla kaydet',
+    'preset.name_placeholder' => 'ör. Şirket',
+    'preset.save' => 'Kaydet',
+
+    'js.scan_checking' => 'Kodun taranıp taranamadığı kontrol ediliyor…',
+    'js.scan_ok' => 'Kod doğru şekilde taranıyor.',
+    'js.scan_fail' => 'Bu kod okunamadı. Kontrastı artırın, görseli küçültün veya daha yüksek bir hata düzeltme seviyesi seçin.',
+    'js.preset_saved' => '"{name}" stili kaydedildi.',
+    'js.preset_saved_no_logo' => '"{name}" stili görsel olmadan kaydedildi - yeterli depolama alanı yok.',
+    'js.preset_deleted' => '"{name}" stili silindi.',
 ];

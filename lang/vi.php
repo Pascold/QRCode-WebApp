@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Trình duyệt của bạn không cho phép sao chép vào bảng nhớ tạm.',
     'js.share_failed' => 'Không chia sẻ được. Vui lòng dùng Tải xuống.',
     'js.format_unsupported' => 'Trình duyệt của bạn không thể tạo định dạng này. Vui lòng chọn định dạng khác.',
+
+    'type.event' => 'Sự kiện',
+    'field.event_title' => 'Tên sự kiện',
+    'field.event_start' => 'Bắt đầu',
+    'field.event_end' => 'Kết thúc',
+    'field.event_location' => 'Địa điểm',
+    'field.event_description' => 'Mô tả',
+
+    'preset.heading' => 'Kiểu đã lưu',
+    'preset.hint' => 'Lưu giao diện hiện tại (màu sắc, hình dạng, kích thước và hình ảnh) và tải lại chỉ với một cú nhấp. Kiểu chỉ được lưu trong trình duyệt này.',
+    'preset.choose' => 'Kiểu đã lưu',
+    'preset.none' => '— Chọn kiểu —',
+    'preset.delete' => 'Xóa',
+    'preset.name' => 'Lưu kiểu hiện tại với tên',
+    'preset.name_placeholder' => 'vd. Công ty',
+    'preset.save' => 'Lưu',
+
+    'js.scan_checking' => 'Đang kiểm tra xem mã có quét được không…',
+    'js.scan_ok' => 'Mã quét được bình thường.',
+    'js.scan_fail' => 'Không đọc được mã này. Hãy tăng độ tương phản, thu nhỏ hình ảnh hoặc chọn mức sửa lỗi cao hơn.',
+    'js.preset_saved' => 'Đã lưu kiểu "{name}".',
+    'js.preset_saved_no_logo' => 'Đã lưu kiểu "{name}" mà không có hình ảnh - không đủ dung lượng lưu trữ.',
+    'js.preset_deleted' => 'Đã xóa kiểu "{name}".',
 ];

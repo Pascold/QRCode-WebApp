@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Zure nabigatzaileak ez du arbelean kopiatzen uzten.',
     'js.share_failed' => 'Ezin izan da partekatu. Erabili «Deskargatu».',
     'js.format_unsupported' => 'Zure nabigatzaileak ezin du formatu hau sortu. Aukeratu beste bat.',
+
+    'type.event' => 'Ekitaldia',
+    'field.event_title' => 'Ekitaldiaren izena',
+    'field.event_start' => 'Hasiera',
+    'field.event_end' => 'Amaiera',
+    'field.event_location' => 'Lekua',
+    'field.event_description' => 'Deskribapena',
+
+    'preset.heading' => 'Gordetako estiloak',
+    'preset.hint' => 'Gorde uneko itxura (koloreak, formak, tamaina eta irudia) eta kargatu berriro klik bakarrarekin. Estiloak nabigatzaile honetan bakarrik gordetzen dira.',
+    'preset.choose' => 'Gordetako estiloa',
+    'preset.none' => '— Aukeratu estilo bat —',
+    'preset.delete' => 'Ezabatu',
+    'preset.name' => 'Gorde uneko estiloa honela',
+    'preset.name_placeholder' => 'adib. Enpresa',
+    'preset.save' => 'Gorde',
+
+    'js.scan_checking' => 'Kodea eskaneatu daitekeen egiaztatzen…',
+    'js.scan_ok' => 'Kodea ondo eskaneatzen da.',
+    'js.scan_fail' => 'Ezin izan da kode hau irakurri. Handitu kontrastea, txikitu irudia edo aukeratu zuzenketa-maila altuagoa.',
+    'js.preset_saved' => '«{name}» estiloa gorde da.',
+    'js.preset_saved_no_logo' => '«{name}» estiloa irudirik gabe gorde da - ez dago behar adina leku.',
+    'js.preset_deleted' => '«{name}» estiloa ezabatu da.',
 ];

@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Dydy eich porwr ddim yn caniatáu copïo i\'r clipfwrdd.',
     'js.share_failed' => 'Methwyd rhannu. Defnyddiwch Llwytho i lawr yn lle hynny.',
     'js.format_unsupported' => 'Dydy eich porwr ddim yn gallu creu\'r fformat hwn. Dewiswch un arall.',
+
+    'type.event' => 'Digwyddiad',
+    'field.event_title' => 'Teitl y digwyddiad',
+    'field.event_start' => 'Dechrau',
+    'field.event_end' => 'Diwedd',
+    'field.event_location' => 'Lleoliad',
+    'field.event_description' => 'Disgrifiad',
+
+    'preset.heading' => 'Arddulliau wedi\'u cadw',
+    'preset.hint' => 'Cadwch yr olwg bresennol (lliwiau, siapiau, maint a delwedd) a\'i llwytho eto gydag un clic. Mae\'r arddulliau\'n cael eu cadw yn y porwr hwn yn unig.',
+    'preset.choose' => 'Arddull wedi\'i chadw',
+    'preset.none' => '— Dewiswch arddull —',
+    'preset.delete' => 'Dileu',
+    'preset.name' => 'Cadw\'r arddull bresennol fel',
+    'preset.name_placeholder' => 'e.e. Cwmni',
+    'preset.save' => 'Cadw',
+
+    'js.scan_checking' => 'Yn gwirio a oes modd sganio\'r cod…',
+    'js.scan_ok' => 'Mae\'r cod yn sganio\'n gywir.',
+    'js.scan_fail' => 'Doedd dim modd darllen y cod hwn. Cynyddwch y cyferbyniad, gwnewch y ddelwedd yn llai neu dewiswch lefel cywiro uwch.',
+    'js.preset_saved' => 'Mae\'r arddull "{name}" wedi\'i chadw.',
+    'js.preset_saved_no_logo' => 'Mae\'r arddull "{name}" wedi\'i chadw heb y ddelwedd - does dim digon o le storio.',
+    'js.preset_deleted' => 'Mae\'r arddull "{name}" wedi\'i dileu.',
 ];

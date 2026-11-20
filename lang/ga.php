@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Ní cheadaíonn do bhrabhsálaí cóipeáil chuig an ghearrthaisce.',
     'js.share_failed' => 'Níor éirigh leis an gcomhroinnt. Úsáid Íoslódáil ina ionad.',
     'js.format_unsupported' => 'Ní féidir le do bhrabhsálaí an fhormáid seo a chruthú. Roghnaigh ceann eile.',
+
+    'type.event' => 'Imeacht',
+    'field.event_title' => 'Teideal an imeachta',
+    'field.event_start' => 'Tús',
+    'field.event_end' => 'Deireadh',
+    'field.event_location' => 'Áit',
+    'field.event_description' => 'Cur síos',
+
+    'preset.heading' => 'Stíleanna sábháilte',
+    'preset.hint' => 'Sábháil an chuma reatha (dathanna, cruthanna, méid agus íomhá) agus lódáil arís í le cliceáil amháin. Ní stóráiltear na stíleanna ach sa bhrabhsálaí seo.',
+    'preset.choose' => 'Stíl shábháilte',
+    'preset.none' => '— Roghnaigh stíl —',
+    'preset.delete' => 'Scrios',
+    'preset.name' => 'Sábháil an stíl reatha mar',
+    'preset.name_placeholder' => 'm.sh. Comhlacht',
+    'preset.save' => 'Sábháil',
+
+    'js.scan_checking' => 'Ag seiceáil an féidir an cód a scanadh…',
+    'js.scan_ok' => 'Scanann an cód i gceart.',
+    'js.scan_fail' => 'Níorbh fhéidir an cód seo a léamh. Méadaigh an chodarsnacht, laghdaigh an íomhá nó roghnaigh leibhéal ceartaithe níos airde.',
+    'js.preset_saved' => 'Sábháladh an stíl "{name}".',
+    'js.preset_saved_no_logo' => 'Sábháladh an stíl "{name}" gan an íomhá - níl go leor spáis stórála ann.',
+    'js.preset_deleted' => 'Scriosadh an stíl "{name}".',
 ];

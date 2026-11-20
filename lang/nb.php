@@ -138,4 +138,27 @@ return [
     'js.clipboard_failed' => 'Nettleseren din tillater ikke kopiering til utklippstavlen.',
     'js.share_failed' => 'Deling fungerte ikke. Bruk Last ned i stedet.',
     'js.format_unsupported' => 'Nettleseren din kan ikke lage dette formatet. Velg et annet.',
+
+    'type.event' => 'Hendelse',
+    'field.event_title' => 'Navn på hendelsen',
+    'field.event_start' => 'Start',
+    'field.event_end' => 'Slutt',
+    'field.event_location' => 'Sted',
+    'field.event_description' => 'Beskrivelse',
+
+    'preset.heading' => 'Lagrede stiler',
+    'preset.hint' => 'Lagre gjeldende utseende (farger, former, størrelse og bilde) og last det inn igjen med ett klikk. Stilene lagres bare i denne nettleseren.',
+    'preset.choose' => 'Lagret stil',
+    'preset.none' => '— Velg en stil —',
+    'preset.delete' => 'Slett',
+    'preset.name' => 'Lagre gjeldende stil som',
+    'preset.name_placeholder' => 'f.eks. Firma',
+    'preset.save' => 'Lagre',
+
+    'js.scan_checking' => 'Sjekker om koden kan skannes…',
+    'js.scan_ok' => 'Koden kan skannes.',
+    'js.scan_fail' => 'Koden kunne ikke leses. Øk kontrasten, gjør bildet mindre eller velg et høyere feilrettingsnivå.',
+    'js.preset_saved' => 'Stilen «{name}» er lagret.',
+    'js.preset_saved_no_logo' => 'Stilen «{name}» ble lagret uten bilde - det er ikke nok lagringsplass.',
+    'js.preset_deleted' => 'Stilen «{name}» er slettet.',
 ];

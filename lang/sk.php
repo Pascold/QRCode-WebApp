@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Váš prehliadač nepovoľuje kopírovanie do schránky.',
     'js.share_failed' => 'Zdieľanie sa nepodarilo. Použite tlačidlo Stiahnuť.',
     'js.format_unsupported' => 'Váš prehliadač nevie vytvoriť tento formát. Vyberte iný.',
+
+    'type.event' => 'Udalosť',
+    'field.event_title' => 'Názov udalosti',
+    'field.event_start' => 'Začiatok',
+    'field.event_end' => 'Koniec',
+    'field.event_location' => 'Miesto',
+    'field.event_description' => 'Popis',
+
+    'preset.heading' => 'Uložené štýly',
+    'preset.hint' => 'Uložte aktuálny vzhľad (farby, tvary, veľkosť a obrázok) a načítajte ho znova jedným kliknutím. Štýly sa ukladajú iba v tomto prehliadači.',
+    'preset.choose' => 'Uložený štýl',
+    'preset.none' => '— Vyberte štýl —',
+    'preset.delete' => 'Odstrániť',
+    'preset.name' => 'Uložiť aktuálny štýl ako',
+    'preset.name_placeholder' => 'napr. Firma',
+    'preset.save' => 'Uložiť',
+
+    'js.scan_checking' => 'Kontrolujem, či sa dá kód naskenovať…',
+    'js.scan_ok' => 'Kód sa načítava správne.',
+    'js.scan_fail' => 'Tento kód sa nepodarilo prečítať. Zvýšte kontrast, zmenšite obrázok alebo zvoľte vyššiu úroveň opravy chýb.',
+    'js.preset_saved' => 'Štýl „{name}“ bol uložený.',
+    'js.preset_saved_no_logo' => 'Štýl „{name}“ bol uložený bez obrázka - nie je naň dosť miesta.',
+    'js.preset_deleted' => 'Štýl „{name}“ bol odstránený.',
 ];

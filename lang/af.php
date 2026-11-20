@@ -137,4 +137,27 @@ return [
     'js.clipboard_failed' => 'Jou blaaier laat nie toe dat na die knipbord gekopieer word nie.',
     'js.share_failed' => 'Deel het nie gewerk nie. Gebruik eerder Laai af.',
     'js.format_unsupported' => 'Jou blaaier kan nie hierdie formaat skep nie. Kies asseblief \'n ander een.',
+
+    'type.event' => 'Geleentheid',
+    'field.event_title' => 'Titel van die geleentheid',
+    'field.event_start' => 'Begin',
+    'field.event_end' => 'Einde',
+    'field.event_location' => 'Plek',
+    'field.event_description' => 'Beskrywing',
+
+    'preset.heading' => 'Gestoorde style',
+    'preset.hint' => 'Stoor die huidige voorkoms (kleure, vorms, grootte en beeld) en laai dit weer met een klik. Style word net in hierdie blaaier gestoor.',
+    'preset.choose' => 'Gestoorde styl',
+    'preset.none' => '— Kies \'n styl —',
+    'preset.delete' => 'Vee uit',
+    'preset.name' => 'Stoor huidige styl as',
+    'preset.name_placeholder' => 'bv. Maatskappy',
+    'preset.save' => 'Stoor',
+
+    'js.scan_checking' => 'Kyk of die kode geskandeer kan word…',
+    'js.scan_ok' => 'Die kode skandeer korrek.',
+    'js.scan_fail' => 'Hierdie kode kon nie gelees word nie. Verhoog die kontras, maak die beeld kleiner of kies \'n hoër foutkorreksievlak.',
+    'js.preset_saved' => 'Styl "{name}" is gestoor.',
+    'js.preset_saved_no_logo' => 'Styl "{name}" is sonder die beeld gestoor - daar is nie genoeg bergingspasie nie.',
+    'js.preset_deleted' => 'Styl "{name}" is uitgevee.',
 ];
