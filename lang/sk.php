@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Nízky kontrast medzi bodkami a pozadím - niektoré telefóny nemusia tento kód načítať.',
     'js.inverted' => 'Bodky sú svetlejšie ako pozadie. Mnohé čítačky nedokážu prečítať invertované kódy - použite tmavé bodky na svetlom pozadí.',
+
+    'download.copy_svg' => 'Kopírovať kód SVG',
+    'download.print' => 'Tlačiť',
+    'download.share' => 'Zdieľať',
+
+    'js.exporting' => 'Pripravujem súbor…',
+    'js.svg_copied' => 'Kód SVG bol skopírovaný do schránky.',
+    'js.clipboard_failed' => 'Váš prehliadač nepovoľuje kopírovanie do schránky.',
+    'js.share_failed' => 'Zdieľanie sa nepodarilo. Použite tlačidlo Stiahnuť.',
+    'js.format_unsupported' => 'Váš prehliadač nevie vytvoriť tento formát. Vyberte iný.',
 ];

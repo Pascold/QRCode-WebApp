@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Contrast scăzut între puncte și fundal - unele telefoane s-ar putea să nu scaneze acest cod.',
     'js.inverted' => 'Punctele sunt mai deschise decât fundalul. Multe scanere nu pot citi coduri inversate - folosește puncte închise pe un fundal deschis.',
+
+    'download.copy_svg' => 'Copiază codul SVG',
+    'download.print' => 'Tipărește',
+    'download.share' => 'Distribuie',
+
+    'js.exporting' => 'Se pregătește fișierul…',
+    'js.svg_copied' => 'Codul SVG a fost copiat în clipboard.',
+    'js.clipboard_failed' => 'Browserul tău nu permite copierea în clipboard.',
+    'js.share_failed' => 'Distribuirea nu a reușit. Folosește în schimb „Descarcă”.',
+    'js.format_unsupported' => 'Browserul tău nu poate crea acest format. Alege altul.',
 ];

@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => '점과 배경의 대비가 낮아 일부 휴대폰에서 이 코드를 스캔하지 못할 수 있습니다.',
     'js.inverted' => '점이 배경보다 밝습니다. 많은 스캐너가 반전된 코드를 읽지 못하므로 밝은 배경에 어두운 점을 사용하세요.',
+
+    'download.copy_svg' => 'SVG 코드 복사',
+    'download.print' => '인쇄',
+    'download.share' => '공유',
+
+    'js.exporting' => '파일 준비 중…',
+    'js.svg_copied' => 'SVG 코드를 클립보드에 복사했습니다.',
+    'js.clipboard_failed' => '브라우저에서 클립보드 복사를 허용하지 않습니다.',
+    'js.share_failed' => '공유하지 못했습니다. 대신 다운로드를 이용하세요.',
+    'js.format_unsupported' => '브라우저에서 이 형식을 만들 수 없습니다. 다른 형식을 선택하세요.',
 ];

@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Mababa ang contrast ng mga tuldok at background - maaaring hindi ma-scan ng ilang telepono ang code na ito.',
     'js.inverted' => 'Mas maliwanag ang mga tuldok kaysa sa background. Maraming scanner ang hindi makabasa ng baligtad na code - gumamit ng madidilim na tuldok sa maliwanag na background.',
+
+    'download.copy_svg' => 'Kopyahin ang SVG code',
+    'download.print' => 'I-print',
+    'download.share' => 'Ibahagi',
+
+    'js.exporting' => 'Inihahanda ang file…',
+    'js.svg_copied' => 'Nakopya ang SVG code sa clipboard.',
+    'js.clipboard_failed' => 'Hindi pinapayagan ng iyong browser ang pagkopya sa clipboard.',
+    'js.share_failed' => 'Hindi naibahagi. Gamitin na lang ang I-download.',
+    'js.format_unsupported' => 'Hindi kayang gawin ng iyong browser ang format na ito. Pumili ng iba.',
 ];

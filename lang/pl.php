@@ -129,4 +129,14 @@ return [
 
     'js.low_contrast' => 'Niski kontrast między kropkami a tłem - niektóre telefony mogą nie odczytać tego kodu.',
     'js.inverted' => 'Kropki są jaśniejsze niż tło. Wiele skanerów nie odczyta odwróconego kodu - użyj ciemnych kropek na jasnym tle.',
+
+    'download.copy_svg' => 'Kopiuj kod SVG',
+    'download.print' => 'Drukuj',
+    'download.share' => 'Udostępnij',
+
+    'js.exporting' => 'Przygotowuję plik…',
+    'js.svg_copied' => 'Kod SVG skopiowano do schowka.',
+    'js.clipboard_failed' => 'Twoja przeglądarka nie pozwala kopiować do schowka.',
+    'js.share_failed' => 'Nie udało się udostępnić. Użyj przycisku Pobierz.',
+    'js.format_unsupported' => 'Twoja przeglądarka nie potrafi utworzyć tego formatu. Wybierz inny.',
 ];

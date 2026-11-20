@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Laag contrast tussen de punten en de achtergrond - sommige telefoons kunnen deze code mogelijk niet scannen.',
     'js.inverted' => 'De punten zijn lichter dan de achtergrond. Veel scanners kunnen omgekeerde codes niet lezen - gebruik donkere punten op een lichte achtergrond.',
+
+    'download.copy_svg' => 'SVG-code kopiëren',
+    'download.print' => 'Afdrukken',
+    'download.share' => 'Delen',
+
+    'js.exporting' => 'Bestand wordt voorbereid…',
+    'js.svg_copied' => 'SVG-code gekopieerd naar het klembord.',
+    'js.clipboard_failed' => 'Je browser staat kopiëren naar het klembord niet toe.',
+    'js.share_failed' => 'Delen is niet gelukt. Gebruik in plaats daarvan Downloaden.',
+    'js.format_unsupported' => 'Je browser kan dit formaat niet maken. Kies een ander formaat.',
 ];

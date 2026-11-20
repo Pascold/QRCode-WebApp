@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Ọdịiche agba dị n\'etiti ntụpọ na azụ dị ala - ụfọdụ ekwentị nwere ike ọ gaghị enyocha koodu a.',
     'js.inverted' => 'Ntụpọ ndị ahụ na-enwu karịa azụ. Ọtụtụ ihe nyocha enweghị ike ịgụ koodu agbanwere agbanwe - jiri ntụpọ gbara ọchịchịrị n\'azụ na-enwu enwu.',
+
+    'download.copy_svg' => 'Detuo koodu SVG',
+    'download.print' => 'Bipụta',
+    'download.share' => 'Kesaa',
+
+    'js.exporting' => 'Na-akwado faịlụ…',
+    'js.svg_copied' => 'E detuola koodu SVG na klipbọọdụ.',
+    'js.clipboard_failed' => 'Nchọgharị gị anaghị ekwe ka e detuo na klipbọọdụ.',
+    'js.share_failed' => 'Ịkesa agaghị nke ọma. Biko jiri Budata kama.',
+    'js.format_unsupported' => 'Nchọgharị gị enweghị ike ịmepụta usoro a. Biko họrọ nke ọzọ.',
 ];

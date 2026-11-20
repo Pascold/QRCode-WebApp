@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Kontras antara titik dan latar belakang rendah - sesetengah telefon mungkin tidak dapat mengimbas kod ini.',
     'js.inverted' => 'Titik lebih cerah daripada latar belakang. Banyak pengimbas tidak dapat membaca kod songsang - gunakan titik gelap pada latar belakang cerah.',
+
+    'download.copy_svg' => 'Salin kod SVG',
+    'download.print' => 'Cetak',
+    'download.share' => 'Kongsi',
+
+    'js.exporting' => 'Menyediakan fail…',
+    'js.svg_copied' => 'Kod SVG telah disalin ke papan keratan.',
+    'js.clipboard_failed' => 'Pelayar anda tidak membenarkan penyalinan ke papan keratan.',
+    'js.share_failed' => 'Perkongsian gagal. Sila gunakan Muat turun.',
+    'js.format_unsupported' => 'Pelayar anda tidak dapat mencipta format ini. Sila pilih format lain.',
 ];

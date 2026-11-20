@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Mažas kontrastas tarp taškų ir fono - kai kurie telefonai gali nenuskaityti šio kodo.',
     'js.inverted' => 'Taškai šviesesni už foną. Daugelis skaitytuvų negali nuskaityti apverstų kodų - naudokite tamsius taškus ant šviesaus fono.',
+
+    'download.copy_svg' => 'Kopijuoti SVG kodą',
+    'download.print' => 'Spausdinti',
+    'download.share' => 'Bendrinti',
+
+    'js.exporting' => 'Ruošiamas failas…',
+    'js.svg_copied' => 'SVG kodas nukopijuotas į iškarpinę.',
+    'js.clipboard_failed' => 'Jūsų naršyklė neleidžia kopijuoti į iškarpinę.',
+    'js.share_failed' => 'Bendrinti nepavyko. Naudokite mygtuką „Atsisiųsti“.',
+    'js.format_unsupported' => 'Jūsų naršyklė negali sukurti šio formato. Pasirinkite kitą.',
 ];

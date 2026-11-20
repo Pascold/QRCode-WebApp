@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Låg kontrast mellan punkterna och bakgrunden - vissa telefoner kanske inte kan skanna koden.',
     'js.inverted' => 'Punkterna är ljusare än bakgrunden. Många läsare kan inte läsa inverterade koder - använd mörka punkter på ljus bakgrund.',
+
+    'download.copy_svg' => 'Kopiera SVG-kod',
+    'download.print' => 'Skriv ut',
+    'download.share' => 'Dela',
+
+    'js.exporting' => 'Förbereder filen…',
+    'js.svg_copied' => 'SVG-koden har kopierats till urklipp.',
+    'js.clipboard_failed' => 'Din webbläsare tillåter inte kopiering till urklipp.',
+    'js.share_failed' => 'Delningen fungerade inte. Använd Ladda ner i stället.',
+    'js.format_unsupported' => 'Din webbläsare kan inte skapa det här formatet. Välj ett annat.',
 ];

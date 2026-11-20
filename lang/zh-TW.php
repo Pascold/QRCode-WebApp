@@ -129,4 +129,14 @@ return [
 
     'js.low_contrast' => '點與背景的對比度偏低，部分手機可能無法掃描此 QR Code。',
     'js.inverted' => '點比背景更亮。許多掃描器無法讀取反色的 QR Code，請在淺色背景上使用深色的點。',
+
+    'download.copy_svg' => '複製 SVG 程式碼',
+    'download.print' => '列印',
+    'download.share' => '分享',
+
+    'js.exporting' => '正在準備檔案…',
+    'js.svg_copied' => 'SVG 程式碼已複製到剪貼簿。',
+    'js.clipboard_failed' => '您的瀏覽器不允許複製到剪貼簿。',
+    'js.share_failed' => '分享失敗，請改用「下載」。',
+    'js.format_unsupported' => '您的瀏覽器無法產生此格式，請選擇其他格式。',
 ];

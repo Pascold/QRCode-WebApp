@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Lav kontrast mellom punktene og bakgrunnen - noen telefoner klarer kanskje ikke å skanne koden.',
     'js.inverted' => 'Punktene er lysere enn bakgrunnen. Mange skannere kan ikke lese inverterte koder - bruk mørke punkter på lys bakgrunn.',
+
+    'download.copy_svg' => 'Kopier SVG-kode',
+    'download.print' => 'Skriv ut',
+    'download.share' => 'Del',
+
+    'js.exporting' => 'Klargjør filen…',
+    'js.svg_copied' => 'SVG-koden er kopiert til utklippstavlen.',
+    'js.clipboard_failed' => 'Nettleseren din tillater ikke kopiering til utklippstavlen.',
+    'js.share_failed' => 'Deling fungerte ikke. Bruk Last ned i stedet.',
+    'js.format_unsupported' => 'Nettleseren din kan ikke lage dette formatet. Velg et annet.',
 ];

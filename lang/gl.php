@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Contraste baixo entre os puntos e o fondo: é posible que algúns teléfonos non poidan escanear este código.',
     'js.inverted' => 'Os puntos son máis claros ca o fondo. Moitos lectores non poden ler códigos invertidos: usa puntos escuros sobre un fondo claro.',
+
+    'download.copy_svg' => 'Copiar o código SVG',
+    'download.print' => 'Imprimir',
+    'download.share' => 'Compartir',
+
+    'js.exporting' => 'Preparando o ficheiro…',
+    'js.svg_copied' => 'Código SVG copiado no portapapeis.',
+    'js.clipboard_failed' => 'O teu navegador non permite copiar no portapapeis.',
+    'js.share_failed' => 'Non se puido compartir. Usa «Descargar».',
+    'js.format_unsupported' => 'O teu navegador non pode crear este formato. Escolle outro.',
 ];

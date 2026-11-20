@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Alacsony a kontraszt a pontok és a háttér között - egyes telefonok nem biztos, hogy beolvassák ezt a kódot.',
     'js.inverted' => 'A pontok világosabbak a háttérnél. Sok olvasó nem tudja beolvasni az invertált kódokat - használj sötét pontokat világos háttéren.',
+
+    'download.copy_svg' => 'SVG-kód másolása',
+    'download.print' => 'Nyomtatás',
+    'download.share' => 'Megosztás',
+
+    'js.exporting' => 'Fájl előkészítése…',
+    'js.svg_copied' => 'Az SVG-kód a vágólapra került.',
+    'js.clipboard_failed' => 'A böngésződ nem engedi a vágólapra másolást.',
+    'js.share_failed' => 'A megosztás nem sikerült. Használd inkább a Letöltés gombot.',
+    'js.format_unsupported' => 'A böngésződ nem tudja létrehozni ezt a formátumot. Válassz másikat.',
 ];

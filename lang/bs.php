@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Nizak kontrast između tačaka i pozadine - neki telefoni možda neće moći skenirati ovaj kod.',
     'js.inverted' => 'Tačke su svjetlije od pozadine. Mnogi čitači ne mogu pročitati obrnute kodove - koristite tamne tačke na svijetloj pozadini.',
+
+    'download.copy_svg' => 'Kopiraj SVG kod',
+    'download.print' => 'Štampaj',
+    'download.share' => 'Podijeli',
+
+    'js.exporting' => 'Pripremam datoteku…',
+    'js.svg_copied' => 'SVG kod je kopiran u međuspremnik.',
+    'js.clipboard_failed' => 'Vaš preglednik ne dozvoljava kopiranje u međuspremnik.',
+    'js.share_failed' => 'Dijeljenje nije uspjelo. Umjesto toga koristite Preuzmi.',
+    'js.format_unsupported' => 'Vaš preglednik ne može napraviti ovaj format. Odaberite drugi.',
 ];

@@ -158,7 +158,9 @@
 
     function buildOptions(data, overrides) {
         overrides = overrides || {};
-        var size = parseInt(value('size'), 10) || 600;
+        // "scale" renders a larger image with the same proportions (print formats).
+        var scale = overrides.scale || 1;
+        var size = Math.round((parseInt(value('size'), 10) || 600) * scale);
         var dotsColor = value('dots_color');
         var transparent = value('transparent') && !overrides.forceBackground;
 
@@ -178,7 +180,7 @@
             type: overrides.type || 'canvas',
             width: size,
             height: size,
-            margin: parseInt(value('margin'), 10) || 0,
+            margin: Math.round((parseInt(value('margin'), 10) || 0) * scale),
             data: data,
             image: logoDataUrl || undefined,
             qrOptions: {
@@ -193,7 +195,7 @@
             imageOptions: {
                 hideBackgroundDots: !!value('logo_hide_dots'),
                 imageSize: (parseInt(value('logo_size'), 10) || 30) / 100,
-                margin: parseInt(value('logo_margin'), 10) || 0,
+                margin: Math.round((parseInt(value('logo_margin'), 10) || 0) * scale),
                 crossOrigin: 'anonymous'
             }
         };
@@ -417,7 +419,7 @@
     }
 
     function setActionsEnabled(enabled) {
-        ['download', 'copy'].forEach(function (id) {
+        ['download', 'copy', 'copy-svg', 'print', 'share'].forEach(function (id) {
             document.getElementById(id).disabled = !enabled;
         });
     }
@@ -531,22 +533,182 @@
         return name || 'qr-code';
     }
 
-    document.getElementById('download').addEventListener('click', function () {
+    // Formats the QR library saves by itself.
+    var NATIVE_FORMATS = { png: true, jpeg: true, webp: true, svg: true };
+    // Formats without transparency: the background color is filled in.
+    var OPAQUE_FORMATS = { jpeg: true, bmp: true, eps: true };
+    // Print formats are rendered at up to 3x resolution (about 300 DPI).
+    var PRINT_FORMATS = { pdf: true, eps: true };
+    var EXTENSIONS = { jpeg: 'jpg' };
+
+    /** Renders the current code into a canvas (for the custom exporters). */
+    async function renderCanvas(data, overrides) {
+        var exporter = new QRCodeStyling(buildOptions(data, overrides));
+        var blob = await exporter.getRawData('png');
+        var bitmap = await createImageBitmap(blob);
+        var canvas = document.createElement('canvas');
+        canvas.width = bitmap.width;
+        canvas.height = bitmap.height;
+        canvas.getContext('2d').drawImage(bitmap, 0, 0);
+        return canvas;
+    }
+
+    function saveBlob(blob, filename) {
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+    }
+
+    /** Disables a button and shows "Preparing file…" while a promise runs. */
+    async function busy(button, task) {
+        var label = button.textContent;
+        button.disabled = true;
+        button.setAttribute('aria-busy', 'true');
+        button.textContent = t('exporting');
+        try {
+            return await task();
+        } finally {
+            button.textContent = label;
+            button.removeAttribute('aria-busy');
+            button.disabled = !qr;
+        }
+    }
+
+    function exportError(error) {
+        if (window.console) {
+            console.error(error);
+        }
+        showMessage(error && error.code === 'unsupported' ? t('format_unsupported') : t('generic_error'), 'error');
+    }
+
+    var downloadButton = document.getElementById('download');
+
+    downloadButton.addEventListener('click', function () {
         var data = currentData();
         if (!data) {
             return;
         }
         var format = value('format') || 'png';
-        try {
-            var exporter = new QRCodeStyling(buildOptions(data, {
-                type: format === 'svg' ? 'svg' : 'canvas',
-                // JPEG has no alpha channel, so fall back to the background color.
-                forceBackground: format === 'jpeg'
-            }));
-            exporter.download({ name: safeFilename(), extension: format });
-        } catch (error) {
-            showMessage(t('generic_error'), 'error');
+
+        if (NATIVE_FORMATS[format]) {
+            try {
+                var exporter = new QRCodeStyling(buildOptions(data, {
+                    type: format === 'svg' ? 'svg' : 'canvas',
+                    forceBackground: !!OPAQUE_FORMATS[format]
+                }));
+                exporter.download({ name: safeFilename(), extension: format });
+            } catch (error) {
+                exportError(error);
+            }
+            return;
         }
+
+        var size = parseInt(value('size'), 10) || 600;
+        var scale = PRINT_FORMATS[format] ? Math.min(3, 4096 / size) : 1;
+
+        busy(downloadButton, async function () {
+            var canvas = await renderCanvas(data, { forceBackground: !!OPAQUE_FORMATS[format], scale: scale });
+            var blob = await window.QrExport.encode(format, canvas, {
+                // Physical size: the chosen pixel size at 96 DPI (1 px = 0.75 pt).
+                widthPt: size * 0.75,
+                heightPt: size * 0.75,
+                title: safeFilename()
+            });
+            saveBlob(blob, safeFilename() + '.' + (EXTENSIONS[format] || format));
+        }).catch(exportError);
+    });
+
+    // ------------------------------------------------------------------
+    // Copy SVG code
+    // ------------------------------------------------------------------
+
+    document.getElementById('copy-svg').addEventListener('click', function () {
+        var data = currentData();
+        if (!data) {
+            return;
+        }
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            showMessage(t('clipboard_failed'), 'error');
+            return;
+        }
+        new QRCodeStyling(buildOptions(data, { type: 'svg' })).getRawData('svg')
+            .then(function (blob) { return blob.text(); })
+            .then(function (svg) { return navigator.clipboard.writeText(svg); })
+            .then(function () { showMessage(t('svg_copied'), 'success'); })
+            .catch(function () { showMessage(t('clipboard_failed'), 'error'); });
+    });
+
+    // ------------------------------------------------------------------
+    // Print: only the code is printed, at the chosen size (96 px = 1 inch)
+    // ------------------------------------------------------------------
+
+    var printArea = document.getElementById('print-area');
+    var printUrl = null;
+
+    document.getElementById('print').addEventListener('click', function () {
+        var data = currentData();
+        if (!data) {
+            return;
+        }
+        var size = parseInt(value('size'), 10) || 600;
+        // Twice the resolution keeps the edges sharp on paper.
+        new QRCodeStyling(buildOptions(data, { scale: Math.min(2, 4096 / size) })).getRawData('png')
+            .then(function (blob) {
+                if (printUrl) {
+                    URL.revokeObjectURL(printUrl);
+                }
+                printUrl = URL.createObjectURL(blob);
+                var image = new Image();
+                image.alt = '';
+                image.style.width = size + 'px';
+                image.onload = function () {
+                    window.print();
+                };
+                image.src = printUrl;
+                printArea.replaceChildren(image);
+            })
+            .catch(exportError);
+    });
+
+    // ------------------------------------------------------------------
+    // Share (phones and some desktop browsers): shares a PNG file
+    // ------------------------------------------------------------------
+
+    var shareButton = document.getElementById('share');
+
+    function canShareFiles() {
+        try {
+            return typeof navigator.share === 'function' && typeof navigator.canShare === 'function'
+                && navigator.canShare({ files: [new File([''], 'qr.png', { type: 'image/png' })] });
+        } catch (error) {
+            return false;
+        }
+    }
+
+    shareButton.hidden = !canShareFiles();
+
+    shareButton.addEventListener('click', function () {
+        if (!qr) {
+            return;
+        }
+        // Pass the file promise straight away so the browser keeps the user gesture.
+        qr.getRawData('png')
+            .then(function (blob) {
+                var file = new File([blob], safeFilename() + '.png', { type: 'image/png' });
+                return navigator.share({ files: [file], title: document.title });
+            })
+            .catch(function (error) {
+                // The visitor closed the share sheet - not an error.
+                if (error && error.name === 'AbortError') {
+                    return;
+                }
+                showMessage(t('share_failed'), 'error');
+            });
     });
 
     document.getElementById('copy').addEventListener('click', function () {

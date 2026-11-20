@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Utofautishaji kati ya vitone na mandharinyuma ni mdogo - baadhi ya simu huenda zisiweze kuchanganua msimbo huu.',
     'js.inverted' => 'Vitone ni vyepesi kuliko mandharinyuma. Vichanganuzi vingi haviwezi kusoma misimbo iliyogeuzwa - tumia vitone vyeusi kwenye mandharinyuma meupe.',
+
+    'download.copy_svg' => 'Nakili msimbo wa SVG',
+    'download.print' => 'Chapisha',
+    'download.share' => 'Shiriki',
+
+    'js.exporting' => 'Inaandaa faili…',
+    'js.svg_copied' => 'Msimbo wa SVG umenakiliwa kwenye ubao wa kunakili.',
+    'js.clipboard_failed' => 'Kivinjari chako hakiruhusu kunakili kwenye ubao wa kunakili.',
+    'js.share_failed' => 'Kushiriki hakukufaulu. Tafadhali tumia Pakua badala yake.',
+    'js.format_unsupported' => 'Kivinjari chako hakiwezi kutengeneza muundo huu. Tafadhali chagua mwingine.',
 ];

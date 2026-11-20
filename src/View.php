@@ -13,9 +13,10 @@ final class View
     /**
      * Content Security Policy shared by the PHP version (HTTP header) and the
      * static build (<meta> tag). qr-code-styling fetch()es the center image
-     * data URL to embed it, hence data:/blob: in connect-src.
+     * data URL to embed it, hence data:/blob: in connect-src. 'wasm-unsafe-eval' lets
+     * the AVIF encoder (WebAssembly) run; it does not allow JavaScript eval().
      */
-    public const CONTENT_SECURITY_POLICY = "default-src 'self'; script-src 'self'; "
+    public const CONTENT_SECURITY_POLICY = "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; "
         . "style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; "
         . "connect-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'self'";
 

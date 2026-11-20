@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Codarsnacht íseal idir na poncanna agus an cúlra - b\'fhéidir nach mbeidh roinnt fón in ann an cód seo a scanadh.',
     'js.inverted' => 'Tá na poncanna níos gile ná an cúlra. Ní féidir le go leor scanóirí cóid inbhéartaithe a léamh - úsáid poncanna dorcha ar chúlra geal.',
+
+    'download.copy_svg' => 'Cóipeáil an cód SVG',
+    'download.print' => 'Priontáil',
+    'download.share' => 'Comhroinn',
+
+    'js.exporting' => 'An comhad á ullmhú…',
+    'js.svg_copied' => 'Cóipeáladh an cód SVG chuig an ghearrthaisce.',
+    'js.clipboard_failed' => 'Ní cheadaíonn do bhrabhsálaí cóipeáil chuig an ghearrthaisce.',
+    'js.share_failed' => 'Níor éirigh leis an gcomhroinnt. Úsáid Íoslódáil ina ionad.',
+    'js.format_unsupported' => 'Ní féidir le do bhrabhsálaí an fhormáid seo a chruthú. Roghnaigh ceann eile.',
 ];

@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Kala-duwanaanshaha u dhexeeya dhibcaha iyo asalka waa hooseeyaa - taleefannada qaar ayan akhrin karin koodhkan.',
     'js.inverted' => 'Dhibcuhu way ka iftiin badan yihiin asalka. Akhriste badan ma akhrin karaan koodhadh rogan - isticmaal dhibco madow oo ku yaal asal iftiin leh.',
+
+    'download.copy_svg' => 'Koobiyee koodhka SVG',
+    'download.print' => 'Daabac',
+    'download.share' => 'La wadaag',
+
+    'js.exporting' => 'Faylka waa la diyaarinayaa…',
+    'js.svg_copied' => 'Koodhka SVG waxaa lagu koobiyeeyay sabuuradda.',
+    'js.clipboard_failed' => 'Biraawsarkaagu ma ogola in lagu koobiyeeyo sabuuradda.',
+    'js.share_failed' => 'La wadaagiddu ma shaqayn. Fadlan isticmaal Soo deji.',
+    'js.format_unsupported' => 'Biraawsarkaagu ma samayn karo qaabkan. Fadlan dooro mid kale.',
 ];

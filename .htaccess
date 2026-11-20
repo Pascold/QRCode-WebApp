@@ -26,6 +26,7 @@ DirectoryIndex index.php index.html
     AddType application/javascript .js
     AddType text/css .css
     AddType application/manifest+json .webmanifest
+    AddType application/wasm .wasm
 </IfModule>
 
 # Cache static assets (URLs carry a ?v= version, so long caching is safe).

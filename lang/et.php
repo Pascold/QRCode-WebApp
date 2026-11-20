@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Punktide ja tausta kontrast on madal - mõni telefon ei pruugi seda koodi skannida.',
     'js.inverted' => 'Punktid on taustast heledamad. Paljud skannerid ei suuda pööratud koode lugeda - kasutage heledal taustal tumedaid punkte.',
+
+    'download.copy_svg' => 'Kopeeri SVG-kood',
+    'download.print' => 'Prindi',
+    'download.share' => 'Jaga',
+
+    'js.exporting' => 'Faili ettevalmistamine…',
+    'js.svg_copied' => 'SVG-kood kopeeriti lõikelauale.',
+    'js.clipboard_failed' => 'Teie brauser ei luba lõikelauale kopeerida.',
+    'js.share_failed' => 'Jagamine ebaõnnestus. Kasutage selle asemel nuppu „Laadi alla”.',
+    'js.format_unsupported' => 'Teie brauser ei saa seda vormingut luua. Valige mõni muu.',
 ];

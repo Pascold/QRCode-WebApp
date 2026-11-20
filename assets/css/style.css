@@ -825,3 +825,33 @@ body > noscript .notice {
     color: var(--accent);
     text-decoration: none;
 }
+
+/* Print: only the QR code ---------------------------------------------- */
+
+.print-area {
+    display: none;
+}
+
+@media print {
+    @page {
+        margin: 15mm;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    body > *:not(.print-area) {
+        display: none !important;
+    }
+
+    .print-area {
+        display: flex;
+        justify-content: center;
+    }
+
+    .print-area img {
+        max-width: 100%;
+        height: auto;
+    }
+}

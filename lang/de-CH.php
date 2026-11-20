@@ -25,4 +25,6 @@ return [
 
     'consent.declined_text' => 'Ohne deine Zustimmung kann diese Seite nicht verwendet werden. Du kannst die Seite schliessen oder zurückgehen und zustimmen.',
     'consent.leave' => 'Seite schliessen',
+
+    'js.share_failed' => 'Teilen hat nicht funktioniert. Bitte nutze stattdessen «Herunterladen».',
 ];

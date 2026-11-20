@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Geringer Kontrast zwischen Punkten und Hintergrund - manche Handys können diesen Code eventuell nicht scannen.',
     'js.inverted' => 'Die Punkte sind heller als der Hintergrund. Viele Scanner können invertierte Codes nicht lesen - verwende dunkle Punkte auf hellem Hintergrund.',
+
+    'download.copy_svg' => 'SVG-Code kopieren',
+    'download.print' => 'Drucken',
+    'download.share' => 'Teilen',
+
+    'js.exporting' => 'Datei wird erstellt…',
+    'js.svg_copied' => 'SVG-Code in die Zwischenablage kopiert.',
+    'js.clipboard_failed' => 'Dein Browser erlaubt das Kopieren in die Zwischenablage nicht.',
+    'js.share_failed' => 'Teilen hat nicht funktioniert. Bitte nutze stattdessen „Herunterladen“.',
+    'js.format_unsupported' => 'Dein Browser kann dieses Format nicht erstellen. Bitte wähle ein anderes.',
 ];

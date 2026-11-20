@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Lae kontras tussen die kolletjies en die agtergrond - sommige fone kan dalk nie hierdie kode skandeer nie.',
     'js.inverted' => 'Die kolletjies is ligter as die agtergrond. Baie skandeerders kan nie omgekeerde kodes lees nie - gebruik donker kolletjies op \'n ligte agtergrond.',
+
+    'download.copy_svg' => 'Kopieer SVG-kode',
+    'download.print' => 'Druk',
+    'download.share' => 'Deel',
+
+    'js.exporting' => 'Berei lêer voor…',
+    'js.svg_copied' => 'SVG-kode na knipbord gekopieer.',
+    'js.clipboard_failed' => 'Jou blaaier laat nie toe dat na die knipbord gekopieer word nie.',
+    'js.share_failed' => 'Deel het nie gewerk nie. Gebruik eerder Laai af.',
+    'js.format_unsupported' => 'Jou blaaier kan nie hierdie formaat skep nie. Kies asseblief \'n ander een.',
 ];

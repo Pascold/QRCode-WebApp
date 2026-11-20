@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Nizek kontrast med pikami in ozadjem - nekateri telefoni te kode morda ne bodo mogli prebrati.',
     'js.inverted' => 'Pike so svetlejše od ozadja. Številni bralniki ne preberejo obrnjenih kod - uporabite temne pike na svetlem ozadju.',
+
+    'download.copy_svg' => 'Kopiraj kodo SVG',
+    'download.print' => 'Natisni',
+    'download.share' => 'Deli',
+
+    'js.exporting' => 'Pripravljam datoteko …',
+    'js.svg_copied' => 'Koda SVG je kopirana v odložišče.',
+    'js.clipboard_failed' => 'Vaš brskalnik ne dovoli kopiranja v odložišče.',
+    'js.share_failed' => 'Deljenje ni uspelo. Namesto tega uporabite Prenesi.',
+    'js.format_unsupported' => 'Vaš brskalnik ne more ustvariti te oblike. Izberite drugo.',
 ];

@@ -21,6 +21,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 -------------------------------------------------------------------------------
-Third-party components bundled in assets/vendor/ keep their own MIT licenses:
-- qr-code-styling - see assets/vendor/qr-code-styling/LICENSE
-- flag-icons      - see assets/vendor/flag-icons/LICENSE
+Third-party components bundled in assets/vendor/ keep their own licenses:
+- qr-code-styling (MIT)        - see assets/vendor/qr-code-styling/LICENSE
+- flag-icons (MIT)             - see assets/vendor/flag-icons/LICENSE
+- gifenc (MIT)                 - see assets/vendor/gifenc/LICENSE.md
+- jSquash AVIF (Apache-2.0)    - see assets/vendor/jsquash-avif/LICENSE

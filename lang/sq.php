@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Kontrast i ulët mes pikave dhe sfondit - disa telefona mund të mos e skanojnë këtë kod.',
     'js.inverted' => 'Pikat janë më të çelëta se sfondi. Shumë skanerë nuk lexojnë kode të përmbysura - përdor pika të errëta mbi sfond të çelët.',
+
+    'download.copy_svg' => 'Kopjo kodin SVG',
+    'download.print' => 'Printo',
+    'download.share' => 'Ndaj',
+
+    'js.exporting' => 'Po përgatitet skedari…',
+    'js.svg_copied' => 'Kodi SVG u kopjua në kujtesën e fragmenteve.',
+    'js.clipboard_failed' => 'Shfletuesi yt nuk lejon kopjimin në kujtesën e fragmenteve.',
+    'js.share_failed' => 'Ndarja nuk funksionoi. Përdor butonin Shkarko.',
+    'js.format_unsupported' => 'Shfletuesi yt nuk mund ta krijojë këtë format. Zgjidh një tjetër.',
 ];

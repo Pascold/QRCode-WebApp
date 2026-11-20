@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Umehluko phakathi kwamachashazi nengemuva mncane - amanye amafoni angase angakwazi ukuskena le khodi.',
     'js.inverted' => 'Amachashazi akhanya kakhulu kunengemuva. Izikena eziningi azikwazi ukufunda amakhodi aguquliwe - sebenzisa amachashazi amnyama engemuva elikhanyayo.',
+
+    'download.copy_svg' => 'Kopisha ikhodi ye-SVG',
+    'download.print' => 'Phrinta',
+    'download.share' => 'Yabelana',
+
+    'js.exporting' => 'Ilungiselela ifayela…',
+    'js.svg_copied' => 'Ikhodi ye-SVG ikopishelwe ebhodini lokunamathisela.',
+    'js.clipboard_failed' => 'Isiphequluli sakho asivumeli ukukopisha ebhodini lokunamathisela.',
+    'js.share_failed' => 'Ukwabelana akuphumelelanga. Sicela usebenzise u-Landa esikhundleni salokho.',
+    'js.format_unsupported' => 'Isiphequluli sakho asikwazi ukwakha le fomethi. Sicela ukhethe enye.',
 ];

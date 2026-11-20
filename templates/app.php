@@ -364,19 +364,31 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
                     <select id="format" name="format" form="qr-form">
                         <option value="png">PNG</option>
                         <option value="svg">SVG</option>
+                        <option value="pdf">PDF</option>
                         <option value="jpeg">JPG</option>
                         <option value="webp">WebP</option>
+                        <option value="avif">AVIF</option>
+                        <option value="gif">GIF</option>
+                        <option value="bmp">BMP</option>
+                        <option value="eps">EPS</option>
                     </select>
                 </div>
             </div>
             <div class="actions">
                 <button type="button" id="download" class="btn btn-primary"><?= $t('download.button') ?></button>
                 <button type="button" id="copy" class="btn"><?= $t('download.copy') ?></button>
+                <button type="button" id="copy-svg" class="btn"><?= $t('download.copy_svg') ?></button>
+                <button type="button" id="print" class="btn"><?= $t('download.print') ?></button>
+                <!-- Shown only when the browser can share files (mostly phones). -->
+                <button type="button" id="share" class="btn" hidden><?= $t('download.share') ?></button>
                 <button type="button" id="reset" class="btn btn-ghost"><?= $t('download.reset') ?></button>
             </div>
         </section>
     </aside>
 </main>
+
+<!-- Filled by the Print button; only this is visible on paper. -->
+<div id="print-area" class="print-area" aria-hidden="true"></div>
 
 <footer class="container site-footer">
     <p><?= $t('app.footer') ?></p>
@@ -429,6 +441,7 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
 <script id="app-config" type="application/json"><?= json_encode($jsConfig, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_THROW_ON_ERROR) ?></script>
 <script src="<?= $asset('assets/js/ui.js') ?>"></script>
 <script src="<?= $asset('assets/vendor/qr-code-styling/qr-code-styling.js') ?>"></script>
+<script src="<?= $asset('assets/js/export.js') ?>"></script>
 <script src="<?= $asset('assets/js/app.js') ?>"></script>
 </body>
 </html>

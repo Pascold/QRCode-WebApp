@@ -7,7 +7,7 @@ A simple, dependency-free PHP web application for creating styled QR codes.
 - Generate QR codes for **links, plain text, e-mail, phone numbers, SMS, Wi-Fi networks, contact cards (vCard) and map locations**.
 - Customize the look: **dot style** (square, dots, rounded, extra rounded, classy, classy rounded), **corner styles**, colors, optional **gradient**, transparent background, size, margin and error correction level.
 - Place your own **image / logo in the center** of the code.
-- Live preview, download as **PNG, SVG, JPG or WebP**, or copy the image to the clipboard.
+- Live preview and export to **PNG, SVG, PDF, JPG, WebP, AVIF, GIF, BMP and EPS**, plus **Print**, **Share** (phones), **Copy image** and **Copy SVG code**.
 - **92 languages and regional variants** (BCP 47 locale codes such as `pl`, `en-GB`, `sr-Latn`, `zh-HK`) in a searchable dropdown with flags, including right-to-left support for Arabic, Hebrew, Persian and Urdu. Adding more takes one file.
 - **Light and dark theme**, following the operating system by default, with a toggle in the header.
 - **Private by design:** content and images are processed entirely in the browser and never uploaded to the server. Your current settings (including the center image) survive a language switch or reload thanks to `sessionStorage` in your own browser tab.
@@ -303,11 +303,14 @@ QRCode-WebApp/
 │   ├── js/ui.js              # Consent dialog, theme toggle, language dropdown
 │   ├── js/theme-init.js      # Static build: applies the saved theme early
 │   ├── js/redirect.js        # Static build: start page and 404 redirects
-│   ├── js/app.js             # QR payload builders, preview, downloads
+│   ├── js/app.js             # QR payload builders, preview, downloads, print, share
+│   ├── js/export.js          # PDF, EPS, BMP, GIF and AVIF exporters
 │   ├── img/                  # Favicon and app icons (SVG + PNG)
 │   └── vendor/
 │       ├── qr-code-styling/  # QR rendering library (bundled, MIT)
-│       └── flag-icons/       # Flag SVGs (bundled, MIT)
+│       ├── flag-icons/       # Flag SVGs (bundled, MIT)
+│       ├── gifenc/           # GIF encoder (bundled, MIT, loaded on demand)
+│       └── jsquash-avif/     # AVIF encoder, WebAssembly (bundled, Apache-2.0, loaded on demand)
 ├── tools/
 │   ├── check-translations.php  # Validates all language files (CLI only)
 │   └── build-static.php        # Builds the static GitHub Pages version (CLI only)
@@ -317,7 +320,7 @@ QRCode-WebApp/
 
 ## How it works
 
-PHP renders the page and handles translations. QR codes are generated in the browser by [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) (v1.9.2, MIT license), which is bundled locally in `assets/vendor/` together with the flag images from [flag-icons](https://github.com/lipis/flag-icons) (v7.6.0, MIT license), so the application works offline and does not load anything from third-party CDNs.
+PHP renders the page and handles translations. QR codes are generated in the browser by [qr-code-styling](https://github.com/kozakdenys/qr-code-styling) (v1.9.2, MIT license), which is bundled locally in `assets/vendor/` together with the flag images from [flag-icons](https://github.com/lipis/flag-icons) (v7.6.0, MIT license), the GIF encoder [gifenc](https://github.com/mattdesl/gifenc) (v1.0.3, MIT) and the AVIF encoder from [jSquash](https://github.com/jamsinclair/jSquash) (v2.1.1, Apache-2.0), so the application works offline and does not load anything from third-party CDNs.
 
 The content types are encoded using the common formats understood by phone camera apps:
 
@@ -330,6 +333,22 @@ The content types are encoded using the common formats understood by phone camer
 | Wi-Fi | `WIFI:T:WPA;S:name;P:password;H:true;;` |
 | Contact | vCard 3.0 |
 | Location | `geo:lat,lng` |
+
+### Export formats
+
+| Format | How it is made | Notes |
+|--------|----------------|-------|
+| PNG, JPG, WebP | Browser (canvas) | JPG has no transparency - the background color is used |
+| SVG | qr-code-styling | Vector; also available as **Copy SVG code** |
+| PDF | Built in `assets/js/export.js` | Lossless image at up to 3x resolution (about 300 DPI); keeps transparency; page size = chosen size at 96 DPI (600 px = 15.9 cm) |
+| EPS | Built in `assets/js/export.js` | PostScript level 3, lossless image at up to 3x resolution, for print shops |
+| BMP | Built in `assets/js/export.js` | 24-bit, no transparency |
+| GIF | gifenc (loaded on demand) | 256 colors, 1-bit transparency |
+| AVIF | Browser if supported, otherwise the jSquash WebAssembly encoder (3.5 MB, loaded only when AVIF is chosen) | Small files with transparency |
+
+PDF and EPS contain a high-resolution image of the code (not vector paths). **Print** prints only the code at the chosen size, and **Share** (shown only where the browser can share files, mostly on phones) sends a PNG to other apps. All exports are created in the browser - nothing is uploaded.
+
+The Content Security Policy allows `wasm-unsafe-eval` so the AVIF encoder can run; it does not allow JavaScript `eval()`.
 
 ### Tips for readable codes
 
@@ -350,6 +369,8 @@ Released under the [MIT License](LICENSE) - Copyright (c) 2026 [Pascold](https:/
 
 You may use, copy, modify and distribute this software, **commercially or not**, as long as the copyright notice with the author's name and the license text are kept in all copies or substantial portions of the software.
 
-The bundled third-party libraries are also MIT licensed - see
-[`assets/vendor/qr-code-styling/LICENSE`](assets/vendor/qr-code-styling/LICENSE) and
-[`assets/vendor/flag-icons/LICENSE`](assets/vendor/flag-icons/LICENSE).
+The bundled third-party libraries keep their own licenses:
+[qr-code-styling](assets/vendor/qr-code-styling/LICENSE) (MIT),
+[flag-icons](assets/vendor/flag-icons/LICENSE) (MIT),
+[gifenc](assets/vendor/gifenc/LICENSE.md) (MIT) and
+[jSquash AVIF](assets/vendor/jsquash-avif/LICENSE) (Apache-2.0).

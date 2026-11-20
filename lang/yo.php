@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Ìyàtọ̀ àwọ̀ láàrin àmì-àmì àti ẹ̀yìn kéré - àwọn fóònù kan lè má lè ka kóòdù yìí.',
     'js.inverted' => 'Àwọn àmì-àmì mọ́lẹ̀ ju ẹ̀yìn lọ. Ọ̀pọ̀ ẹ̀rọ ìwòran kò lè ka kóòdù tí a yí padà - lo àmì-àmì dúdú lórí ẹ̀yìn tó mọ́lẹ̀.',
+
+    'download.copy_svg' => 'Ṣe àdàkọ kóòdù SVG',
+    'download.print' => 'Tẹ̀ jáde',
+    'download.share' => 'Pín',
+
+    'js.exporting' => 'À ń pèsè fáìlì…',
+    'js.svg_copied' => 'A ti ṣe àdàkọ kóòdù SVG sí pátákó ìdàkọ.',
+    'js.clipboard_failed' => 'Aṣàwákiri rẹ kò gbà láti ṣe àdàkọ sí pátákó ìdàkọ.',
+    'js.share_failed' => 'Pínpín kò ṣiṣẹ́. Jọ̀wọ́ lo Gbà sílẹ̀ dípò rẹ̀.',
+    'js.format_unsupported' => 'Aṣàwákiri rẹ kò lè ṣẹ̀dá ọ̀nà yìí. Jọ̀wọ́ yan òmíràn.',
 ];

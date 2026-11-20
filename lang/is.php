@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Lítil birtuskil milli punkta og bakgrunns - sumir símar geta hugsanlega ekki skannað þennan kóða.',
     'js.inverted' => 'Punktarnir eru ljósari en bakgrunnurinn. Margir skannar geta ekki lesið öfuga kóða - notaðu dökka punkta á ljósum bakgrunni.',
+
+    'download.copy_svg' => 'Afrita SVG-kóða',
+    'download.print' => 'Prenta',
+    'download.share' => 'Deila',
+
+    'js.exporting' => 'Undirbý skrá…',
+    'js.svg_copied' => 'SVG-kóðinn var afritaður á klippiborðið.',
+    'js.clipboard_failed' => 'Vafrinn þinn leyfir ekki afritun á klippiborðið.',
+    'js.share_failed' => 'Ekki tókst að deila. Notaðu „Sækja“ í staðinn.',
+    'js.format_unsupported' => 'Vafrinn þinn getur ekki búið til þetta snið. Veldu annað.',
 ];

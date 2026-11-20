@@ -23,4 +23,6 @@ return [
     'js.copy_failed' => 'Tu navegador no permite copiar imágenes. Usa "Descargar" en su lugar.',
     'js.logo_ec_hint' => 'Consejo: con una imagen central, usa el nivel de corrección "Alta" para que el código siga siendo legible.',
     'js.generic_error' => 'Ocurrió un error al generar el código QR.',
+
+    'js.share_failed' => 'No se pudo compartir. Usa "Descargar" en su lugar.',
 ];

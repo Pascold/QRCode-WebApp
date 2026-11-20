@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Nöqtələrlə fon arasında kontrast aşağıdır - bəzi telefonlar bu kodu skan edə bilməyə bilər.',
     'js.inverted' => 'Nöqtələr fondan açıqdır. Bir çox skaner tərs kodları oxuya bilmir - açıq fonda tünd nöqtələrdən istifadə edin.',
+
+    'download.copy_svg' => 'SVG kodunu kopyala',
+    'download.print' => 'Çap et',
+    'download.share' => 'Paylaş',
+
+    'js.exporting' => 'Fayl hazırlanır…',
+    'js.svg_copied' => 'SVG kodu mübadilə buferinə kopyalandı.',
+    'js.clipboard_failed' => 'Brauzeriniz mübadilə buferinə kopyalamağa icazə vermir.',
+    'js.share_failed' => 'Paylaşmaq alınmadı. Əvəzində «Endir» düyməsindən istifadə edin.',
+    'js.format_unsupported' => 'Brauzeriniz bu formatı yarada bilmir. Başqasını seçin.',
 ];

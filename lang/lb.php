@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Niddregen Kontrast tëscht de Punkten an dem Hannergrond - verschidden Handyen kënnen dëse Code eventuell net scannen.',
     'js.inverted' => 'D\'Punkten si méi hell wéi den Hannergrond. Vill Scanner kënnen invertéiert Coden net liesen - benotzt donkel Punkten op engem helle Hannergrond.',
+
+    'download.copy_svg' => 'SVG-Code kopéieren',
+    'download.print' => 'Drécken',
+    'download.share' => 'Deelen',
+
+    'js.exporting' => 'Fichier gëtt preparéiert…',
+    'js.svg_copied' => 'SVG-Code an den Tëschespäicher kopéiert.',
+    'js.clipboard_failed' => 'Äre Browser erlaabt net, an den Tëschespäicher ze kopéieren.',
+    'js.share_failed' => 'Deelen huet net geklappt. Benotzt w.e.g. „Eroflueden“.',
+    'js.format_unsupported' => 'Äre Browser kann dëse Format net erstellen. Wielt w.e.g. en aneren.',
 ];

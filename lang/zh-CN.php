@@ -129,4 +129,14 @@ return [
 
     'js.low_contrast' => '点与背景的对比度较低，部分手机可能无法扫描此二维码。',
     'js.inverted' => '点比背景更亮。许多扫描器无法识别反色二维码，请在浅色背景上使用深色点。',
+
+    'download.copy_svg' => '复制 SVG 代码',
+    'download.print' => '打印',
+    'download.share' => '分享',
+
+    'js.exporting' => '正在准备文件…',
+    'js.svg_copied' => 'SVG 代码已复制到剪贴板。',
+    'js.clipboard_failed' => '您的浏览器不允许复制到剪贴板。',
+    'js.share_failed' => '分享失败，请改用“下载”。',
+    'js.format_unsupported' => '您的浏览器无法生成此格式，请选择其他格式。',
 ];

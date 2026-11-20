@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Độ tương phản giữa chấm và nền thấp - một số điện thoại có thể không quét được mã này.',
     'js.inverted' => 'Các chấm sáng hơn nền. Nhiều máy quét không đọc được mã đảo màu - hãy dùng chấm tối trên nền sáng.',
+
+    'download.copy_svg' => 'Sao chép mã SVG',
+    'download.print' => 'In',
+    'download.share' => 'Chia sẻ',
+
+    'js.exporting' => 'Đang chuẩn bị tệp…',
+    'js.svg_copied' => 'Đã sao chép mã SVG vào bảng nhớ tạm.',
+    'js.clipboard_failed' => 'Trình duyệt của bạn không cho phép sao chép vào bảng nhớ tạm.',
+    'js.share_failed' => 'Không chia sẻ được. Vui lòng dùng Tải xuống.',
+    'js.format_unsupported' => 'Trình duyệt của bạn không thể tạo định dạng này. Vui lòng chọn định dạng khác.',
 ];

@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Lav kontrast mellem prikkerne og baggrunden - nogle telefoner kan muligvis ikke scanne koden.',
     'js.inverted' => 'Prikkerne er lysere end baggrunden. Mange scannere kan ikke læse inverterede koder - brug mørke prikker på lys baggrund.',
+
+    'download.copy_svg' => 'Kopiér SVG-kode',
+    'download.print' => 'Udskriv',
+    'download.share' => 'Del',
+
+    'js.exporting' => 'Forbereder filen…',
+    'js.svg_copied' => 'SVG-koden er kopieret til udklipsholderen.',
+    'js.clipboard_failed' => 'Din browser tillader ikke kopiering til udklipsholderen.',
+    'js.share_failed' => 'Deling mislykkedes. Brug Download i stedet.',
+    'js.format_unsupported' => 'Din browser kan ikke lave dette format. Vælg et andet.',
 ];

@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Zems kontrasts starp punktiem un fonu - daži tālruņi, iespējams, nevarēs nolasīt šo kodu.',
     'js.inverted' => 'Punkti ir gaišāki par fonu. Daudzi skeneri nevar nolasīt apgrieztus kodus - izmantojiet tumšus punktus uz gaiša fona.',
+
+    'download.copy_svg' => 'Kopēt SVG kodu',
+    'download.print' => 'Drukāt',
+    'download.share' => 'Kopīgot',
+
+    'js.exporting' => 'Sagatavo failu…',
+    'js.svg_copied' => 'SVG kods nokopēts starpliktuvē.',
+    'js.clipboard_failed' => 'Jūsu pārlūkprogramma neļauj kopēt starpliktuvē.',
+    'js.share_failed' => 'Kopīgošana neizdevās. Lūdzu, izmantojiet pogu “Lejupielādēt”.',
+    'js.format_unsupported' => 'Jūsu pārlūkprogramma nevar izveidot šo formātu. Izvēlieties citu.',
 ];

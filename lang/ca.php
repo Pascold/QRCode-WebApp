@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Contrast baix entre els punts i el fons: és possible que alguns telèfons no puguin escanejar aquest codi.',
     'js.inverted' => 'Els punts són més clars que el fons. Molts lectors no poden llegir codis invertits: fes servir punts foscos sobre un fons clar.',
+
+    'download.copy_svg' => 'Copia el codi SVG',
+    'download.print' => 'Imprimeix',
+    'download.share' => 'Comparteix',
+
+    'js.exporting' => 'S\'està preparant el fitxer…',
+    'js.svg_copied' => 'S\'ha copiat el codi SVG al porta-retalls.',
+    'js.clipboard_failed' => 'El teu navegador no permet copiar al porta-retalls.',
+    'js.share_failed' => 'No s\'ha pogut compartir. Fes servir «Baixa».',
+    'js.format_unsupported' => 'El teu navegador no pot crear aquest format. Tria\'n un altre.',
 ];

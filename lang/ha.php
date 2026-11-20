@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Bambancin launi tsakanin ɗigo da bango ya yi ƙasa - wasu wayoyi ba za su iya duba wannan lambar ba.',
     'js.inverted' => 'Ɗigon sun fi bango haske. Na\'urorin dubawa da yawa ba sa iya karanta lambobin da aka juya - yi amfani da ɗigo masu duhu a kan bango mai haske.',
+
+    'download.copy_svg' => 'Kwafi lambar SVG',
+    'download.print' => 'Buga',
+    'download.share' => 'Raba',
+
+    'js.exporting' => 'Ana shirya fayil…',
+    'js.svg_copied' => 'An kwafi lambar SVG zuwa allon kwafi.',
+    'js.clipboard_failed' => 'Burauzarka ba ta ba da damar kwafi zuwa allon kwafi ba.',
+    'js.share_failed' => 'Ba a iya rabawa ba. Da fatan za a yi amfani da Zazzage.',
+    'js.format_unsupported' => 'Burauzarka ba za ta iya ƙirƙirar wannan tsari ba. Da fatan za a zaɓi wani.',
 ];

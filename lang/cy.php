@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Cyferbyniad isel rhwng y dotiau a\'r cefndir - efallai na fydd rhai ffonau\'n gallu sganio\'r cod hwn.',
     'js.inverted' => 'Mae\'r dotiau\'n oleuach na\'r cefndir. Dydy llawer o sganwyr ddim yn gallu darllen codau gwrthdro - defnyddiwch ddotiau tywyll ar gefndir golau.',
+
+    'download.copy_svg' => 'Copïo\'r cod SVG',
+    'download.print' => 'Argraffu',
+    'download.share' => 'Rhannu',
+
+    'js.exporting' => 'Wrthi\'n paratoi\'r ffeil…',
+    'js.svg_copied' => 'Mae\'r cod SVG wedi\'i gopïo i\'r clipfwrdd.',
+    'js.clipboard_failed' => 'Dydy eich porwr ddim yn caniatáu copïo i\'r clipfwrdd.',
+    'js.share_failed' => 'Methwyd rhannu. Defnyddiwch Llwytho i lawr yn lle hynny.',
+    'js.format_unsupported' => 'Dydy eich porwr ddim yn gallu creu\'r fformat hwn. Dewiswch un arall.',
 ];

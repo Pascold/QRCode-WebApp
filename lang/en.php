@@ -133,4 +133,14 @@ return [
 
     'js.low_contrast' => 'Low contrast between the dots and the background - some phones may not be able to scan this code.',
     'js.inverted' => 'The dots are lighter than the background. Many scanners cannot read inverted codes - use dark dots on a light background.',
+
+    'download.copy_svg' => 'Copy SVG code',
+    'download.print' => 'Print',
+    'download.share' => 'Share',
+
+    'js.exporting' => 'Preparing file…',
+    'js.svg_copied' => 'SVG code copied to clipboard.',
+    'js.clipboard_failed' => 'Your browser does not allow copying to the clipboard.',
+    'js.share_failed' => 'Sharing did not work. Please use Download instead.',
+    'js.format_unsupported' => 'Your browser cannot create this format. Please choose another one.',
 ];

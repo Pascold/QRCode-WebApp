@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Kontras antara titik dan latar rendah - beberapa ponsel mungkin tidak dapat memindai kode ini.',
     'js.inverted' => 'Titik lebih terang daripada latar. Banyak pemindai tidak dapat membaca kode terbalik - gunakan titik gelap di atas latar terang.',
+
+    'download.copy_svg' => 'Salin kode SVG',
+    'download.print' => 'Cetak',
+    'download.share' => 'Bagikan',
+
+    'js.exporting' => 'Menyiapkan file…',
+    'js.svg_copied' => 'Kode SVG disalin ke papan klip.',
+    'js.clipboard_failed' => 'Browser Anda tidak mengizinkan penyalinan ke papan klip.',
+    'js.share_failed' => 'Gagal membagikan. Gunakan Unduh sebagai gantinya.',
+    'js.format_unsupported' => 'Browser Anda tidak dapat membuat format ini. Pilih format lain.',
 ];

@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Pisteiden ja taustan välinen kontrasti on heikko - kaikki puhelimet eivät ehkä pysty lukemaan koodia.',
     'js.inverted' => 'Pisteet ovat taustaa vaaleampia. Monet lukijat eivät pysty lukemaan käänteisiä koodeja - käytä tummia pisteitä vaalealla taustalla.',
+
+    'download.copy_svg' => 'Kopioi SVG-koodi',
+    'download.print' => 'Tulosta',
+    'download.share' => 'Jaa',
+
+    'js.exporting' => 'Valmistellaan tiedostoa…',
+    'js.svg_copied' => 'SVG-koodi kopioitu leikepöydälle.',
+    'js.clipboard_failed' => 'Selaimesi ei salli kopioimista leikepöydälle.',
+    'js.share_failed' => 'Jakaminen ei onnistunut. Käytä sen sijaan Lataa-painiketta.',
+    'js.format_unsupported' => 'Selaimesi ei pysty luomaan tätä muotoa. Valitse toinen.',
 ];

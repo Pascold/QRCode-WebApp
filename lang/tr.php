@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Noktalar ile arka plan arasındaki kontrast düşük - bazı telefonlar bu kodu tarayamayabilir.',
     'js.inverted' => 'Noktalar arka plandan daha açık. Birçok tarayıcı ters çevrilmiş kodları okuyamaz - açık arka plan üzerinde koyu noktalar kullanın.',
+
+    'download.copy_svg' => 'SVG kodunu kopyala',
+    'download.print' => 'Yazdır',
+    'download.share' => 'Paylaş',
+
+    'js.exporting' => 'Dosya hazırlanıyor…',
+    'js.svg_copied' => 'SVG kodu panoya kopyalandı.',
+    'js.clipboard_failed' => 'Tarayıcınız panoya kopyalamaya izin vermiyor.',
+    'js.share_failed' => 'Paylaşım başarısız oldu. Lütfen bunun yerine İndir\'i kullanın.',
+    'js.format_unsupported' => 'Tarayıcınız bu biçimi oluşturamıyor. Lütfen başka bir biçim seçin.',
 ];

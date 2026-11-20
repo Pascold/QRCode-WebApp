@@ -128,4 +128,14 @@ return [
 
     'js.low_contrast' => 'Nízký kontrast mezi tečkami a pozadím - některé telefony nemusí tento kód načíst.',
     'js.inverted' => 'Tečky jsou světlejší než pozadí. Mnoho čteček neumí přečíst inverzní kódy - použijte tmavé tečky na světlém pozadí.',
+
+    'download.copy_svg' => 'Kopírovat kód SVG',
+    'download.print' => 'Tisk',
+    'download.share' => 'Sdílet',
+
+    'js.exporting' => 'Připravuji soubor…',
+    'js.svg_copied' => 'Kód SVG byl zkopírován do schránky.',
+    'js.clipboard_failed' => 'Váš prohlížeč nepovoluje kopírování do schránky.',
+    'js.share_failed' => 'Sdílení se nezdařilo. Použijte tlačítko Stáhnout.',
+    'js.format_unsupported' => 'Váš prohlížeč neumí vytvořit tento formát. Vyberte jiný.',
 ];

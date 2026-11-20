@@ -127,4 +127,14 @@ return [
 
     'js.low_contrast' => 'Kontraste baxua puntuen eta atzeko planoaren artean - baliteke telefono batzuek kode hau ezin irakurtzea.',
     'js.inverted' => 'Puntuak atzeko planoa baino argiagoak dira. Irakurgailu askok ezin dituzte alderantzizko kodeak irakurri - erabili puntu ilunak atzeko plano argian.',
+
+    'download.copy_svg' => 'Kopiatu SVG kodea',
+    'download.print' => 'Inprimatu',
+    'download.share' => 'Partekatu',
+
+    'js.exporting' => 'Fitxategia prestatzen…',
+    'js.svg_copied' => 'SVG kodea arbelean kopiatu da.',
+    'js.clipboard_failed' => 'Zure nabigatzaileak ez du arbelean kopiatzen uzten.',
+    'js.share_failed' => 'Ezin izan da partekatu. Erabili «Deskargatu».',
+    'js.format_unsupported' => 'Zure nabigatzaileak ezin du formatu hau sortu. Aukeratu beste bat.',
 ];
