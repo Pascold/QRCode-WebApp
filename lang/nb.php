@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Kildekode på GitHub',
     'footer.license' => 'MIT-lisens',
 
-    'consent.title' => 'Før du begynner',
-    'consent.text' => 'Denne siden lagrer språk, tema og gjeldende innstillinger bare i nettleseren din (informasjonskapsler og nettleserlagring). Ingenting du skriver inn, sendes til en server eller deles med noen.',
-    'consent.accept' => 'Godta og fortsett',
-    'consent.decline' => 'Avslå',
-    'consent.declined_title' => 'Samtykke kreves',
-    'consent.declined_text' => 'Uten ditt samtykke kan siden ikke brukes. Du kan lukke siden eller gå tilbake og godta.',
-    'consent.back' => 'Tilbake',
-    'consent.leave' => 'Lukk siden',
+    'privacy.storage' => 'Denne siden lagrer språk, tema og gjeldende innstillinger bare i nettleseren din (informasjonskapsler og nettleserlagring). Ingenting du skriver inn, sendes til en server eller deles med noen.',
 
     'js.low_contrast' => 'Lav kontrast mellom punktene og bakgrunnen - noen telefoner klarer kanskje ikke å skanne koden.',
     'js.inverted' => 'Punktene er lysere enn bakgrunnen. Mange skannere kan ikke lese inverterte koder - bruk mørke punkter på lys bakgrunn.',

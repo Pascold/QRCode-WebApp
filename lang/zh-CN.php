@@ -118,14 +118,7 @@ return [
     'footer.source' => 'GitHub 上的源代码',
     'footer.license' => 'MIT 许可证',
 
-    'consent.title' => '开始之前',
-    'consent.text' => '本页面仅在您的浏览器中（Cookie 和浏览器存储）保存您的语言、主题和当前设置。您输入的任何内容都不会发送到服务器，也不会与任何人共享。',
-    'consent.accept' => '接受并继续',
-    'consent.decline' => '拒绝',
-    'consent.declined_title' => '需要您的同意',
-    'consent.declined_text' => '未经您的同意，无法使用本页面。您可以关闭页面，或返回并接受。',
-    'consent.back' => '返回',
-    'consent.leave' => '关闭页面',
+    'privacy.storage' => '本页面仅在您的浏览器中（Cookie 和浏览器存储）保存您的语言、主题和当前设置。您输入的任何内容都不会发送到服务器，也不会与任何人共享。',
 
     'js.low_contrast' => '点与背景的对比度较低，部分手机可能无法扫描此二维码。',
     'js.inverted' => '点比背景更亮。许多扫描器无法识别反色二维码，请在浅色背景上使用深色点。',

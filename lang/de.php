@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Quellcode auf GitHub',
     'footer.license' => 'MIT-Lizenz',
 
-    'consent.title' => 'Bevor du loslegst',
-    'consent.text' => 'Diese Seite speichert deine Sprache, dein Design und deine aktuellen Einstellungen nur in deinem Browser (Cookies und Browserspeicher). Nichts, was du eingibst, wird an einen Server gesendet oder mit jemandem geteilt.',
-    'consent.accept' => 'Akzeptieren und fortfahren',
-    'consent.decline' => 'Ablehnen',
-    'consent.declined_title' => 'Zustimmung erforderlich',
-    'consent.declined_text' => 'Ohne deine Zustimmung kann diese Seite nicht verwendet werden. Du kannst die Seite schließen oder zurückgehen und zustimmen.',
-    'consent.back' => 'Zurück',
-    'consent.leave' => 'Seite schließen',
+    'privacy.storage' => 'Diese Seite speichert deine Sprache, dein Design und deine aktuellen Einstellungen nur in deinem Browser (Cookies und Browserspeicher). Nichts, was du eingibst, wird an einen Server gesendet oder mit jemandem geteilt.',
 
     'js.low_contrast' => 'Geringer Kontrast zwischen Punkten und Hintergrund - manche Handys können diesen Code eventuell nicht scannen.',
     'js.inverted' => 'Die Punkte sind heller als der Hintergrund. Viele Scanner können invertierte Codes nicht lesen - verwende dunkle Punkte auf hellem Hintergrund.',

@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Codice sorgente su GitHub',
     'footer.license' => 'Licenza MIT',
 
-    'consent.title' => 'Prima di iniziare',
-    'consent.text' => 'Questa pagina salva lingua, tema e impostazioni correnti solo nel tuo browser (cookie e memoria del browser). Nulla di ciò che inserisci viene inviato a un server o condiviso con altri.',
-    'consent.accept' => 'Accetta e continua',
-    'consent.decline' => 'Rifiuta',
-    'consent.declined_title' => 'Consenso richiesto',
-    'consent.declined_text' => 'Senza il tuo consenso questa pagina non può essere utilizzata. Puoi chiudere la pagina oppure tornare indietro e accettare.',
-    'consent.back' => 'Indietro',
-    'consent.leave' => 'Chiudi pagina',
+    'privacy.storage' => 'Questa pagina salva lingua, tema e impostazioni correnti solo nel tuo browser (cookie e memoria del browser). Nulla di ciò che inserisci viene inviato a un server o condiviso con altri.',
 
     'js.low_contrast' => 'Contrasto basso tra i punti e lo sfondo: alcuni telefoni potrebbero non riuscire a scansionare questo codice.',
     'js.inverted' => 'I punti sono più chiari dello sfondo. Molti lettori non leggono i codici invertiti: usa punti scuri su sfondo chiaro.',

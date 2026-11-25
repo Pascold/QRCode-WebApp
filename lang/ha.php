@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Lambar tushe a GitHub',
     'footer.license' => 'Lasisin MIT',
 
-    'consent.title' => 'Kafin ka fara',
-    'consent.text' => 'Wannan shafi yana adana harshenka, jigonka da saitunanka na yanzu a cikin burauzarka kawai (kukis da ma\'ajiyar burauza). Babu abin da ka shigar da ake aikawa zuwa sabar ko a raba shi da kowa.',
-    'consent.accept' => 'Karɓa ka ci gaba',
-    'consent.decline' => 'Ƙi',
-    'consent.declined_title' => 'Ana buƙatar izini',
-    'consent.declined_text' => 'Ba tare da izininka ba ba za a iya amfani da wannan shafi ba. Kana iya rufe shafin ko ka koma ka karɓa.',
-    'consent.back' => 'Koma baya',
-    'consent.leave' => 'Rufe shafi',
+    'privacy.storage' => 'Wannan shafi yana adana harshenka, jigonka da saitunanka na yanzu a cikin burauzarka kawai (kukis da ma\'ajiyar burauza). Babu abin da ka shigar da ake aikawa zuwa sabar ko a raba shi da kowa.',
 
     'js.low_contrast' => 'Bambancin launi tsakanin ɗigo da bango ya yi ƙasa - wasu wayoyi ba za su iya duba wannan lambar ba.',
     'js.inverted' => 'Ɗigon sun fi bango haske. Na\'urorin dubawa da yawa ba sa iya karanta lambobin da aka juya - yi amfani da ɗigo masu duhu a kan bango mai haske.',

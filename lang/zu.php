@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Ikhodi yomthombo ku-GitHub',
     'footer.license' => 'Ilayisensi ye-MIT',
 
-    'consent.title' => 'Ngaphambi kokuthi uqale',
-    'consent.text' => 'Leli khasi ligcina ulimi lwakho, itimu nezilungiselelo zamanje kusiphequluli sakho kuphela (amakhukhi nesitoreji sesiphequluli). Akukho lutho olufakayo oluthunyelwa kuseva noma olwabelwana nomuntu.',
-    'consent.accept' => 'Yamukela uqhubeke',
-    'consent.decline' => 'Yenqaba',
-    'consent.declined_title' => 'Imvume iyadingeka',
-    'consent.declined_text' => 'Ngaphandle kwemvume yakho leli khasi alikwazi ukusetshenziswa. Ungavala ikhasi noma ubuyele emuva wamukele.',
-    'consent.back' => 'Buyela emuva',
-    'consent.leave' => 'Vala ikhasi',
+    'privacy.storage' => 'Leli khasi ligcina ulimi lwakho, itimu nezilungiselelo zamanje kusiphequluli sakho kuphela (amakhukhi nesitoreji sesiphequluli). Akukho lutho olufakayo oluthunyelwa kuseva noma olwabelwana nomuntu.',
 
     'js.low_contrast' => 'Umehluko phakathi kwamachashazi nengemuva mncane - amanye amafoni angase angakwazi ukuskena le khodi.',
     'js.inverted' => 'Amachashazi akhanya kakhulu kunengemuva. Izikena eziningi azikwazi ukufunda amakhodi aguquliwe - sebenzisa amachashazi amnyama engemuva elikhanyayo.',

@@ -116,14 +116,7 @@ return [
     'footer.source' => 'GitHub\'da kaynak kodu',
     'footer.license' => 'MIT Lisansı',
 
-    'consent.title' => 'Başlamadan önce',
-    'consent.text' => 'Bu sayfa dilinizi, temanızı ve mevcut ayarlarınızı yalnızca tarayıcınızda (çerezler ve tarayıcı depolaması) saklar. Girdiğiniz hiçbir şey bir sunucuya gönderilmez veya kimseyle paylaşılmaz.',
-    'consent.accept' => 'Kabul et ve devam et',
-    'consent.decline' => 'Reddet',
-    'consent.declined_title' => 'Onay gerekli',
-    'consent.declined_text' => 'Onayınız olmadan bu sayfa kullanılamaz. Sayfayı kapatabilir veya geri dönüp kabul edebilirsiniz.',
-    'consent.back' => 'Geri dön',
-    'consent.leave' => 'Sayfayı kapat',
+    'privacy.storage' => 'Bu sayfa dilinizi, temanızı ve mevcut ayarlarınızı yalnızca tarayıcınızda (çerezler ve tarayıcı depolaması) saklar. Girdiğiniz hiçbir şey bir sunucuya gönderilmez veya kimseyle paylaşılmaz.',
 
     'js.low_contrast' => 'Noktalar ile arka plan arasındaki kontrast düşük - bazı telefonlar bu kodu tarayamayabilir.',
     'js.inverted' => 'Noktalar arka plandan daha açık. Birçok tarayıcı ters çevrilmiş kodları okuyamaz - açık arka plan üzerinde koyu noktalar kullanın.',

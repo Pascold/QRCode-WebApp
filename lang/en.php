@@ -122,14 +122,7 @@ return [
     'footer.source' => 'Source code on GitHub',
     'footer.license' => 'MIT License',
 
-    'consent.title' => 'Before you start',
-    'consent.text' => 'This page saves your language, theme and current settings only in your browser (cookies and browser storage). Nothing you enter is sent to a server or shared with anyone.',
-    'consent.accept' => 'Accept and continue',
-    'consent.decline' => 'Decline',
-    'consent.declined_title' => 'Consent required',
-    'consent.declined_text' => 'Without your consent this page cannot be used. You can close the page or go back and accept.',
-    'consent.back' => 'Go back',
-    'consent.leave' => 'Close page',
+    'privacy.storage' => 'This page saves your language, theme and current settings only in your browser (cookies and browser storage). Nothing you enter is sent to a server or shared with anyone.',
 
     'js.low_contrast' => 'Low contrast between the dots and the background - some phones may not be able to scan this code.',
     'js.inverted' => 'The dots are lighter than the background. Many scanners cannot read inverted codes - use dark dots on a light background.',

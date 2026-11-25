@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Live demo
+    url: https://pascold.github.io/QRCode-WebApp/
+    about: Try the app before reporting - maybe it is already fixed.

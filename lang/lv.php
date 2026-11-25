@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Pirmkods vietnē GitHub',
     'footer.license' => 'MIT licence',
 
-    'consent.title' => 'Pirms sākat',
-    'consent.text' => 'Šī lapa saglabā jūsu valodu, motīvu un pašreizējos iestatījumus tikai jūsu pārlūkprogrammā (sīkdatnes un pārlūkprogrammas krātuve). Nekas no ievadītā netiek sūtīts uz serveri vai kopīgots ar citiem.',
-    'consent.accept' => 'Piekrist un turpināt',
-    'consent.decline' => 'Noraidīt',
-    'consent.declined_title' => 'Nepieciešama piekrišana',
-    'consent.declined_text' => 'Bez jūsu piekrišanas šo lapu nevar izmantot. Varat aizvērt lapu vai atgriezties un piekrist.',
-    'consent.back' => 'Atpakaļ',
-    'consent.leave' => 'Aizvērt lapu',
+    'privacy.storage' => 'Šī lapa saglabā jūsu valodu, motīvu un pašreizējos iestatījumus tikai jūsu pārlūkprogrammā (sīkdatnes un pārlūkprogrammas krātuve). Nekas no ievadītā netiek sūtīts uz serveri vai kopīgots ar citiem.',
 
     'js.low_contrast' => 'Zems kontrasts starp punktiem un fonu - daži tālruņi, iespējams, nevarēs nolasīt šo kodu.',
     'js.inverted' => 'Punkti ir gaišāki par fonu. Daudzi skeneri nevar nolasīt apgrieztus kodus - izmantojiet tumšus punktus uz gaiša fona.',

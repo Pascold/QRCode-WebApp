@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Koodu isi mmalite na GitHub',
     'footer.license' => 'Ikikere MIT',
 
-    'consent.title' => 'Tupu ịmalite',
-    'consent.text' => 'Ibe a na-echekwa asụsụ gị, isiokwu gị na ntọala gị ugbu a naanị na nchọgharị gị (kuki na nchekwa nchọgharị). Ọ dịghị ihe ị tinyere a na-eziga na sava ma ọ bụ kesaa onye ọ bụla.',
-    'consent.accept' => 'Nabata ma gaa n\'ihu',
-    'consent.decline' => 'Jụ',
-    'consent.declined_title' => 'Achọrọ nkwenye',
-    'consent.declined_text' => 'Na-enweghị nkwenye gị, a gaghị eji ibe a. Ị nwere ike imechi ibe ahụ ma ọ bụ laghachi ma nabata.',
-    'consent.back' => 'Laghachi',
-    'consent.leave' => 'Mechie ibe',
+    'privacy.storage' => 'Ibe a na-echekwa asụsụ gị, isiokwu gị na ntọala gị ugbu a naanị na nchọgharị gị (kuki na nchekwa nchọgharị). Ọ dịghị ihe ị tinyere a na-eziga na sava ma ọ bụ kesaa onye ọ bụla.',
 
     'js.low_contrast' => 'Ọdịiche agba dị n\'etiti ntụpọ na azụ dị ala - ụfọdụ ekwentị nwere ike ọ gaghị enyocha koodu a.',
     'js.inverted' => 'Ntụpọ ndị ahụ na-enwu karịa azụ. Ọtụtụ ihe nyocha enweghị ike ịgụ koodu agbanwere agbanwe - jiri ntụpọ gbara ọchịchịrị n\'azụ na-enwu enwu.',

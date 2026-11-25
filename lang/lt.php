@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Šaltinio kodas „GitHub“',
     'footer.license' => 'MIT licencija',
 
-    'consent.title' => 'Prieš pradėdami',
-    'consent.text' => 'Šis puslapis jūsų kalbą, temą ir dabartinius nustatymus saugo tik jūsų naršyklėje (slapukai ir naršyklės saugykla). Niekas, ką įvedate, nesiunčiama į serverį ir niekam neperduodama.',
-    'consent.accept' => 'Sutikti ir tęsti',
-    'consent.decline' => 'Atsisakyti',
-    'consent.declined_title' => 'Reikalingas sutikimas',
-    'consent.declined_text' => 'Be jūsų sutikimo šiuo puslapiu naudotis negalima. Galite uždaryti puslapį arba grįžti ir sutikti.',
-    'consent.back' => 'Atgal',
-    'consent.leave' => 'Uždaryti puslapį',
+    'privacy.storage' => 'Šis puslapis jūsų kalbą, temą ir dabartinius nustatymus saugo tik jūsų naršyklėje (slapukai ir naršyklės saugykla). Niekas, ką įvedate, nesiunčiama į serverį ir niekam neperduodama.',
 
     'js.low_contrast' => 'Mažas kontrastas tarp taškų ir fono - kai kurie telefonai gali nenuskaityti šio kodo.',
     'js.inverted' => 'Taškai šviesesni už foną. Daugelis skaitytuvų negali nuskaityti apverstų kodų - naudokite tamsius taškus ant šviesaus fono.',

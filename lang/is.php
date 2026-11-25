@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Frumkóði á GitHub',
     'footer.license' => 'MIT-leyfi',
 
-    'consent.title' => 'Áður en þú byrjar',
-    'consent.text' => 'Þessi síða vistar tungumál, þema og núverandi stillingar eingöngu í vafranum þínum (vafrakökur og geymsla vafrans). Ekkert sem þú slærð inn er sent á netþjón eða deilt með neinum.',
-    'consent.accept' => 'Samþykkja og halda áfram',
-    'consent.decline' => 'Hafna',
-    'consent.declined_title' => 'Samþykki krafist',
-    'consent.declined_text' => 'Án samþykkis þíns er ekki hægt að nota síðuna. Þú getur lokað síðunni eða farið til baka og samþykkt.',
-    'consent.back' => 'Til baka',
-    'consent.leave' => 'Loka síðu',
+    'privacy.storage' => 'Þessi síða vistar tungumál, þema og núverandi stillingar eingöngu í vafranum þínum (vafrakökur og geymsla vafrans). Ekkert sem þú slærð inn er sent á netþjón eða deilt með neinum.',
 
     'js.low_contrast' => 'Lítil birtuskil milli punkta og bakgrunns - sumir símar geta hugsanlega ekki skannað þennan kóða.',
     'js.inverted' => 'Punktarnir eru ljósari en bakgrunnurinn. Margir skannar geta ekki lesið öfuga kóða - notaðu dökka punkta á ljósum bakgrunni.',

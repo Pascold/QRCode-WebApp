@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Msimbo chanzo kwenye GitHub',
     'footer.license' => 'Leseni ya MIT',
 
-    'consent.title' => 'Kabla hujaanza',
-    'consent.text' => 'Ukurasa huu huhifadhi lugha, mandhari na mipangilio yako ya sasa kwenye kivinjari chako pekee (vidakuzi na hifadhi ya kivinjari). Hakuna chochote unachoweka kinachotumwa kwa seva au kushirikiwa na mtu yeyote.',
-    'consent.accept' => 'Kubali na uendelee',
-    'consent.decline' => 'Kataa',
-    'consent.declined_title' => 'Idhini inahitajika',
-    'consent.declined_text' => 'Bila idhini yako ukurasa huu hauwezi kutumika. Unaweza kufunga ukurasa au kurudi nyuma na kukubali.',
-    'consent.back' => 'Rudi nyuma',
-    'consent.leave' => 'Funga ukurasa',
+    'privacy.storage' => 'Ukurasa huu huhifadhi lugha, mandhari na mipangilio yako ya sasa kwenye kivinjari chako pekee (vidakuzi na hifadhi ya kivinjari). Hakuna chochote unachoweka kinachotumwa kwa seva au kushirikiwa na mtu yeyote.',
 
     'js.low_contrast' => 'Utofautishaji kati ya vitone na mandharinyuma ni mdogo - baadhi ya simu huenda zisiweze kuchanganua msimbo huu.',
     'js.inverted' => 'Vitone ni vyepesi kuliko mandharinyuma. Vichanganuzi vingi haviwezi kusoma misimbo iliyogeuzwa - tumia vitone vyeusi kwenye mandharinyuma meupe.',

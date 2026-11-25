@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Zdrojový kód na GitHubu',
     'footer.license' => 'Licence MIT',
 
-    'consent.title' => 'Než začnete',
-    'consent.text' => 'Tato stránka ukládá váš jazyk, motiv a aktuální nastavení pouze ve vašem prohlížeči (cookies a úložiště prohlížeče). Nic, co zadáte, se neodesílá na server ani nikomu nesdílí.',
-    'consent.accept' => 'Přijmout a pokračovat',
-    'consent.decline' => 'Odmítnout',
-    'consent.declined_title' => 'Vyžaduje se souhlas',
-    'consent.declined_text' => 'Bez vašeho souhlasu nelze tuto stránku používat. Můžete stránku zavřít nebo se vrátit a souhlasit.',
-    'consent.back' => 'Zpět',
-    'consent.leave' => 'Zavřít stránku',
+    'privacy.storage' => 'Tato stránka ukládá váš jazyk, motiv a aktuální nastavení pouze ve vašem prohlížeči (cookies a úložiště prohlížeče). Nic, co zadáte, se neodesílá na server ani nikomu nesdílí.',
 
     'js.low_contrast' => 'Nízký kontrast mezi tečkami a pozadím - některé telefony nemusí tento kód načíst.',
     'js.inverted' => 'Tečky jsou světlejší než pozadí. Mnoho čteček neumí přečíst inverzní kódy - použijte tmavé tečky na světlém pozadí.',

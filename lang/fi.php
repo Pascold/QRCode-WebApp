@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Lähdekoodi GitHubissa',
     'footer.license' => 'MIT-lisenssi',
 
-    'consent.title' => 'Ennen kuin aloitat',
-    'consent.text' => 'Tämä sivu tallentaa kielesi, teemasi ja nykyiset asetuksesi vain selaimeesi (evästeet ja selaimen tallennustila). Mitään kirjoittamaasi ei lähetetä palvelimelle eikä jaeta kenellekään.',
-    'consent.accept' => 'Hyväksy ja jatka',
-    'consent.decline' => 'Hylkää',
-    'consent.declined_title' => 'Suostumus vaaditaan',
-    'consent.declined_text' => 'Ilman suostumustasi sivua ei voi käyttää. Voit sulkea sivun tai palata takaisin ja hyväksyä.',
-    'consent.back' => 'Takaisin',
-    'consent.leave' => 'Sulje sivu',
+    'privacy.storage' => 'Tämä sivu tallentaa kielesi, teemasi ja nykyiset asetuksesi vain selaimeesi (evästeet ja selaimen tallennustila). Mitään kirjoittamaasi ei lähetetä palvelimelle eikä jaeta kenellekään.',
 
     'js.low_contrast' => 'Pisteiden ja taustan välinen kontrasti on heikko - kaikki puhelimet eivät ehkä pysty lukemaan koodia.',
     'js.inverted' => 'Pisteet ovat taustaa vaaleampia. Monet lukijat eivät pysty lukemaan käänteisiä koodeja - käytä tummia pisteitä vaalealla taustalla.',

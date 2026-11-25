@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Forráskód a GitHubon',
     'footer.license' => 'MIT-licenc',
 
-    'consent.title' => 'Mielőtt elkezded',
-    'consent.text' => 'Ez az oldal a nyelvet, a témát és az aktuális beállításokat csak a böngésződben tárolja (sütik és böngészőtárhely). Semmi, amit beírsz, nem kerül szerverre, és senkivel nem osztjuk meg.',
-    'consent.accept' => 'Elfogadás és folytatás',
-    'consent.decline' => 'Elutasítás',
-    'consent.declined_title' => 'Hozzájárulás szükséges',
-    'consent.declined_text' => 'A hozzájárulásod nélkül az oldal nem használható. Bezárhatod az oldalt, vagy visszaléphetsz és elfogadhatod.',
-    'consent.back' => 'Vissza',
-    'consent.leave' => 'Oldal bezárása',
+    'privacy.storage' => 'Ez az oldal a nyelvet, a témát és az aktuális beállításokat csak a böngésződben tárolja (sütik és böngészőtárhely). Semmi, amit beírsz, nem kerül szerverre, és senkivel nem osztjuk meg.',
 
     'js.low_contrast' => 'Alacsony a kontraszt a pontok és a háttér között - egyes telefonok nem biztos, hogy beolvassák ezt a kódot.',
     'js.inverted' => 'A pontok világosabbak a háttérnél. Sok olvasó nem tudja beolvasni az invertált kódokat - használj sötét pontokat világos háttéren.',

@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Iturburu-kodea GitHub-en',
     'footer.license' => 'MIT lizentzia',
 
-    'consent.title' => 'Hasi aurretik',
-    'consent.text' => 'Orri honek zure hizkuntza, gaia eta uneko ezarpenak zure nabigatzailean soilik gordetzen ditu (cookieak eta nabigatzailearen biltegia). Idazten duzun ezer ez da zerbitzarira bidaltzen ezta inorekin partekatzen ere.',
-    'consent.accept' => 'Onartu eta jarraitu',
-    'consent.decline' => 'Baztertu',
-    'consent.declined_title' => 'Baimena behar da',
-    'consent.declined_text' => 'Zure baimenik gabe ezin da orri hau erabili. Orria itxi dezakezu edo atzera egin eta onartu.',
-    'consent.back' => 'Atzera',
-    'consent.leave' => 'Itxi orria',
+    'privacy.storage' => 'Orri honek zure hizkuntza, gaia eta uneko ezarpenak zure nabigatzailean soilik gordetzen ditu (cookieak eta nabigatzailearen biltegia). Idazten duzun ezer ez da zerbitzarira bidaltzen ezta inorekin partekatzen ere.',
 
     'js.low_contrast' => 'Kontraste baxua puntuen eta atzeko planoaren artean - baliteke telefono batzuek kode hau ezin irakurtzea.',
     'js.inverted' => 'Puntuak atzeko planoa baino argiagoak dira. Irakurgailu askok ezin dituzte alderantzizko kodeak irakurri - erabili puntu ilunak atzeko plano argian.',

@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Izvorni kod na GitHubu',
     'footer.license' => 'MIT licenca',
 
-    'consent.title' => 'Prije nego što počnete',
-    'consent.text' => 'Ova stranica čuva vaš jezik, temu i trenutne postavke samo u vašem pregledniku (kolačići i pohrana preglednika). Ništa što unesete ne šalje se na server niti se s bilo kim dijeli.',
-    'consent.accept' => 'Prihvati i nastavi',
-    'consent.decline' => 'Odbij',
-    'consent.declined_title' => 'Potreban je pristanak',
-    'consent.declined_text' => 'Bez vašeg pristanka stranica se ne može koristiti. Možete zatvoriti stranicu ili se vratiti i prihvatiti.',
-    'consent.back' => 'Nazad',
-    'consent.leave' => 'Zatvori stranicu',
+    'privacy.storage' => 'Ova stranica čuva vaš jezik, temu i trenutne postavke samo u vašem pregledniku (kolačići i pohrana preglednika). Ništa što unesete ne šalje se na server niti se s bilo kim dijeli.',
 
     'js.low_contrast' => 'Nizak kontrast između tačaka i pozadine - neki telefoni možda neće moći skenirati ovaj kod.',
     'js.inverted' => 'Tačke su svjetlije od pozadine. Mnogi čitači ne mogu pročitati obrnute kodove - koristite tamne tačke na svijetloj pozadini.',

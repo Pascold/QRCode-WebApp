@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Cód foinseach ar GitHub',
     'footer.license' => 'Ceadúnas MIT',
 
-    'consent.title' => 'Sula dtosaíonn tú',
-    'consent.text' => 'Sábhálann an leathanach seo do theanga, do théama agus do shocruithe reatha i do bhrabhsálaí amháin (fianáin agus stóráil an bhrabhsálaí). Ní sheoltar aon rud a chuireann tú isteach chuig freastalaí agus ní roinntear é le duine ar bith.',
-    'consent.accept' => 'Glac leis agus lean ar aghaidh',
-    'consent.decline' => 'Diúltaigh',
-    'consent.declined_title' => 'Toiliú ag teastáil',
-    'consent.declined_text' => 'Gan do thoiliú ní féidir an leathanach seo a úsáid. Is féidir leat an leathanach a dhúnadh nó dul ar ais agus glacadh leis.',
-    'consent.back' => 'Ar ais',
-    'consent.leave' => 'Dún an leathanach',
+    'privacy.storage' => 'Sábhálann an leathanach seo do theanga, do théama agus do shocruithe reatha i do bhrabhsálaí amháin (fianáin agus stóráil an bhrabhsálaí). Ní sheoltar aon rud a chuireann tú isteach chuig freastalaí agus ní roinntear é le duine ar bith.',
 
     'js.low_contrast' => 'Codarsnacht íseal idir na poncanna agus an cúlra - b\'fhéidir nach mbeidh roinnt fón in ann an cód seo a scanadh.',
     'js.inverted' => 'Tá na poncanna níos gile ná an cúlra. Ní féidir le go leor scanóirí cóid inbhéartaithe a léamh - úsáid poncanna dorcha ar chúlra geal.',

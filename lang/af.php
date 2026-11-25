@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Bronkode op GitHub',
     'footer.license' => 'MIT-lisensie',
 
-    'consent.title' => 'Voordat jy begin',
-    'consent.text' => 'Hierdie bladsy stoor jou taal, tema en huidige instellings net in jou blaaier (koekies en blaaierberging). Niks wat jy invoer, word na \'n bediener gestuur of met enigiemand gedeel nie.',
-    'consent.accept' => 'Aanvaar en gaan voort',
-    'consent.decline' => 'Weier',
-    'consent.declined_title' => 'Toestemming vereis',
-    'consent.declined_text' => 'Sonder jou toestemming kan hierdie bladsy nie gebruik word nie. Jy kan die bladsy toemaak of teruggaan en aanvaar.',
-    'consent.back' => 'Terug',
-    'consent.leave' => 'Maak bladsy toe',
+    'privacy.storage' => 'Hierdie bladsy stoor jou taal, tema en huidige instellings net in jou blaaier (koekies en blaaierberging). Niks wat jy invoer, word na \'n bediener gestuur of met enigiemand gedeel nie.',
 
     'js.low_contrast' => 'Lae kontras tussen die kolletjies en die agtergrond - sommige fone kan dalk nie hierdie kode skandeer nie.',
     'js.inverted' => 'Die kolletjies is ligter as die agtergrond. Baie skandeerders kan nie omgekeerde kodes lees nie - gebruik donker kolletjies op \'n ligte agtergrond.',

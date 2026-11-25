@@ -1,8 +1,40 @@
+<div align="center">
+
 # QR Code Generator
 
-A simple, dependency-free PHP web application for creating styled QR codes.
+**Styled QR codes with your own logo that never expire.**<br>
+No sign-up, no tracking, no redirects: everything runs in your browser.
 
-**Live demo:** <https://pascold.github.io/QRCode-WebApp/> (static version on GitHub Pages)
+[![Live demo](https://img.shields.io/badge/demo-live-4f46e5?style=flat-square)](https://pascold.github.io/QRCode-WebApp/)
+[![Deploy](https://img.shields.io/github/actions/workflow/status/Pascold/QRCode-WebApp/pages.yml?branch=main&style=flat-square&label=deploy)](https://github.com/Pascold/QRCode-WebApp/actions/workflows/pages.yml)
+[![License: MIT](https://img.shields.io/github/license/Pascold/QRCode-WebApp?style=flat-square)](LICENSE)
+[![PHP 8.2+](https://img.shields.io/badge/PHP-8.2%2B-777bb4?style=flat-square&logo=php&logoColor=white)](#requirements)
+[![92 languages](https://img.shields.io/badge/languages-92-0ea5e9?style=flat-square)](#languages)
+[![No tracking](https://img.shields.io/badge/tracking-none-16a34a?style=flat-square)](#privacy)
+[![Works offline](https://img.shields.io/badge/PWA-works%20offline-db2777?style=flat-square)](#offline-mode)
+
+**[Open the app →](https://pascold.github.io/QRCode-WebApp/)**
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/screenshot-dark.png">
+  <img src=".github/assets/screenshot-light.png" alt="QR Code Generator: a styled QR code with a gradient and a logo in the center, with the editor on the left" width="900">
+</picture>
+
+</div>
+
+## Why another QR generator?
+
+Search for "free QR code generator" and most of the top results give you a **dynamic** code. The QR code holds a short link to *their* server, which redirects to your address. That lets them count your scans, and it lets them **switch the code off** when the free trial ends or unless you pay for a subscription. Printed flyers, menus and business cards then lead to a paywall or an error page.
+
+This project does the opposite:
+
+- **The code contains your content directly** (your link, Wi-Fi password, contact card, etc.). It works for as long as that content does, with no account and no third-party server in between.
+- **Nothing leaves your device.** The QR code, your logo and your settings are processed in the browser. There are no analytics, no cookies for tracking, no CDNs and no third-party requests. You can check: the Content Security Policy only allows the page's own files.
+- **Print-ready output.** You get vector SVG and print-size PDF / EPS at up to 600 DPI, not only a small PNG.
+- **It checks that the code scans.** After every change the code is decoded in the browser, as a phone camera would, so a logo that is too big or colors that are too light are flagged before you print.
+- **Easy to self-host.** It is plain PHP with no database, Composer or build step, or a static site (one page per language) on GitHub Pages or any static host. Everything is MIT-licensed.
+
+## Features
 
 - Generate QR codes for **links, App Store / Google Play apps, plain text, e-mail, phone numbers, SMS, WhatsApp, Wi-Fi networks, contact cards (vCard or the shorter MeCard), calendar events and map locations**. Any language and emoji are encoded as UTF-8.
 - Customize the look: **dot style** (square, dots, rounded, extra rounded, classy, classy rounded), **corner styles**, colors, optional **gradient**, transparent background, size, margin and error correction level.
@@ -18,7 +50,6 @@ A simple, dependency-free PHP web application for creating styled QR codes.
 - **Contrast check:** a warning appears when the dots are too light or lighter than the background (inverted codes), which many phones cannot scan.
 - **Saved styles:** save the current look (colors, shapes, size, image) under a name and load it again with one click - stored only in the browser (`localStorage`).
 - **Style link:** copy a link that carries the current style (not the content and not the image) after `#` in the address, so you can send your look to someone else.
-- **Consent dialog** on the first visit: preferences are stored only after the visitor accepts; declining explains that the page cannot be used and offers to close it.
 - **Installable** on phones and desktops (web app manifest and icons).
 - Searchable language dropdown with **keyboard navigation** (arrows, Home/End, Enter, Escape).
 
@@ -95,7 +126,7 @@ Differences from the PHP version:
 | | PHP server | Static (GitHub Pages) |
 |---|---|---|
 | Language URLs | `?lang=pl` | `/pl/` |
-| Preferences (consent, language, theme) | cookies | `localStorage` |
+| Preferences (language, theme) | cookies | `localStorage` |
 | Browser language detection | `Accept-Language` header | `navigator.languages` on the start page |
 | Security headers | HTTP headers | `<meta>` Content-Security-Policy and referrer policy |
 
@@ -112,7 +143,7 @@ All settings live in [`config.php`](config.php):
 | `language_cookie` | Cookie that remembers the chosen language | `qr_lang` |
 | `language_cookie_lifetime` | Cookie lifetime in seconds | 1 year |
 | `theme_cookie` | Cookie that remembers the light/dark theme | `qr_theme` |
-| `consent_cookie` | Cookie that remembers the visitor's consent | `qr_consent` |
+| `site_url` | Public address of the site (ending with `/`), used for the link preview image (Open Graph / Twitter Card). Empty = no preview image | GitHub Pages URL |
 | `author_name`, `author_url` | Author credited in the footer | `Pascold` |
 | `repository_url`, `license_url` | Footer links to the source code and license | GitHub repository |
 | `max_logo_size_mb` | Maximum center image size | `5` |
@@ -280,12 +311,11 @@ php tools/check-translations.php
 
 It reports missing or unknown keys, lost placeholders (`{size}`, `{author}`), broken parents, missing flags and duplicate aliases, and exits with code 1 on errors (handy in CI).
 
-## Privacy and consent
+## Privacy
 
 - Nothing the visitor types or uploads is ever sent to the server - QR codes are generated in the browser.
-- On the first visit a dialog asks for consent to store preferences. Until the visitor accepts, **no cookies are written** and the page cannot be used. Declining shows a short explanation with options to go back or close the page.
-- After consent the app stores:
-  - `qr_consent`, `qr_lang` and `qr_theme` (preferences only) - as cookies in the PHP version, in `localStorage` in the static version,
+- There is **no cookie banner** because there is nothing to consent to. The app only keeps functional preferences on the visitor's own device: no tracking, no analytics, no advertising. A short note in the footer says what is stored:
+  - `qr_lang` and `qr_theme` (preferences only) - as cookies in the PHP version, in `localStorage` in the static version,
   - saved styles in `localStorage` (`qr_presets`),
   - the current form settings in `sessionStorage` (cleared when the tab is closed),
   - a copy of the site's own files (pages, scripts, styles, images) in the service worker cache `qr-offline-v1`, so the app works offline. Nothing the visitor enters is cached.
@@ -295,7 +325,7 @@ It reports missing or unknown keys, lost placeholders (`{size}`, `{author}`), br
 
 ### Offline mode
 
-`sw.js` (registered after consent, on `https://` or `localhost` only) caches every file of the site the first time it is used:
+`sw.js` (registered on `https://` or `localhost` only) caches every file of the site the first time it is used:
 
 - **Pages** are loaded from the network first; when offline the saved copy is used. A language page that was never opened falls back to a saved page in another language.
 - **Scripts, styles and images** come from the cache first. Files with a `?v=` version are replaced when the version changes, the others are refreshed in the background.
@@ -324,12 +354,12 @@ QRCode-WebApp/
 │   └── app.php               # Page markup
 ├── assets/
 │   ├── css/style.css         # Styles (light & dark mode, responsive)
-│   ├── js/ui.js              # Consent dialog, theme toggle, language dropdown
+│   ├── js/ui.js              # Theme toggle, language dropdown
 │   ├── js/theme-init.js      # Static build: applies the saved theme early
 │   ├── js/redirect.js        # Static build: start page and 404 redirects
 │   ├── js/app.js             # QR payload builders, preview, downloads, print, share, undo, style link
 │   ├── js/export.js          # PDF, EPS, BMP, GIF and AVIF exporters
-│   ├── img/                  # Favicon and app icons (SVG + PNG)
+│   ├── img/                  # Favicon, app icons and the link preview image (og-image.png)
 │   └── vendor/
 │       ├── qr-code-styling/  # QR rendering library (bundled, MIT)
 │       ├── flag-icons/       # Flag SVGs (bundled, MIT)
@@ -340,6 +370,7 @@ QRCode-WebApp/
 │   ├── check-translations.php  # Validates all language files (CLI only)
 │   └── build-static.php        # Builds the static GitHub Pages version (CLI only)
 ├── .github/workflows/pages.yml # Deploys the static version to GitHub Pages
+├── .github/assets/           # README screenshots and the GitHub social preview image
 └── .htaccess                 # Apache rules
 ```
 
@@ -392,6 +423,10 @@ The Content Security Policy allows `wasm-unsafe-eval` so the AVIF encoder can ru
 ```bash
 curl -L -o assets/vendor/qr-code-styling/qr-code-styling.js https://cdn.jsdelivr.net/npm/qr-code-styling@<version>/lib/qr-code-styling.js
 ```
+
+## Contributing
+
+Bug reports, ideas and pull requests are welcome - see [CONTRIBUTING.md](CONTRIBUTING.md). Fixing a translation or adding a language is a great first contribution: it takes one file and no build tools.
 
 ## License
 

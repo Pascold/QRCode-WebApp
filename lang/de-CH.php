@@ -23,8 +23,6 @@ return [
     'js.logo_too_big' => 'Das Bild ist zu gross. Die maximale Grösse beträgt {size} MB.',
     'js.logo_ec_hint' => 'Tipp: Mit einem Bild in der Mitte sollte die Fehlerkorrektur «Hoch» sein, damit der Code lesbar bleibt.',
 
-    'consent.declined_text' => 'Ohne deine Zustimmung kann diese Seite nicht verwendet werden. Du kannst die Seite schliessen oder zurückgehen und zustimmen.',
-    'consent.leave' => 'Seite schliessen',
 
     'js.share_failed' => 'Teilen hat nicht funktioniert. Bitte nutze stattdessen «Herunterladen».',
 

@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Kodi burimor në GitHub',
     'footer.license' => 'Licenca MIT',
 
-    'consent.title' => 'Para se të fillosh',
-    'consent.text' => 'Kjo faqe ruan gjuhën, temën dhe cilësimet e tua aktuale vetëm në shfletuesin tënd (cookies dhe hapësira e shfletuesit). Asgjë që shkruan nuk dërgohet në server dhe nuk ndahet me askënd.',
-    'consent.accept' => 'Prano dhe vazhdo',
-    'consent.decline' => 'Refuzo',
-    'consent.declined_title' => 'Kërkohet pëlqimi',
-    'consent.declined_text' => 'Pa pëlqimin tënd kjo faqe nuk mund të përdoret. Mund ta mbyllësh faqen ose të kthehesh dhe ta pranosh.',
-    'consent.back' => 'Kthehu',
-    'consent.leave' => 'Mbyll faqen',
+    'privacy.storage' => 'Kjo faqe ruan gjuhën, temën dhe cilësimet e tua aktuale vetëm në shfletuesin tënd (cookies dhe hapësira e shfletuesit). Asgjë që shkruan nuk dërgohet në server dhe nuk ndahet me askënd.',
 
     'js.low_contrast' => 'Kontrast i ulët mes pikave dhe sfondit - disa telefona mund të mos e skanojnë këtë kod.',
     'js.inverted' => 'Pikat janë më të çelëta se sfondi. Shumë skanerë nuk lexojnë kode të përmbysura - përdor pika të errëta mbi sfond të çelët.',

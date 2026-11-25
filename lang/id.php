@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Kode sumber di GitHub',
     'footer.license' => 'Lisensi MIT',
 
-    'consent.title' => 'Sebelum memulai',
-    'consent.text' => 'Halaman ini menyimpan bahasa, tema, dan pengaturan Anda saat ini hanya di browser Anda (cookie dan penyimpanan browser). Apa pun yang Anda masukkan tidak dikirim ke server atau dibagikan kepada siapa pun.',
-    'consent.accept' => 'Terima dan lanjutkan',
-    'consent.decline' => 'Tolak',
-    'consent.declined_title' => 'Persetujuan diperlukan',
-    'consent.declined_text' => 'Tanpa persetujuan Anda, halaman ini tidak dapat digunakan. Anda dapat menutup halaman atau kembali dan menyetujui.',
-    'consent.back' => 'Kembali',
-    'consent.leave' => 'Tutup halaman',
+    'privacy.storage' => 'Halaman ini menyimpan bahasa, tema, dan pengaturan Anda saat ini hanya di browser Anda (cookie dan penyimpanan browser). Apa pun yang Anda masukkan tidak dikirim ke server atau dibagikan kepada siapa pun.',
 
     'js.low_contrast' => 'Kontras antara titik dan latar rendah - beberapa ponsel mungkin tidak dapat memindai kode ini.',
     'js.inverted' => 'Titik lebih terang daripada latar. Banyak pemindai tidak dapat membaca kode terbalik - gunakan titik gelap di atas latar terang.',

@@ -25,9 +25,11 @@ return [
     // button. Without it the operating system setting is used.
     'theme_cookie' => 'qr_theme',
 
-    // Cookie that stores the visitor's consent (shown in a dialog on the
-    // first visit). Language and theme cookies are only written after consent.
-    'consent_cookie' => 'qr_consent',
+    // Public address of the site, ending with "/". Used for the link preview
+    // (Open Graph / Twitter Card) shown when the page is shared on social
+    // media or in chat apps - those need absolute URLs. Leave empty to skip
+    // the preview image and URL.
+    'site_url' => 'https://pascold.github.io/QRCode-WebApp/',
 
     // Credits shown in the footer.
     'author_name' => 'Pascold',

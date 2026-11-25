@@ -116,14 +116,7 @@ return [
     'footer.source' => 'GitHub 소스 코드',
     'footer.license' => 'MIT 라이선스',
 
-    'consent.title' => '시작하기 전에',
-    'consent.text' => '이 페이지는 언어, 테마, 현재 설정을 브라우저(쿠키 및 브라우저 저장소)에만 저장합니다. 입력한 내용은 서버로 전송되거나 다른 사람과 공유되지 않습니다.',
-    'consent.accept' => '동의하고 계속하기',
-    'consent.decline' => '거부',
-    'consent.declined_title' => '동의가 필요합니다',
-    'consent.declined_text' => '동의하지 않으면 이 페이지를 사용할 수 없습니다. 페이지를 닫거나 돌아가서 동의할 수 있습니다.',
-    'consent.back' => '돌아가기',
-    'consent.leave' => '페이지 닫기',
+    'privacy.storage' => '이 페이지는 언어, 테마, 현재 설정을 브라우저(쿠키 및 브라우저 저장소)에만 저장합니다. 입력한 내용은 서버로 전송되거나 다른 사람과 공유되지 않습니다.',
 
     'js.low_contrast' => '점과 배경의 대비가 낮아 일부 휴대폰에서 이 코드를 스캔하지 못할 수 있습니다.',
     'js.inverted' => '점이 배경보다 밝습니다. 많은 스캐너가 반전된 코드를 읽지 못하므로 밝은 배경에 어두운 점을 사용하세요.',

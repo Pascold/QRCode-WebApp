@@ -11,7 +11,6 @@ declare(strict_types=1);
  * @var array<string, mixed> $config
  * @var array<string, mixed> $jsConfig
  * @var string|null $theme
- * @var bool $consented
  * @var bool $static     true for the static (GitHub Pages) build
  * @var \Closure $e      HTML escape
  * @var \Closure $t      translate + escape
@@ -58,11 +57,12 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
     <meta http-equiv="Content-Security-Policy" content="<?= $e(\QrApp\View::CONTENT_SECURITY_POLICY) ?>">
     <meta name="referrer" content="same-origin">
     <!-- Applies the saved light/dark theme before the page is painted. -->
-    <script src="<?= $asset('assets/js/theme-init.js') ?>" data-consent-key="<?= $e((string) $config['consent_cookie']) ?>" data-theme-key="<?= $e((string) $config['theme_cookie']) ?>"></script>
+    <script src="<?= $asset('assets/js/theme-init.js') ?>" data-theme-key="<?= $e((string) $config['theme_cookie']) ?>"></script>
 <?php endif; ?>
     <meta name="color-scheme" content="light dark">
     <meta name="description" content="<?= $t('app.tagline') ?>">
     <title><?= $t('app.title') ?></title>
+<?= \QrApp\View::socialMeta($i18n, $config, $static ? $i18n->current() . '/' : '') ?>
     <meta name="theme-color" content="#4f46e5">
     <link rel="icon" href="<?= $url('assets/img/favicon.svg') ?>" type="image/svg+xml">
     <link rel="icon" href="<?= $url('assets/img/icon-32.png') ?>" type="image/png" sizes="32x32">
@@ -495,6 +495,7 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
 
 <footer class="container site-footer">
     <p><?= $t('app.footer') ?></p>
+    <p class="storage-note"><?= $t('privacy.storage') ?></p>
     <p class="credits">
         <?php
         // "{author}" is replaced with a link after escaping the translated text.
@@ -508,38 +509,6 @@ $flag = static function (string $country, bool $lazy = false) use ($e, $url): st
         <a href="<?= $e((string) $config['license_url']) ?>" rel="license noopener" target="_blank"><?= $t('footer.license') ?></a>
     </p>
 </footer>
-
-<?php if (!$consented): ?>
-<!-- Consent dialog: opened by assets/js/ui.js on the first visit. -->
-<dialog id="consent" class="consent" aria-labelledby="consent-title" data-open>
-    <div class="consent-lang">
-        <label for="consent-language" class="visually-hidden"><?= $t('app.language') ?></label>
-        <select id="consent-language">
-            <?php foreach ($i18n->languages() as $code => $language): ?>
-                <option value="<?= $e($code) ?>" data-url="<?= $e($langUrl($code)) ?>" <?= $code === $i18n->current() ? 'selected' : '' ?>><?= $e($language['native']) ?></option>
-            <?php endforeach; ?>
-        </select>
-    </div>
-
-    <div class="consent-step" data-step="ask">
-        <h2 id="consent-title"><?= $t('consent.title') ?></h2>
-        <p><?= $t('consent.text') ?></p>
-        <div class="actions">
-            <button type="button" class="btn btn-primary" data-consent="accept"><?= $t('consent.accept') ?></button>
-            <button type="button" class="btn btn-ghost" data-consent="decline"><?= $t('consent.decline') ?></button>
-        </div>
-    </div>
-
-    <div class="consent-step" data-step="declined" hidden>
-        <h2><?= $t('consent.declined_title') ?></h2>
-        <p><?= $t('consent.declined_text') ?></p>
-        <div class="actions">
-            <button type="button" class="btn btn-primary" data-consent="back"><?= $t('consent.back') ?></button>
-            <button type="button" class="btn btn-ghost" data-consent="leave"><?= $t('consent.leave') ?></button>
-        </div>
-    </div>
-</dialog>
-<?php endif; ?>
 
 <script id="app-config" type="application/json"><?= json_encode($jsConfig, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_THROW_ON_ERROR) ?></script>
 <script src="<?= $asset('assets/js/ui.js') ?>"></script>

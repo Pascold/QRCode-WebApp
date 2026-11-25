@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Källkod på GitHub',
     'footer.license' => 'MIT-licens',
 
-    'consent.title' => 'Innan du börjar',
-    'consent.text' => 'Den här sidan sparar ditt språk, tema och dina aktuella inställningar endast i din webbläsare (cookies och webbläsarlagring). Inget du skriver skickas till en server eller delas med någon.',
-    'consent.accept' => 'Godkänn och fortsätt',
-    'consent.decline' => 'Avböj',
-    'consent.declined_title' => 'Samtycke krävs',
-    'consent.declined_text' => 'Utan ditt samtycke kan sidan inte användas. Du kan stänga sidan eller gå tillbaka och godkänna.',
-    'consent.back' => 'Tillbaka',
-    'consent.leave' => 'Stäng sidan',
+    'privacy.storage' => 'Den här sidan sparar ditt språk, tema och dina aktuella inställningar endast i din webbläsare (cookies och webbläsarlagring). Inget du skriver skickas till en server eller delas med någon.',
 
     'js.low_contrast' => 'Låg kontrast mellan punkterna och bakgrunden - vissa telefoner kanske inte kan skanna koden.',
     'js.inverted' => 'Punkterna är ljusare än bakgrunden. Många läsare kan inte läsa inverterade koder - använd mörka punkter på ljus bakgrund.',

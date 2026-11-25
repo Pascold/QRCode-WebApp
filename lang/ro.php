@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Cod sursă pe GitHub',
     'footer.license' => 'Licență MIT',
 
-    'consent.title' => 'Înainte să începi',
-    'consent.text' => 'Această pagină salvează limba, tema și setările curente doar în browserul tău (cookie-uri și spațiul de stocare al browserului). Nimic din ce introduci nu este trimis la un server și nu este partajat cu nimeni.',
-    'consent.accept' => 'Acceptă și continuă',
-    'consent.decline' => 'Refuză',
-    'consent.declined_title' => 'Este necesar acordul',
-    'consent.declined_text' => 'Fără acordul tău, pagina nu poate fi folosită. Poți închide pagina sau te poți întoarce și accepta.',
-    'consent.back' => 'Înapoi',
-    'consent.leave' => 'Închide pagina',
+    'privacy.storage' => 'Această pagină salvează limba, tema și setările curente doar în browserul tău (cookie-uri și spațiul de stocare al browserului). Nimic din ce introduci nu este trimis la un server și nu este partajat cu nimeni.',
 
     'js.low_contrast' => 'Contrast scăzut între puncte și fundal - unele telefoane s-ar putea să nu scaneze acest cod.',
     'js.inverted' => 'Punctele sunt mai deschise decât fundalul. Multe scanere nu pot citi coduri inversate - folosește puncte închise pe un fundal deschis.',

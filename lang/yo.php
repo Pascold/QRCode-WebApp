@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Kóòdù orísun lórí GitHub',
     'footer.license' => 'Ìwé-àṣẹ MIT',
 
-    'consent.title' => 'Kí o tó bẹ̀rẹ̀',
-    'consent.text' => 'Ojú-ewé yìí ń fi èdè rẹ, àwòṣe àti ètò rẹ lọ́wọ́lọ́wọ́ pamọ́ sínú aṣàwákiri rẹ nìkan (kúkì àti ibi ìpamọ́ aṣàwákiri). A kò fi ohunkóhun tí o tẹ̀ ránṣẹ́ sí olupin, a kò sì pín in pẹ̀lú ẹnikẹ́ni.',
-    'consent.accept' => 'Gbà kí o tẹ̀síwájú',
-    'consent.decline' => 'Kọ̀',
-    'consent.declined_title' => 'A nílò ìfọwọ́sí',
-    'consent.declined_text' => 'Láìsí ìfọwọ́sí rẹ, a kò lè lo ojú-ewé yìí. O lè pa ojú-ewé náà dé tàbí padà sẹ́yìn láti gbà.',
-    'consent.back' => 'Padà sẹ́yìn',
-    'consent.leave' => 'Pa ojú-ewé dé',
+    'privacy.storage' => 'Ojú-ewé yìí ń fi èdè rẹ, àwòṣe àti ètò rẹ lọ́wọ́lọ́wọ́ pamọ́ sínú aṣàwákiri rẹ nìkan (kúkì àti ibi ìpamọ́ aṣàwákiri). A kò fi ohunkóhun tí o tẹ̀ ránṣẹ́ sí olupin, a kò sì pín in pẹ̀lú ẹnikẹ́ni.',
 
     'js.low_contrast' => 'Ìyàtọ̀ àwọ̀ láàrin àmì-àmì àti ẹ̀yìn kéré - àwọn fóònù kan lè má lè ka kóòdù yìí.',
     'js.inverted' => 'Àwọn àmì-àmì mọ́lẹ̀ ju ẹ̀yìn lọ. Ọ̀pọ̀ ẹ̀rọ ìwòran kò lè ka kóòdù tí a yí padà - lo àmì-àmì dúdú lórí ẹ̀yìn tó mọ́lẹ̀.',

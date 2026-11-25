@@ -1,0 +1,36 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: style
+    attributes:
+      label: Style link (optional)
+      description: Click "Copy link to this style" in the app and paste it here. It contains only the look, not your content.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and operating system
+      placeholder: e.g. Firefox 140 on Windows 11, Safari on iOS 19
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      options:
+        - Live demo (GitHub Pages)
+        - Self-hosted PHP version
+        - Self-hosted static build
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: Please do not paste real Wi-Fi passwords or personal contact data.

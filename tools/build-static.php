@@ -125,7 +125,6 @@ $landing = static function (string $mode, string $prefix) use ($i18n, $config, $
         'mode' => $mode,
         'base' => $base,
         'defaultLanguage' => $i18n->defaultLanguage(),
-        'consentKey' => (string) $config['consent_cookie'],
         'languageKey' => (string) $config['language_cookie'],
         'lookup' => $i18n->lookupTable(),
     ];
@@ -147,7 +146,7 @@ $landing = static function (string $mode, string $prefix) use ($i18n, $config, $
     <meta name="color-scheme" content="light dark">
     <title>' . $e($i18n->t('app.title')) . '</title>
     <meta name="description" content="' . $e($i18n->t('app.tagline')) . '">
-    <link rel="icon" href="' . $e($prefix . 'assets/img/favicon.svg') . '" type="image/svg+xml">
+' . View::socialMeta($i18n, $config) . '    <link rel="icon" href="' . $e($prefix . 'assets/img/favicon.svg') . '" type="image/svg+xml">
     <link rel="manifest" href="' . $e($prefix . 'manifest.webmanifest') . '">
     <link rel="stylesheet" href="' . $e($prefix . 'assets/css/style.css') . '">
     <script id="redirect-config" type="application/json">' . $json . '</script>

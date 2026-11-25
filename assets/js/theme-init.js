@@ -8,9 +8,6 @@
 
     var script = document.currentScript;
     try {
-        if (localStorage.getItem(script.dataset.consentKey) !== '1') {
-            return;
-        }
         var theme = localStorage.getItem(script.dataset.themeKey);
         if (theme === 'light' || theme === 'dark') {
             document.documentElement.setAttribute('data-theme', theme);

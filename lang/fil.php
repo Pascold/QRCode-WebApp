@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Source code sa GitHub',
     'footer.license' => 'MIT License',
 
-    'consent.title' => 'Bago ka magsimula',
-    'consent.text' => 'Ang page na ito ay nagse-save ng iyong wika, tema at kasalukuyang mga setting sa iyong browser lamang (cookies at storage ng browser). Walang anumang inilalagay mo ang ipinapadala sa server o ibinabahagi sa iba.',
-    'consent.accept' => 'Tanggapin at magpatuloy',
-    'consent.decline' => 'Tanggihan',
-    'consent.declined_title' => 'Kailangan ang pahintulot',
-    'consent.declined_text' => 'Kung walang pahintulot mo, hindi magagamit ang page na ito. Maaari mong isara ang page o bumalik at tanggapin.',
-    'consent.back' => 'Bumalik',
-    'consent.leave' => 'Isara ang page',
+    'privacy.storage' => 'Ang page na ito ay nagse-save ng iyong wika, tema at kasalukuyang mga setting sa iyong browser lamang (cookies at storage ng browser). Walang anumang inilalagay mo ang ipinapadala sa server o ibinabahagi sa iba.',
 
     'js.low_contrast' => 'Mababa ang contrast ng mga tuldok at background - maaaring hindi ma-scan ng ilang telepono ang code na ito.',
     'js.inverted' => 'Mas maliwanag ang mga tuldok kaysa sa background. Maraming scanner ang hindi makabasa ng baligtad na code - gumamit ng madidilim na tuldok sa maliwanag na background.',

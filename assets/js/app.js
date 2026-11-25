@@ -412,9 +412,6 @@
         }
     }
 
-    function consentGiven() {
-        return !window.QrConsent || window.QrConsent.given();
-    }
 
     function collectState() {
         var fields = {};
@@ -438,7 +435,7 @@
     function saveState() {
         window.clearTimeout(saveTimer);
         var store = storage();
-        if (!store || !consentGiven()) {
+        if (!store) {
             return;
         }
         var state = collectState();
@@ -1038,7 +1035,7 @@
 
     // ------------------------------------------------------------------
     // Saved styles: the look of the code (not its content) is stored under
-    // a name in localStorage - only in this browser, after consent.
+    // a name in localStorage - only in this browser.
     // ------------------------------------------------------------------
 
     var PRESETS_KEY = 'qr_presets';
@@ -1107,7 +1104,7 @@
 
     presetSave.addEventListener('click', function () {
         var name = presetName.value.trim();
-        if (!name || !consentGiven()) {
+        if (!name) {
             return;
         }
         var presets = readPresets();
@@ -1392,17 +1389,12 @@
 
     // Save right away when the page is left (e.g. switching the language).
     window.addEventListener('pagehide', saveState);
-    document.addEventListener('qr:consent', saveState);
 
     restoreState();
     refresh();
     applyStyleLink();
     recordHistory();
 
-    // Offline mode is set up only after consent (it stores files in the browser).
-    if (consentGiven()) {
-        registerServiceWorker();
-    } else {
-        document.addEventListener('qr:consent', registerServiceWorker);
-    }
+    // Offline mode: keeps a copy of the site's own files in the browser.
+    registerServiceWorker();
 })();

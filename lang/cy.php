@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Cod ffynhonnell ar GitHub',
     'footer.license' => 'Trwydded MIT',
 
-    'consent.title' => 'Cyn i chi ddechrau',
-    'consent.text' => 'Mae\'r dudalen hon yn cadw eich iaith, eich thema a\'ch gosodiadau presennol yn eich porwr yn unig (cwcis a storfa\'r porwr). Does dim byd rydych chi\'n ei roi i mewn yn cael ei anfon at weinydd na\'i rannu ag unrhyw un.',
-    'consent.accept' => 'Derbyn a pharhau',
-    'consent.decline' => 'Gwrthod',
-    'consent.declined_title' => 'Mae angen caniatâd',
-    'consent.declined_text' => 'Heb eich caniatâd, does dim modd defnyddio\'r dudalen. Gallwch gau\'r dudalen neu fynd yn ôl a derbyn.',
-    'consent.back' => 'Yn ôl',
-    'consent.leave' => 'Cau\'r dudalen',
+    'privacy.storage' => 'Mae\'r dudalen hon yn cadw eich iaith, eich thema a\'ch gosodiadau presennol yn eich porwr yn unig (cwcis a storfa\'r porwr). Does dim byd rydych chi\'n ei roi i mewn yn cael ei anfon at weinydd na\'i rannu ag unrhyw un.',
 
     'js.low_contrast' => 'Cyferbyniad isel rhwng y dotiau a\'r cefndir - efallai na fydd rhai ffonau\'n gallu sganio\'r cod hwn.',
     'js.inverted' => 'Mae\'r dotiau\'n oleuach na\'r cefndir. Dydy llawer o sganwyr ddim yn gallu darllen codau gwrthdro - defnyddiwch ddotiau tywyll ar gefndir golau.',

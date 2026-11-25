@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Codi font a GitHub',
     'footer.license' => 'Llicència MIT',
 
-    'consent.title' => 'Abans de començar',
-    'consent.text' => 'Aquesta pàgina desa l\'idioma, el tema i la configuració actual només al teu navegador (galetes i emmagatzematge del navegador). Res del que escrius s\'envia a cap servidor ni es comparteix amb ningú.',
-    'consent.accept' => 'Accepta i continua',
-    'consent.decline' => 'Rebutja',
-    'consent.declined_title' => 'Cal el consentiment',
-    'consent.declined_text' => 'Sense el teu consentiment no es pot fer servir aquesta pàgina. Pots tancar la pàgina o tornar enrere i acceptar.',
-    'consent.back' => 'Torna',
-    'consent.leave' => 'Tanca la pàgina',
+    'privacy.storage' => 'Aquesta pàgina desa l\'idioma, el tema i la configuració actual només al teu navegador (galetes i emmagatzematge del navegador). Res del que escrius s\'envia a cap servidor ni es comparteix amb ningú.',
 
     'js.low_contrast' => 'Contrast baix entre els punts i el fons: és possible que alguns telèfons no puguin escanejar aquest codi.',
     'js.inverted' => 'Els punts són més clars que el fons. Molts lectors no poden llegir codis invertits: fes servir punts foscos sobre un fons clar.',

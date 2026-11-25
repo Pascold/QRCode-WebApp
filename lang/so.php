@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Koodhka isha ee GitHub',
     'footer.license' => 'Liisanka MIT',
 
-    'consent.title' => 'Kahor intaadan bilaabin',
-    'consent.text' => 'Boggan wuxuu luqaddaada, muuqaalkaaga iyo dejimahaaga hadda ku kaydiyaa biraawsarkaaga oo keliya (kukiyada iyo kaydka biraawsarka). Waxba oo aad geliso looma diro server lagamana wadaago qof.',
-    'consent.accept' => 'Aqbal oo sii wad',
-    'consent.decline' => 'Diid',
-    'consent.declined_title' => 'Oggolaansho ayaa loo baahan yahay',
-    'consent.declined_text' => 'Oggolaanshahaaga la\'aantiis boggan lama isticmaali karo. Waad xiri kartaa bogga ama dib u noqo oo aqbal.',
-    'consent.back' => 'Dib u noqo',
-    'consent.leave' => 'Xir bogga',
+    'privacy.storage' => 'Boggan wuxuu luqaddaada, muuqaalkaaga iyo dejimahaaga hadda ku kaydiyaa biraawsarkaaga oo keliya (kukiyada iyo kaydka biraawsarka). Waxba oo aad geliso looma diro server lagamana wadaago qof.',
 
     'js.low_contrast' => 'Kala-duwanaanshaha u dhexeeya dhibcaha iyo asalka waa hooseeyaa - taleefannada qaar ayan akhrin karin koodhkan.',
     'js.inverted' => 'Dhibcuhu way ka iftiin badan yihiin asalka. Akhriste badan ma akhrin karaan koodhadh rogan - isticmaal dhibco madow oo ku yaal asal iftiin leh.',

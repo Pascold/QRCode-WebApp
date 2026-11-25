@@ -118,14 +118,7 @@ return [
     'footer.source' => 'GitHub 上的原始碼',
     'footer.license' => 'MIT 授權條款',
 
-    'consent.title' => '開始之前',
-    'consent.text' => '本頁面僅在您的瀏覽器中（Cookie 與瀏覽器儲存空間）保存您的語言、主題與目前設定。您輸入的任何內容都不會傳送到伺服器，也不會與任何人分享。',
-    'consent.accept' => '接受並繼續',
-    'consent.decline' => '拒絕',
-    'consent.declined_title' => '需要您的同意',
-    'consent.declined_text' => '未經您的同意，無法使用本頁面。您可以關閉頁面，或返回並接受。',
-    'consent.back' => '返回',
-    'consent.leave' => '關閉頁面',
+    'privacy.storage' => '本頁面僅在您的瀏覽器中（Cookie 與瀏覽器儲存空間）保存您的語言、主題與目前設定。您輸入的任何內容都不會傳送到伺服器，也不會與任何人分享。',
 
     'js.low_contrast' => '點與背景的對比度偏低，部分手機可能無法掃描此 QR Code。',
     'js.inverted' => '點比背景更亮。許多掃描器無法讀取反色的 QR Code，請在淺色背景上使用深色的點。',

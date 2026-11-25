@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Quellcode op GitHub',
     'footer.license' => 'MIT-Lizenz',
 
-    'consent.title' => 'Ier Dir ufänkt',
-    'consent.text' => 'Dës Säit späichert Är Sprooch, Ären Design an Är aktuell Astellungen nëmmen an Ärem Browser (Cookien a Browser-Späicher). Näischt, wat Dir agitt, gëtt un e Server geschéckt oder mat iergendengem gedeelt.',
-    'consent.accept' => 'Akzeptéieren a weidermaachen',
-    'consent.decline' => 'Refuséieren',
-    'consent.declined_title' => 'Zoustëmmung néideg',
-    'consent.declined_text' => 'Ouni Är Zoustëmmung kann dës Säit net benotzt ginn. Dir kënnt d\'Säit zoumaachen oder zréckgoen an akzeptéieren.',
-    'consent.back' => 'Zréck',
-    'consent.leave' => 'Säit zoumaachen',
+    'privacy.storage' => 'Dës Säit späichert Är Sprooch, Ären Design an Är aktuell Astellungen nëmmen an Ärem Browser (Cookien a Browser-Späicher). Näischt, wat Dir agitt, gëtt un e Server geschéckt oder mat iergendengem gedeelt.',
 
     'js.low_contrast' => 'Niddregen Kontrast tëscht de Punkten an dem Hannergrond - verschidden Handyen kënnen dëse Code eventuell net scannen.',
     'js.inverted' => 'D\'Punkten si méi hell wéi den Hannergrond. Vill Scanner kënnen invertéiert Coden net liesen - benotzt donkel Punkten op engem helle Hannergrond.',

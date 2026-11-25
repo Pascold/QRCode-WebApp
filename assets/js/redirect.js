@@ -46,10 +46,7 @@
             target = config.base;
         }
     } else {
-        var language = null;
-        if (stored(config.consentKey) === '1') {
-            language = match(stored(config.languageKey));
-        }
+        var language = match(stored(config.languageKey));
         var browserLanguages = navigator.languages && navigator.languages.length
             ? navigator.languages
             : [navigator.language || navigator.userLanguage];

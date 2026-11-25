@@ -116,14 +116,7 @@ return [
     'footer.source' => 'GitHub-da mənbə kodu',
     'footer.license' => 'MIT lisenziyası',
 
-    'consent.title' => 'Başlamazdan əvvəl',
-    'consent.text' => 'Bu səhifə dilinizi, mövzunuzu və cari ayarlarınızı yalnız brauzerinizdə (kukilər və brauzer yaddaşı) saxlayır. Daxil etdiyiniz heç nə serverə göndərilmir və heç kimlə paylaşılmır.',
-    'consent.accept' => 'Qəbul et və davam et',
-    'consent.decline' => 'İmtina et',
-    'consent.declined_title' => 'Razılıq tələb olunur',
-    'consent.declined_text' => 'Razılığınız olmadan bu səhifədən istifadə etmək mümkün deyil. Səhifəni bağlaya və ya geri qayıdıb qəbul edə bilərsiniz.',
-    'consent.back' => 'Geri',
-    'consent.leave' => 'Səhifəni bağla',
+    'privacy.storage' => 'Bu səhifə dilinizi, mövzunuzu və cari ayarlarınızı yalnız brauzerinizdə (kukilər və brauzer yaddaşı) saxlayır. Daxil etdiyiniz heç nə serverə göndərilmir və heç kimlə paylaşılmır.',
 
     'js.low_contrast' => 'Nöqtələrlə fon arasında kontrast aşağıdır - bəzi telefonlar bu kodu skan edə bilməyə bilər.',
     'js.inverted' => 'Nöqtələr fondan açıqdır. Bir çox skaner tərs kodları oxuya bilmir - açıq fonda tünd nöqtələrdən istifadə edin.',

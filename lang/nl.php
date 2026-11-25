@@ -117,14 +117,7 @@ return [
     'footer.source' => 'Broncode op GitHub',
     'footer.license' => 'MIT-licentie',
 
-    'consent.title' => 'Voordat je begint',
-    'consent.text' => 'Deze pagina bewaart je taal, thema en huidige instellingen alleen in je browser (cookies en browseropslag). Niets wat je invoert wordt naar een server gestuurd of met iemand gedeeld.',
-    'consent.accept' => 'Accepteren en doorgaan',
-    'consent.decline' => 'Weigeren',
-    'consent.declined_title' => 'Toestemming vereist',
-    'consent.declined_text' => 'Zonder je toestemming kan deze pagina niet worden gebruikt. Je kunt de pagina sluiten of teruggaan en accepteren.',
-    'consent.back' => 'Terug',
-    'consent.leave' => 'Pagina sluiten',
+    'privacy.storage' => 'Deze pagina bewaart je taal, thema en huidige instellingen alleen in je browser (cookies en browseropslag). Niets wat je invoert wordt naar een server gestuurd of met iemand gedeeld.',
 
     'js.low_contrast' => 'Laag contrast tussen de punten en de achtergrond - sommige telefoons kunnen deze code mogelijk niet scannen.',
     'js.inverted' => 'De punten zijn lichter dan de achtergrond. Veel scanners kunnen omgekeerde codes niet lezen - gebruik donkere punten op een lichte achtergrond.',

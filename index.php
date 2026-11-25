@@ -24,16 +24,14 @@ $saved = isset($_COOKIE[$config['language_cookie']]) && is_string($_COOKIE[$conf
 $language = $i18n->resolve($requested, $saved, $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? null);
 $i18n->setLanguage($language);
 
-// The visitor accepts storing preferences in a dialog on the first visit
-// (assets/js/ui.js). Until then no cookies are written.
-$consented = ($_COOKIE[$config['consent_cookie']] ?? null) === '1';
-
-if ($consented && $requested !== null && $i18n->normalize($requested) !== null && $language !== $saved) {
+// Remember an explicitly chosen language. This is a functional preference
+// cookie (no tracking), so it needs no consent banner.
+if ($requested !== null && $i18n->normalize($requested) !== null && $language !== $saved) {
     setcookie($config['language_cookie'], $language, [
         'expires' => time() + (int) $config['language_cookie_lifetime'],
         'path' => '/',
         'secure' => (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'),
-        // Also written by JavaScript right after consent is given.
+        // Also written by assets/js/ui.js.
         'httponly' => false,
         'samesite' => 'Lax',
     ]);
@@ -58,5 +56,4 @@ header('Content-Security-Policy: ' . View::CONTENT_SECURITY_POLICY . "; frame-an
 
 echo View::render($i18n, $config, [
     'theme' => $theme,
-    'consented' => $consented,
 ]);

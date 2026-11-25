@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Mã nguồn trên GitHub',
     'footer.license' => 'Giấy phép MIT',
 
-    'consent.title' => 'Trước khi bắt đầu',
-    'consent.text' => 'Trang này chỉ lưu ngôn ngữ, giao diện và cài đặt hiện tại của bạn trong trình duyệt (cookie và bộ nhớ trình duyệt). Mọi thứ bạn nhập đều không được gửi đến máy chủ hay chia sẻ với bất kỳ ai.',
-    'consent.accept' => 'Chấp nhận và tiếp tục',
-    'consent.decline' => 'Từ chối',
-    'consent.declined_title' => 'Cần có sự đồng ý',
-    'consent.declined_text' => 'Nếu không có sự đồng ý của bạn, trang này không thể sử dụng được. Bạn có thể đóng trang hoặc quay lại và chấp nhận.',
-    'consent.back' => 'Quay lại',
-    'consent.leave' => 'Đóng trang',
+    'privacy.storage' => 'Trang này chỉ lưu ngôn ngữ, giao diện và cài đặt hiện tại của bạn trong trình duyệt (cookie và bộ nhớ trình duyệt). Mọi thứ bạn nhập đều không được gửi đến máy chủ hay chia sẻ với bất kỳ ai.',
 
     'js.low_contrast' => 'Độ tương phản giữa chấm và nền thấp - một số điện thoại có thể không quét được mã này.',
     'js.inverted' => 'Các chấm sáng hơn nền. Nhiều máy quét không đọc được mã đảo màu - hãy dùng chấm tối trên nền sáng.',

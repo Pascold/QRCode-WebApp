@@ -740,6 +740,12 @@ body > noscript .notice {
     text-align: center;
 }
 
+.site-footer .storage-note {
+    max-width: 640px;
+    margin: 4px auto 0;
+    font-size: .75rem;
+}
+
 .site-footer .credits {
     margin-top: 6px;
 }
@@ -751,59 +757,6 @@ body > noscript .notice {
 
 .site-footer a:hover {
     text-decoration: underline;
-}
-
-/* Consent dialog ------------------------------------------------------- */
-
-.consent {
-    width: min(460px, calc(100vw - 32px));
-    padding: 22px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-    color: var(--text);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
-}
-
-.consent::backdrop {
-    background: rgba(10, 12, 20, .65);
-    backdrop-filter: blur(3px);
-}
-
-/* Fallback for browsers without <dialog>.showModal(). */
-.consent[open]:not(:modal) {
-    position: fixed;
-    inset: 0;
-    z-index: 100;
-    margin: auto;
-    height: fit-content;
-}
-
-.consent h2 {
-    margin: 0 0 8px;
-    font-size: 1.125rem;
-}
-
-.consent p {
-    margin: 0;
-    color: var(--muted);
-}
-
-.consent .actions .btn {
-    flex: 1 1 auto;
-}
-
-.consent-lang {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 12px;
-}
-
-.consent-lang select {
-    width: auto;
-    max-width: 100%;
-    padding: 6px 10px;
-    font-size: .8125rem;
 }
 
 /* Static build start page (shown only until the redirect runs or without JS) */

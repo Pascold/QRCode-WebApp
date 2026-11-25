@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Izvorna koda na GitHubu',
     'footer.license' => 'Licenca MIT',
 
-    'consent.title' => 'Preden začnete',
-    'consent.text' => 'Ta stran shrani vaš jezik, temo in trenutne nastavitve samo v vašem brskalniku (piškotki in shramba brskalnika). Nič, kar vnesete, se ne pošlje na strežnik ali deli z nikomer.',
-    'consent.accept' => 'Sprejmi in nadaljuj',
-    'consent.decline' => 'Zavrni',
-    'consent.declined_title' => 'Potrebna je privolitev',
-    'consent.declined_text' => 'Brez vaše privolitve strani ni mogoče uporabljati. Stran lahko zaprete ali se vrnete in sprejmete.',
-    'consent.back' => 'Nazaj',
-    'consent.leave' => 'Zapri stran',
+    'privacy.storage' => 'Ta stran shrani vaš jezik, temo in trenutne nastavitve samo v vašem brskalniku (piškotki in shramba brskalnika). Nič, kar vnesete, se ne pošlje na strežnik ali deli z nikomer.',
 
     'js.low_contrast' => 'Nizek kontrast med pikami in ozadjem - nekateri telefoni te kode morda ne bodo mogli prebrati.',
     'js.inverted' => 'Pike so svetlejše od ozadja. Številni bralniki ne preberejo obrnjenih kod - uporabite temne pike na svetlem ozadju.',

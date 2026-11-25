@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Ikhowudi yomthombo kwi-GitHub',
     'footer.license' => 'Iphepha-mvume le-MIT',
 
-    'consent.title' => 'Phambi kokuba uqalise',
-    'consent.text' => 'Eli phepha ligcina ulwimi lwakho, umxholo kunye neesetingi zangoku kwisikhangeli sakho kuphela (iikhukhi nogcino lwesikhangeli). Akukho nto oyifakayo ethunyelwa kwiseva okanye yabelwane ngayo nomntu.',
-    'consent.accept' => 'Yamkela uqhubeke',
-    'consent.decline' => 'Yala',
-    'consent.declined_title' => 'Imvume iyafuneka',
-    'consent.declined_text' => 'Ngaphandle kwemvume yakho eli phepha alinakusetyenziswa. Ungalivala iphepha okanye ubuyele umva wamkele.',
-    'consent.back' => 'Buyela umva',
-    'consent.leave' => 'Vala iphepha',
+    'privacy.storage' => 'Eli phepha ligcina ulwimi lwakho, umxholo kunye neesetingi zangoku kwisikhangeli sakho kuphela (iikhukhi nogcino lwesikhangeli). Akukho nto oyifakayo ethunyelwa kwiseva okanye yabelwane ngayo nomntu.',
 
     'js.low_contrast' => 'Umahluko phakathi kwamachaphaza nomva mncinci - ezinye iifowuni zinokungakwazi ukuskena le khowudi.',
     'js.inverted' => 'Amachaphaza akhanya ngakumbi kunomva. Izikena ezininzi azikwazi ukufunda iikhowudi eziguquliweyo - sebenzisa amachaphaza amnyama kumva okhanyayo.',

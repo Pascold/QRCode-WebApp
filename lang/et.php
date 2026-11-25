@@ -116,14 +116,7 @@ return [
     'footer.source' => 'Lähtekood GitHubis',
     'footer.license' => 'MIT-litsents',
 
-    'consent.title' => 'Enne alustamist',
-    'consent.text' => 'See leht salvestab teie keele, teema ja praegused seaded ainult teie brauserisse (küpsised ja brauseri salvestusruum). Midagi, mida sisestate, ei saadeta serverisse ega jagata kellegagi.',
-    'consent.accept' => 'Nõustu ja jätka',
-    'consent.decline' => 'Keeldu',
-    'consent.declined_title' => 'Nõusolek on vajalik',
-    'consent.declined_text' => 'Ilma teie nõusolekuta ei saa seda lehte kasutada. Võite lehe sulgeda või minna tagasi ja nõustuda.',
-    'consent.back' => 'Tagasi',
-    'consent.leave' => 'Sulge leht',
+    'privacy.storage' => 'See leht salvestab teie keele, teema ja praegused seaded ainult teie brauserisse (küpsised ja brauseri salvestusruum). Midagi, mida sisestate, ei saadeta serverisse ega jagata kellegagi.',
 
     'js.low_contrast' => 'Punktide ja tausta kontrast on madal - mõni telefon ei pruugi seda koodi skannida.',
     'js.inverted' => 'Punktid on taustast heledamad. Paljud skannerid ei suuda pööratud koode lugeda - kasutage heledal taustal tumedaid punkte.',

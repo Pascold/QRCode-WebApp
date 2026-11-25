@@ -1,7 +1,7 @@
 /*
- * Page chrome: consent dialog, light/dark theme toggle and the language
- * dropdown. Nothing here talks to the server - preferences are kept in
- * cookies / browser storage only after the visitor has given consent.
+ * Page chrome: light/dark theme toggle and the language dropdown.
+ * Nothing here talks to the server - preferences are kept only in
+ * cookies / browser storage on the visitor's own device.
  */
 (function () {
     'use strict';
@@ -41,87 +41,9 @@
         }
     };
 
-    // ------------------------------------------------------------------
-    // Consent
-    // ------------------------------------------------------------------
-
-    var consent = {
-        given: function () {
-            return prefs.get(config.consentCookie) === '1';
-        }
-    };
-    // Shared with app.js (which stores the form state only after consent).
-    window.QrConsent = consent;
-
-    var dialog = document.getElementById('consent');
-
-    if (dialog && !consent.given()) {
-        var steps = dialog.querySelectorAll('.consent-step');
-
-        var showStep = function (name) {
-            steps.forEach(function (step) {
-                step.hidden = step.dataset.step !== name;
-            });
-            var button = dialog.querySelector('.consent-step[data-step="' + name + '"] .btn-primary');
-            if (button) {
-                button.focus();
-            }
-        };
-
-        // The dialog cannot be dismissed with Escape - a choice is required.
-        dialog.addEventListener('cancel', function (event) {
-            event.preventDefault();
-        });
-
-        dialog.addEventListener('click', function (event) {
-            var action = event.target.closest('[data-consent]');
-            if (!action) {
-                return;
-            }
-            switch (action.dataset.consent) {
-                case 'accept':
-                    prefs.set(config.consentCookie, '1');
-                    prefs.set(config.languageCookie, config.language);
-                    dialog.close();
-                    dialog.remove();
-                    document.dispatchEvent(new CustomEvent('qr:consent'));
-                    break;
-                case 'decline':
-                    showStep('declined');
-                    break;
-                case 'back':
-                    showStep('ask');
-                    break;
-                case 'leave':
-                    // Browsers only let scripts close windows they opened, so
-                    // fall back to an empty page.
-                    window.close();
-                    window.setTimeout(function () {
-                        window.location.replace('about:blank');
-                    }, 150);
-                    break;
-            }
-        });
-
-        // Lets the visitor read the dialog in another language first.
-        document.getElementById('consent-language').addEventListener('change', function (event) {
-            var option = event.target.options[event.target.selectedIndex];
-            window.location.href = option.dataset.url;
-        });
-
-        if (typeof dialog.showModal === 'function') {
-            dialog.showModal();
-        } else {
-            dialog.setAttribute('open', '');
-        }
-        showStep('ask');
-    } else if (dialog) {
-        dialog.remove();
-    }
-
     // Remember the language being viewed, so the start page of the static
     // build (and the PHP version) opens it next time.
-    if (consent.given() && prefs.get(config.languageCookie) !== config.language) {
+    if (prefs.get(config.languageCookie) !== config.language) {
         prefs.set(config.languageCookie, config.language);
     }
 
@@ -150,9 +72,7 @@
         var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', next);
         // Stored in a cookie so PHP can render the right theme without a flash.
-        if (consent.given()) {
-            prefs.set(config.themeCookie, next);
-        }
+        prefs.set(config.themeCookie, next);
         updateToggleLabel();
     });
 
