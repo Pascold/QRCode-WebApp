@@ -3,3 +3,6 @@ contact_links:
   - name: Live demo
     url: https://pascold.github.io/QRCode-WebApp/
     about: Try the app before reporting - maybe it is already fixed.
+  - name: Questions and ideas
+    url: https://github.com/Pascold/QRCode-WebApp/discussions
+    about: Ask a question or share an idea in Discussions.
